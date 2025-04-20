@@ -1,6 +1,7 @@
 package com.brainbuzz
 
 import android.app.Application
+import com.brainbuzz.database.DatabasePackage
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
@@ -19,7 +20,7 @@ class MainApplication : Application(), ReactApplication {
         override fun getPackages(): List<ReactPackage> =
             PackageList(this).packages.apply {
               // Packages that cannot be autolinked yet can be added manually here, for example:
-              // add(MyReactNativePackage())
+              add(DatabasePackage())
             }
 
         override fun getJSMainModuleName(): String = "index"
