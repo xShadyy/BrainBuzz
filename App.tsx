@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -5,17 +6,28 @@
  * @format
  */
 
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {SafeAreaView, StatusBar, useColorScheme, View} from 'react-native';
-import {AuthScreen} from './src/screens/AuthScreen';
-import {SplashScreen} from './src/screens/SplashScreen';
+import {WelcomeScreen} from './src/screens/WelcomeScreen';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
-  const [showSplash, setShowSplash] = useState(true);
+  const [showWelcome, setShowWelcome] = useState(true);
 
-  const handleSplashFinish = () => {
-    setShowSplash(false);
+  useEffect(() => {
+    console.log('App mounted, initializing ambient sound');
+
+    const timeoutId = setTimeout(() => {
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+      console.log('App unmounted, stopping all sounds');
+    };
+  }, []);
+
+  const handleWelcomeFinish = () => {
+    setShowWelcome(false);
   };
 
   return (
@@ -25,10 +37,10 @@ function App(): React.JSX.Element {
         backgroundColor={isDarkMode ? '#1C1C1E' : '#FFFFFF'}
       />
       <View style={{flex: 1}}>
-        {showSplash ? (
-          <SplashScreen onFinish={handleSplashFinish} />
+        {showWelcome ? (
+          <WelcomeScreen onFinish={handleWelcomeFinish} />
         ) : (
-          <AuthScreen />
+          null
         )}
       </View>
     </SafeAreaView>
