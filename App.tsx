@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -7,12 +6,17 @@
  */
 
 import React, {useState, useEffect} from 'react';
-import {SafeAreaView, StatusBar, useColorScheme, View} from 'react-native';
+import {StatusBar} from 'react-native';
 import {WelcomeScreen} from './src/screens/WelcomeScreen';
+import {LoginScreen} from './src/screens/LoginScreen';
+import {DashboardScreen} from './src/screens/DashboardScreen';
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
   const [showWelcome, setShowWelcome] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userId, setUserId] = useState<number | null>(null);
+
+  // Single cross-fade transition between screens
 
   useEffect(() => {
     console.log('App mounted, initializing ambient sound');
@@ -26,24 +30,40 @@ function App(): React.JSX.Element {
     };
   }, []);
 
+  // This function is called when WelcomeScreen's transition animation completes
   const handleWelcomeFinish = () => {
+    // Immediately switch to login screen without a fade animation
+    // The transition animation from WelcomeScreen will continue into LoginScreen
     setShowWelcome(false);
   };
 
+  // Handle successful login
+  const handleLoginSuccess = (loggedInUserId: number) => {
+    setUserId(loggedInUserId);
+    setIsLoggedIn(true);
+  };
+
+  // Handle logout
+  const handleLogout = () => {
+    setUserId(null);
+    setIsLoggedIn(false);
+  };
+
+  // No background color here - let each screen control its own background
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: isDarkMode ? '#1C1C1E' : '#FFFFFF'}}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={isDarkMode ? '#1C1C1E' : '#FFFFFF'}
-      />
-      <View style={{flex: 1}}>
-        {showWelcome ? (
-          <WelcomeScreen onFinish={handleWelcomeFinish} />
-        ) : (
-          null
-        )}
-      </View>
-    </SafeAreaView>
+    <>
+      {/* Status bar is transparent to allow screen backgrounds to show through */}
+      <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+
+      {/* No fade animation during screen changes - let the transition animation handle it */}
+      {showWelcome ? (
+        <WelcomeScreen onFinish={handleWelcomeFinish} />
+      ) : isLoggedIn && userId ? (
+        <DashboardScreen userId={userId} onLogout={handleLogout} />
+      ) : (
+        <LoginScreen onLoginSuccess={handleLoginSuccess} />
+      )}
+    </>
   );
 }
 

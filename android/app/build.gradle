@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
+apply plugin: "kotlin-kapt" // Added Kotlin kapt plugin
 apply plugin: "com.facebook.react"
 
 /**
@@ -120,7 +121,8 @@ dependencies {
 
     def room_version = "2.5.0"
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // Replace annotationProcessor with kapt for Kotlin
+    kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
     implementation "androidx.room:room-rxjava2:$room_version"
 
