@@ -9,13 +9,45 @@ class Database {
    * Add a new user to the database
    * @param name User's name
    * @param email User's email
+   * @param password User's password
    * @returns Promise resolving to the new user ID
    */
-  async addUser(name: string, email: string): Promise<number> {
+  async addUser(name: string, email: string, password?: string): Promise<number> {
     try {
-      return await NativeDatabaseModule.addUser({ name, email });
+      return await NativeDatabaseModule.addUser({ name, email, password });
     } catch (error) {
       console.error('Error adding user:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Register a new user account
+   * @param name User's name
+   * @param email User's email
+   * @param password User's password
+   * @returns Promise resolving to the newly created user
+   */
+  async registerUser(name: string, email: string, password: string): Promise<User> {
+    try {
+      return await NativeDatabaseModule.registerUser({ name, email, password });
+    } catch (error) {
+      console.error('Error registering user:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Login a user with email and password
+   * @param email User's email
+   * @param password User's password
+   * @returns Promise resolving to the authenticated user
+   */
+  async loginUser(email: string, password: string): Promise<User> {
+    try {
+      return await NativeDatabaseModule.loginUser(email, password);
+    } catch (error) {
+      console.error('Error logging in:', error);
       throw error;
     }
   }

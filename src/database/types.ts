@@ -2,6 +2,8 @@ export interface User {
   id?: number;
   name: string;
   email: string;
+  password?: string; // Optional in responses, required in registration
+  creationDate?: number; // Timestamp of account creation
 }
 
 export interface DatabaseModule {
@@ -11,4 +13,8 @@ export interface DatabaseModule {
   updateUser(user: User): Promise<boolean>;
   deleteUser(userId: number): Promise<boolean>;
   deleteAllUsers(): Promise<boolean>;
+
+  // Authentication methods
+  registerUser(user: { name: string; email: string; password: string }): Promise<User>;
+  loginUser(email: string, password: string): Promise<User>;
 }
