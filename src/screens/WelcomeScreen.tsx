@@ -45,7 +45,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onFinish }) => {
 
     timers.push(setTimeout(() => {
       SoundManager.playZap2();
-    }, 2000));
+    }, 2200));
 
     timers.push(setTimeout(() => {
       setShowEnterButton(true);
@@ -93,7 +93,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onFinish }) => {
 
   const handleEnterPress = () => {
     SoundManager.playInteraction();
-    SoundManager.fadeOutAmbient(2000);
+    // Removed fadeOutAmbient call
 
     Animated.sequence([
       Animated.timing(enterButtonScale, {

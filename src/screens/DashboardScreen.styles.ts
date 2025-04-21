@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, StatusBar } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 // Get the full screen dimensions including status bar area
 const { width, height } = Dimensions.get('screen');
@@ -37,49 +37,31 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
-  header: {
-    zIndex: 2,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    paddingHorizontal: 20,
-    paddingTop: StatusBar.currentHeight || 20,
-    paddingBottom: 15,
-    backgroundColor: '#D0DEF0',
-    borderBottomWidth: 1,
-    borderBottomColor: '#B8C9DF',
-  },
-  welcomeText: {
-    color: '#3A4A5D',
-    fontFamily: 'Lexend-Bold',
-    fontSize: 20,
-  },
-  logoutButton: {
-    backgroundColor: '#B8C9DF',
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: '#A0B5D0',
-  },
-  logoutText: {
-    color: '#3A4A5D',
-    fontFamily: 'Lexend-Medium',
-    fontSize: 14,
-  },
-  scrollView: {
-    zIndex: 2,
+  // Updated dashboard layout without side menu
+  dashboardLayout: {
     flex: 1,
-    backgroundColor: 'transparent',
+    flexDirection: 'column',
+    zIndex: 2,
+    height: '100%',
+  },
+  // Main content container, now takes full width
+  mainContent: {
+    flex: 1,
+    backgroundColor: '#FFFFFF',
+    height: '100%',
+  },
+  // Showing content now
+  scrollView: {
+    flex: 1,
   },
   contentContainer: {
     padding: 20,
-    paddingBottom: 30,
+    paddingBottom: 40,
   },
   dashboardSection: {
     backgroundColor: '#FFFFFF',
-    borderRadius: 16,
-    padding: 20,
+    borderRadius: 12,
+    padding: 16,
     marginBottom: 20,
     shadowColor: '#000',
     shadowOffset: {
@@ -89,14 +71,12 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 4,
     elevation: 3,
-    borderWidth: 1,
-    borderColor: '#D0DEF0',
   },
   sectionTitle: {
-    color: '#3A4A5D',
-    fontFamily: 'Lexend-SemiBold',
     fontSize: 18,
-    marginBottom: 15,
+    fontFamily: 'Lexend-Bold',
+    color: '#3A4A5D',
+    marginBottom: 12,
   },
   sectionContent: {
     minHeight: 100,
@@ -104,21 +84,19 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   emptyStateText: {
-    color: '#8696A7',
+    color: '#8897A8',
     fontFamily: 'Lexend-Regular',
     fontSize: 14,
     textAlign: 'center',
   },
   footer: {
-    zIndex: 2,
-    padding: 15,
-    backgroundColor: '#D0DEF0',
+    padding: 16,
     alignItems: 'center',
     borderTopWidth: 1,
-    borderTopColor: '#B8C9DF',
+    borderTopColor: '#E0E0E0',
   },
   footerText: {
-    color: '#8696A7',
+    color: '#8897A8',
     fontFamily: 'Lexend-Regular',
     fontSize: 12,
   },

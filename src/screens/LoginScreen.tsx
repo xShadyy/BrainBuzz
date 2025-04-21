@@ -44,6 +44,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
   // Initialize sound manager when component mounts
   useEffect(() => {
     SoundManager.init();
+    console.log('LoginScreen mounted, SoundManager initialized');
 
     return () => {
       // Cleanup if needed
@@ -74,6 +75,8 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
   };
 
   const handleLogin = async () => {
+    console.log('Login button pressed with email:', email);
+
     // Clear any previous errors
     setError('');
 
@@ -90,18 +93,41 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
 
     try {
       setIsLoading(true);
+      console.log('Attempting to log in with:', email);
+
+      // For testing - create a test user if none exists
+      try {
+        const users = await db.getUsers();
+        console.log('Current users in database:', users);
+        if (!users || users.length === 0) {
+          console.log('No users found, creating test user');
+          await db.registerUser('Test User', 'test@example.com', 'password');
+          console.log('Test user created');
+        }
+      } catch (err) {
+        console.log('Error checking users:', err);
+      }
+
       const user = await db.loginUser(email, password);
+      console.log('Login result:', user);
+
       if (user && user.id) {
+        console.log('Login successful for user ID:', user.id);
         setSuccessUserId(user.id);
         // Play sound first then show animation
         SoundManager.playLoginSuccess();
+        console.log('Login success sound played');
+
         setTimeout(() => {
           setShowSuccessAnimation(true);
+          console.log('Success animation shown');
         }, 100);
       } else {
+        console.log('Login failed: User object invalid');
         setError('Login failed');
       }
     } catch (err: any) {
+      console.error('Login error:', err);
       setError(err.message || 'Login failed. Please try again.');
     } finally {
       setIsLoading(false);
@@ -162,9 +188,13 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
   };
 
   const handleAnimationFinish = () => {
+    console.log('Success animation finished, userId:', successUserId);
     if (successUserId && onLoginSuccess) {
+      console.log('Calling onLoginSuccess with userId:', successUserId);
       onLoginSuccess(successUserId);
       setShowSuccessAnimation(false);
+    } else {
+      console.warn('Cannot complete login: successUserId or onLoginSuccess is missing');
     }
   };
 

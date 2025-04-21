@@ -1,7 +1,7 @@
 import { AppState, AppStateStatus, NativeModules } from 'react-native';
 const Sound = require('react-native-sound');
 
-const ambientSource = require('../assets/sounds/ambient.mp3');
+// Removed ambient source import
 const interactionSource = require('../assets/sounds/interaction.mp3');
 const zap1Source = require('../assets/sounds/zap1.mp3');
 const zap2Source = require('../assets/sounds/zap2.mp3');
@@ -25,7 +25,7 @@ const AudioFocusModule =
   };
 
 class SoundManager {
-  private static ambient: any = null;
+  // Removed ambient related properties
   private static interaction: any = null;
   private static zap1: any = null;
   private static zap2: any = null;
@@ -34,12 +34,11 @@ class SoundManager {
   private static currentAppState: AppStateStatus = AppState.currentState;
   private static isInitialized: boolean = false;
   private static hasAudioFocus: boolean = false;
-  private static fadeInterval: number | null = null;
 
   static async init() {
     if (this.isInitialized) {return;}
 
-    Sound.setCategory('Ambient', false);
+    Sound.setCategory('SoundEffect', false);
 
     // Always request Android audio focus
     try {
@@ -50,23 +49,6 @@ class SoundManager {
     } catch (error) {
       console.warn('SoundManager: Error requesting audio focus', error);
       this.hasAudioFocus = false;
-    }
-
-    // Ambient looped background
-    if (!this.ambient) {
-      this.ambient = new Sound(ambientSource, (err: any) => {
-        if (err) {
-          console.warn('SoundManager: ambient load failed', err);
-          return;
-        }
-        this.ambient.setNumberOfLoops(-1);
-        this.ambient.setVolume(0.7);
-        if (this.hasAudioFocus) {
-          this.ambient.play((success: boolean) => {
-            if (!success) {console.warn('SoundManager: ambient playback error');}
-          });
-        }
-      });
     }
 
     // One‑shot effects
@@ -104,9 +86,6 @@ class SoundManager {
       AudioFocusModule.requestAudioFocus()
         .then((granted: boolean) => {
           this.hasAudioFocus = granted;
-          if (granted && this.ambient && !this.ambient.isPlaying()) {
-            this.ambient.play();
-          }
         })
         .catch((err: any) => {
           console.warn('SoundManager: Error requesting audio focus', err);
@@ -120,18 +99,11 @@ class SoundManager {
         this.hasAudioFocus = false;
       }
 
-      // Make sure to stop (not just pause) ambient sound in background
-      this.ambient?.stop();
+      // Stop all sound effects in background
       if (this.interaction?.isPlaying()) {this.interaction.stop();}
       if (this.zap1?.isPlaying()) {this.zap1.stop();}
       if (this.zap2?.isPlaying()) {this.zap2.stop();}
       if (this.loginSuccess?.isPlaying()) {this.loginSuccess.stop();}
-
-      // Clear any active fade intervals
-      if (this.fadeInterval) {
-        clearInterval(this.fadeInterval);
-        this.fadeInterval = null;
-      }
     }
 
     this.currentAppState = nextAppState;
@@ -173,46 +145,7 @@ class SoundManager {
     }
   }
 
-  static fadeOutAmbient(duration: number = 2000, callback?: () => void) {
-    if (!this.ambient || !this.hasAudioFocus) {
-      if (callback) {callback();}
-      return;
-    }
-
-    // Clear any existing fade intervals
-    if (this.fadeInterval) {
-      clearInterval(this.fadeInterval);
-    }
-
-    // Get current volume
-    this.ambient.getVolume((currentVolume: number) => {
-      const startVolume = currentVolume;
-      const steps = 20; // Number of volume steps
-      const stepDuration = duration / steps;
-      const volumeStep = startVolume / steps;
-      let currentStep = 0;
-
-      this.fadeInterval = setInterval(() => {
-        currentStep++;
-        const newVolume = startVolume - (volumeStep * currentStep);
-
-        if (currentStep >= steps || newVolume <= 0) {
-          // End of fade out
-          this.ambient?.setVolume(0);
-          clearInterval(this.fadeInterval as number);
-          this.fadeInterval = null;
-
-          // Stop the sound when completely faded out
-          this.ambient?.stop();
-
-          if (callback) {callback();}
-        } else {
-          // Continue fading
-          this.ambient?.setVolume(newVolume);
-        }
-      }, stepDuration);
-    });
-  }
+  // Removed stopAmbient and fadeOutAmbient methods
 
   static release() {
     this.appStateSubscription?.remove();
@@ -224,15 +157,6 @@ class SoundManager {
       });
       this.hasAudioFocus = false;
     }
-
-    // Clear any active fade intervals
-    if (this.fadeInterval) {
-      clearInterval(this.fadeInterval);
-      this.fadeInterval = null;
-    }
-
-    this.ambient?.stop(() => this.ambient?.release());
-    this.ambient = null;
 
     this.interaction?.release();
     this.interaction = null;

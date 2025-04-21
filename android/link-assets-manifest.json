@@ -110,16 +110,68 @@
       "sha1": "04f69417392da5f6f831fd89e6ff5698323fdecb"
     },
     {
-      "path": "src/assets/images/texture.jpg",
-      "sha1": "48d815d1595697534d1ea93313a970bea6a9a945"
+      "path": "src/assets/fonts/Supercharge-JRgPo.otf",
+      "sha1": "c5f86345c5c5111eacd52ea6cb6c8bc2573f8301"
     },
     {
-      "path": "src/assets/sound/ambient.mp3",
-      "sha1": "f06ea0f597b98aaeccec50077a9af5f16d9f52c4"
+      "path": "src/assets/fonts/Supercharge3D-GO79P.otf",
+      "sha1": "921e7964abc11a6b9b7c01180a1c30788fe7e13b"
     },
     {
-      "path": "src/assets/sound/zap.mp3",
-      "sha1": "ee0f0bda8b0a75b42427ccb9d9a2cc15bca33fe9"
+      "path": "src/assets/fonts/SuperchargeCondensed-jE5KO.otf",
+      "sha1": "d5e0fbc54d3d5e6de8940ad23154f624e55f79ba"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeExpanded-z83aw.otf",
+      "sha1": "4e85deb3ec193d6f12819122d1053a1ee8a81628"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeGradient-51oqZ.otf",
+      "sha1": "b52d8d62c7b615cd1af74c58992730fd4fcf1c32"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeHalftone-6Y0Vq.otf",
+      "sha1": "140050b59682d36fa0cd62c3b2fa043ee60b57e3"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeItalic-ywOWd.otf",
+      "sha1": "f41374ceb230401ff54e105c5d023f36c19640c9"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeLaser-9YZjj.otf",
+      "sha1": "4ced854cb78de11c873704bae961a103a05b8fbe"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeSemiStraight-lgnvD.otf",
+      "sha1": "7e88242684fe35f584e367f493129ff12b51d5ff"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeStraight-nR87V.otf",
+      "sha1": "a5681e0fc75bcce15855daa5bae4251bedfedbdc"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeStraight3D-1Gwx0.otf",
+      "sha1": "d4792dd192ffafb2bc061a54e89fd418d43e942e"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeStraightCondensed-RpVWV.otf",
+      "sha1": "c4f88f73e6b87efcd17cf8e17b14558969a69a27"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeStraightExpanded-BWRxB.otf",
+      "sha1": "a4765f04836bc0770032e7fd635853068f722819"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeStraightGradient-8MEoM.otf",
+      "sha1": "6a9b6f749a5df79fe6925b088e6bc3bf73237db7"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeStraightHalftone-YzY7q.otf",
+      "sha1": "773a73a76783c8b184022fa6e2d72cc86fe5c702"
+    },
+    {
+      "path": "src/assets/fonts/SuperchargeStraightLaser-rg7jx.otf",
+      "sha1": "c44ae78e9a62699e7abd3977ebf026397dea5ee3"
     }
   ]
 }
