@@ -23,6 +23,8 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onFinish }) => {
   const enterButtonTranslate = useRef(new Animated.Value(20)).current;
 
   useEffect(() => {
+
+
     SoundManager.init();
 
     const timers: ReturnType<typeof setTimeout>[] = [];

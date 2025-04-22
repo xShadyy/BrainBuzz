@@ -1,4 +1,4 @@
-import {StyleSheet, Dimensions, StatusBar} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
 // Get the full screen dimensions including status bar area
 const {width, height} = Dimensions.get('screen');
@@ -6,9 +6,12 @@ const {width, height} = Dimensions.get('screen');
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // No fixed background color - let animation be the background
+    backgroundColor: 'black', // Fallback background color
     width: width,
     height: height,
+    // Ensure content extends to the top of the screen
+    paddingTop: 0,
+    marginTop: 0,
   },
   backgroundAnimation: {
     position: 'absolute',
@@ -32,8 +35,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    // Account for the status bar height
-    paddingTop: StatusBar.currentHeight || 20,
+    // Remove paddingTop that may create a gap at the top
+    paddingTop: 20,
   },
   formContainer: {
     width: width * 0.85,

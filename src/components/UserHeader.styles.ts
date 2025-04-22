@@ -1,12 +1,19 @@
-import { StyleSheet, StatusBar } from 'react-native';
+import { StyleSheet, StatusBar, Platform } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#3C67B1',
-    paddingTop: StatusBar.currentHeight || 0,
+    backgroundColor: '#0A0A6E',
+    // Position at the top of the screen
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 10,
+    // Calculate padding based on platform
+    paddingTop: Platform.OS === 'ios' ? 44 : StatusBar.currentHeight || 0,
     paddingBottom: 10,
-    elevation: 4,
-    shadowColor: '#000',
+    elevation: 4, // Android elevation for shadow
+    shadowColor: '#000', // iOS shadow properties
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 3,
@@ -54,7 +61,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   xpBarBackground: {
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
+    backgroundColor: 'rgba(12, 12, 12, 0.3)',
     height: 8,
     borderRadius: 4,
     overflow: 'hidden',
@@ -88,3 +95,14 @@ export const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
 });
+
+// Export a function to set status bar color
+export const configureStatusBar = () => {
+  StatusBar.setBackgroundColor('#0A0A6E');
+  StatusBar.setBarStyle('light-content');
+
+  // For iOS, we need to ensure the app has a translucent status bar
+  if (Platform.OS === 'ios') {
+    StatusBar.setTranslucent(true);
+  }
+};

@@ -3,7 +3,6 @@ import {
   View,
   Text,
   ScrollView,
-  StatusBar,
   Alert,
   BackHandler,
 } from 'react-native';
@@ -11,6 +10,7 @@ import { styles } from './DashboardScreen.styles.ts';
 import LottieView from 'lottie-react-native';
 import { db } from '../database';
 import { UserHeader } from '../components/UserHeader';
+import SoundManager from '../utils/SoundManager';
 
 interface DashboardScreenProps {
   userId: number;
@@ -56,6 +56,8 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
       }
     );
 
+    SoundManager.disableAmbient();
+
     return () => backHandler.remove();
   }, [userId, onLogout]);
 
@@ -93,7 +95,6 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="#3C67B1" />
 
       {/* Background */}
       <View style={styles.backgroundContainer} />

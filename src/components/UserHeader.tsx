@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   View,
   Text,
@@ -6,13 +6,12 @@ import {
 } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import SoundManager from '../utils/SoundManager';
-import { styles } from './UserHeader.styles';
+import { styles, configureStatusBar } from './UserHeader.styles';
 
 interface UserHeaderProps {
   username: string;
   onLogout: () => void;
   onSettings: () => void;
-  // These will be implemented later
   level?: number;
   xpCurrent?: number;
   xpRequired?: number;
@@ -28,6 +27,14 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
 }) => {
   // Calculate XP percentage for the progress bar
   const xpPercentage = Math.min(100, Math.max(0, (xpCurrent / xpRequired) * 100));
+
+  // Configure status bar to match header color
+  useEffect(() => {
+    configureStatusBar();
+    return () => {
+      // Reset status bar if needed when component unmounts
+    };
+  }, []);
 
   const handleSettingsPress = () => {
     SoundManager.playInteraction();

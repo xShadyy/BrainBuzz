@@ -8,6 +8,9 @@ export const styles = StyleSheet.create({
     backgroundColor: 'black',
     width: width,
     height: height,
+    // Add properties to ensure content goes to the very top of the screen
+    paddingTop: 0,
+    marginTop: 0,
   },
   backgroundAnimation: {
     position: 'absolute',

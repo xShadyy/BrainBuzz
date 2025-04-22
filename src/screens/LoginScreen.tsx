@@ -11,6 +11,7 @@ import {
   Alert,
   Animated,
   Modal,
+  StatusBar, // Added StatusBar import
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 import {styles} from './LoginScreen.styles.ts';
@@ -45,6 +46,13 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
   useEffect(() => {
     SoundManager.init();
     console.log('LoginScreen mounted, SoundManager initialized');
+
+    // Configure status bar for initial state - transparent with light content
+    StatusBar.setBarStyle('light-content');
+    if (Platform.OS === 'android') {
+      StatusBar.setTranslucent(true);
+      StatusBar.setBackgroundColor('transparent');
+    }
 
     return () => {
       // Cleanup if needed
@@ -309,6 +317,22 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
         transparent={true}
         visible={showSuccessAnimation}
         animationType="fade"
+        onShow={() => {
+          // When animation modal shows, update status bar to match animation background
+          StatusBar.setBarStyle('light-content');
+          if (Platform.OS === 'android') {
+            StatusBar.setTranslucent(false);
+            StatusBar.setBackgroundColor('#0A0A3C'); // Match animation background
+          }
+        }}
+        onDismiss={() => {
+          // Restore status bar settings when modal is dismissed
+          StatusBar.setBarStyle('light-content');
+          if (Platform.OS === 'android') {
+            StatusBar.setTranslucent(true);
+            StatusBar.setBackgroundColor('transparent');
+          }
+        }}
       >
         <View style={styles.successAnimationContainer}>
           <View style={styles.successAnimationWrapper}>
