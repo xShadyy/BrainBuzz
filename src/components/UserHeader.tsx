@@ -1,18 +1,15 @@
-import React, { useEffect } from 'react';
-import {
-  View,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+/* eslint-disable react-native/no-inline-styles */
+import React, {useEffect} from 'react';
+import {View, Text, TouchableOpacity} from 'react-native';
 import SoundManager from '../utils/SoundManager';
-import { styles, configureStatusBar } from './UserHeader.styles';
+import {styles, configureStatusBar} from './UserHeader.styles';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import LottieView from 'lottie-react-native';
 
 interface UserHeaderProps {
   username: string;
   onLogout: () => void;
   onSettings: () => void;
-  level?: number;
   xpCurrent?: number;
   xpRequired?: number;
 }
@@ -21,16 +18,21 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
   username,
   onLogout,
   onSettings,
-  level = 1,
   xpCurrent = 50,
   xpRequired = 100,
 }) => {
   // Calculate XP percentage for the progress bar
-  const xpPercentage = Math.min(100, Math.max(0, (xpCurrent / xpRequired) * 100));
+  const xpPercentage = Math.min(
+    100,
+    Math.max(0, (xpCurrent / xpRequired) * 100),
+  );
 
   // Configure status bar to match header color
   useEffect(() => {
     configureStatusBar();
+    // Ensure ambient sound is playing when component mounts
+    SoundManager.init().then(() => SoundManager.playAmbient());
+
     return () => {
       // Reset status bar if needed when component unmounts
     };
@@ -49,47 +51,52 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
   return (
     <View style={styles.container}>
       <View style={styles.headerContent}>
-        {/* User info section */}
         <View style={styles.userInfoContainer}>
-          <Text style={styles.username}>{username.toUpperCase()}</Text>
+          {/* Top row with username and action icons */}
+          <View style={styles.topRow}>
+            <View style={styles.usernameContainer}>
+              <Text
+                style={[styles.username, {opacity: 1}]}
+                numberOfLines={1}
+                ellipsizeMode="tail">
+                {username ? username.toUpperCase() : 'USER'}
+              </Text>
+            </View>
+            <View style={styles.actionsContainer}>
+              <TouchableOpacity
+                onPress={handleSettingsPress}
+                style={{marginRight: 16, padding: 5}}>
+                <MaterialIcons name="settings" size={24} color="#FFFFFF" />
+              </TouchableOpacity>
+              <TouchableOpacity
+                onPress={handleLogoutPress}
+                style={{padding: 5}}>
+                <MaterialIcons name="logout" size={24} color="#FFFFFF" />
+              </TouchableOpacity>
+            </View>
+          </View>
 
           <View style={styles.levelContainer}>
-            <View style={styles.levelBadge}>
-              <Text style={styles.levelText}>{level}</Text>
+            <View style={styles.levelEffect}>
+              <LottieView
+                source={require('../assets/animations/fire_light_red.json')}
+                autoPlay
+                loop
+                style={{
+                  width: 48,
+                  height: 48,
+                }}
+              />
             </View>
             <View style={styles.xpContainer}>
               <View style={styles.xpBarBackground}>
-                <View
-                  style={[
-                    styles.xpBarFill,
-                    { width: `${xpPercentage}%` },
-                  ]}
-                />
+                <View style={[styles.xpBarFill, {width: `${xpPercentage}%`}]} />
               </View>
-              <Text style={styles.xpText}>{xpCurrent}/{xpRequired} XP</Text>
+              <Text style={styles.xpText}>
+                {xpCurrent}/{xpRequired} XP
+              </Text>
             </View>
           </View>
-        </View>
-
-        {/* Actions section */}
-        <View style={styles.actionsContainer}>
-          <TouchableOpacity
-            style={styles.iconButton}
-            onPress={handleSettingsPress}
-            activeOpacity={0.7}
-            testID="settingsButton"
-          >
-            <MaterialIcons name="settings" size={24} color="#FFFFFF" />
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={styles.iconButton}
-            onPress={handleLogoutPress}
-            activeOpacity={0.7}
-            testID="logoutButton"
-          >
-            <MaterialIcons name="logout" size={24} color="#FFFFFF" />
-          </TouchableOpacity>
         </View>
       </View>
     </View>

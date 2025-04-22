@@ -1,8 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
-import React, { useEffect, useRef, useState } from 'react';
-import { View, LogBox, Animated, Text, TouchableOpacity } from 'react-native';
+import React, {useEffect, useRef, useState} from 'react';
+import {
+  View,
+  LogBox,
+  Animated,
+  Text,
+  TouchableOpacity,
+  StatusBar,
+} from 'react-native';
 import LottieView from 'lottie-react-native';
-import { styles } from './WelcomeScreen.styles';
+import {styles} from './WelcomeScreen.styles';
 import SoundManager from '../utils/SoundManager';
 
 LogBox.ignoreLogs(['ViewPropTypes will be removed']);
@@ -11,7 +19,7 @@ interface WelcomeScreenProps {
   onFinish?: () => void;
 }
 
-export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onFinish }) => {
+export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({onFinish}) => {
   const [showLightning, setShowLightning] = useState(false);
   const [showText, setShowText] = useState(false);
   const [showEnterButton, setShowEnterButton] = useState(false);
@@ -21,81 +29,83 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onFinish }) => {
   const enterButtonOpacity = useRef(new Animated.Value(0)).current;
   const enterButtonScale = useRef(new Animated.Value(0.8)).current;
   const enterButtonTranslate = useRef(new Animated.Value(20)).current;
+  const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
+    const initializeApp = async () => {
+      try {
+        await SoundManager.init();
+        SoundManager.playAmbient();
 
+        timers.current.push(setTimeout(() => setShowLightning(true), 1000));
+        timers.current.push(
+          setTimeout(() => {
+            SoundManager.playZap1();
+            lightningRef.current?.play();
+          }, 1100),
+        );
+        timers.current.push(
+          setTimeout(() => {
+            setShowText(true);
+            Animated.timing(textOpacity, {
+              toValue: 1,
+              duration: 1500,
+              useNativeDriver: true,
+            }).start();
+          }, 1200),
+        );
 
-    SoundManager.init();
+        timers.current.push(
+          setTimeout(() => {
+            SoundManager.playZap2();
+          }, 2200),
+        );
 
-    const timers: ReturnType<typeof setTimeout>[] = [];
+        timers.current.push(
+          setTimeout(() => {
+            setShowEnterButton(true);
+            Animated.parallel([
+              Animated.timing(enterButtonOpacity, {
+                toValue: 1,
+                duration: 800,
+                useNativeDriver: true,
+              }),
+              Animated.spring(enterButtonScale, {
+                toValue: 1,
+                friction: 8,
+                tension: 40,
+                useNativeDriver: true,
+              }),
+              Animated.timing(enterButtonTranslate, {
+                toValue: 0,
+                duration: 800,
+                useNativeDriver: true,
+              }),
+            ]).start();
+          }, 2900),
+        ); // 1200 + 1500 + 200 = 2900ms
+      } catch (error) {
+        console.error('Initialization error:', error);
+      }
+    };
 
-    timers.push(setTimeout(() => setShowLightning(true), 1000));
-    timers.push(
-      setTimeout(() => {
-        SoundManager.playZap1();
-        lightningRef.current?.play();
-      }, 1100)
-    );
-    timers.push(setTimeout(() => {
-      setShowText(true);
-      Animated.timing(textOpacity, {
-        toValue: 1,
-        duration: 1500,
-        useNativeDriver: true,
-      }).start();
-    }, 1200));
-
-    timers.push(setTimeout(() => {
-      SoundManager.playZap2();
-    }, 2200));
-
-    timers.push(setTimeout(() => {
-      setShowEnterButton(true);
-      Animated.parallel([
-        Animated.timing(enterButtonOpacity, {
-          toValue: 1,
-          duration: 800,
-          useNativeDriver: true,
-        }),
-        Animated.spring(enterButtonScale, {
-          toValue: 1,
-          friction: 8,
-          tension: 40,
-          useNativeDriver: true,
-        }),
-        Animated.timing(enterButtonTranslate, {
-          toValue: 0,
-          duration: 800,
-          useNativeDriver: true,
-        }),
-      ]).start();
-    }, 1200 + 1500 + 2000));
-
-    if (!frozen) {
-      timers.push(
-        setTimeout(() => {
-          Animated.timing(textOpacity, {
-            toValue: 0,
-            duration: 1000,
-            useNativeDriver: true,
-          }).start(() => {
-            if (onFinish) {
-              onFinish();
-            }
-          });
-        }, 4000)
-      );
-    }
+    initializeApp();
 
     return () => {
-      timers.forEach(clearTimeout);
-      SoundManager.release();
+      // Clear timers but DON'T release SoundManager
+      timers.current.forEach(clearTimeout);
     };
-  }, [onFinish, textOpacity, frozen, enterButtonOpacity, enterButtonScale, enterButtonTranslate]);
+  }, [
+    onFinish,
+    textOpacity,
+    frozen,
+    enterButtonOpacity,
+    enterButtonScale,
+    enterButtonTranslate,
+  ]);
 
   const handleEnterPress = () => {
     SoundManager.playInteraction();
-    // Removed fadeOutAmbient call
 
     Animated.sequence([
       Animated.timing(enterButtonScale, {
@@ -125,15 +135,12 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onFinish }) => {
           useNativeDriver: true,
         }),
       ]),
-    ]).start(() => {
-      if (onFinish) {
-        onFinish();
-      }
-    });
+    ]).start(() => onFinish?.());
   };
 
   return (
     <View style={styles.container}>
+      <StatusBar backgroundColor="transparent" translucent />
       <LottieView
         source={require('../assets/animations/background.json')}
         autoPlay
@@ -164,12 +171,19 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onFinish }) => {
               zIndex: 2,
               opacity: textOpacity,
             },
-          ]}
-        >
-          <View style={styles.titleContainer}>
-            <Text style={[styles.brainTextStyle, { color: '#FFEB74' }]}>BRAIN</Text>
-            <Text style={[styles.buzzTextStyle, { color: '#FFFFFF' }]}>BUZZ</Text>
-          </View>
+          ]}>
+          <Text style={styles.titleContainer}>
+            <Text style={{color: '#FFEB74', fontFamily: 'Supercharge-JRgPo'}}>
+              BRAIN
+            </Text>
+            <Text style={{color: '#FFFFFF', fontFamily: 'Supercharge-JRgPo'}}>
+              BUZZ
+            </Text>
+            <Text
+              style={{color: 'transparent', fontFamily: 'Supercharge-JRgPo'}}>
+              _
+            </Text>
+          </Text>
         </Animated.View>
       )}
 
@@ -180,18 +194,16 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ onFinish }) => {
             {
               opacity: enterButtonOpacity,
               transform: [
-                { scale: enterButtonScale },
-                { translateY: enterButtonTranslate },
+                {scale: enterButtonScale},
+                {translateY: enterButtonTranslate},
               ],
             },
-          ]}
-        >
+          ]}>
           <View style={styles.cornerTL} />
           <TouchableOpacity
             onPress={handleEnterPress}
             style={styles.enterButton}
-            activeOpacity={0.8}
-          >
+            activeOpacity={0.8}>
             <Text style={styles.enterButtonText}>ENTER</Text>
           </TouchableOpacity>
           <View style={styles.cornerBR} />

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { NativeModules } from 'react-native';
-import { User, DatabaseModule } from './types';
+import {NativeModules} from 'react-native';
+import {User, DatabaseModule} from './types';
 
-const { DatabaseModule: NativeDatabaseModule } = NativeModules;
+const {DatabaseModule: NativeDatabaseModule} = NativeModules;
 
 class Database {
   /**
@@ -12,9 +12,13 @@ class Database {
    * @param password User's password
    * @returns Promise resolving to the new user ID
    */
-  async addUser(name: string, email: string, password?: string): Promise<number> {
+  async addUser(
+    name: string,
+    email: string,
+    password?: string,
+  ): Promise<number> {
     try {
-      return await NativeDatabaseModule.addUser({ name, email, password });
+      return await NativeDatabaseModule.addUser({name, email, password});
     } catch (error) {
       console.error('Error adding user:', error);
       throw error;
@@ -28,9 +32,13 @@ class Database {
    * @param password User's password
    * @returns Promise resolving to the newly created user
    */
-  async registerUser(name: string, email: string, password: string): Promise<User> {
+  async registerUser(
+    name: string,
+    email: string,
+    password: string,
+  ): Promise<User> {
     try {
-      return await NativeDatabaseModule.registerUser({ name, email, password });
+      return await NativeDatabaseModule.registerUser({name, email, password});
     } catch (error) {
       console.error('Error registering user:', error);
       throw error;

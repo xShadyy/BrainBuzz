@@ -1,6 +1,6 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
-const { height, width } = Dimensions.get('screen');
+const {height, width} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
   container: {
@@ -22,6 +22,7 @@ export const styles = StyleSheet.create({
     bottom: 0,
   },
   textContainer: {
+    overflow: 'visible',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
@@ -31,33 +32,15 @@ export const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     zIndex: 2,
+    width: width,
+    paddingHorizontal: 10, // Add horizontal padding
   },
   titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  brainTextStyle: {
-    fontSize: 50,
     fontFamily: 'Supercharge-JRgPo',
-    color: '#FFEB74',
-    textShadowColor: 'rgba(0, 0, 0, 1)',
-    textShadowOffset: { width: 0, height: 1 },
-    textShadowRadius: 10,
-    letterSpacing: 2,
+    fontSize: 46,
+    letterSpacing: 1,
     textAlign: 'center',
-    marginRight: -8,
-  },
-  buzzTextStyle: {
-    fontSize: 50,
-    fontFamily: 'Supercharge-JRgPo',
-    color: '#FFFFFF',
-    textShadowColor: 'rgba(0, 0, 0, 1)',
-    textShadowOffset: { width: 0, height: 1 },
-    textShadowRadius: 10,
-    letterSpacing: 3,
-    marginLeft: 8,
-    textAlign: 'center',
+    overflow: 'visible',
   },
   lightningContainer: {
     width: width,

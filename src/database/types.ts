@@ -15,6 +15,10 @@ export interface DatabaseModule {
   deleteAllUsers(): Promise<boolean>;
 
   // Authentication methods
-  registerUser(user: { name: string; email: string; password: string }): Promise<User>;
+  registerUser(user: {
+    name: string;
+    email: string;
+    password: string;
+  }): Promise<User>;
   loginUser(email: string, password: string): Promise<User>;
 }

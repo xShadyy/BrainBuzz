@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -6,7 +7,7 @@
  */
 
 import React, {useState, useEffect} from 'react';
-import {StatusBar} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import {WelcomeScreen} from './src/screens/WelcomeScreen';
 import {LoginScreen} from './src/screens/LoginScreen';
 import {DashboardScreen} from './src/screens/DashboardScreen';
@@ -16,39 +17,23 @@ function App(): React.JSX.Element {
   const [showWelcome, setShowWelcome] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userId, setUserId] = useState<number | null>(null);
-  // Add state for StatusBar styling
-  const [statusBarStyle, setStatusBarStyle] = useState<'light-content' | 'dark-content'>('light-content');
-  const [statusBarBgColor, setStatusBarBgColor] = useState('transparent');
-  const [statusBarTranslucent, setStatusBarTranslucent] = useState(true);
 
   useEffect(() => {
     console.log('App mounted, initializing ambient sound');
 
-    // Set appropriate StatusBar configuration based on current screen
-    if (showWelcome) {
-      // WelcomeScreen status bar settings
-      setStatusBarStyle('light-content');
-      setStatusBarBgColor('transparent');
-      setStatusBarTranslucent(true);
-    } else if (isLoggedIn) {
-      // DashboardScreen status bar settings
-      setStatusBarStyle('light-content');
-      setStatusBarBgColor('#3C67B1');
-      setStatusBarTranslucent(false);
-    } else {
-      // LoginScreen status bar settings
-      setStatusBarStyle('light-content');
-      setStatusBarBgColor('transparent');
-      setStatusBarTranslucent(true);
+    {
+      SoundManager.init().then(() => {
+        // Start playing ambient music if not logged in
+        if (!isLoggedIn) {
+          SoundManager.playAmbient();
+        } else {
+          // Make sure ambient is stopped when going directly to dashboard
+          SoundManager.fadeOutAmbient();
+        }
+      });
     }
 
-    const timeoutId = setTimeout(() => {
-      // Initialize sound manager
-      SoundManager.init();
-    }, 500);
-
     return () => {
-      clearTimeout(timeoutId);
       console.log('App unmounted, stopping all sounds');
       SoundManager.release();
     };
@@ -57,31 +42,29 @@ function App(): React.JSX.Element {
   // This function is called when WelcomeScreen's transition animation completes
   const handleWelcomeFinish = () => {
     // Immediately switch to login screen without a fade animation
-    // The transition animation from WelcomeScreen will continue into LoginScreen
     setShowWelcome(false);
   };
 
   // Handle successful login
   const handleLoginSuccess = (loggedInUserId: number) => {
+    // Play login success sound which fades out ambient
+    SoundManager.playLoginSuccess();
+
     setUserId(loggedInUserId);
     setIsLoggedIn(true);
   };
 
   // Handle logout
   const handleLogout = () => {
+    // Restart ambient music when logging out
+    SoundManager.playAmbient();
+
     setUserId(null);
     setIsLoggedIn(false);
   };
 
   return (
-    <>
-      {/* Dynamic StatusBar that adapts to each screen */}
-      <StatusBar
-        barStyle={statusBarStyle}
-        backgroundColor={statusBarBgColor}
-        translucent={statusBarTranslucent}
-      />
-
+    <View style={styles.container}>
       {showWelcome ? (
         <WelcomeScreen onFinish={handleWelcomeFinish} />
       ) : isLoggedIn && userId ? (
@@ -89,8 +72,14 @@ function App(): React.JSX.Element {
       ) : (
         <LoginScreen onLoginSuccess={handleLoginSuccess} />
       )}
-    </>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
 
 export default App;

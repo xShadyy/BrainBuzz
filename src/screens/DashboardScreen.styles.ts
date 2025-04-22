@@ -1,24 +1,16 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import {StyleSheet} from 'react-native';
 
-// Get the full screen dimensions including status bar area
-const { width, height } = Dimensions.get('screen');
+export const HEADER_HEIGHT = 120;
+export const FOOTER_HEIGHT = 40;
+export const ICON_SIZE = 46;
+export const GRID_GAP = 15;
+export const PADDING = 20;
 
 export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    width: width,
-    height: height,
-  },
+  container: {flex: 1},
   backgroundContainer: {
-    position: 'absolute',
-    width: width,
-    height: height,
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    zIndex: 1,
-    backgroundColor: '#E8EFF5',
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: '#282828',
   },
   loadingContainer: {
     flex: 1,
@@ -37,67 +29,51 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
-  // Updated dashboard layout without side menu
-  dashboardLayout: {
-    flex: 1,
-    flexDirection: 'column',
-    zIndex: 2,
-    height: '100%',
-  },
-  // Main content container, now takes full width
-  mainContent: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    height: '100%',
-  },
-  // Showing content now
+  dashboardLayout: {flex: 1},
   scrollView: {
-    flex: 1,
+    position: 'absolute',
+    top: HEADER_HEIGHT,
+    bottom: FOOTER_HEIGHT,
+    left: 0,
+    right: 0,
   },
-  contentContainer: {
-    padding: 20,
-    paddingBottom: 40,
+  contentContainer: {padding: PADDING},
+  gridRow: {
+    justifyContent: 'space-between',
+    marginBottom: GRID_GAP,
   },
-  dashboardSection: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 20,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
-  },
-  sectionTitle: {
-    fontSize: 18,
-    fontFamily: 'Lexend-Bold',
-    color: '#3A4A5D',
-    marginBottom: 12,
-  },
-  sectionContent: {
-    minHeight: 100,
+  gridItem: {
+    width: '48%',
+    aspectRatio: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 8,
   },
-  emptyStateText: {
-    color: '#8897A8',
-    fontFamily: 'Lexend-Regular',
-    fontSize: 14,
+  iconContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  categoryText: {
+    marginTop: 10,
+    fontFamily: 'Lexend-Medium',
+    fontSize: 16,
     textAlign: 'center',
+    color: '#FFFFFF',
   },
   footer: {
-    padding: 16,
+    position: 'absolute',
+    bottom: 0,
+    height: FOOTER_HEIGHT,
+    width: '100%',
+    backgroundColor: '#2B2B2B',
     alignItems: 'center',
+    justifyContent: 'center',
     borderTopWidth: 1,
-    borderTopColor: '#E0E0E0',
+    borderTopColor: '#FFC800',
   },
   footerText: {
-    color: '#8897A8',
     fontFamily: 'Lexend-Regular',
     fontSize: 12,
+    color: '#FFFFFF',
   },
 });

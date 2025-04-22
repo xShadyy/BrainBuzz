@@ -13,6 +13,13 @@ export const styles = StyleSheet.create({
     paddingTop: 0,
     marginTop: 0,
   },
+  passwordWrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderColor: '#AAA',
+  },
+
   backgroundAnimation: {
     position: 'absolute',
     width: width,

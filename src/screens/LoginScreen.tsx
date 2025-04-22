@@ -1,67 +1,49 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   View,
   TextInput,
   TouchableOpacity,
   Text,
   KeyboardAvoidingView,
-  Platform,
   ScrollView,
   ActivityIndicator,
   Alert,
   Animated,
   Modal,
-  StatusBar, // Added StatusBar import
+  StatusBar,
 } from 'react-native';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import LottieView from 'lottie-react-native';
-import {styles} from './LoginScreen.styles.ts';
-import {db} from '../database';
+import { styles } from './LoginScreen.styles.ts';
+import { db } from '../database';
 import SoundManager from '../utils/SoundManager';
 
 interface LoginScreenProps {
   onLoginSuccess?: (userId: number) => void;
 }
 
-export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
-  // States for login
+export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  // Additional states for registration
   const [name, setName] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isRegistering, setIsRegistering] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-
-  // State for success animation
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const successAnimationRef = useRef<LottieView>(null);
   const [successUserId, setSuccessUserId] = useState<number | null>(null);
-
-  // Form opacity animation
   const formOpacity = useRef(new Animated.Value(0)).current;
 
-  // Initialize sound manager when component mounts
   useEffect(() => {
     SoundManager.init();
-    console.log('LoginScreen mounted, SoundManager initialized');
-
-    // Configure status bar for initial state - transparent with light content
     StatusBar.setBarStyle('light-content');
-    if (Platform.OS === 'android') {
-      StatusBar.setTranslucent(true);
-      StatusBar.setBackgroundColor('transparent');
-    }
-
-    return () => {
-      // Cleanup if needed
-    };
+    StatusBar.setTranslucent(true);
+    StatusBar.setBackgroundColor('transparent');
   }, []);
 
-  // Fade in the form content immediately
   useEffect(() => {
-    // Fade in the form right away
     Animated.timing(formOpacity, {
       toValue: 1,
       duration: 800,
@@ -83,12 +65,8 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
   };
 
   const handleLogin = async () => {
-    console.log('Login button pressed with email:', email);
-
-    // Clear any previous errors
     setError('');
 
-    // Basic validation
     if (!email || !password) {
       setError('Please fill in all fields');
       return;
@@ -101,52 +79,27 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
 
     try {
       setIsLoading(true);
-      console.log('Attempting to log in with:', email);
-
-      // For testing - create a test user if none exists
-      try {
-        const users = await db.getUsers();
-        console.log('Current users in database:', users);
-        if (!users || users.length === 0) {
-          console.log('No users found, creating test user');
-          await db.registerUser('Test User', 'test@example.com', 'password');
-          console.log('Test user created');
-        }
-      } catch (err) {
-        console.log('Error checking users:', err);
-      }
-
       const user = await db.loginUser(email, password);
-      console.log('Login result:', user);
-
       if (user && user.id) {
-        console.log('Login successful for user ID:', user.id);
+        setError('');
         setSuccessUserId(user.id);
-        // Play sound first then show animation
         SoundManager.playLoginSuccess();
-        console.log('Login success sound played');
-
-        setTimeout(() => {
-          setShowSuccessAnimation(true);
-          console.log('Success animation shown');
-        }, 100);
+        setTimeout(() => setShowSuccessAnimation(true), 100);
       } else {
-        console.log('Login failed: User object invalid');
         setError('Login failed');
       }
     } catch (err: any) {
-      console.error('Login error:', err);
       setError(err.message || 'Login failed. Please try again.');
+      setSuccessUserId(null);
+      setShowSuccessAnimation(false);
     } finally {
       setIsLoading(false);
     }
   };
 
   const handleRegister = async () => {
-    // Clear any previous errors
     setError('');
 
-    // Basic validation
     if (!name || !email || !password || !confirmPassword) {
       setError('Please fill in all fields');
       return;
@@ -196,19 +149,16 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
   };
 
   const handleAnimationFinish = () => {
-    console.log('Success animation finished, userId:', successUserId);
     if (successUserId && onLoginSuccess) {
-      console.log('Calling onLoginSuccess with userId:', successUserId);
       onLoginSuccess(successUserId);
       setShowSuccessAnimation(false);
-    } else {
-      console.warn('Cannot complete login: successUserId or onLoginSuccess is missing');
     }
   };
 
   return (
     <View style={styles.container}>
-      {/* Use background.json animation instead of static background */}
+      <StatusBar backgroundColor="transparent" translucent />
+
       <LottieView
         source={require('../assets/animations/background.json')}
         autoPlay
@@ -217,17 +167,12 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
         resizeMode="cover"
       />
 
-      <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        style={styles.keyboardAvoidView}
-      >
+      <KeyboardAvoidingView behavior="padding" style={styles.keyboardAvoidView}>
         <ScrollView
           contentContainerStyle={styles.scrollContainer}
           keyboardShouldPersistTaps="handled"
         >
           <Animated.View style={[styles.formContainer, { opacity: formOpacity }]}>
-            <View style={styles.headerContainer} />
-
             {isRegistering && (
               <View style={styles.inputContainer}>
                 <Text style={styles.label}>Name</Text>
@@ -257,14 +202,23 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
 
             <View style={styles.inputContainer}>
               <Text style={styles.label}>Password</Text>
-              <TextInput
-                style={styles.input}
-                placeholder="Enter your password"
-                placeholderTextColor="#AAA"
-                value={password}
-                onChangeText={setPassword}
-                secureTextEntry
-              />
+              <View style={styles.passwordWrapper}>
+                <TextInput
+                  style={styles.input}
+                  placeholder="Enter your password"
+                  placeholderTextColor="#AAA"
+                  value={password}
+                  onChangeText={setPassword}
+                  secureTextEntry={!showPassword}
+                />
+                <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+                  <MaterialIcons
+                    name={showPassword ? 'visibility' : 'visibility-off'}
+                    size={24}
+                    color="#AAA"
+                  />
+                </TouchableOpacity>
+              </View>
             </View>
 
             {isRegistering && (
@@ -312,26 +266,13 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({onLoginSuccess}) => {
         </ScrollView>
       </KeyboardAvoidingView>
 
-      {/* Success Animation Modal */}
       <Modal
-        transparent={true}
+        transparent
         visible={showSuccessAnimation}
         animationType="fade"
         onShow={() => {
-          // When animation modal shows, update status bar to match animation background
-          StatusBar.setBarStyle('light-content');
-          if (Platform.OS === 'android') {
-            StatusBar.setTranslucent(false);
-            StatusBar.setBackgroundColor('#0A0A3C'); // Match animation background
-          }
-        }}
-        onDismiss={() => {
-          // Restore status bar settings when modal is dismissed
-          StatusBar.setBarStyle('light-content');
-          if (Platform.OS === 'android') {
-            StatusBar.setTranslucent(true);
-            StatusBar.setBackgroundColor('transparent');
-          }
+          StatusBar.setTranslucent(false);
+          StatusBar.setBackgroundColor('#0A0A3C');
         }}
       >
         <View style={styles.successAnimationContainer}>
