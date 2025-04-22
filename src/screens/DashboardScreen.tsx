@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {
   View,
   Text,
@@ -9,10 +10,11 @@ import {
   TouchableOpacity,
   Animated,
   StyleSheet,
+  StatusBar,
 } from 'react-native';
 import {styles} from './DashboardScreen.styles';
 import LottieView from 'lottie-react-native';
-import {db} from '../database';
+import {db, User} from '../database';
 import {UserHeader} from '../components/UserHeader';
 import SoundManager from '../utils/SoundManager';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -38,6 +40,10 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
   const [isLoading, setIsLoading] = useState(true);
   const [showSettings, setShowSettings] = useState(false);
   const settingsAnimation = useState(new Animated.Value(0))[0];
+  const [dashboardData, setDashboardData] = useState<User | null>(null);
+  const loaderOpacity = useRef(new Animated.Value(1)).current;
+  const dashboardOpacity = useRef(new Animated.Value(0)).current;
+  const minLoadingTime = 2000; // 2 seconds minimum
 
   const categoryItems: CategoryItem[] = [
     {id: 1, title: 'Math', iconName: 'calculate', iconColor: '#FF6B6B'},
@@ -84,12 +90,32 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
           console.log('Username:', user.name); // Debug log
           setUserName(user.name);
         }
+        // Store the fetched data
+        setDashboardData(user);
       } finally {
         setIsLoading(false);
       }
     };
     fetchUser();
 
+    // Enforce minimum loading time of 2 seconds
+    const timer = setTimeout(() => {
+      // Start cross-fade animation
+      Animated.parallel([
+        Animated.timing(loaderOpacity, {
+          toValue: 0,
+          duration: 800, // Fade out over 800ms
+          useNativeDriver: true,
+        }),
+        Animated.timing(dashboardOpacity, {
+          toValue: 1,
+          duration: 800, // Fade in over 800ms
+          useNativeDriver: true,
+        }),
+      ]).start();
+    }, minLoadingTime);
+
+    // Stop the ambient sound when entering the dashboard screen
     SoundManager.fadeOutAmbient();
 
     const backHandler = BackHandler.addEventListener(
@@ -103,8 +129,11 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
       },
     );
 
-    return () => backHandler.remove();
-  }, [userId, onLogout]);
+    return () => {
+      backHandler.remove();
+      clearTimeout(timer);
+    };
+  }, [userId, onLogout, loaderOpacity, dashboardOpacity]);
 
   const handleLogout = () => {
     Alert.alert('Logout', 'Are you sure you want to logout?', [
@@ -152,28 +181,29 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     </TouchableOpacity>
   );
 
-  if (isLoading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <LottieView
-          source={require('../assets/animations/lightning.json')}
-          autoPlay
-          loop
-          style={styles.loadingAnimation}
-        />
-        <Text style={styles.loadingText}>Loading your dashboard...</Text>
-      </View>
-    );
-  }
-
   return (
     <View style={styles.container}>
-      <View style={styles.backgroundContainer} />
+      <StatusBar translucent backgroundColor="transparent" />
 
+      {/* Dashboard Content - Initially invisible but becomes visible as loader fades */}
       <Animated.View
         style={[
-          styles.dashboardLayout,
-          {
+          StyleSheet.absoluteFillObject,
+          { opacity: dashboardOpacity },
+        ]}
+      >
+        <View style={styles.backgroundContainer} />
+
+        <UserHeader
+          username={userName}
+          onLogout={handleLogout}
+          onSettings={handleSettings}
+          xpCurrent={50}
+          xpRequired={100}
+        />
+
+        <Animated.View
+          style={[styles.dashboardLayout, {
             opacity: settingsAnimation.interpolate({
               inputRange: [0, 1],
               outputRange: [1, 0],
@@ -186,52 +216,66 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
                 }),
               },
             ],
-          },
-        ]}>
-        <UserHeader
-          username={userName}
-          onLogout={handleLogout}
-          onSettings={handleSettings}
-          xpCurrent={50}
-          xpRequired={100}
-        />
+          }]}>
 
-        <FlatList
-          data={categoryItems}
-          renderItem={renderCategoryItem}
-          keyExtractor={item => item.id.toString()}
-          numColumns={2}
-          style={{
-            flex: 1,
-            marginTop: 150, // Adjusted to make room for header plus XP bar
-          }}
-          contentContainerStyle={styles.contentContainer}
-          showsVerticalScrollIndicator={false}
-          columnWrapperStyle={styles.gridRow}
-        />
+          <FlatList
+            data={categoryItems}
+            renderItem={renderCategoryItem}
+            keyExtractor={item => item.id.toString()}
+            numColumns={2}
+            style={{
+              flex: 1,
+              marginTop: 110, // Ensures content starts below the header
+            }}
+            contentContainerStyle={{
+              ...styles.contentContainer,
+              paddingTop: 10, // Reduced padding to move content higher
+            }}
+            showsVerticalScrollIndicator={false}
+            columnWrapperStyle={styles.gridRow}
+          />
 
-        <View style={styles.footer}>
-          <Text style={styles.footerText}>BrainBuzz • Dashboard v1.0</Text>
-        </View>
+          <View style={styles.footer}>
+            <Text style={styles.footerText}>BrainBuzz • Dashboard v1.0</Text>
+          </View>
+        </Animated.View>
+
+        {showSettings && (
+          <Animated.View
+            style={{
+              ...StyleSheet.absoluteFillObject,
+              opacity: settingsAnimation,
+              transform: [
+                {
+                  translateX: settingsAnimation.interpolate({
+                    inputRange: [0, 1],
+                    outputRange: [50, 0],
+                  }),
+                },
+              ],
+              zIndex: 20, // Ensure settings is above everything else
+              elevation: 5, // For Android
+            }}>
+            <Settings userId={userId} onBack={handleSettingsBack} />
+          </Animated.View>
+        )}
       </Animated.View>
 
-      {showSettings && (
-        <Animated.View
-          style={{
-            ...StyleSheet.absoluteFillObject,
-            opacity: settingsAnimation,
-            transform: [
-              {
-                translateX: settingsAnimation.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [50, 0],
-                }),
-              },
-            ],
-          }}>
-          <Settings userId={userId} onBack={handleSettingsBack} />
-        </Animated.View>
-      )}
+      {/* Loading Overlay - Starts visible and fades out */}
+      <Animated.View
+        style={[
+          StyleSheet.absoluteFillObject,
+          styles.loadingContainer,
+          { opacity: loaderOpacity },
+        ]}
+      >
+        <LottieView
+          source={require('../assets/animations/loader.json')}
+          autoPlay
+          loop
+          style={styles.loadingAnimation}
+        />
+      </Animated.View>
     </View>
   );
 };

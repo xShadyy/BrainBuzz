@@ -79,7 +79,7 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
           <View style={styles.levelContainer}>
             <View style={styles.levelEffect}>
               <LottieView
-                source={require('../assets/animations/fire_light_red.json')}
+                source={require('../assets/animations/fire_cherry_pink_light.json')}
                 autoPlay
                 loop
                 style={{

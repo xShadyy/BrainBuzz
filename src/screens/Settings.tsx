@@ -36,51 +36,51 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
 
   const fireLevels: FireLevel[] = [
     {
-      animation: require('../assets/animations/fire_light_red.json'),
+      animation: require('../assets/animations/fire_sunny_beige_lighter.json'),
       name: 'Ember Spark',
       color: '#FF6B6B',
       progress: 100,
     },
     {
-      animation: require('../assets/animations/fire_dark_blue.json'),
-      name: 'Azure Flame',
-      color: '#4ECDC4',
+      animation: require('../assets/animations/fire_sunny_beige_light.json'),
+      name: 'Sun Flame',
+      color: '#FF5C8D',
       progress: 80,
     },
     {
-      animation: require('../assets/animations/fire_dark_green.json'),
-      name: 'Emerald Blaze',
-      color: '#88D8B0',
+      animation: require('../assets/animations/fire_sky_blue_lighter.json'),
+      name: 'Azure Flame',
+      color: '#4ECDC4',
       progress: 60,
     },
     {
-      animation: require('../assets/animations/fire_dark_magenta.json'),
-      name: 'Mystic Inferno',
-      color: '#F25F5C',
+      animation: require('../assets/animations/fire_sky_blue_light.json'),
+      name: 'Sapphire Blaze',
+      color: '#5DA9E9',
       progress: 40,
     },
     {
-      animation: require('../assets/animations/fire_dark_purple.json'),
-      name: 'Violet Pyre',
-      color: '#9B5DE5',
+      animation: require('../assets/animations/fire_spring_green_lighter.json'),
+      name: 'Emerald Inferno',
+      color: '#6EEB83',
       progress: 20,
     },
     {
-      animation: require('../assets/animations/fire_light_red.json'),
-      name: 'Shadow Blaze',
-      color: '#556270',
+      animation: require('../assets/animations/fire_spring_green_light.json'),
+      name: 'Jade Pyre',
+      color: '#50CB86',
       progress: 10,
     },
     {
-      animation: require('../assets/animations/fire_dark_magenta.json'),
-      name: 'Ethereal Fire',
-      color: '#A7E8BD',
+      animation: require('../assets/animations/fire_cherry_pink_lighter.json'),
+      name: 'Mystical Aura',
+      color: '#A9B7C0',
       progress: 5,
     },
     {
-      animation: require('../assets/animations/fire_light_red.json'),
-      name: 'Eternal Flame',
-      color: '#343434',
+      animation: require('../assets/animations/fire_cherry_pink_light.json'),
+      name: 'Eternal Storm',
+      color: '#FFFFFF',
       progress: 0,
     },
   ];
@@ -159,9 +159,11 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
     return (
       <View style={styles.container}>
         <View style={styles.headerContainer}>
-          <TouchableOpacity style={styles.backButton} onPress={handleBackPress}>
+            <TouchableOpacity
+            style={styles.backButton}
+            onPress={handleBackPress}>
             <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
-          </TouchableOpacity>
+            </TouchableOpacity>
           <Text style={styles.headerTitle}>Settings</Text>
         </View>
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
@@ -197,7 +199,10 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
         <Text style={styles.headerTitle}>Settings</Text>
       </View>
 
-      <ScrollView style={styles.contentContainer}>
+      <ScrollView
+        overScrollMode="never"
+        style={styles.contentContainer}
+        contentContainerStyle={styles.scrollContentContainer}>
         <Text style={styles.sectionTitle}>Account Information</Text>
         <View style={styles.card}>
           {!isEditingName ? (
@@ -225,13 +230,26 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
                 placeholder="Enter your name"
                 placeholderTextColor="#888888"
               />
-              <TouchableOpacity
-                style={styles.saveButtonContainer}
-                onPress={handleSaveName}
-                accessibilityLabel="Save name"
-                accessibilityRole="button">
-                <Text style={styles.saveButtonText}>Save</Text>
-              </TouchableOpacity>
+              <View style={styles.buttonRow}>
+                <TouchableOpacity
+                  style={[styles.saveButton, newName.trim() === user?.name?.trim() && {opacity: 0.5}]}
+                  onPress={() => {
+                  SoundManager.playInteraction();
+                  handleSaveName();
+                  }}
+                  disabled={newName.trim() === user?.name?.trim()}>
+                  <Text style={styles.saveButtonText}>Save</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.cancelButton}
+                  onPress={() => {
+                    setIsEditingName(false);
+                    setNewName(user?.name || '');
+                    SoundManager.playInteraction();
+                  }}>
+                  <Text style={styles.cancelButtonText}>Cancel</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           )}
 
@@ -249,19 +267,13 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
         </View>
 
         <View style={styles.animationProgressContainer}>
-          <Text style={styles.animationProgressTitle}>
-            Fire Animation Progress
-          </Text>
-
-          {/* Render the vertical fire animation progression */}
+          <Text style={styles.animationProgressTitle}>Fire Animation Progress</Text>
           {fireLevels.map((level, index) => {
-            // Calculate connector line height for all but the last item
-            const connectorHeight = index < fireLevels.length - 1 ? 12 : 0;
+            const isLastItem = index === fireLevels.length - 1;
 
             return (
               <React.Fragment key={index}>
-                <View style={styles.levelRowContainer}>
-                  {/* Fire animation on the left */}
+                <View style={[styles.levelRowContainer, isLastItem ? {marginBottom: 0} : null]}>
                   <View style={styles.animationContainer}>
                     <LottieView
                       source={level.animation}
@@ -270,8 +282,6 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
                       style={{width: 50, height: 50}}
                     />
                   </View>
-
-                  {/* Progress bar in the middle */}
                   <View style={styles.progressBarContainer}>
                     <View
                       style={[
@@ -282,8 +292,6 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
                         },
                       ]}
                     />
-
-                    {/* Checkpoints on the progress bar */}
                     {[25, 50, 75].map(checkpoint => (
                       <View
                         key={checkpoint}
@@ -294,25 +302,20 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
                       />
                     ))}
                   </View>
-
-                  {/* Level name on the right */}
                   <View style={styles.levelNameContainer}>
                     <Text style={[styles.levelName, {color: level.color}]}>
                       {level.name}
                     </Text>
                   </View>
                 </View>
-
-                {/* Vertical connector between fire animations */}
-                {index < fireLevels.length - 1 && (
-                  <View
-                    style={[styles.connectorLine, {height: connectorHeight}]}
-                  />
-                )}
               </React.Fragment>
             );
           })}
+          {/* Remove progressClosingElement - we don't need extra space */}
         </View>
+
+        {/* Reduce the height of the end spacer */}
+        <View style={{height: 20}} />
       </ScrollView>
     </SafeAreaView>
   );

@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform, StatusBar} from 'react-native';
 
 export const HEADER_HEIGHT = 120;
 export const FOOTER_HEIGHT = 40;
@@ -6,8 +6,14 @@ export const ICON_SIZE = 46;
 export const GRID_GAP = 15;
 export const PADDING = 20;
 
+const statusBarHeight = Platform.OS === 'android' ? StatusBar.currentHeight || 0 : 0;
+
 export const styles = StyleSheet.create({
-  container: {flex: 1},
+  container: {
+    flex: 1,
+    backgroundColor: '#040414',
+    paddingTop: statusBarHeight, // Add padding for status bar
+  },
   backgroundContainer: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: '#282828',

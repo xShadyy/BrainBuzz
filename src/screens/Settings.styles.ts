@@ -1,4 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Platform, StatusBar} from 'react-native';
+
+// Get the status bar height for proper padding
+const STATUS_BAR_HEIGHT = Platform.OS === 'android' ? StatusBar.currentHeight || 0 : 0;
 
 export const styles = StyleSheet.create({
   container: {
@@ -9,7 +12,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'rgb(43, 43, 43)',
     flexDirection: 'row',
     alignItems: 'center',
-    paddingTop: 10,
+    paddingTop: STATUS_BAR_HEIGHT + 10, // Add padding for status bar + original padding
     paddingHorizontal: 16,
     paddingBottom: 10,
     elevation: 4,
@@ -29,8 +32,12 @@ export const styles = StyleSheet.create({
     fontFamily: 'Lexend-SemiBold',
   },
   contentContainer: {
+    flex: 1,
+  },
+  scrollContentContainer: {
     paddingHorizontal: 20,
     paddingTop: 24,
+    paddingBottom: 30, // Add padding to the bottom so content doesn't extend to edge
   },
   sectionTitle: {
     color: '#FFFFFF',
@@ -67,7 +74,6 @@ export const styles = StyleSheet.create({
   fieldNameContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'flex-end',
     flex: 1,
   },
   editButton: {
@@ -76,24 +82,6 @@ export const styles = StyleSheet.create({
   },
   editNameContainer: {
     marginTop: 12,
-  },
-  saveButtonContainer: {
-    backgroundColor: 'rgba(42, 42, 204, 0.25)',
-    borderRadius: 8,
-    height: 40,
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 10,
-    borderWidth: 1,
-    borderColor: 'rgba(255, 201, 242, 0.5)',
-  },
-  saveButtonText: {
-    color: '#FFFFFF',
-    fontFamily: 'Lexend-SemiBold',
-    fontSize: 16,
-    textShadowColor: '#FFD3F4',
-    textShadowOffset: {width: 0, height: 0},
-    textShadowRadius: 10,
   },
   editNameInput: {
     backgroundColor: 'rgba(255, 255, 255, 0.12)',
@@ -106,10 +94,51 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: 'rgba(255, 201, 242, 0.25)',
   },
+  buttonRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 10,
+    marginBottom: 16,
+    gap: 10,
+  },
+  saveButton: {
+    flex: 1,
+    backgroundColor: 'rgba(42, 42, 204, 0.25)',
+    borderRadius: 8,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 201, 242, 0.5)',
+  },
+  saveButtonText: {
+    color: '#FFFFFF',
+    fontFamily: 'Lexend-SemiBold',
+    fontSize: 16,
+    textShadowColor: '#FFD3F4',
+    textShadowOffset: {width: 0, height: 0},
+    textShadowRadius: 10,
+  },
+  cancelButton: {
+    flex: 1,
+    backgroundColor: 'rgba(255, 0, 0, 0.15)',
+    borderRadius: 8,
+    height: 40,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 100, 100, 0.4)',
+  },
+  cancelButtonText: {
+    color: '#FFFFFF',
+    fontFamily: 'Lexend-SemiBold',
+    fontSize: 16,
+  },
   animationProgressContainer: {
     marginTop: 20,
     marginBottom: 16,
     padding: 16,
+    paddingBottom: 8, // Reduced bottom padding to close container right at the last fire animation
     backgroundColor: 'rgba(60, 60, 60, 0.7)',
     borderRadius: 12,
     borderWidth: 1,
@@ -161,11 +190,8 @@ export const styles = StyleSheet.create({
     fontFamily: 'Lexend-Medium',
     textAlign: 'left',
   },
-  connectorLine: {
-    width: 2,
-    backgroundColor: '#666666',
-    position: 'absolute',
-    left: 25, // Center of the fire animation
-    top: 50, // Start from bottom of the fire animation
+
+  scrollEndSpacer: {
+    height: 20, // Reduced height to minimize empty space
   },
 });

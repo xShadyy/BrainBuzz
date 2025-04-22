@@ -7,7 +7,6 @@ import {
   Animated,
   Text,
   TouchableOpacity,
-  StatusBar,
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 import {styles} from './WelcomeScreen.styles';
@@ -32,6 +31,8 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({onFinish}) => {
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
+    // No need to set status bar here anymore since it's handled at app level
+
     const initializeApp = async () => {
       try {
         await SoundManager.init();
@@ -92,7 +93,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({onFinish}) => {
     initializeApp();
 
     return () => {
-      // Clear timers but DON'T release SoundManager
+      // Only clear timers, no status bar reset needed
       timers.current.forEach(clearTimeout);
     };
   }, [
@@ -140,7 +141,6 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({onFinish}) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="transparent" translucent />
       <LottieView
         source={require('../assets/animations/background.json')}
         autoPlay

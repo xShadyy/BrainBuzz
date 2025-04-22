@@ -32,16 +32,10 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
   const [error, setError] = useState('');
   const [showSuccessAnimation, setShowSuccessAnimation] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const successAnimationRef = useRef<LottieView>(null);
   const [successUserId, setSuccessUserId] = useState<number | null>(null);
   const formOpacity = useRef(new Animated.Value(0)).current;
-
-  useEffect(() => {
-    SoundManager.init();
-    StatusBar.setBarStyle('light-content');
-    StatusBar.setTranslucent(true);
-    StatusBar.setBackgroundColor('transparent');
-  }, []);
 
   useEffect(() => {
     Animated.timing(formOpacity, {
@@ -49,6 +43,11 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
       duration: 800,
       useNativeDriver: true,
     }).start();
+
+    // No status bar reset needed here since it's managed at app level
+    return () => {
+      // Cleanup if needed in the future
+    };
   }, [formOpacity]);
 
   const validateEmailFormat = (emailValue: string): boolean => {
@@ -176,29 +175,33 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
             {isRegistering && (
               <View style={styles.inputContainer}>
                 <Text style={styles.label}>Name</Text>
-                <TextInput
-                  style={styles.input}
-                  placeholder="Enter your name"
-                  placeholderTextColor="#AAA"
-                  value={name}
-                  onChangeText={setName}
-                  autoCapitalize="words"
-                />
+                <View style={styles.inputWrapper}>
+                  <TextInput
+                    style={styles.input}
+                    placeholder="Enter your name"
+                    placeholderTextColor="#AAA"
+                    value={name}
+                    onChangeText={setName}
+                    autoCapitalize="words"
+                  />
+                </View>
               </View>
             )}
 
-            <View style={styles.inputContainer}>
-              <Text style={styles.label}>Email</Text>
-              <TextInput
-                style={styles.input}
-                placeholder="Enter your email"
-                placeholderTextColor="#AAA"
-                value={email}
-                onChangeText={setEmail}
-                keyboardType="email-address"
-                autoCapitalize="none"
-              />
-            </View>
+<View style={styles.inputContainer}>
+  <Text style={styles.label}>Email</Text>
+  <View style={styles.inputWrapper}>
+    <TextInput
+      style={styles.input}
+      placeholder="Enter your email"
+      placeholderTextColor="#AAA"
+      value={email}
+      onChangeText={setEmail}
+      keyboardType="email-address"
+      autoCapitalize="none"
+    />
+  </View>
+</View>
 
             <View style={styles.inputContainer}>
               <Text style={styles.label}>Password</Text>
@@ -224,14 +227,23 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
             {isRegistering && (
               <View style={styles.inputContainer}>
                 <Text style={styles.label}>Confirm Password</Text>
-                <TextInput
-                  style={styles.input}
-                  placeholder="Confirm your password"
-                  placeholderTextColor="#AAA"
-                  value={confirmPassword}
-                  onChangeText={setConfirmPassword}
-                  secureTextEntry
-                />
+                <View style={styles.passwordWrapper}>
+                  <TextInput
+                    style={styles.input}
+                    placeholder="Confirm your password"
+                    placeholderTextColor="#AAA"
+                    value={confirmPassword}
+                    onChangeText={setConfirmPassword}
+                    secureTextEntry={!showConfirmPassword}
+                  />
+                  <TouchableOpacity onPress={() => setShowConfirmPassword(!showConfirmPassword)}>
+                    <MaterialIcons
+                      name={showConfirmPassword ? 'visibility' : 'visibility-off'}
+                      size={24}
+                      color="#AAA"
+                    />
+                  </TouchableOpacity>
+                </View>
               </View>
             )}
 

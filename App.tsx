@@ -7,7 +7,7 @@
  */
 
 import React, {useState, useEffect} from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, StatusBar} from 'react-native';
 import {WelcomeScreen} from './src/screens/WelcomeScreen';
 import {LoginScreen} from './src/screens/LoginScreen';
 import {DashboardScreen} from './src/screens/DashboardScreen';
@@ -19,6 +19,10 @@ function App(): React.JSX.Element {
   const [userId, setUserId] = useState<number | null>(null);
 
   useEffect(() => {
+    // Set status bar to translucent for the entire app
+    StatusBar.setTranslucent(true);
+    StatusBar.setBackgroundColor('transparent');
+
     console.log('App mounted, initializing ambient sound');
 
     {
@@ -65,6 +69,9 @@ function App(): React.JSX.Element {
 
   return (
     <View style={styles.container}>
+      {/* Add StatusBar component at app level */}
+      <StatusBar translucent backgroundColor="transparent" />
+
       {showWelcome ? (
         <WelcomeScreen onFinish={handleWelcomeFinish} />
       ) : isLoggedIn && userId ? (
