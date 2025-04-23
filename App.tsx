@@ -51,8 +51,8 @@ function App(): React.JSX.Element {
 
   // Handle successful login
   const handleLoginSuccess = (loggedInUserId: number) => {
-    // Play login success sound which fades out ambient
-    SoundManager.playLoginSuccess();
+    // The login success sound is already played in LoginScreen.tsx
+    // No need to play it again here
 
     setUserId(loggedInUserId);
     setIsLoggedIn(true);

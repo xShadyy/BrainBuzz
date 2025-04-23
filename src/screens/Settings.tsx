@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {
   View,
   Text,
@@ -8,6 +8,7 @@ import {
   Alert,
   SafeAreaView,
   ScrollView,
+  Animated,
 } from 'react-native';
 import {styles} from './Settings.styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -33,6 +34,8 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
   const [isEditingName, setIsEditingName] = useState(false);
   const [newName, setNewName] = useState('');
   const [isLoading, setIsLoading] = useState(true);
+  const [showLoader, setShowLoader] = useState(true);
+  const loaderOpacity = useRef(new Animated.Value(1)).current;
 
   const fireLevels: FireLevel[] = [
     {
@@ -102,7 +105,22 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
     };
 
     fetchUserData();
-  }, [userId]);
+
+    // Show loader for 1 second with fade-out animation
+    const loaderTimer = setTimeout(() => {
+      Animated.timing(loaderOpacity, {
+        toValue: 0,
+        duration: 400, // Fade out over 400ms
+        useNativeDriver: true,
+      }).start(({finished}) => {
+        if (finished) {
+          setShowLoader(false);
+        }
+      });
+    }, 600); // Start fading out after 600ms for a total visible time of 1 second
+
+    return () => clearTimeout(loaderTimer);
+  }, [userId, loaderOpacity]);
 
   const handleBackPress = () => {
     SoundManager.playInteraction();
@@ -155,6 +173,36 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
     });
   };
 
+  if (showLoader) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.headerContainer}>
+            <TouchableOpacity
+            style={styles.backButton}
+            onPress={handleBackPress}>
+            <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
+            </TouchableOpacity>
+          <Text style={styles.headerTitle}>Settings</Text>
+        </View>
+        <Animated.View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            opacity: loaderOpacity,
+          }}
+        >
+          <LottieView
+            source={require('../assets/animations/loader.json')}
+            autoPlay
+            loop
+            style={{width: 100, height: 100}}
+          />
+        </Animated.View>
+      </View>
+    );
+  }
+
   if (isLoading) {
     return (
       <View style={styles.container}>
@@ -167,16 +215,9 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
           <Text style={styles.headerTitle}>Settings</Text>
         </View>
         <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <LottieView
-            source={require('../assets/animations/lightning.json')}
-            autoPlay
-            loop
-            style={{width: 100, height: 100}}
-          />
           <Text
             style={{
               color: '#FFFFFF',
-              marginTop: 20,
               fontFamily: 'Lexend-Medium',
             }}>
             Loading settings...

@@ -82,6 +82,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
       if (user && user.id) {
         setError('');
         setSuccessUserId(user.id);
+        // Play the success sound only once here
         SoundManager.playLoginSuccess();
         setTimeout(() => setShowSuccessAnimation(true), 100);
       } else {

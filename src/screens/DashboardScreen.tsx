@@ -43,7 +43,8 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
   const [dashboardData, setDashboardData] = useState<User | null>(null);
   const loaderOpacity = useRef(new Animated.Value(1)).current;
   const dashboardOpacity = useRef(new Animated.Value(0)).current;
-  const minLoadingTime = 2000; // 2 seconds minimum
+  const [loaderVisible, setLoaderVisible] = useState(true);
+  const minLoadingTime = 2000;
 
   const categoryItems: CategoryItem[] = [
     {id: 1, title: 'Math', iconName: 'calculate', iconColor: '#FF6B6B'},
@@ -112,7 +113,12 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
           duration: 800, // Fade in over 800ms
           useNativeDriver: true,
         }),
-      ]).start();
+      ]).start(({finished}) => {
+        if (finished) {
+          // Only remove the loader from the component tree after animation completes
+          setLoaderVisible(false);
+        }
+      });
     }, minLoadingTime);
 
     // Stop the ambient sound when entering the dashboard screen
@@ -229,7 +235,7 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
             }}
             contentContainerStyle={{
               ...styles.contentContainer,
-              paddingTop: 10, // Reduced padding to move content higher
+              paddingTop: 40, // Increased padding to move content back down to original position
             }}
             showsVerticalScrollIndicator={false}
             columnWrapperStyle={styles.gridRow}
@@ -261,21 +267,27 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
         )}
       </Animated.View>
 
-      {/* Loading Overlay - Starts visible and fades out */}
-      <Animated.View
-        style={[
-          StyleSheet.absoluteFillObject,
-          styles.loadingContainer,
-          { opacity: loaderOpacity },
-        ]}
-      >
-        <LottieView
-          source={require('../assets/animations/loader.json')}
-          autoPlay
-          loop
-          style={styles.loadingAnimation}
-        />
-      </Animated.View>
+      {/* Loading Overlay - Only rendered when visible */}
+      {loaderVisible && (
+        <Animated.View
+          style={[
+            StyleSheet.absoluteFillObject,
+            styles.loadingContainer,
+            { opacity: loaderOpacity },
+          ]}
+          pointerEvents={loaderOpacity.interpolate({
+            inputRange: [0, 0.1],
+            outputRange: ['none', 'auto'],
+          })}
+        >
+          <LottieView
+            source={require('../assets/animations/loader.json')}
+            autoPlay
+            loop
+            style={styles.loadingAnimation}
+          />
+        </Animated.View>
+      )}
     </View>
   );
 };
