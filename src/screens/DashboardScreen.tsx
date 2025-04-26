@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState, useRef, useCallback} from 'react';
 import {
   View,
   Text,
@@ -14,11 +14,11 @@ import {
 } from 'react-native';
 import {styles} from './DashboardScreen.styles';
 import LottieView from 'lottie-react-native';
-import {db, User} from '../database';
 import {UserHeader} from '../components/UserHeader';
 import SoundManager from '../utils/SoundManager';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {Settings} from './Settings';
+import {QuizDisplay} from './QuizDisplay';
+import {useUser} from '../utils/UserContext';
 
 interface CategoryItem {
   id: number;
@@ -36,92 +36,80 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
   userId,
   onLogout,
 }) => {
-  const [userName, setUserName] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
-  const [showSettings, setShowSettings] = useState(false);
-  const settingsAnimation = useState(new Animated.Value(0))[0];
-  const [dashboardData, setDashboardData] = useState<User | null>(null);
+  const {user, isLoading: userLoading, refreshUser} = useUser();
+  const [showQuizDisplay, setShowQuizDisplay] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<CategoryItem | null>(null);
+  const quizDisplayAnimation = useState(new Animated.Value(0))[0];
   const loaderOpacity = useRef(new Animated.Value(1)).current;
   const dashboardOpacity = useRef(new Animated.Value(0)).current;
   const [loaderVisible, setLoaderVisible] = useState(true);
+  const [initialLoadDone, setInitialLoadDone] = useState(false);
+  const hasUserBeenFetched = useRef(false);
   const minLoadingTime = 2000;
 
+  // Categories data
   const categoryItems: CategoryItem[] = [
-    {id: 1, title: 'Math', iconName: 'calculate', iconColor: '#FF6B6B'},
-    {id: 2, title: 'Science', iconName: 'science', iconColor: '#4ECDC4'},
-    {id: 3, title: 'History', iconName: 'history-edu', iconColor: '#FFD166'},
-    {id: 4, title: 'Geography', iconName: 'public', iconColor: '#6B5B95'},
-    {id: 5, title: 'Languages', iconName: 'translate', iconColor: '#88D8B0'},
-    {id: 6, title: 'Literature', iconName: 'menu-book', iconColor: '#F6AE2D'},
-    {id: 7, title: 'Art', iconName: 'palette', iconColor: '#F25F5C'},
-    {id: 8, title: 'Music', iconName: 'music-note', iconColor: '#247BA0'},
-    {id: 9, title: 'Technology', iconName: 'memory', iconColor: '#70C1B3'},
-    {
-      id: 10,
-      title: 'Sports',
-      iconName: 'sports-basketball',
-      iconColor: '#B2DBBF',
-    },
-    {id: 11, title: 'Health', iconName: 'favorite', iconColor: '#FF9F1C'},
-    {
-      id: 12,
-      title: 'Daily Quiz',
-      iconName: 'help-outline',
-      iconColor: '#E76F51',
-    },
-    {
-      id: 13,
-      title: 'Challenges',
-      iconName: 'emoji-events',
-      iconColor: '#2A9D8F',
-    },
-    {
-      id: 14,
-      title: 'Leaderboard',
-      iconName: 'leaderboard',
-      iconColor: '#9B5DE5',
-    },
+    { id: 1, title: 'Math', iconName: 'calculate', iconColor: '#1F77B4' },
+    { id: 2, title: 'Science', iconName: 'science', iconColor: '#2CA02C' },
+    { id: 3, title: 'History', iconName: 'history-edu', iconColor: '#8C564B' },
+    { id: 4, title: 'Geography', iconName: 'public', iconColor: '#17BECF' },
+    { id: 5, title: 'Languages', iconName: 'translate', iconColor: '#FF7F0E' },
+    { id: 6, title: 'Literature', iconName: 'menu-book', iconColor: '#9467BD' },
+    { id: 7, title: 'Art', iconName: 'palette', iconColor: '#D62728' },
+    { id: 8, title: 'Music', iconName: 'music-note', iconColor: '#1B9E77' },
+    { id: 9, title: 'Technology', iconName: 'memory', iconColor: '#636EFA' },
+    { id: 10, title: 'Sports', iconName: 'sports-basketball', iconColor: '#FF5733' },
+    { id: 11, title: 'Health', iconName: 'favorite', iconColor: '#E63946' },
+    { id: 12, title: 'Space', iconName: 'rocket', iconColor: '#3F51B5' },
+    { id: 13, title: 'Movies', iconName: 'movie-filter', iconColor: '#FFB703' },
+    { id: 14, title: 'Animals', iconName: 'pets', iconColor: '#43AA8B' },
   ];
 
+  // Load user data only once when component mounts
   useEffect(() => {
-    const fetchUser = async () => {
-      try {
-        const user = await db.getUserById(userId);
-        if (user?.name) {
-          console.log('Username:', user.name); // Debug log
-          setUserName(user.name);
+    if (!hasUserBeenFetched.current) {
+      hasUserBeenFetched.current = true;
+      const loadUser = async () => {
+        try {
+          await refreshUser(userId);
+        } finally {
+          setInitialLoadDone(true);
         }
-        // Store the fetched data
-        setDashboardData(user);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    fetchUser();
+      };
+      loadUser();
+    }
+  }, [userId, refreshUser]);
 
-    // Enforce minimum loading time of 2 seconds
+  // Handle the loading animation timing separately from data fetching
+  useEffect(() => {
+    if (!initialLoadDone) {return;}
+
+    // Minimum display time for the loader
     const timer = setTimeout(() => {
       // Start cross-fade animation
       Animated.parallel([
         Animated.timing(loaderOpacity, {
           toValue: 0,
-          duration: 800, // Fade out over 800ms
+          duration: 800,
           useNativeDriver: true,
         }),
         Animated.timing(dashboardOpacity, {
           toValue: 1,
-          duration: 800, // Fade in over 800ms
+          duration: 800,
           useNativeDriver: true,
         }),
       ]).start(({finished}) => {
         if (finished) {
-          // Only remove the loader from the component tree after animation completes
           setLoaderVisible(false);
         }
       });
     }, minLoadingTime);
 
-    // Stop the ambient sound when entering the dashboard screen
+    return () => clearTimeout(timer);
+  }, [initialLoadDone, loaderOpacity, dashboardOpacity, minLoadingTime]);
+
+  // Setup back button handler
+  useEffect(() => {
     SoundManager.fadeOutAmbient();
 
     const backHandler = BackHandler.addEventListener(
@@ -137,40 +125,43 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
 
     return () => {
       backHandler.remove();
-      clearTimeout(timer);
     };
-  }, [userId, onLogout, loaderOpacity, dashboardOpacity]);
+  }, [onLogout]);
 
-  const handleLogout = () => {
-    Alert.alert('Logout', 'Are you sure you want to logout?', [
-      {text: 'Cancel', style: 'cancel'},
-      {text: 'Logout', onPress: onLogout},
-    ]);
-  };
-
-  const handleSettings = () => {
+  const handleItemPress = (itemId: number) => {
+    // Play interaction sound
     SoundManager.playInteraction();
-    setShowSettings(true);
-    Animated.timing(settingsAnimation, {
-      toValue: 1,
-      duration: 300,
-      useNativeDriver: true,
-    }).start();
+
+    // Find the selected category
+    const category = categoryItems.find(i => i.id === itemId);
+    if (category) {
+      setSelectedCategory(category);
+
+      // Navigate to QuizDisplay screen with animation
+      setShowQuizDisplay(true);
+      Animated.timing(quizDisplayAnimation, {
+        toValue: 1,
+        duration: 300,
+        useNativeDriver: true,
+      }).start();
+    }
   };
 
-  const handleSettingsBack = () => {
-    Animated.timing(settingsAnimation, {
+  const handleQuizDisplayBack = () => {
+    // Animate quiz display exit
+    Animated.timing(quizDisplayAnimation, {
       toValue: 0,
       duration: 300,
       useNativeDriver: true,
     }).start(() => {
-      setShowSettings(false);
+      setShowQuizDisplay(false);
+      setSelectedCategory(null);
     });
   };
 
-  const handleItemPress = (itemId: number) => {
-    const title = categoryItems.find(i => i.id === itemId)?.title;
-    Alert.alert('Category Selected', `You selected the ${title} category`);
+  const handleSelectDifficulty = (difficulty: string) => {
+    console.log(`Selected difficulty: ${difficulty} for category: ${selectedCategory?.title}`);
+    // Here you would implement the logic to start the quiz with the selected difficulty
   };
 
   const renderCategoryItem = ({item}: {item: CategoryItem}) => (
@@ -191,7 +182,7 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     <View style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" />
 
-      {/* Dashboard Content - Initially invisible but becomes visible as loader fades */}
+      {/* Dashboard Content */}
       <Animated.View
         style={[
           StyleSheet.absoluteFillObject,
@@ -200,74 +191,67 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
       >
         <View style={styles.backgroundContainer} />
 
-        <UserHeader
-          username={userName}
-          onLogout={handleLogout}
-          onSettings={handleSettings}
-          xpCurrent={50}
-          xpRequired={100}
-        />
+        {!showQuizDisplay && (
+          <>
+            <UserHeader
+              username={user?.name || 'USER'}
+              xpCurrent={50}
+              xpRequired={100}
+            />
 
-        <Animated.View
-          style={[styles.dashboardLayout, {
-            opacity: settingsAnimation.interpolate({
-              inputRange: [0, 1],
-              outputRange: [1, 0],
-            }),
-            transform: [
-              {
-                translateX: settingsAnimation.interpolate({
-                  inputRange: [0, 1],
-                  outputRange: [0, -50],
-                }),
-              },
-            ],
-          }]}>
+            <Animated.View style={styles.dashboardLayout}>
+              <FlatList
+                overScrollMode="never"
+                data={categoryItems}
+                renderItem={renderCategoryItem}
+                keyExtractor={item => item.id.toString()}
+                numColumns={2}
+                style={{
+                  flex: 1,
+                  marginTop: 110,
+                }}
+                contentContainerStyle={{
+                  ...styles.contentContainer,
+                  paddingTop: 40,
+                }}
+                showsVerticalScrollIndicator={false}
+                columnWrapperStyle={styles.gridRow}
+              />
 
-          <FlatList
-            data={categoryItems}
-            renderItem={renderCategoryItem}
-            keyExtractor={item => item.id.toString()}
-            numColumns={2}
-            style={{
-              flex: 1,
-              marginTop: 110, // Ensures content starts below the header
-            }}
-            contentContainerStyle={{
-              ...styles.contentContainer,
-              paddingTop: 40, // Increased padding to move content back down to original position
-            }}
-            showsVerticalScrollIndicator={false}
-            columnWrapperStyle={styles.gridRow}
-          />
+              <View style={styles.footer}>
+                <Text style={styles.footerText}>BrainBuzz • Dashboard v1.0</Text>
+              </View>
+            </Animated.View>
+          </>
+        )}
 
-          <View style={styles.footer}>
-            <Text style={styles.footerText}>BrainBuzz • Dashboard v1.0</Text>
-          </View>
-        </Animated.View>
-
-        {showSettings && (
+        {showQuizDisplay && selectedCategory && (
           <Animated.View
             style={{
               ...StyleSheet.absoluteFillObject,
-              opacity: settingsAnimation,
+              opacity: quizDisplayAnimation,
               transform: [
                 {
-                  translateX: settingsAnimation.interpolate({
+                  translateX: quizDisplayAnimation.interpolate({
                     inputRange: [0, 1],
                     outputRange: [50, 0],
                   }),
                 },
               ],
-              zIndex: 20, // Ensure settings is above everything else
-              elevation: 5, // For Android
+              zIndex: 20,
+              elevation: 5,
             }}>
-            <Settings userId={userId} onBack={handleSettingsBack} />
+            <QuizDisplay
+              userId={userId}
+              onBack={handleQuizDisplayBack}
+              category={selectedCategory.title}
+              onSelectDifficulty={handleSelectDifficulty}
+            />
           </Animated.View>
         )}
       </Animated.View>
 
-      {/* Loading Overlay - Only rendered when visible */}
+      {/* Loading Overlay */}
       {loaderVisible && (
         <Animated.View
           style={[
@@ -275,10 +259,7 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
             styles.loadingContainer,
             { opacity: loaderOpacity },
           ]}
-          pointerEvents={loaderOpacity.interpolate({
-            inputRange: [0, 0.1],
-            outputRange: ['none', 'auto'],
-          })}
+          pointerEvents={loaderVisible ? 'auto' : 'none'}
         >
           <LottieView
             source={require('../assets/animations/loader.json')}

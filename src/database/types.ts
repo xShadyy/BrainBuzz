@@ -4,6 +4,8 @@ export interface User {
   email: string;
   password?: string; // Optional in responses, required in registration
   creationDate?: number; // Timestamp of account creation
+  level?: number; // User's current level
+  xp?: number; // User's current experience points
 }
 
 export interface DatabaseModule {

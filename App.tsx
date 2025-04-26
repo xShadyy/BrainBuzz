@@ -12,6 +12,7 @@ import {WelcomeScreen} from './src/screens/WelcomeScreen';
 import {LoginScreen} from './src/screens/LoginScreen';
 import {DashboardScreen} from './src/screens/DashboardScreen';
 import SoundManager from './src/utils/SoundManager';
+import {UserProvider} from './src/utils/UserContext';
 
 function App(): React.JSX.Element {
   const [showWelcome, setShowWelcome] = useState(true);
@@ -68,18 +69,20 @@ function App(): React.JSX.Element {
   };
 
   return (
-    <View style={styles.container}>
-      {/* Add StatusBar component at app level */}
-      <StatusBar translucent backgroundColor="transparent" />
+    <UserProvider>
+      <View style={styles.container}>
+        {/* Add StatusBar component at app level */}
+        <StatusBar translucent backgroundColor="transparent" />
 
-      {showWelcome ? (
-        <WelcomeScreen onFinish={handleWelcomeFinish} />
-      ) : isLoggedIn && userId ? (
-        <DashboardScreen userId={userId} onLogout={handleLogout} />
-      ) : (
-        <LoginScreen onLoginSuccess={handleLoginSuccess} />
-      )}
-    </View>
+        {showWelcome ? (
+          <WelcomeScreen onFinish={handleWelcomeFinish} />
+        ) : isLoggedIn && userId ? (
+          <DashboardScreen userId={userId} onLogout={handleLogout} />
+        ) : (
+          <LoginScreen onLoginSuccess={handleLoginSuccess} />
+        )}
+      </View>
+    </UserProvider>
   );
 }
 

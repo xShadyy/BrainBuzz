@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState, useRef} from 'react';
 import {
@@ -6,16 +7,17 @@ import {
   TouchableOpacity,
   TextInput,
   Alert,
-  SafeAreaView,
-  ScrollView,
+  StyleSheet,
+  StatusBar,
   Animated,
+  SafeAreaView,
 } from 'react-native';
 import {styles} from './Settings.styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import LottieView from 'lottie-react-native';
 import {db} from '../database';
 import SoundManager from '../utils/SoundManager';
-import {User} from '../database/types';
+import {useUser} from '../utils/UserContext';
 
 interface SettingsScreenProps {
   userId: number;
@@ -26,16 +28,19 @@ interface FireLevel {
   animation: any;
   name: string;
   color: string;
-  progress: number; // 0-100
+  progress: number;
 }
 
 export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
-  const [user, setUser] = useState<User | null>(null);
+  const {user, refreshUser} = useUser();
   const [isEditingName, setIsEditingName] = useState(false);
   const [newName, setNewName] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  const [showLoader, setShowLoader] = useState(true);
+  const [initialLoadDone, setInitialLoadDone] = useState(false);
   const loaderOpacity = useRef(new Animated.Value(1)).current;
+  const contentOpacity = useRef(new Animated.Value(0)).current;
+  const [loaderVisible, setLoaderVisible] = useState(true);
+  const minLoadingTime = 1000;
 
   const fireLevels: FireLevel[] = [
     {
@@ -89,38 +94,41 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
   ];
 
   useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const userData = await db.getUserById(userId);
-        if (userData) {
-          setUser(userData);
-          setNewName(userData.name);
-        }
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-        Alert.alert('Error', 'Failed to load user data');
-      } finally {
-        setIsLoading(false);
-      }
-    };
+    if (user) {
+      setNewName(user.name);
+      setInitialLoadDone(true);
+    } else if (userId) {
+      refreshUser(userId).then(() => {
+        setInitialLoadDone(true);
+      });
+    }
+  }, [userId, user, refreshUser]);
 
-    fetchUserData();
+  useEffect(() => {
+    if (!initialLoadDone) {return;}
 
-    // Show loader for 1 second with fade-out animation
-    const loaderTimer = setTimeout(() => {
-      Animated.timing(loaderOpacity, {
-        toValue: 0,
-        duration: 400, // Fade out over 400ms
-        useNativeDriver: true,
-      }).start(({finished}) => {
+    const timer = setTimeout(() => {
+      Animated.parallel([
+        Animated.timing(loaderOpacity, {
+          toValue: 0,
+          duration: 800,
+          useNativeDriver: true,
+        }),
+        Animated.timing(contentOpacity, {
+          toValue: 1,
+          duration: 800,
+          useNativeDriver: true,
+        }),
+      ]).start(({finished}) => {
         if (finished) {
-          setShowLoader(false);
+          setLoaderVisible(false);
+          setIsLoading(false);
         }
       });
-    }, 600); // Start fading out after 600ms for a total visible time of 1 second
+    }, minLoadingTime);
 
-    return () => clearTimeout(loaderTimer);
-  }, [userId, loaderOpacity]);
+    return () => clearTimeout(timer);
+  }, [initialLoadDone, loaderOpacity, contentOpacity, minLoadingTime]);
 
   const handleBackPress = () => {
     SoundManager.playInteraction();
@@ -138,16 +146,14 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
       return;
     }
 
-    if (!user) {
-      return;
-    }
+    if (!user) {return;}
 
     try {
       const updatedUser = {...user, name: newName.trim()};
       const success = await db.updateUser(updatedUser);
 
       if (success) {
-        setUser(updatedUser);
+        refreshUser(userId);
         setIsEditingName(false);
         SoundManager.playInteraction();
         Alert.alert('Success', 'Name updated successfully');
@@ -161,10 +167,7 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
   };
 
   const formatDate = (timestamp?: number) => {
-    if (!timestamp) {
-      return 'Unknown';
-    }
-
+    if (!timestamp) {return 'Unknown';}
     const date = new Date(timestamp);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -173,148 +176,92 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
     });
   };
 
-  if (showLoader) {
-    return (
-      <View style={styles.container}>
-        <View style={styles.headerContainer}>
-            <TouchableOpacity
-            style={styles.backButton}
-            onPress={handleBackPress}>
-            <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
-            </TouchableOpacity>
-          <Text style={styles.headerTitle}>Settings</Text>
-        </View>
-        <Animated.View
-          style={{
-            flex: 1,
-            justifyContent: 'center',
-            alignItems: 'center',
-            opacity: loaderOpacity,
-          }}
-        >
-          <LottieView
-            source={require('../assets/animations/loader.json')}
-            autoPlay
-            loop
-            style={{width: 100, height: 100}}
-          />
-        </Animated.View>
-      </View>
-    );
-  }
-
-  if (isLoading) {
-    return (
-      <View style={styles.container}>
-        <View style={styles.headerContainer}>
-            <TouchableOpacity
-            style={styles.backButton}
-            onPress={handleBackPress}>
-            <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
-            </TouchableOpacity>
-          <Text style={styles.headerTitle}>Settings</Text>
-        </View>
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text
-            style={{
-              color: '#FFFFFF',
-              fontFamily: 'Lexend-Medium',
-            }}>
-            Loading settings...
-          </Text>
-        </View>
-      </View>
-    );
-  }
-
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.headerContainer}>
-        <TouchableOpacity
-          style={styles.backButton}
-          onPress={handleBackPress}
-          accessibilityLabel="Go back to dashboard"
-          accessibilityRole="button">
-          <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Settings</Text>
-      </View>
-
-      <ScrollView
-        overScrollMode="never"
-        style={styles.contentContainer}
-        contentContainerStyle={styles.scrollContentContainer}>
-        <Text style={styles.sectionTitle}>Account Information</Text>
-        <View style={styles.card}>
-          {!isEditingName ? (
-            <View style={styles.fieldContainer}>
-              <Text style={styles.fieldLabel}>Name</Text>
-              <View style={styles.fieldNameContainer}>
-                <TouchableOpacity
-                  style={styles.editButton}
-                  onPress={handleEditName}
-                  accessibilityLabel="Edit name"
-                  accessibilityRole="button">
-                  <MaterialIcons name="edit" size={18} color="#FFC107" />
-                </TouchableOpacity>
-                <Text style={styles.fieldValue}>{user?.name || 'Unknown'}</Text>
-              </View>
-            </View>
-          ) : (
-            <View style={styles.editNameContainer}>
-              <Text style={styles.fieldLabel}>Name</Text>
-              <TextInput
-                style={styles.editNameInput}
-                value={newName}
-                onChangeText={setNewName}
-                autoFocus
-                placeholder="Enter your name"
-                placeholderTextColor="#888888"
-              />
-              <View style={styles.buttonRow}>
-                <TouchableOpacity
-                  style={[styles.saveButton, newName.trim() === user?.name?.trim() && {opacity: 0.5}]}
-                  onPress={() => {
-                  SoundManager.playInteraction();
-                  handleSaveName();
-                  }}
-                  disabled={newName.trim() === user?.name?.trim()}>
-                  <Text style={styles.saveButtonText}>Save</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                  style={styles.cancelButton}
-                  onPress={() => {
-                    setIsEditingName(false);
-                    setNewName(user?.name || '');
-                    SoundManager.playInteraction();
-                  }}>
-                  <Text style={styles.cancelButtonText}>Cancel</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-          )}
-
-          <View style={styles.fieldContainer}>
-            <Text style={styles.fieldLabel}>Email</Text>
-            <Text style={styles.fieldValue}>{user?.email || 'Unknown'}</Text>
-          </View>
-
-          <View style={styles.fieldContainer}>
-            <Text style={styles.fieldLabel}>Account Created</Text>
-            <Text style={styles.fieldValue}>
-              {formatDate(user?.creationDate)}
-            </Text>
-          </View>
+    <View style={styles.container}>
+      <StatusBar translucent backgroundColor="transparent" />
+      <Animated.View style={{flex: 1, opacity: contentOpacity}}>
+        <View style={[styles.headerContainer, {paddingTop: StatusBar.currentHeight || 0}]}>
+          <TouchableOpacity
+            style={styles.backButton}
+            onPress={handleBackPress}
+            accessibilityLabel="Go back to dashboard"
+            accessibilityRole="button">
+            <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>Settings</Text>
         </View>
 
-        <View style={styles.animationProgressContainer}>
-          <Text style={styles.animationProgressTitle}>Fire Animation Progress</Text>
-          {fireLevels.map((level, index) => {
-            const isLastItem = index === fireLevels.length - 1;
+        <View style={styles.staticContentContainer}>
+          <View>
+            <Text style={styles.sectionTitle}>Account Information</Text>
+            <View style={styles.card}>
+              {!isEditingName ? (
+                <View style={styles.fieldContainer}>
+                  <Text style={styles.fieldLabel}>Name</Text>
+                  <View style={styles.fieldNameContainer}>
+                    <TouchableOpacity
+                      style={styles.editButton}
+                      onPress={handleEditName}>
+                      <MaterialIcons name="edit" size={18} color="#FFC107" />
+                    </TouchableOpacity>
+                    <Text style={styles.fieldValue}>{user?.name || 'Unknown'}</Text>
+                  </View>
+                </View>
+              ) : (
+                <View style={styles.editNameContainer}>
+                  <Text style={styles.fieldLabel}>Name</Text>
+                  <TextInput
+                    style={styles.editNameInput}
+                    value={newName}
+                    onChangeText={setNewName}
+                    autoFocus
+                    placeholder="Enter your name"
+                    placeholderTextColor="#888888"
+                  />
+                  <View style={styles.buttonRow}>
+                    <TouchableOpacity
+                      style={[
+                        styles.saveButton,
+                        newName.trim() === user?.name?.trim() && {opacity: 0.5},
+                      ]}
+                      onPress={() => {
+                        SoundManager.playInteraction();
+                        handleSaveName();
+                      }}
+                      disabled={newName.trim() === user?.name?.trim()}>
+                      <Text style={styles.saveButtonText}>Save</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      style={styles.cancelButton}
+                      onPress={() => {
+                        setIsEditingName(false);
+                        setNewName(user?.name || '');
+                        SoundManager.playInteraction();
+                      }}>
+                      <Text style={styles.cancelButtonText}>Cancel</Text>
+                    </TouchableOpacity>
+                  </View>
+                </View>
+              )}
 
-            return (
-              <React.Fragment key={index}>
-                <View style={[styles.levelRowContainer, isLastItem ? {marginBottom: 0} : null]}>
+              <View style={styles.fieldContainer}>
+                <Text style={styles.fieldLabel}>Email</Text>
+                <Text style={styles.fieldValue}>{user?.email || 'Unknown'}</Text>
+              </View>
+
+              <View style={styles.fieldContainer}>
+                <Text style={styles.fieldLabel}>Account Created</Text>
+                <Text style={styles.fieldValue}>{formatDate(user?.creationDate)}</Text>
+              </View>
+            </View>
+          </View>
+
+          <View style={styles.animationProgressContainer}>
+            <Text style={styles.animationProgressTitle}>Fire Animation Progress</Text>
+            {fireLevels.map((level, index) => {
+              const isLastItem = index === fireLevels.length - 1;
+              return (
+                <View key={index} style={[styles.levelRowContainer, isLastItem ? {marginBottom: 0} : null]}>
                   <View style={styles.animationContainer}>
                     <LottieView
                       source={level.animation}
@@ -327,37 +274,47 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
                     <View
                       style={[
                         styles.progressBarFill,
-                        {
-                          width: `${level.progress}%`,
-                          backgroundColor: level.color,
-                        },
+                        {width: `${level.progress}%`, backgroundColor: level.color},
                       ]}
                     />
                     {[25, 50, 75].map(checkpoint => (
                       <View
                         key={checkpoint}
-                        style={[
-                          styles.checkpointMarker,
-                          {left: `${checkpoint}%`},
-                        ]}
+                        style={[styles.checkpointMarker, {left: `${checkpoint}%`}]}
                       />
                     ))}
                   </View>
                   <View style={styles.levelNameContainer}>
-                    <Text style={[styles.levelName, {color: level.color}]}>
-                      {level.name}
-                    </Text>
+                    <Text style={[styles.levelName, {color: level.color}]}>{level.name}</Text>
                   </View>
                 </View>
-              </React.Fragment>
-            );
-          })}
-          {/* Remove progressClosingElement - we don't need extra space */}
+              );
+            })}
+          </View>
         </View>
+      </Animated.View>
 
-        {/* Reduce the height of the end spacer */}
-        <View style={{height: 20}} />
-      </ScrollView>
-    </SafeAreaView>
+      {loaderVisible && (
+        <Animated.View
+          style={[
+            StyleSheet.absoluteFillObject,
+            {
+              backgroundColor: '#272727',
+              justifyContent: 'center',
+              alignItems: 'center',
+              zIndex: 10,
+              opacity: loaderOpacity,
+            },
+          ]}
+          pointerEvents="auto">
+          <LottieView
+            source={require('../assets/animations/loader.json')}
+            autoPlay
+            loop
+            style={{width: 150, height: 150}}
+          />
+        </Animated.View>
+      )}
+    </View>
   );
 };
