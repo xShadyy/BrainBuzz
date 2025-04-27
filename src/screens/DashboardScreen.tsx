@@ -181,8 +181,6 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({ navigation, ro
 
         <UserHeader
           username={user?.name || 'USER'}
-          xpCurrent={user?.xp || 50}
-          xpRequired={(user?.level || 1) * 100}
           onSettingsPress={handleOpenSettings}
           onLogoutPress={handleLogout}
         />

@@ -6,6 +6,7 @@ interface UserContextType {
   user: User | null;
   isLoading: boolean;
   setUser: (user: User | null) => void;
+  updateUser: (updatedUser: User) => void;
   refreshUser: (userId: number) => Promise<void>;
   logout: () => void;
 }
@@ -14,6 +15,7 @@ export const UserContext = createContext<UserContextType>({
   user: null,
   isLoading: true,
   setUser: () => {},
+  updateUser: () => {},
   refreshUser: async () => {},
   logout: () => {},
 });
@@ -24,8 +26,19 @@ interface UserProviderProps {
 
 export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(false); // Change to false by default
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const isRefreshingRef = useRef<boolean>(false); // Track if refreshUser is already in progress
+
+  const updateUser = (updatedUser: User) => {
+    setUser(updatedUser);
+
+    // Also update in the database if we have an ID
+    if (updatedUser.id) {
+      db.updateUser(updatedUser).catch(error => {
+        console.error('Error updating user:', error);
+      });
+    }
+  };
 
   const refreshUser = async (userId: number) => {
     // Prevent multiple concurrent refreshUser calls
@@ -59,6 +72,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     user,
     isLoading,
     setUser,
+    updateUser,
     refreshUser,
     logout,
   };

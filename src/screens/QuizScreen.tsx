@@ -7,6 +7,7 @@ import SoundManager from '../utils/SoundManager';
 import {styles, configureStatusBar} from './QuizScreen.styles';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
+import Quiz from '../components/Quiz';
 
 type QuizScreenProps = StackScreenProps<RootStackParamList, 'Quiz'>;
 
@@ -14,6 +15,8 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
   const { userId, category } = route.params;
   const {user, refreshUser} = useUser();
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
+  const [quizStarted, setQuizStarted] = useState(false);
+  const [categoryId, setCategoryId] = useState<number | null>(null);
 
   // Fetch user data when component mounts and configure status bar
   useEffect(() => {
@@ -25,7 +28,21 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
       }
     };
 
+    // Load the categories to get the correct category ID
+    const loadCategoryId = async () => {
+      try {
+        const categoriesData = require('../../android/app/src/main/assets/quiz_data/categories.json');
+        const foundCategory = categoriesData.find((cat: any) => cat.name === category);
+        if (foundCategory) {
+          setCategoryId(foundCategory.id);
+        }
+      } catch (error) {
+        console.error('Failed to load category ID:', error);
+      }
+    };
+
     loadUserData();
+    loadCategoryId();
 
     // Initialize sound manager
     SoundManager.init();
@@ -33,25 +50,25 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
     return () => {
       // Clean up if needed
     };
-  }, [userId, refreshUser]);
+  }, [userId, refreshUser, category]);
 
   const difficulties = [
     {
-      id: 'hard',
+      id: 'HARD',
       title: 'Hard',
       styleClass: styles.hardButton,
       multiplier: '3x',
       icon: 'whatshot',
     },
     {
-      id: 'medium',
+      id: 'MEDIUM',
       title: 'Medium',
       styleClass: styles.mediumButton,
       multiplier: '2x',
       icon: 'bolt',
     },
     {
-      id: 'easy',
+      id: 'EASY',
       title: 'Easy',
       styleClass: styles.easyButton,
       multiplier: '1x',
@@ -60,18 +77,14 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
   ];
 
   const handleDifficultySelect = (difficulty: string) => {
+    SoundManager.playInteraction();
     setSelectedDifficulty(difficulty);
-
-    // Handle difficulty selection
-    console.log(`Selected difficulty: ${difficulty} for category: ${category}`);
-
-    // In a real implementation, you would probably navigate to a quiz game screen
-    // navigation.navigate('QuizGame', { userId, category, difficulty });
+    setQuizStarted(true);
   };
 
   const handleBackPress = () => {
+    SoundManager.playInteraction();
     navigation.goBack();
-    SoundManager.playInteraction();  // Sound will play but won't block navigation
   };
 
   const handleLogout = () => {
@@ -85,6 +98,24 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
   const handleOpenSettings = () => {
     navigation.navigate('Settings', { userId: userId });
   };
+
+  const handleQuizComplete = (score: number, totalQuestions: number) => {
+
+    SoundManager.playInteraction();
+    alert(`Quiz completed! Your score: ${score}/${totalQuestions}`);
+    navigation.goBack();
+  };
+
+  // Display quiz if started
+  if (quizStarted && selectedDifficulty && categoryId) {
+    return (
+      <Quiz
+        categoryId={categoryId}
+        difficulty={selectedDifficulty}
+        onComplete={handleQuizComplete}
+      />
+    );
+  }
 
   // Calculate some example XP for visual demonstration
   const userXpCurrent = user?.xp || 50;
@@ -104,48 +135,47 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
       />
 
       <View style={styles.contentContainer}>
-        <ScrollView
-          contentContainerStyle={styles.scrollViewContainer}
-          showsVerticalScrollIndicator={false}>
-          <View style={styles.centeringContainer}>
-            <Text style={styles.categoryText}>Quiz Category: {category}</Text>
-            <Text style={styles.chooseText}>Choose Difficulty</Text>
+        <ScrollView contentContainerStyle={styles.difficultiesContainer}>
+          <Text style={styles.categoryText}>Quiz Category: {category}</Text>
+          <Text style={styles.chooseText}>Choose Difficulty</Text>
 
-            {difficulties.map(difficulty => (
-              <TouchableOpacity
-                key={difficulty.id}
-                style={[
-                  styles.difficultyButton,
-                  difficulty.styleClass,
-                  selectedDifficulty === difficulty.id && styles.selectedDifficultyButton,
-                ]}
-                onPress={() => handleDifficultySelect(difficulty.id)}>
-                <View style={styles.difficultyIconContainer}>
-                  <MaterialIcons
-                    name={difficulty.icon}
-                    size={28}
-                    color="#FFFFFF"
-                    style={styles.difficultyIcon}
-                  />
-                  <Text style={styles.difficultyText}>{difficulty.title}</Text>
-                </View>
-                <View style={styles.multiplierContainer}>
-                  <Text style={styles.multiplierText}>
-                    {difficulty.multiplier}
-                  </Text>
-                </View>
-              </TouchableOpacity>
-            ))}
-
+          {difficulties.map(difficulty => (
             <TouchableOpacity
-              style={styles.backToCategoriesButton}
-              onPress={handleBackPress}>
-              <MaterialIcons name="arrow-back" size={20} color="#FFFFFF" />
-              <Text style={styles.backToCategoriesText}>Back to Categories</Text>
+              key={difficulty.id}
+              style={[
+                styles.difficultyButton,
+                difficulty.styleClass,
+                selectedDifficulty === difficulty.id && styles.selectedDifficultyButton,
+              ]}
+              onPress={() => handleDifficultySelect(difficulty.id)}>
+              <View style={styles.difficultyIconContainer}>
+                <MaterialIcons
+                  name={difficulty.icon}
+                  size={28}
+                  color="#FFFFFF"
+                  style={styles.difficultyIcon}
+                />
+                <Text style={styles.difficultyText}>{difficulty.title}</Text>
+              </View>
+              <View style={styles.multiplierContainer}>
+                <Text style={styles.multiplierText}>
+                  {difficulty.multiplier}
+                </Text>
+              </View>
             </TouchableOpacity>
-          </View>
+          ))}
+          <TouchableOpacity
+            style={styles.backToCategoriesButton}
+            onPress={handleBackPress}>
+            <MaterialIcons name="arrow-back" size={20} color="#FFFFFF" />
+            <Text style={styles.backToCategoriesText}>Back to Categories</Text>
+          </TouchableOpacity>
         </ScrollView>
       </View>
     </View>
   );
 };
+function alert(_arg0: string) {
+  throw new Error('Function not implemented.');
+}
+

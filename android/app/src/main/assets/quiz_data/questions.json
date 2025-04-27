@@ -1,0 +1,2522 @@
+[
+  {
+    "id": 1,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 27 + 29?"
+  },
+  {
+    "id": 2,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 16 + 35?"
+  },
+  {
+    "id": 3,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 19 + 21?"
+  },
+  {
+    "id": 4,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 22 + 12?"
+  },
+  {
+    "id": 5,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 32 + 46?"
+  },
+  {
+    "id": 6,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 25 + 45?"
+  },
+  {
+    "id": 7,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 29 + 6?"
+  },
+  {
+    "id": 8,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 45 + 13?"
+  },
+  {
+    "id": 9,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 33 + 22?"
+  },
+  {
+    "id": 10,
+    "category_id": 1,
+    "difficulty": "EASY",
+    "text": "What is 8 + 38?"
+  },
+  {
+    "id": 11,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 20x + 14x"
+  },
+  {
+    "id": 12,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 18x + 27x"
+  },
+  {
+    "id": 13,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 13x + 27x"
+  },
+  {
+    "id": 14,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 41x + 14x"
+  },
+  {
+    "id": 15,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 40x + 3x"
+  },
+  {
+    "id": 16,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 19x + 26x"
+  },
+  {
+    "id": 17,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 20x + 31x"
+  },
+  {
+    "id": 18,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 17x + 26x"
+  },
+  {
+    "id": 19,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 21x + 24x"
+  },
+  {
+    "id": 20,
+    "category_id": 1,
+    "difficulty": "MEDIUM",
+    "text": "Simplify: 29x + 21x"
+  },
+  {
+    "id": 21,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^18?"
+  },
+  {
+    "id": 22,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^38?"
+  },
+  {
+    "id": 23,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^35?"
+  },
+  {
+    "id": 24,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^1?"
+  },
+  {
+    "id": 25,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^6?"
+  },
+  {
+    "id": 26,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^18?"
+  },
+  {
+    "id": 27,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^36?"
+  },
+  {
+    "id": 28,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^11?"
+  },
+  {
+    "id": 29,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^23?"
+  },
+  {
+    "id": 30,
+    "category_id": 1,
+    "difficulty": "HARD",
+    "text": "What is the derivative of x^22?"
+  },
+  {
+    "id": 31,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 1"
+  },
+  {
+    "id": 32,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 2"
+  },
+  {
+    "id": 33,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 3"
+  },
+  {
+    "id": 34,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 4"
+  },
+  {
+    "id": 35,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 5"
+  },
+  {
+    "id": 36,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 6"
+  },
+  {
+    "id": 37,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 7"
+  },
+  {
+    "id": 38,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 8"
+  },
+  {
+    "id": 39,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 9"
+  },
+  {
+    "id": 40,
+    "category_id": 2,
+    "difficulty": "EASY",
+    "text": "[Science EASY] Sample question 10"
+  },
+  {
+    "id": 41,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 1"
+  },
+  {
+    "id": 42,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 2"
+  },
+  {
+    "id": 43,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 3"
+  },
+  {
+    "id": 44,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 4"
+  },
+  {
+    "id": 45,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 5"
+  },
+  {
+    "id": 46,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 6"
+  },
+  {
+    "id": 47,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 7"
+  },
+  {
+    "id": 48,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 8"
+  },
+  {
+    "id": 49,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 9"
+  },
+  {
+    "id": 50,
+    "category_id": 2,
+    "difficulty": "MEDIUM",
+    "text": "[Science MEDIUM] Sample question 10"
+  },
+  {
+    "id": 51,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 1"
+  },
+  {
+    "id": 52,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 2"
+  },
+  {
+    "id": 53,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 3"
+  },
+  {
+    "id": 54,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 4"
+  },
+  {
+    "id": 55,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 5"
+  },
+  {
+    "id": 56,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 6"
+  },
+  {
+    "id": 57,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 7"
+  },
+  {
+    "id": 58,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 8"
+  },
+  {
+    "id": 59,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 9"
+  },
+  {
+    "id": 60,
+    "category_id": 2,
+    "difficulty": "HARD",
+    "text": "[Science HARD] Sample question 10"
+  },
+  {
+    "id": 61,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 1"
+  },
+  {
+    "id": 62,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 2"
+  },
+  {
+    "id": 63,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 3"
+  },
+  {
+    "id": 64,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 4"
+  },
+  {
+    "id": 65,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 5"
+  },
+  {
+    "id": 66,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 6"
+  },
+  {
+    "id": 67,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 7"
+  },
+  {
+    "id": 68,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 8"
+  },
+  {
+    "id": 69,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 9"
+  },
+  {
+    "id": 70,
+    "category_id": 3,
+    "difficulty": "EASY",
+    "text": "[History EASY] Sample question 10"
+  },
+  {
+    "id": 71,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 1"
+  },
+  {
+    "id": 72,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 2"
+  },
+  {
+    "id": 73,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 3"
+  },
+  {
+    "id": 74,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 4"
+  },
+  {
+    "id": 75,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 5"
+  },
+  {
+    "id": 76,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 6"
+  },
+  {
+    "id": 77,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 7"
+  },
+  {
+    "id": 78,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 8"
+  },
+  {
+    "id": 79,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 9"
+  },
+  {
+    "id": 80,
+    "category_id": 3,
+    "difficulty": "MEDIUM",
+    "text": "[History MEDIUM] Sample question 10"
+  },
+  {
+    "id": 81,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 1"
+  },
+  {
+    "id": 82,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 2"
+  },
+  {
+    "id": 83,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 3"
+  },
+  {
+    "id": 84,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 4"
+  },
+  {
+    "id": 85,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 5"
+  },
+  {
+    "id": 86,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 6"
+  },
+  {
+    "id": 87,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 7"
+  },
+  {
+    "id": 88,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 8"
+  },
+  {
+    "id": 89,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 9"
+  },
+  {
+    "id": 90,
+    "category_id": 3,
+    "difficulty": "HARD",
+    "text": "[History HARD] Sample question 10"
+  },
+  {
+    "id": 91,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 1"
+  },
+  {
+    "id": 92,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 2"
+  },
+  {
+    "id": 93,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 3"
+  },
+  {
+    "id": 94,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 4"
+  },
+  {
+    "id": 95,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 5"
+  },
+  {
+    "id": 96,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 6"
+  },
+  {
+    "id": 97,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 7"
+  },
+  {
+    "id": 98,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 8"
+  },
+  {
+    "id": 99,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 9"
+  },
+  {
+    "id": 100,
+    "category_id": 4,
+    "difficulty": "EASY",
+    "text": "[Geography EASY] Sample question 10"
+  },
+  {
+    "id": 101,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 1"
+  },
+  {
+    "id": 102,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 2"
+  },
+  {
+    "id": 103,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 3"
+  },
+  {
+    "id": 104,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 4"
+  },
+  {
+    "id": 105,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 5"
+  },
+  {
+    "id": 106,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 6"
+  },
+  {
+    "id": 107,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 7"
+  },
+  {
+    "id": 108,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 8"
+  },
+  {
+    "id": 109,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 9"
+  },
+  {
+    "id": 110,
+    "category_id": 4,
+    "difficulty": "MEDIUM",
+    "text": "[Geography MEDIUM] Sample question 10"
+  },
+  {
+    "id": 111,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 1"
+  },
+  {
+    "id": 112,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 2"
+  },
+  {
+    "id": 113,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 3"
+  },
+  {
+    "id": 114,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 4"
+  },
+  {
+    "id": 115,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 5"
+  },
+  {
+    "id": 116,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 6"
+  },
+  {
+    "id": 117,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 7"
+  },
+  {
+    "id": 118,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 8"
+  },
+  {
+    "id": 119,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 9"
+  },
+  {
+    "id": 120,
+    "category_id": 4,
+    "difficulty": "HARD",
+    "text": "[Geography HARD] Sample question 10"
+  },
+  {
+    "id": 121,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 1"
+  },
+  {
+    "id": 122,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 2"
+  },
+  {
+    "id": 123,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 3"
+  },
+  {
+    "id": 124,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 4"
+  },
+  {
+    "id": 125,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 5"
+  },
+  {
+    "id": 126,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 6"
+  },
+  {
+    "id": 127,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 7"
+  },
+  {
+    "id": 128,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 8"
+  },
+  {
+    "id": 129,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 9"
+  },
+  {
+    "id": 130,
+    "category_id": 5,
+    "difficulty": "EASY",
+    "text": "[Languages EASY] Sample question 10"
+  },
+  {
+    "id": 131,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 1"
+  },
+  {
+    "id": 132,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 2"
+  },
+  {
+    "id": 133,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 3"
+  },
+  {
+    "id": 134,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 4"
+  },
+  {
+    "id": 135,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 5"
+  },
+  {
+    "id": 136,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 6"
+  },
+  {
+    "id": 137,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 7"
+  },
+  {
+    "id": 138,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 8"
+  },
+  {
+    "id": 139,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 9"
+  },
+  {
+    "id": 140,
+    "category_id": 5,
+    "difficulty": "MEDIUM",
+    "text": "[Languages MEDIUM] Sample question 10"
+  },
+  {
+    "id": 141,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 1"
+  },
+  {
+    "id": 142,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 2"
+  },
+  {
+    "id": 143,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 3"
+  },
+  {
+    "id": 144,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 4"
+  },
+  {
+    "id": 145,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 5"
+  },
+  {
+    "id": 146,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 6"
+  },
+  {
+    "id": 147,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 7"
+  },
+  {
+    "id": 148,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 8"
+  },
+  {
+    "id": 149,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 9"
+  },
+  {
+    "id": 150,
+    "category_id": 5,
+    "difficulty": "HARD",
+    "text": "[Languages HARD] Sample question 10"
+  },
+  {
+    "id": 151,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 1"
+  },
+  {
+    "id": 152,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 2"
+  },
+  {
+    "id": 153,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 3"
+  },
+  {
+    "id": 154,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 4"
+  },
+  {
+    "id": 155,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 5"
+  },
+  {
+    "id": 156,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 6"
+  },
+  {
+    "id": 157,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 7"
+  },
+  {
+    "id": 158,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 8"
+  },
+  {
+    "id": 159,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 9"
+  },
+  {
+    "id": 160,
+    "category_id": 6,
+    "difficulty": "EASY",
+    "text": "[Literature EASY] Sample question 10"
+  },
+  {
+    "id": 161,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 1"
+  },
+  {
+    "id": 162,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 2"
+  },
+  {
+    "id": 163,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 3"
+  },
+  {
+    "id": 164,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 4"
+  },
+  {
+    "id": 165,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 5"
+  },
+  {
+    "id": 166,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 6"
+  },
+  {
+    "id": 167,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 7"
+  },
+  {
+    "id": 168,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 8"
+  },
+  {
+    "id": 169,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 9"
+  },
+  {
+    "id": 170,
+    "category_id": 6,
+    "difficulty": "MEDIUM",
+    "text": "[Literature MEDIUM] Sample question 10"
+  },
+  {
+    "id": 171,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 1"
+  },
+  {
+    "id": 172,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 2"
+  },
+  {
+    "id": 173,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 3"
+  },
+  {
+    "id": 174,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 4"
+  },
+  {
+    "id": 175,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 5"
+  },
+  {
+    "id": 176,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 6"
+  },
+  {
+    "id": 177,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 7"
+  },
+  {
+    "id": 178,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 8"
+  },
+  {
+    "id": 179,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 9"
+  },
+  {
+    "id": 180,
+    "category_id": 6,
+    "difficulty": "HARD",
+    "text": "[Literature HARD] Sample question 10"
+  },
+  {
+    "id": 181,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 1"
+  },
+  {
+    "id": 182,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 2"
+  },
+  {
+    "id": 183,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 3"
+  },
+  {
+    "id": 184,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 4"
+  },
+  {
+    "id": 185,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 5"
+  },
+  {
+    "id": 186,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 6"
+  },
+  {
+    "id": 187,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 7"
+  },
+  {
+    "id": 188,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 8"
+  },
+  {
+    "id": 189,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 9"
+  },
+  {
+    "id": 190,
+    "category_id": 7,
+    "difficulty": "EASY",
+    "text": "[Art EASY] Sample question 10"
+  },
+  {
+    "id": 191,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 1"
+  },
+  {
+    "id": 192,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 2"
+  },
+  {
+    "id": 193,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 3"
+  },
+  {
+    "id": 194,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 4"
+  },
+  {
+    "id": 195,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 5"
+  },
+  {
+    "id": 196,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 6"
+  },
+  {
+    "id": 197,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 7"
+  },
+  {
+    "id": 198,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 8"
+  },
+  {
+    "id": 199,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 9"
+  },
+  {
+    "id": 200,
+    "category_id": 7,
+    "difficulty": "MEDIUM",
+    "text": "[Art MEDIUM] Sample question 10"
+  },
+  {
+    "id": 201,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 1"
+  },
+  {
+    "id": 202,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 2"
+  },
+  {
+    "id": 203,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 3"
+  },
+  {
+    "id": 204,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 4"
+  },
+  {
+    "id": 205,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 5"
+  },
+  {
+    "id": 206,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 6"
+  },
+  {
+    "id": 207,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 7"
+  },
+  {
+    "id": 208,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 8"
+  },
+  {
+    "id": 209,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 9"
+  },
+  {
+    "id": 210,
+    "category_id": 7,
+    "difficulty": "HARD",
+    "text": "[Art HARD] Sample question 10"
+  },
+  {
+    "id": 211,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 1"
+  },
+  {
+    "id": 212,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 2"
+  },
+  {
+    "id": 213,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 3"
+  },
+  {
+    "id": 214,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 4"
+  },
+  {
+    "id": 215,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 5"
+  },
+  {
+    "id": 216,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 6"
+  },
+  {
+    "id": 217,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 7"
+  },
+  {
+    "id": 218,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 8"
+  },
+  {
+    "id": 219,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 9"
+  },
+  {
+    "id": 220,
+    "category_id": 8,
+    "difficulty": "EASY",
+    "text": "[Music EASY] Sample question 10"
+  },
+  {
+    "id": 221,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 1"
+  },
+  {
+    "id": 222,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 2"
+  },
+  {
+    "id": 223,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 3"
+  },
+  {
+    "id": 224,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 4"
+  },
+  {
+    "id": 225,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 5"
+  },
+  {
+    "id": 226,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 6"
+  },
+  {
+    "id": 227,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 7"
+  },
+  {
+    "id": 228,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 8"
+  },
+  {
+    "id": 229,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 9"
+  },
+  {
+    "id": 230,
+    "category_id": 8,
+    "difficulty": "MEDIUM",
+    "text": "[Music MEDIUM] Sample question 10"
+  },
+  {
+    "id": 231,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 1"
+  },
+  {
+    "id": 232,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 2"
+  },
+  {
+    "id": 233,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 3"
+  },
+  {
+    "id": 234,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 4"
+  },
+  {
+    "id": 235,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 5"
+  },
+  {
+    "id": 236,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 6"
+  },
+  {
+    "id": 237,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 7"
+  },
+  {
+    "id": 238,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 8"
+  },
+  {
+    "id": 239,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 9"
+  },
+  {
+    "id": 240,
+    "category_id": 8,
+    "difficulty": "HARD",
+    "text": "[Music HARD] Sample question 10"
+  },
+  {
+    "id": 241,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 1"
+  },
+  {
+    "id": 242,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 2"
+  },
+  {
+    "id": 243,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 3"
+  },
+  {
+    "id": 244,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 4"
+  },
+  {
+    "id": 245,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 5"
+  },
+  {
+    "id": 246,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 6"
+  },
+  {
+    "id": 247,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 7"
+  },
+  {
+    "id": 248,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 8"
+  },
+  {
+    "id": 249,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 9"
+  },
+  {
+    "id": 250,
+    "category_id": 9,
+    "difficulty": "EASY",
+    "text": "[Technology EASY] Sample question 10"
+  },
+  {
+    "id": 251,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 1"
+  },
+  {
+    "id": 252,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 2"
+  },
+  {
+    "id": 253,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 3"
+  },
+  {
+    "id": 254,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 4"
+  },
+  {
+    "id": 255,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 5"
+  },
+  {
+    "id": 256,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 6"
+  },
+  {
+    "id": 257,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 7"
+  },
+  {
+    "id": 258,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 8"
+  },
+  {
+    "id": 259,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 9"
+  },
+  {
+    "id": 260,
+    "category_id": 9,
+    "difficulty": "MEDIUM",
+    "text": "[Technology MEDIUM] Sample question 10"
+  },
+  {
+    "id": 261,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 1"
+  },
+  {
+    "id": 262,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 2"
+  },
+  {
+    "id": 263,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 3"
+  },
+  {
+    "id": 264,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 4"
+  },
+  {
+    "id": 265,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 5"
+  },
+  {
+    "id": 266,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 6"
+  },
+  {
+    "id": 267,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 7"
+  },
+  {
+    "id": 268,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 8"
+  },
+  {
+    "id": 269,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 9"
+  },
+  {
+    "id": 270,
+    "category_id": 9,
+    "difficulty": "HARD",
+    "text": "[Technology HARD] Sample question 10"
+  },
+  {
+    "id": 271,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 1"
+  },
+  {
+    "id": 272,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 2"
+  },
+  {
+    "id": 273,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 3"
+  },
+  {
+    "id": 274,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 4"
+  },
+  {
+    "id": 275,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 5"
+  },
+  {
+    "id": 276,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 6"
+  },
+  {
+    "id": 277,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 7"
+  },
+  {
+    "id": 278,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 8"
+  },
+  {
+    "id": 279,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 9"
+  },
+  {
+    "id": 280,
+    "category_id": 10,
+    "difficulty": "EASY",
+    "text": "[Sports EASY] Sample question 10"
+  },
+  {
+    "id": 281,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 1"
+  },
+  {
+    "id": 282,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 2"
+  },
+  {
+    "id": 283,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 3"
+  },
+  {
+    "id": 284,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 4"
+  },
+  {
+    "id": 285,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 5"
+  },
+  {
+    "id": 286,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 6"
+  },
+  {
+    "id": 287,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 7"
+  },
+  {
+    "id": 288,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 8"
+  },
+  {
+    "id": 289,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 9"
+  },
+  {
+    "id": 290,
+    "category_id": 10,
+    "difficulty": "MEDIUM",
+    "text": "[Sports MEDIUM] Sample question 10"
+  },
+  {
+    "id": 291,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 1"
+  },
+  {
+    "id": 292,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 2"
+  },
+  {
+    "id": 293,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 3"
+  },
+  {
+    "id": 294,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 4"
+  },
+  {
+    "id": 295,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 5"
+  },
+  {
+    "id": 296,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 6"
+  },
+  {
+    "id": 297,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 7"
+  },
+  {
+    "id": 298,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 8"
+  },
+  {
+    "id": 299,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 9"
+  },
+  {
+    "id": 300,
+    "category_id": 10,
+    "difficulty": "HARD",
+    "text": "[Sports HARD] Sample question 10"
+  },
+  {
+    "id": 301,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 1"
+  },
+  {
+    "id": 302,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 2"
+  },
+  {
+    "id": 303,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 3"
+  },
+  {
+    "id": 304,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 4"
+  },
+  {
+    "id": 305,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 5"
+  },
+  {
+    "id": 306,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 6"
+  },
+  {
+    "id": 307,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 7"
+  },
+  {
+    "id": 308,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 8"
+  },
+  {
+    "id": 309,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 9"
+  },
+  {
+    "id": 310,
+    "category_id": 11,
+    "difficulty": "EASY",
+    "text": "[Health EASY] Sample question 10"
+  },
+  {
+    "id": 311,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 1"
+  },
+  {
+    "id": 312,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 2"
+  },
+  {
+    "id": 313,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 3"
+  },
+  {
+    "id": 314,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 4"
+  },
+  {
+    "id": 315,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 5"
+  },
+  {
+    "id": 316,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 6"
+  },
+  {
+    "id": 317,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 7"
+  },
+  {
+    "id": 318,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 8"
+  },
+  {
+    "id": 319,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 9"
+  },
+  {
+    "id": 320,
+    "category_id": 11,
+    "difficulty": "MEDIUM",
+    "text": "[Health MEDIUM] Sample question 10"
+  },
+  {
+    "id": 321,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 1"
+  },
+  {
+    "id": 322,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 2"
+  },
+  {
+    "id": 323,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 3"
+  },
+  {
+    "id": 324,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 4"
+  },
+  {
+    "id": 325,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 5"
+  },
+  {
+    "id": 326,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 6"
+  },
+  {
+    "id": 327,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 7"
+  },
+  {
+    "id": 328,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 8"
+  },
+  {
+    "id": 329,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 9"
+  },
+  {
+    "id": 330,
+    "category_id": 11,
+    "difficulty": "HARD",
+    "text": "[Health HARD] Sample question 10"
+  },
+  {
+    "id": 331,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 1"
+  },
+  {
+    "id": 332,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 2"
+  },
+  {
+    "id": 333,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 3"
+  },
+  {
+    "id": 334,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 4"
+  },
+  {
+    "id": 335,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 5"
+  },
+  {
+    "id": 336,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 6"
+  },
+  {
+    "id": 337,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 7"
+  },
+  {
+    "id": 338,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 8"
+  },
+  {
+    "id": 339,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 9"
+  },
+  {
+    "id": 340,
+    "category_id": 12,
+    "difficulty": "EASY",
+    "text": "[Space EASY] Sample question 10"
+  },
+  {
+    "id": 341,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 1"
+  },
+  {
+    "id": 342,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 2"
+  },
+  {
+    "id": 343,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 3"
+  },
+  {
+    "id": 344,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 4"
+  },
+  {
+    "id": 345,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 5"
+  },
+  {
+    "id": 346,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 6"
+  },
+  {
+    "id": 347,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 7"
+  },
+  {
+    "id": 348,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 8"
+  },
+  {
+    "id": 349,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 9"
+  },
+  {
+    "id": 350,
+    "category_id": 12,
+    "difficulty": "MEDIUM",
+    "text": "[Space MEDIUM] Sample question 10"
+  },
+  {
+    "id": 351,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 1"
+  },
+  {
+    "id": 352,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 2"
+  },
+  {
+    "id": 353,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 3"
+  },
+  {
+    "id": 354,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 4"
+  },
+  {
+    "id": 355,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 5"
+  },
+  {
+    "id": 356,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 6"
+  },
+  {
+    "id": 357,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 7"
+  },
+  {
+    "id": 358,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 8"
+  },
+  {
+    "id": 359,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 9"
+  },
+  {
+    "id": 360,
+    "category_id": 12,
+    "difficulty": "HARD",
+    "text": "[Space HARD] Sample question 10"
+  },
+  {
+    "id": 361,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 1"
+  },
+  {
+    "id": 362,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 2"
+  },
+  {
+    "id": 363,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 3"
+  },
+  {
+    "id": 364,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 4"
+  },
+  {
+    "id": 365,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 5"
+  },
+  {
+    "id": 366,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 6"
+  },
+  {
+    "id": 367,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 7"
+  },
+  {
+    "id": 368,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 8"
+  },
+  {
+    "id": 369,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 9"
+  },
+  {
+    "id": 370,
+    "category_id": 13,
+    "difficulty": "EASY",
+    "text": "[Movies EASY] Sample question 10"
+  },
+  {
+    "id": 371,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 1"
+  },
+  {
+    "id": 372,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 2"
+  },
+  {
+    "id": 373,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 3"
+  },
+  {
+    "id": 374,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 4"
+  },
+  {
+    "id": 375,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 5"
+  },
+  {
+    "id": 376,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 6"
+  },
+  {
+    "id": 377,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 7"
+  },
+  {
+    "id": 378,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 8"
+  },
+  {
+    "id": 379,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 9"
+  },
+  {
+    "id": 380,
+    "category_id": 13,
+    "difficulty": "MEDIUM",
+    "text": "[Movies MEDIUM] Sample question 10"
+  },
+  {
+    "id": 381,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 1"
+  },
+  {
+    "id": 382,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 2"
+  },
+  {
+    "id": 383,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 3"
+  },
+  {
+    "id": 384,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 4"
+  },
+  {
+    "id": 385,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 5"
+  },
+  {
+    "id": 386,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 6"
+  },
+  {
+    "id": 387,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 7"
+  },
+  {
+    "id": 388,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 8"
+  },
+  {
+    "id": 389,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 9"
+  },
+  {
+    "id": 390,
+    "category_id": 13,
+    "difficulty": "HARD",
+    "text": "[Movies HARD] Sample question 10"
+  },
+  {
+    "id": 391,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 1"
+  },
+  {
+    "id": 392,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 2"
+  },
+  {
+    "id": 393,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 3"
+  },
+  {
+    "id": 394,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 4"
+  },
+  {
+    "id": 395,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 5"
+  },
+  {
+    "id": 396,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 6"
+  },
+  {
+    "id": 397,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 7"
+  },
+  {
+    "id": 398,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 8"
+  },
+  {
+    "id": 399,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 9"
+  },
+  {
+    "id": 400,
+    "category_id": 14,
+    "difficulty": "EASY",
+    "text": "[Animals EASY] Sample question 10"
+  },
+  {
+    "id": 401,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 1"
+  },
+  {
+    "id": 402,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 2"
+  },
+  {
+    "id": 403,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 3"
+  },
+  {
+    "id": 404,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 4"
+  },
+  {
+    "id": 405,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 5"
+  },
+  {
+    "id": 406,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 6"
+  },
+  {
+    "id": 407,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 7"
+  },
+  {
+    "id": 408,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 8"
+  },
+  {
+    "id": 409,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 9"
+  },
+  {
+    "id": 410,
+    "category_id": 14,
+    "difficulty": "MEDIUM",
+    "text": "[Animals MEDIUM] Sample question 10"
+  },
+  {
+    "id": 411,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 1"
+  },
+  {
+    "id": 412,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 2"
+  },
+  {
+    "id": 413,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 3"
+  },
+  {
+    "id": 414,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 4"
+  },
+  {
+    "id": 415,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 5"
+  },
+  {
+    "id": 416,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 6"
+  },
+  {
+    "id": 417,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 7"
+  },
+  {
+    "id": 418,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 8"
+  },
+  {
+    "id": 419,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 9"
+  },
+  {
+    "id": 420,
+    "category_id": 14,
+    "difficulty": "HARD",
+    "text": "[Animals HARD] Sample question 10"
+  }
+]
