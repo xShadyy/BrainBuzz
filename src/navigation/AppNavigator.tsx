@@ -6,16 +6,19 @@ import {
 } from '@react-navigation/stack';
 import { Easing, Animated } from 'react-native';
 
-import { WelcomeScreen } from '../screens/WelcomeScreen';
-import { LoginScreen } from '../screens/LoginScreen';
-import { DashboardScreen } from '../screens/DashboardScreen';
-import { QuizScreen } from '../screens/QuizScreen';
-import { SettingsScreen } from '../screens/SettingsScreen';
+import { WelcomeScreen } from '../screens/WelcomeScreen/WelcomeScreen';
+import { LoginScreen } from '../screens/LoginScreen/LoginScreen';
+import { DashboardScreen } from '../screens/DashboardScreen/DashboardScreen';
+import { DifficultySelectorScreen } from '../screens/DifficultySelectorScreen/DifficultySelectorScreen';
+import { SettingsScreen } from '../screens/SettingsScreen/SettingsScreen';
+import { QuizScreen } from '../screens/QuizScreen/QuizScreen';
+
 export type RootStackParamList = {
   Welcome: undefined;
   Login: undefined;
-  Dashboard: { userId: number };
+  Dashboard: { userId: number; fromLogin?: boolean };
   Quiz: { userId: number; category: string };
+  QuizScreen: { userId: number; categoryId: number; difficulty: string; category: string };
   Settings: { userId: number };
 };
 
@@ -82,7 +85,8 @@ export const AppNavigator: React.FC = () => {
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Dashboard" component={DashboardScreen} />
-        <Stack.Screen name="Quiz" component={QuizScreen} />
+        <Stack.Screen name="Quiz" component={DifficultySelectorScreen} />
+        <Stack.Screen name="QuizScreen" component={QuizScreen} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
       </Stack.Navigator>
     </NavigationContainer>

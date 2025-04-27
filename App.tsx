@@ -1,4 +1,3 @@
-
 /**
  * BrainBuzz App
  *
@@ -13,20 +12,11 @@ import { UserProvider } from './src/utils/UserContext';
 
 function App(): React.JSX.Element {
   useEffect(() => {
-    // Set status bar to translucent for the entire app
-    StatusBar.setTranslucent(true);
-    StatusBar.setBackgroundColor('transparent');
-
-    console.log('App mounted, initializing ambient sound');
-
-    // Initialize sound manager
     SoundManager.init().then(() => {
-      // Start playing ambient music
       SoundManager.playAmbient();
     });
 
     return () => {
-      console.log('App unmounted, stopping all sounds');
       SoundManager.release();
     };
   }, []);

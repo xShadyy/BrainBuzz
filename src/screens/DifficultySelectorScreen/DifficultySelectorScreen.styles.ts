@@ -22,15 +22,15 @@ export const configureStatusBar = () => {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#121212',
+    backgroundColor: '#282828',
   },
   contentContainer: {
     flex: 1,
-    marginTop: HEADER_HEIGHT, // Add margin to account for absolute header
+    marginTop: HEADER_HEIGHT,
   },
   scrollViewContainer: {
     flexGrow: 1,
-    justifyContent: 'center', // Center content vertically in remaining space
+    justifyContent: 'center',
   },
   centeringContainer: {
     width: '100%',

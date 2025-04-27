@@ -17,11 +17,11 @@ import {
 import {styles} from './SettingsScreen.styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import LottieView from 'lottie-react-native';
-import {db} from '../database';
-import SoundManager from '../utils/SoundManager';
-import {useUser} from '../utils/UserContext';
+import {db} from '../../database';
+import SoundManager from '../../utils/SoundManager';
+import {useUser} from '../../utils/UserContext';
 import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigation/AppNavigator';
+import { RootStackParamList } from '../../navigation/AppNavigator';
 
 type SettingsScreenProps = StackScreenProps<RootStackParamList, 'Settings'>;
 
@@ -43,49 +43,49 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, rout
 
   const fireLevels: FireLevel[] = [
     {
-      animation: require('../assets/animations/fire_sunny_beige_lighter.json'),
+      animation: require('../../assets/animations/fire_sunny_beige_lighter.json'),
       name: 'Ember Spark',
       color: '#FF6B6B',
       progress: 100,
     },
     {
-      animation: require('../assets/animations/fire_sunny_beige_light.json'),
+      animation: require('../../assets/animations/fire_sunny_beige_light.json'),
       name: 'Sun Flame',
       color: '#FF5C8D',
       progress: 80,
     },
     {
-      animation: require('../assets/animations/fire_sky_blue_lighter.json'),
+      animation: require('../../assets/animations/fire_sky_blue_lighter.json'),
       name: 'Azure Flame',
       color: '#4ECDC4',
       progress: 60,
     },
     {
-      animation: require('../assets/animations/fire_sky_blue_light.json'),
+      animation: require('../../assets/animations/fire_sky_blue_light.json'),
       name: 'Sapphire Blaze',
       color: '#5DA9E9',
       progress: 40,
     },
     {
-      animation: require('../assets/animations/fire_spring_green_lighter.json'),
+      animation: require('../../assets/animations/fire_spring_green_lighter.json'),
       name: 'Emerald Inferno',
       color: '#6EEB83',
       progress: 20,
     },
     {
-      animation: require('../assets/animations/fire_spring_green_light.json'),
+      animation: require('../../assets/animations/fire_spring_green_light.json'),
       name: 'Jade Pyre',
       color: '#50CB86',
       progress: 10,
     },
     {
-      animation: require('../assets/animations/fire_cherry_pink_lighter.json'),
+      animation: require('../../assets/animations/fire_cherry_pink_lighter.json'),
       name: 'Mystical Aura',
       color: '#A9B7C0',
       progress: 5,
     },
     {
-      animation: require('../assets/animations/fire_cherry_pink_light.json'),
+      animation: require('../../assets/animations/fire_cherry_pink_light.json'),
       name: 'Eternal Storm',
       color: '#FFFFFF',
       progress: 0,

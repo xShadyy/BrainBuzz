@@ -3,2520 +3,2520 @@
     "id": 1,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 27 + 29?"
+    "text": "What is 13 + 12?"
   },
   {
     "id": 2,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 16 + 35?"
+    "text": "What is 9 + 29?"
   },
   {
     "id": 3,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 19 + 21?"
+    "text": "What is 30 + 19?"
   },
   {
     "id": 4,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 22 + 12?"
+    "text": "What is 16 + 15?"
   },
   {
     "id": 5,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 32 + 46?"
+    "text": "What is 4 + 4?"
   },
   {
     "id": 6,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 25 + 45?"
+    "text": "What is 30 + 21?"
   },
   {
     "id": 7,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 29 + 6?"
+    "text": "What is 18 + 3?"
   },
   {
     "id": 8,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 45 + 13?"
+    "text": "What is 6 + 21?"
   },
   {
     "id": 9,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 33 + 22?"
+    "text": "What is 3 + 4?"
   },
   {
     "id": 10,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 8 + 38?"
+    "text": "What is 21 + 25?"
   },
   {
     "id": 11,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 20x + 14x"
+    "text": "What is 6 \u00d7 11?"
   },
   {
     "id": 12,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 18x + 27x"
+    "text": "What is 15 \u00d7 17?"
   },
   {
     "id": 13,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 13x + 27x"
+    "text": "What is 9 \u00d7 3?"
   },
   {
     "id": 14,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 41x + 14x"
+    "text": "What is 3 \u00d7 14?"
   },
   {
     "id": 15,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 40x + 3x"
+    "text": "What is 13 \u00d7 8?"
   },
   {
     "id": 16,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 19x + 26x"
+    "text": "What is 2 \u00d7 30?"
   },
   {
     "id": 17,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 20x + 31x"
+    "text": "What is 27 \u00d7 28?"
   },
   {
     "id": 18,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 17x + 26x"
+    "text": "What is 27 \u00d7 9?"
   },
   {
     "id": 19,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 21x + 24x"
+    "text": "What is 9 \u00d7 13?"
   },
   {
     "id": 20,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "Simplify: 29x + 21x"
+    "text": "What is 27 \u00d7 23?"
   },
   {
     "id": 21,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^18?"
+    "text": "What is 39 \u00f7 3?"
   },
   {
     "id": 22,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^38?"
+    "text": "What is 375 \u00f7 25?"
   },
   {
     "id": 23,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^35?"
+    "text": "What is 598 \u00f7 23?"
   },
   {
     "id": 24,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^1?"
+    "text": "What is 285 \u00f7 19?"
   },
   {
     "id": 25,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^6?"
+    "text": "What is 456 \u00f7 24?"
   },
   {
     "id": 26,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^18?"
+    "text": "What is 6 \u00f7 2?"
   },
   {
     "id": 27,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^36?"
+    "text": "What is 288 \u00f7 18?"
   },
   {
     "id": 28,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^11?"
+    "text": "What is 135 \u00f7 9?"
   },
   {
     "id": 29,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^23?"
+    "text": "What is 144 \u00f7 6?"
   },
   {
     "id": 30,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is the derivative of x^22?"
+    "text": "What is 330 \u00f7 30?"
   },
   {
     "id": 31,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 1"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 32,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 2"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 33,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 3"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 34,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 4"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 35,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 5"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 36,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 6"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 37,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 7"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 38,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 8"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 39,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 9"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 40,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "[Science EASY] Sample question 10"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 41,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 1"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 42,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 2"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 43,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 3"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 44,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 4"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 45,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 5"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 46,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 6"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 47,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 7"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 48,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 8"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 49,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 9"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 50,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "[Science MEDIUM] Sample question 10"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 51,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 1"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 52,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 2"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 53,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 3"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 54,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 4"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 55,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 5"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 56,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 6"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 57,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 7"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 58,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 8"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 59,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 9"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 60,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "[Science HARD] Sample question 10"
+    "text": "What is the chemical symbol for water?"
   },
   {
     "id": 61,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 1"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 62,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 2"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 63,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 3"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 64,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 4"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 65,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 5"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 66,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 6"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 67,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 7"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 68,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 8"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 69,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 9"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 70,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "[History EASY] Sample question 10"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 71,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 1"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 72,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 2"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 73,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 3"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 74,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 4"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 75,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 5"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 76,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 6"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 77,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 7"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 78,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 8"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 79,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 9"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 80,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "[History MEDIUM] Sample question 10"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 81,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 1"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 82,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 2"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 83,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 3"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 84,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 4"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 85,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 5"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 86,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 6"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 87,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 7"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 88,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 8"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 89,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 9"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 90,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "[History HARD] Sample question 10"
+    "text": "Who was the first President of the USA?"
   },
   {
     "id": 91,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 1"
+    "text": "What is the capital of France?"
   },
   {
     "id": 92,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 2"
+    "text": "What is the capital of France?"
   },
   {
     "id": 93,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 3"
+    "text": "What is the capital of France?"
   },
   {
     "id": 94,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 4"
+    "text": "What is the capital of France?"
   },
   {
     "id": 95,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 5"
+    "text": "What is the capital of France?"
   },
   {
     "id": 96,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 6"
+    "text": "What is the capital of France?"
   },
   {
     "id": 97,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 7"
+    "text": "What is the capital of France?"
   },
   {
     "id": 98,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 8"
+    "text": "What is the capital of France?"
   },
   {
     "id": 99,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 9"
+    "text": "What is the capital of France?"
   },
   {
     "id": 100,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "[Geography EASY] Sample question 10"
+    "text": "What is the capital of France?"
   },
   {
     "id": 101,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 1"
+    "text": "What is the capital of France?"
   },
   {
     "id": 102,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 2"
+    "text": "What is the capital of France?"
   },
   {
     "id": 103,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 3"
+    "text": "What is the capital of France?"
   },
   {
     "id": 104,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 4"
+    "text": "What is the capital of France?"
   },
   {
     "id": 105,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 5"
+    "text": "What is the capital of France?"
   },
   {
     "id": 106,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 6"
+    "text": "What is the capital of France?"
   },
   {
     "id": 107,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 7"
+    "text": "What is the capital of France?"
   },
   {
     "id": 108,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 8"
+    "text": "What is the capital of France?"
   },
   {
     "id": 109,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 9"
+    "text": "What is the capital of France?"
   },
   {
     "id": 110,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "[Geography MEDIUM] Sample question 10"
+    "text": "What is the capital of France?"
   },
   {
     "id": 111,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 1"
+    "text": "What is the capital of France?"
   },
   {
     "id": 112,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 2"
+    "text": "What is the capital of France?"
   },
   {
     "id": 113,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 3"
+    "text": "What is the capital of France?"
   },
   {
     "id": 114,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 4"
+    "text": "What is the capital of France?"
   },
   {
     "id": 115,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 5"
+    "text": "What is the capital of France?"
   },
   {
     "id": 116,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 6"
+    "text": "What is the capital of France?"
   },
   {
     "id": 117,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 7"
+    "text": "What is the capital of France?"
   },
   {
     "id": 118,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 8"
+    "text": "What is the capital of France?"
   },
   {
     "id": 119,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 9"
+    "text": "What is the capital of France?"
   },
   {
     "id": 120,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "[Geography HARD] Sample question 10"
+    "text": "What is the capital of France?"
   },
   {
     "id": 121,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 1"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 122,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 2"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 123,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 3"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 124,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 4"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 125,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 5"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 126,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 6"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 127,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 7"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 128,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 8"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 129,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 9"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 130,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "[Languages EASY] Sample question 10"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 131,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 1"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 132,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 2"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 133,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 3"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 134,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 4"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 135,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 5"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 136,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 6"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 137,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 7"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 138,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 8"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 139,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 9"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 140,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "[Languages MEDIUM] Sample question 10"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 141,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 1"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 142,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 2"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 143,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 3"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 144,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 4"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 145,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 5"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 146,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 6"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 147,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 7"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 148,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 8"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 149,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 9"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 150,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "[Languages HARD] Sample question 10"
+    "text": "Which language is primarily spoken in Brazil?"
   },
   {
     "id": 151,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 1"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 152,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 2"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 153,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 3"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 154,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 4"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 155,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 5"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 156,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 6"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 157,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 7"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 158,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 8"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 159,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 9"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 160,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "[Literature EASY] Sample question 10"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 161,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 1"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 162,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 2"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 163,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 3"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 164,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 4"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 165,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 5"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 166,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 6"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 167,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 7"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 168,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 8"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 169,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 9"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 170,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "[Literature MEDIUM] Sample question 10"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 171,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 1"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 172,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 2"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 173,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 3"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 174,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 4"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 175,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 5"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 176,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 6"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 177,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 7"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 178,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 8"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 179,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 9"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 180,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "[Literature HARD] Sample question 10"
+    "text": "Who wrote \"Romeo and Juliet\"?"
   },
   {
     "id": 181,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 1"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 182,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 2"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 183,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 3"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 184,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 4"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 185,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 5"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 186,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 6"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 187,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 7"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 188,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 8"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 189,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 9"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 190,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "[Art EASY] Sample question 10"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 191,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 1"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 192,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 2"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 193,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 3"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 194,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 4"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 195,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 5"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 196,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 6"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 197,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 7"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 198,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 8"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 199,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 9"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 200,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "[Art MEDIUM] Sample question 10"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 201,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 1"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 202,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 2"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 203,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 3"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 204,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 4"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 205,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 5"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 206,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 6"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 207,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 7"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 208,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 8"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 209,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 9"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 210,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "[Art HARD] Sample question 10"
+    "text": "Which artist painted the Mona Lisa?"
   },
   {
     "id": 211,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 1"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 212,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 2"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 213,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 3"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 214,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 4"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 215,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 5"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 216,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 6"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 217,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 7"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 218,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 8"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 219,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 9"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 220,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "[Music EASY] Sample question 10"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 221,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 1"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 222,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 2"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 223,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 3"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 224,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 4"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 225,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 5"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 226,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 6"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 227,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 7"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 228,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 8"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 229,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 9"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 230,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "[Music MEDIUM] Sample question 10"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 231,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 1"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 232,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 2"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 233,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 3"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 234,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 4"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 235,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 5"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 236,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 6"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 237,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 7"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 238,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 8"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 239,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 9"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 240,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "[Music HARD] Sample question 10"
+    "text": "Who is known as the \"King of Pop\"?"
   },
   {
     "id": 241,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 1"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 242,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 2"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 243,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 3"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 244,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 4"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 245,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 5"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 246,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 6"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 247,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 7"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 248,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 8"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 249,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 9"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 250,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "[Technology EASY] Sample question 10"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 251,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 1"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 252,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 2"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 253,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 3"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 254,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 4"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 255,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 5"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 256,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 6"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 257,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 7"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 258,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 8"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 259,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 9"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 260,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "[Technology MEDIUM] Sample question 10"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 261,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 1"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 262,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 2"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 263,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 3"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 264,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 4"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 265,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 5"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 266,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 6"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 267,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 7"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 268,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 8"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 269,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 9"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 270,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "[Technology HARD] Sample question 10"
+    "text": "Who founded Microsoft?"
   },
   {
     "id": 271,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 1"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 272,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 2"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 273,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 3"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 274,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 4"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 275,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 5"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 276,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 6"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 277,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 7"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 278,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 8"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 279,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 9"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 280,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "[Sports EASY] Sample question 10"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 281,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 1"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 282,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 2"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 283,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 3"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 284,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 4"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 285,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 5"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 286,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 6"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 287,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 7"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 288,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 8"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 289,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 9"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 290,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "[Sports MEDIUM] Sample question 10"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 291,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 1"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 292,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 2"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 293,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 3"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 294,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 4"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 295,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 5"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 296,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 6"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 297,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 7"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 298,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 8"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 299,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 9"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 300,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "[Sports HARD] Sample question 10"
+    "text": "How many players are on a soccer team on the field?"
   },
   {
     "id": 301,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 1"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 302,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 2"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 303,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 3"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 304,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 4"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 305,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 5"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 306,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 6"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 307,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 7"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 308,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 8"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 309,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 9"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 310,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "[Health EASY] Sample question 10"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 311,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 1"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 312,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 2"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 313,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 3"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 314,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 4"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 315,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 5"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 316,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 6"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 317,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 7"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 318,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 8"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 319,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 9"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 320,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "[Health MEDIUM] Sample question 10"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 321,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 1"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 322,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 2"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 323,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 3"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 324,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 4"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 325,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 5"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 326,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 6"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 327,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 7"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 328,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 8"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 329,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 9"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 330,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "[Health HARD] Sample question 10"
+    "text": "What vitamin do you get from sunlight?"
   },
   {
     "id": 331,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 1"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 332,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 2"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 333,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 3"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 334,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 4"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 335,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 5"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 336,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 6"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 337,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 7"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 338,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 8"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 339,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 9"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 340,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "[Space EASY] Sample question 10"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 341,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 1"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 342,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 2"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 343,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 3"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 344,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 4"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 345,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 5"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 346,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 6"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 347,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 7"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 348,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 8"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 349,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 9"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 350,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "[Space MEDIUM] Sample question 10"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 351,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 1"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 352,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 2"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 353,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 3"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 354,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 4"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 355,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 5"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 356,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 6"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 357,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 7"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 358,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 8"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 359,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 9"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 360,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "[Space HARD] Sample question 10"
+    "text": "Which planet is known as the Red Planet?"
   },
   {
     "id": 361,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 1"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 362,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 2"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 363,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 3"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 364,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 4"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 365,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 5"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 366,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 6"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 367,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 7"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 368,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 8"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 369,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 9"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 370,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "[Movies EASY] Sample question 10"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 371,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 1"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 372,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 2"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 373,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 3"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 374,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 4"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 375,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 5"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 376,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 6"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 377,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 7"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 378,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 8"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 379,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 9"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 380,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "[Movies MEDIUM] Sample question 10"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 381,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 1"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 382,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 2"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 383,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 3"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 384,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 4"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 385,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 5"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 386,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 6"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 387,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 7"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 388,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 8"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 389,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 9"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 390,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "[Movies HARD] Sample question 10"
+    "text": "Who directed \"Jurassic Park\"?"
   },
   {
     "id": 391,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 1"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 392,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 2"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 393,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 3"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 394,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 4"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 395,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 5"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 396,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 6"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 397,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 7"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 398,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 8"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 399,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 9"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 400,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "[Animals EASY] Sample question 10"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 401,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 1"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 402,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 2"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 403,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 3"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 404,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 4"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 405,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 5"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 406,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 6"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 407,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 7"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 408,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 8"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 409,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 9"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 410,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "[Animals MEDIUM] Sample question 10"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 411,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 1"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 412,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 2"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 413,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 3"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 414,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 4"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 415,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 5"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 416,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 6"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 417,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 7"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 418,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 8"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 419,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 9"
+    "text": "What is the largest land animal?"
   },
   {
     "id": 420,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "[Animals HARD] Sample question 10"
+    "text": "What is the largest land animal?"
   }
 ]

@@ -15,10 +15,10 @@ import {
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import LottieView from 'lottie-react-native';
 import { styles } from './LoginScreen.styles.ts';
-import { db } from '../database';
-import SoundManager from '../utils/SoundManager';
+import { db } from '../../database';
+import SoundManager from '../../utils/SoundManager';
 import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigation/AppNavigator';
+import { RootStackParamList } from '../../navigation/AppNavigator';
 
 type LoginScreenProps = StackScreenProps<RootStackParamList, 'Login'>;
 
@@ -151,8 +151,11 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   const handleAnimationFinish = () => {
     if (successUserId) {
       setShowSuccessAnimation(false);
-      // Navigate to Dashboard with the userId
-      navigation.replace('Dashboard', { userId: successUserId });
+      // Navigate to Dashboard with the userId and a fromLogin flag
+      navigation.replace('Dashboard', {
+        userId: successUserId,
+        fromLogin: true,
+      });
     }
   };
 
@@ -162,7 +165,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
       <StatusBar backgroundColor="transparent" translucent />
 
       <LottieView
-        source={require('../assets/animations/background.json')}
+        source={require('../../assets/animations/background.json')}
         autoPlay
         loop
         style={styles.backgroundAnimation}
@@ -294,7 +297,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
           <View style={styles.successAnimationWrapper}>
             <LottieView
               ref={successAnimationRef}
-              source={require('../assets/animations/check.json')}
+              source={require('../../assets/animations/check.json')}
               autoPlay
               loop={false}
               style={styles.successAnimation}

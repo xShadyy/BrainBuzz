@@ -15,12 +15,12 @@ import {
 } from 'react-native';
 import {styles} from './DashboardScreen.styles';
 import LottieView from 'lottie-react-native';
-import {UserHeader} from '../components/UserHeader';
-import SoundManager from '../utils/SoundManager';
+import {UserHeader} from '../../components/UserHeader';
+import SoundManager from '../../utils/SoundManager';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {useUser} from '../utils/UserContext';
+import {useUser} from '../../utils/UserContext';
 import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigation/AppNavigator';
+import { RootStackParamList } from '../../navigation/AppNavigator';
 
 interface CategoryItem {
   id: number;
@@ -32,14 +32,23 @@ interface CategoryItem {
 type DashboardScreenProps = StackScreenProps<RootStackParamList, 'Dashboard'>;
 
 export const DashboardScreen: React.FC<DashboardScreenProps> = ({ navigation, route }) => {
-  const { userId } = route.params;
+  const { userId, fromLogin = false } = route.params;
   const {user, isLoading: userLoading, refreshUser} = useUser();
   const loaderOpacity = useRef(new Animated.Value(1)).current;
   const dashboardOpacity = useRef(new Animated.Value(0)).current;
-  const [loaderVisible, setLoaderVisible] = useState(true);
+  const [loaderVisible, setLoaderVisible] = useState(fromLogin);
   const [initialLoadDone, setInitialLoadDone] = useState(false);
   const hasUserBeenFetched = useRef(false);
   const minLoadingTime = 2000;
+
+  // Set animation values based on whether we're coming from login
+  useEffect(() => {
+    if (!fromLogin) {
+      // If not coming from login, make dashboard visible immediately
+      loaderOpacity.setValue(0);
+      dashboardOpacity.setValue(1);
+    }
+  }, []);
 
   // Categories data
   const categoryItems: CategoryItem[] = [
@@ -76,31 +85,33 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({ navigation, ro
 
   // Handle the loading animation timing separately from data fetching
   useEffect(() => {
-    if (!initialLoadDone) {return;}
+    if (!initialLoadDone || !loaderVisible) {return;}
 
-    // Minimum display time for the loader
-    const timer = setTimeout(() => {
-      // Start cross-fade animation
-      Animated.parallel([
-        Animated.timing(loaderOpacity, {
-          toValue: 0,
-          duration: 800,
-          useNativeDriver: true,
-        }),
-        Animated.timing(dashboardOpacity, {
-          toValue: 1,
-          duration: 800,
-          useNativeDriver: true,
-        }),
-      ]).start(({finished}) => {
-        if (finished) {
-          setLoaderVisible(false);
-        }
-      });
-    }, minLoadingTime);
+    // Minimum display time for the loader - only if coming from login
+    if (fromLogin) {
+      const timer = setTimeout(() => {
+        // Start cross-fade animation
+        Animated.parallel([
+          Animated.timing(loaderOpacity, {
+            toValue: 0,
+            duration: 800,
+            useNativeDriver: true,
+          }),
+          Animated.timing(dashboardOpacity, {
+            toValue: 1,
+            duration: 800,
+            useNativeDriver: true,
+          }),
+        ]).start(({finished}) => {
+          if (finished) {
+            setLoaderVisible(false);
+          }
+        });
+      }, minLoadingTime);
 
-    return () => clearTimeout(timer);
-  }, [initialLoadDone, loaderOpacity, dashboardOpacity, minLoadingTime]);
+      return () => clearTimeout(timer);
+    }
+  }, [initialLoadDone, loaderOpacity, dashboardOpacity, minLoadingTime, loaderVisible]);
 
   // Setup back button handler
   useEffect(() => {
@@ -221,7 +232,7 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({ navigation, ro
           pointerEvents={loaderVisible ? 'auto' : 'none'}
         >
           <LottieView
-            source={require('../assets/animations/loader.json')}
+            source={require('../../assets/animations/loader.json')}
             autoPlay
             loop
             style={styles.loadingAnimation}

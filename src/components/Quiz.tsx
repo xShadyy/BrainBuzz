@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
-import {styles} from './Quiz.styles';
+import { View, Text, TouchableOpacity, Animated } from 'react-native';
+import { styles } from './Quiz.styles.ts';
+
 interface Question {
   id: number;
   category_id: number;
@@ -28,8 +29,8 @@ const Quiz: React.FC<QuizProps> = ({ categoryId, difficulty, onComplete }) => {
   const [selectedAnswerId, setSelectedAnswerId] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const [score, setScore] = useState(0);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [progressAnim] = useState(new Animated.Value(0));
 
   useEffect(() => {
     const loadQuizData = async () => {
@@ -56,16 +57,25 @@ const Quiz: React.FC<QuizProps> = ({ categoryId, difficulty, onComplete }) => {
 
         setQuestions(filteredQuestions);
         setAnswers(answersData);
-        setLoading(false);
       } catch (err) {
         console.error('Error loading quiz data:', err);
         setError('Failed to load quiz data. Please try again later.');
-        setLoading(false);
       }
     };
 
     loadQuizData();
   }, [categoryId, difficulty]);
+
+  // Update progress bar when question changes
+  useEffect(() => {
+    if (questions.length > 0) {
+      Animated.timing(progressAnim, {
+        toValue: (currentQuestionIndex + 1) / questions.length,
+        duration: 300,
+        useNativeDriver: false,
+      }).start();
+    }
+  }, [currentQuestionIndex, questions.length, progressAnim]);
 
   // Get answers for the current question
   const getCurrentQuestionAnswers = (): Answer[] => {
@@ -110,14 +120,6 @@ const Quiz: React.FC<QuizProps> = ({ categoryId, difficulty, onComplete }) => {
     }, 1500);
   };
 
-  if (loading) {
-    return (
-      <View style={styles.loadingContainer}>
-        <ActivityIndicator size="large" color="#0000ff" />
-      </View>
-    );
-  }
-
   if (error) {
     return (
       <View style={styles.container}>
@@ -150,6 +152,22 @@ const Quiz: React.FC<QuizProps> = ({ categoryId, difficulty, onComplete }) => {
       <Text style={styles.questionCount}>
         Question {currentQuestionIndex + 1} of {questions.length}
       </Text>
+
+      {/* Progress Bar */}
+      <View style={styles.progressBar}>
+        <Animated.View
+          style={[styles.progressFill, { width: progressAnim.interpolate({
+            inputRange: [0, 1],
+            outputRange: ['0%', '100%'],
+          }) }]}
+        />
+      </View>
+
+      {/* Score Display */}
+      <View style={styles.scoreContainer}>
+        <Text style={styles.scoreText}>Score:</Text>
+        <Text style={styles.scoreValue}>{score}</Text>
+      </View>
 
       <Text style={styles.questionText}>{currentQuestion.text}</Text>
 

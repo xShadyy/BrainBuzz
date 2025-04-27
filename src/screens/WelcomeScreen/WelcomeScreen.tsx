@@ -10,9 +10,9 @@ import {
 } from 'react-native';
 import LottieView from 'lottie-react-native';
 import {styles} from './WelcomeScreen.styles';
-import SoundManager from '../utils/SoundManager';
+import SoundManager from '../../utils/SoundManager';
 import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigation/AppNavigator';
+import { RootStackParamList } from '../../navigation/AppNavigator';
 
 LogBox.ignoreLogs(['ViewPropTypes will be removed']);
 
@@ -141,7 +141,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <LottieView
-        source={require('../assets/animations/background.json')}
+        source={require('../../assets/animations/background.json')}
         autoPlay
         loop
         style={styles.backgroundAnimation}
@@ -152,7 +152,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
         <View style={styles.lightningContainer}>
           <LottieView
             ref={lightningRef}
-            source={require('../assets/animations/lightning.json')}
+            source={require('../../assets/animations/lightning.json')}
             autoPlay={false}
             loop={false}
             style={styles.lightningAnimation}

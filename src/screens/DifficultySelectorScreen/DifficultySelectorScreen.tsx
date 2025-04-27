@@ -1,21 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text, TouchableOpacity, ScrollView, StatusBar} from 'react-native';
-import {UserHeader} from '../components/UserHeader';
+import {UserHeader} from '../../components/UserHeader';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {useUser} from '../utils/UserContext';
-import SoundManager from '../utils/SoundManager';
-import {styles, configureStatusBar} from './QuizScreen.styles';
+import {useUser} from '../../utils/UserContext';
+import SoundManager from '../../utils/SoundManager';
+import {styles, configureStatusBar} from './DifficultySelectorScreen.styles';
 import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigation/AppNavigator';
-import Quiz from '../components/Quiz';
+import { RootStackParamList } from '../../navigation/AppNavigator';
 
-type QuizScreenProps = StackScreenProps<RootStackParamList, 'Quiz'>;
+type DifficultySelectorScreenProps = StackScreenProps<RootStackParamList, 'Quiz'>;
 
-export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => {
+export const DifficultySelectorScreen: React.FC<DifficultySelectorScreenProps> = ({ navigation, route }) => {
   const { userId, category } = route.params;
   const {user, refreshUser} = useUser();
-  const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
-  const [quizStarted, setQuizStarted] = useState(false);
   const [categoryId, setCategoryId] = useState<number | null>(null);
 
   // Fetch user data when component mounts and configure status bar
@@ -31,7 +28,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
     // Load the categories to get the correct category ID
     const loadCategoryId = async () => {
       try {
-        const categoriesData = require('../../android/app/src/main/assets/quiz_data/categories.json');
+        const categoriesData = require('../../../android/app/src/main/assets/quiz_data/categories.json');
         const foundCategory = categoriesData.find((cat: any) => cat.name === category);
         if (foundCategory) {
           setCategoryId(foundCategory.id);
@@ -78,13 +75,23 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
 
   const handleDifficultySelect = (difficulty: string) => {
     SoundManager.playInteraction();
-    setSelectedDifficulty(difficulty);
-    setQuizStarted(true);
+
+    // Navigate to QuizScreen instead of showing Quiz component directly
+    if (categoryId) {
+      navigation.navigate('QuizScreen', {
+        userId,
+        categoryId,
+        difficulty,
+        category,
+      });
+    } else {
+      alert('Unable to load category information. Please try again.');
+    }
   };
 
   const handleBackPress = () => {
     SoundManager.playInteraction();
-    navigation.goBack();
+    navigation.navigate('Dashboard', { userId });
   };
 
   const handleLogout = () => {
@@ -99,25 +106,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
     navigation.navigate('Settings', { userId: userId });
   };
 
-  const handleQuizComplete = (score: number, totalQuestions: number) => {
-
-    SoundManager.playInteraction();
-    alert(`Quiz completed! Your score: ${score}/${totalQuestions}`);
-    navigation.goBack();
-  };
-
-  // Display quiz if started
-  if (quizStarted && selectedDifficulty && categoryId) {
-    return (
-      <Quiz
-        categoryId={categoryId}
-        difficulty={selectedDifficulty}
-        onComplete={handleQuizComplete}
-      />
-    );
-  }
-
-  // Calculate some example XP for visual demonstration
   const userXpCurrent = user?.xp || 50;
   const userXpRequired = (user?.level || 1) * 100;
 
@@ -125,7 +113,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
     <View style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" />
 
-      {/* UserHeader with the currently logged-in user */}
       <UserHeader
         username={user?.name}
         xpCurrent={userXpCurrent}
@@ -145,7 +132,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
               style={[
                 styles.difficultyButton,
                 difficulty.styleClass,
-                selectedDifficulty === difficulty.id && styles.selectedDifficultyButton,
               ]}
               onPress={() => handleDifficultySelect(difficulty.id)}>
               <View style={styles.difficultyIconContainer}>
@@ -175,6 +161,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => 
     </View>
   );
 };
+
 function alert(_arg0: string) {
   throw new Error('Function not implemented.');
 }
