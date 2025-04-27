@@ -11,6 +11,8 @@ import {
   StatusBar,
   Animated,
   SafeAreaView,
+  Platform,
+  Dimensions,
 } from 'react-native';
 import {styles} from './Settings.styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -18,11 +20,10 @@ import LottieView from 'lottie-react-native';
 import {db} from '../database';
 import SoundManager from '../utils/SoundManager';
 import {useUser} from '../utils/UserContext';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigation/AppNavigator';
 
-interface SettingsScreenProps {
-  userId: number;
-  onBack: () => void;
-}
+type SettingsScreenProps = StackScreenProps<RootStackParamList, 'Settings'>;
 
 interface FireLevel {
   animation: any;
@@ -31,7 +32,8 @@ interface FireLevel {
   progress: number;
 }
 
-export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
+export const Settings: React.FC<SettingsScreenProps> = ({ navigation, route }) => {
+  const { userId } = route.params;
   const {user, refreshUser} = useUser();
   const [isEditingName, setIsEditingName] = useState(false);
   const [newName, setNewName] = useState('');
@@ -132,7 +134,7 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
 
   const handleBackPress = () => {
     SoundManager.playInteraction();
-    onBack();
+    navigation.goBack();
   };
 
   const handleEditName = () => {
@@ -153,6 +155,7 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
       const success = await db.updateUser(updatedUser);
 
       if (success) {
+        // Update local user context state immediately
         refreshUser(userId);
         setIsEditingName(false);
         SoundManager.playInteraction();
@@ -178,9 +181,10 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar translucent backgroundColor="transparent" />
+      <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+
       <Animated.View style={{flex: 1, opacity: contentOpacity}}>
-        <View style={[styles.headerContainer, {paddingTop: StatusBar.currentHeight || 0}]}>
+        <View style={styles.headerContainer}>
           <TouchableOpacity
             style={styles.backButton}
             onPress={handleBackPress}
@@ -191,105 +195,114 @@ export const Settings: React.FC<SettingsScreenProps> = ({userId, onBack}) => {
           <Text style={styles.headerTitle}>Settings</Text>
         </View>
 
-        <View style={styles.staticContentContainer}>
-          <View>
-            <Text style={styles.sectionTitle}>Account Information</Text>
-            <View style={styles.card}>
-              {!isEditingName ? (
+        <View style={styles.contentWrapper}>
+          <View style={styles.staticContentContainer}>
+            <View>
+              <Text style={styles.sectionTitle}>Account Information</Text>
+              <View style={styles.card}>
+                {!isEditingName ? (
+                  <View style={styles.fieldContainer}>
+                    <Text style={styles.fieldLabel}>Name</Text>
+                    <View style={styles.fieldNameContainer}>
+                      <TouchableOpacity
+                        style={styles.editButton}
+                        onPress={handleEditName}>
+                        <MaterialIcons name="edit" size={18} color="#FFC107" />
+                      </TouchableOpacity>
+                      <Text style={styles.fieldValue}>{user?.name || 'Unknown'}</Text>
+                    </View>
+                  </View>
+                ) : (
+                  <View style={styles.editNameContainer}>
+                    <Text style={styles.fieldLabel}>Name</Text>
+                    <TextInput
+                      style={styles.editNameInput}
+                      value={newName}
+                      onChangeText={setNewName}
+                      autoFocus
+                      placeholder="Enter your name"
+                      placeholderTextColor="#888888"
+                    />
+                    <View style={styles.buttonRow}>
+                      <TouchableOpacity
+                        style={[
+                          styles.saveButton,
+                          newName.trim() === user?.name?.trim() && {opacity: 0.5},
+                        ]}
+                        onPress={() => {
+                          SoundManager.playInteraction();
+                          handleSaveName();
+                        }}
+                        disabled={newName.trim() === user?.name?.trim()}>
+                        <Text style={styles.saveButtonText}>Save</Text>
+                      </TouchableOpacity>
+                      <TouchableOpacity
+                        style={styles.cancelButton}
+                        onPress={() => {
+                          setIsEditingName(false);
+                          setNewName(user?.name || '');
+                          SoundManager.playInteraction();
+                        }}>
+                        <Text style={styles.cancelButtonText}>Cancel</Text>
+                      </TouchableOpacity>
+                    </View>
+                  </View>
+                )}
+
                 <View style={styles.fieldContainer}>
-                  <Text style={styles.fieldLabel}>Name</Text>
-                  <View style={styles.fieldNameContainer}>
-                    <TouchableOpacity
-                      style={styles.editButton}
-                      onPress={handleEditName}>
-                      <MaterialIcons name="edit" size={18} color="#FFC107" />
-                    </TouchableOpacity>
-                    <Text style={styles.fieldValue}>{user?.name || 'Unknown'}</Text>
-                  </View>
+                  <Text style={styles.fieldLabel}>Email</Text>
+                  <Text style={styles.fieldValue}>{user?.email || 'Unknown'}</Text>
                 </View>
-              ) : (
-                <View style={styles.editNameContainer}>
-                  <Text style={styles.fieldLabel}>Name</Text>
-                  <TextInput
-                    style={styles.editNameInput}
-                    value={newName}
-                    onChangeText={setNewName}
-                    autoFocus
-                    placeholder="Enter your name"
-                    placeholderTextColor="#888888"
-                  />
-                  <View style={styles.buttonRow}>
-                    <TouchableOpacity
-                      style={[
-                        styles.saveButton,
-                        newName.trim() === user?.name?.trim() && {opacity: 0.5},
-                      ]}
-                      onPress={() => {
-                        SoundManager.playInteraction();
-                        handleSaveName();
-                      }}
-                      disabled={newName.trim() === user?.name?.trim()}>
-                      <Text style={styles.saveButtonText}>Save</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                      style={styles.cancelButton}
-                      onPress={() => {
-                        setIsEditingName(false);
-                        setNewName(user?.name || '');
-                        SoundManager.playInteraction();
-                      }}>
-                      <Text style={styles.cancelButtonText}>Cancel</Text>
-                    </TouchableOpacity>
-                  </View>
+
+                <View style={styles.fieldContainer}>
+                  <Text style={styles.fieldLabel}>Account Created</Text>
+                  <Text style={styles.fieldValue}>{formatDate(user?.creationDate)}</Text>
                 </View>
-              )}
-
-              <View style={styles.fieldContainer}>
-                <Text style={styles.fieldLabel}>Email</Text>
-                <Text style={styles.fieldValue}>{user?.email || 'Unknown'}</Text>
               </View>
+            </View>
 
-              <View style={styles.fieldContainer}>
-                <Text style={styles.fieldLabel}>Account Created</Text>
-                <Text style={styles.fieldValue}>{formatDate(user?.creationDate)}</Text>
-              </View>
+            <View style={styles.animationProgressContainer}>
+              <Text style={styles.animationProgressTitle}>Fire Animation Progress</Text>
+              {fireLevels.map((level, index) => {
+                const isLastItem = index === fireLevels.length - 1;
+                return (
+                  <View key={index} style={[
+                    styles.levelRowContainer,
+                    isLastItem ? {marginBottom: 2} : null,
+                  ]}>
+                    <View style={styles.animationContainer}>
+                      <LottieView
+                        source={level.animation}
+                        autoPlay
+                        loop
+                        style={{width: 42, height: 42, alignSelf: 'center'}}
+                      />
+                    </View>
+                    <View style={styles.progressBarContainer}>
+                      <View
+                        style={[
+                          styles.progressBarFill,
+                          {width: `${level.progress}%`, backgroundColor: level.color},
+                        ]}
+                      />
+                      {[25, 50, 75].map(checkpoint => (
+                        <View
+                          key={checkpoint}
+                          style={[styles.checkpointMarker, {left: `${checkpoint}%`}]}
+                        />
+                      ))}
+                    </View>
+                    <View style={styles.levelNameContainer}>
+                      <Text style={[styles.levelName, {color: level.color}]}>{level.name}</Text>
+                    </View>
+                  </View>
+                );
+              })}
             </View>
           </View>
 
-          <View style={styles.animationProgressContainer}>
-            <Text style={styles.animationProgressTitle}>Fire Animation Progress</Text>
-            {fireLevels.map((level, index) => {
-              const isLastItem = index === fireLevels.length - 1;
-              return (
-                <View key={index} style={[styles.levelRowContainer, isLastItem ? {marginBottom: 0} : null]}>
-                  <View style={styles.animationContainer}>
-                    <LottieView
-                      source={level.animation}
-                      autoPlay
-                      loop
-                      style={{width: 50, height: 50}}
-                    />
-                  </View>
-                  <View style={styles.progressBarContainer}>
-                    <View
-                      style={[
-                        styles.progressBarFill,
-                        {width: `${level.progress}%`, backgroundColor: level.color},
-                      ]}
-                    />
-                    {[25, 50, 75].map(checkpoint => (
-                      <View
-                        key={checkpoint}
-                        style={[styles.checkpointMarker, {left: `${checkpoint}%`}]}
-                      />
-                    ))}
-                  </View>
-                  <View style={styles.levelNameContainer}>
-                    <Text style={[styles.levelName, {color: level.color}]}>{level.name}</Text>
-                  </View>
-                </View>
-              );
-            })}
+          <View style={styles.footer}>
+            <Text style={styles.footerText}>BrainBuzz • Settings v1.0</Text>
           </View>
         </View>
       </Animated.View>

@@ -17,12 +17,12 @@ import LottieView from 'lottie-react-native';
 import { styles } from './LoginScreen.styles.ts';
 import { db } from '../database';
 import SoundManager from '../utils/SoundManager';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigation/AppNavigator';
 
-interface LoginScreenProps {
-  onLoginSuccess?: (userId: number) => void;
-}
+type LoginScreenProps = StackScreenProps<RootStackParamList, 'Login'>;
 
-export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
+export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -149,12 +149,14 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
   };
 
   const handleAnimationFinish = () => {
-    if (successUserId && onLoginSuccess) {
-      onLoginSuccess(successUserId);
+    if (successUserId) {
       setShowSuccessAnimation(false);
+      // Navigate to Dashboard with the userId
+      navigation.replace('Dashboard', { userId: successUserId });
     }
   };
 
+  // Rest of the component remains the same
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="transparent" translucent />
@@ -189,20 +191,20 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ onLoginSuccess }) => {
               </View>
             )}
 
-<View style={styles.inputContainer}>
-  <Text style={styles.label}>Email</Text>
-  <View style={styles.inputWrapper}>
-    <TextInput
-      style={styles.input}
-      placeholder="Enter your email"
-      placeholderTextColor="#AAA"
-      value={email}
-      onChangeText={setEmail}
-      keyboardType="email-address"
-      autoCapitalize="none"
-    />
-  </View>
-</View>
+            <View style={styles.inputContainer}>
+              <Text style={styles.label}>Email</Text>
+              <View style={styles.inputWrapper}>
+                <TextInput
+                  style={styles.input}
+                  placeholder="Enter your email"
+                  placeholderTextColor="#AAA"
+                  value={email}
+                  onChangeText={setEmail}
+                  keyboardType="email-address"
+                  autoCapitalize="none"
+                />
+              </View>
+            </View>
 
             <View style={styles.inputContainer}>
               <Text style={styles.label}>Password</Text>

@@ -16,91 +16,110 @@ export const styles = StyleSheet.create({
     flex: 1,
     padding: 16,
   },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginBottom: 24,
-  },
-  backButton: {
-    padding: 8,
-  },
-  categoryTitle: {
+  categoryText: {
     fontSize: 24,
     fontFamily: 'Lexend-Bold',
     color: '#FFFFFF',
-    marginLeft: 16,
+    textAlign: 'center',
+    marginBottom: 10,
   },
-  instructionsContainer: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+  backToCategoriesButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    paddingVertical: 10,
+    paddingHorizontal: 15,
     borderRadius: 8,
-    padding: 16,
-    marginBottom: 24,
+    marginBottom: 20,
+    alignSelf: 'center',
   },
-  instructionText: {
+  backToCategoriesText: {
+    color: '#FFFFFF',
+    fontFamily: 'Lexend-Medium',
+    fontSize: 14,
+    marginLeft: 8,
+  },
+  chooseText: {
     fontSize: 16,
     fontFamily: 'Lexend-Regular',
     color: '#FFFFFF',
     textAlign: 'center',
+    marginTop: 10,
+    marginBottom: 20,
   },
   difficultiesContainer: {
     paddingVertical: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flex: 1,
   },
   difficultyButton: {
     borderRadius: 8,
     padding: 20,
-    marginBottom: 16,
+    marginBottom: 24,
+    elevation: 8,
+    width: '80%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    elevation: 3,
+    paddingHorizontal: 30,
   },
-  selectedDifficulty: {
-    borderWidth: 2,
-    borderColor: '#FFFFFF',
+  selectedDifficultyButton: {
+    shadowOpacity: 1,
+    shadowRadius: 20,
+    elevation: 15,
+    transform: [{scale: 1.05}],
+  },
+  difficultyIconContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  difficultyIcon: {
+    marginRight: 15,
   },
   difficultyText: {
     fontSize: 18,
     fontFamily: 'Lexend-SemiBold',
     color: '#FFFFFF',
   },
-  // Quiz question styles
-  questionContainer: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
-    borderRadius: 12,
-    padding: 20,
-    marginVertical: 16,
+  multiplierContainer: {
+    backgroundColor: 'rgba(0,0,0,0.2)',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 15,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.3)',
   },
-  questionText: {
-    fontSize: 18,
-    fontFamily: 'Lexend-Medium',
+  multiplierText: {
     color: '#FFFFFF',
-    marginBottom: 20,
-  },
-  answerOption: {
-    backgroundColor: 'rgba(255, 255, 255, 0.05)',
-    borderRadius: 8,
-    padding: 16,
-    marginBottom: 12,
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  selectedAnswer: {
-    backgroundColor: 'rgba(33, 150, 243, 0.3)',
-    borderColor: '#2196F3',
-    borderWidth: 1,
-  },
-  correctAnswer: {
-    backgroundColor: 'rgba(76, 175, 80, 0.3)',
-    borderColor: '#4CAF50',
-    borderWidth: 1,
-  },
-  incorrectAnswer: {
-    backgroundColor: 'rgba(244, 67, 54, 0.3)',
-    borderColor: '#F44336',
-    borderWidth: 1,
-  },
-  answerText: {
+    fontFamily: 'Lexend-Bold',
     fontSize: 16,
-    fontFamily: 'Lexend-Regular',
+  },
+  // Dynamic difficulty button styles
+  easyButton: {
+    backgroundColor: '#4CAF50',
+    shadowColor: 'rgba(76, 175, 80, 0.7)',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 1,
+    shadowRadius: 10,
+  },
+  mediumButton: {
+    backgroundColor: '#FF9800',
+    shadowColor: 'rgba(255, 152, 0, 0.7)',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 1,
+    shadowRadius: 10,
+  },
+  hardButton: {
+    backgroundColor: '#F44336',
+    shadowColor: 'rgba(244, 67, 54, 0.7)',
+    shadowOffset: { width: 0, height: 0 },
+    shadowOpacity: 1,
+    shadowRadius: 10,
+  },
+  backIcon: {
     color: '#FFFFFF',
-    flex: 1,
+    fontSize: 20,
   },
 });

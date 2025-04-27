@@ -1,9 +1,21 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
+
+const FOOTER_HEIGHT = 40;
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#282828',
+  },
+  fullScreenContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: '#282828',
+    zIndex: 999,
+    elevation: 999,
   },
   loaderContainer: {
     justifyContent: 'center',
@@ -14,7 +26,8 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingBottom: 6,
+    paddingVertical: 10,
+    paddingTop: StatusBar.currentHeight || 0,
     elevation: 4,
     shadowColor: '#000',
     shadowOffset: {width: 0, height: 2},
@@ -25,14 +38,21 @@ export const styles = StyleSheet.create({
   },
   backButton: {
     marginRight: 16,
+    padding: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   headerTitle: {
     color: '#FFFFFF',
     fontSize: 20,
     fontFamily: 'Lexend-SemiBold',
+    textShadowColor: 'rgba(255, 255, 255, 0.2)',
+    textShadowOffset: {width: 0, height: 1},
+    textShadowRadius: 2,
   },
-  contentContainer: {
+  contentWrapper: {
     flex: 1,
+    paddingBottom: FOOTER_HEIGHT,
   },
   scrollContentContainer: {
     paddingHorizontal: 20,
@@ -137,9 +157,9 @@ export const styles = StyleSheet.create({
   },
   animationProgressContainer: {
     marginTop: 10,
-    marginBottom: 12,
+    marginBottom: 24,
     padding: 12,
-    paddingBottom: 4,
+    paddingBottom: 16,
     backgroundColor: 'rgba(60, 60, 60, 0.7)',
     borderRadius: 12,
     borderWidth: 1,
@@ -149,25 +169,30 @@ export const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 16,
     fontFamily: 'Lexend-SemiBold',
-    marginBottom: 12,
+    marginBottom: 16,
   },
   levelRowContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 8,
+    marginBottom: 10,
     height: 44,
   },
   animationContainer: {
-    width: 42,
-    height: 42,
+    width: 45,
+    height: 45,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingBottom: 4,
   },
   progressBarContainer: {
     flex: 1,
     height: 14,
     backgroundColor: '#444444',
     borderRadius: 10,
-    marginHorizontal: 10,
+    marginHorizontal: 12,
     position: 'relative',
+    alignSelf: 'center',
+    marginTop: 4,
   },
   progressBarFill: {
     height: '100%',
@@ -195,6 +220,23 @@ export const styles = StyleSheet.create({
   loadingAnimation: {
     width: 150,
     height: 150,
+  },
+  footer: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    right: 0,
+    height: FOOTER_HEIGHT,
+    backgroundColor: '#2B2B2B',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderTopWidth: 1,
+    borderTopColor: '#FFC800',
+  },
+  footerText: {
+    fontFamily: 'Lexend-Regular',
+    fontSize: 12,
+    color: '#FFFFFF',
   },
   staticContentContainer: {
     flex: 1,

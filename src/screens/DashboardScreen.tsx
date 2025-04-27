@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useState, useRef, useCallback} from 'react';
@@ -17,8 +18,9 @@ import LottieView from 'lottie-react-native';
 import {UserHeader} from '../components/UserHeader';
 import SoundManager from '../utils/SoundManager';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import {QuizDisplay} from './QuizDisplay';
 import {useUser} from '../utils/UserContext';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigation/AppNavigator';
 
 interface CategoryItem {
   id: number;
@@ -27,19 +29,11 @@ interface CategoryItem {
   iconColor: string;
 }
 
-interface DashboardScreenProps {
-  userId: number;
-  onLogout: () => void;
-}
+type DashboardScreenProps = StackScreenProps<RootStackParamList, 'Dashboard'>;
 
-export const DashboardScreen: React.FC<DashboardScreenProps> = ({
-  userId,
-  onLogout,
-}) => {
+export const DashboardScreen: React.FC<DashboardScreenProps> = ({ navigation, route }) => {
+  const { userId } = route.params;
   const {user, isLoading: userLoading, refreshUser} = useUser();
-  const [showQuizDisplay, setShowQuizDisplay] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<CategoryItem | null>(null);
-  const quizDisplayAnimation = useState(new Animated.Value(0))[0];
   const loaderOpacity = useRef(new Animated.Value(1)).current;
   const dashboardOpacity = useRef(new Animated.Value(0)).current;
   const [loaderVisible, setLoaderVisible] = useState(true);
@@ -117,7 +111,7 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
       () => {
         Alert.alert('Confirm', 'Do you want to logout?', [
           {text: 'Cancel', style: 'cancel'},
-          {text: 'Yes', onPress: onLogout},
+          {text: 'Yes', onPress: handleLogout},
         ]);
         return true;
       },
@@ -126,7 +120,18 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     return () => {
       backHandler.remove();
     };
-  }, [onLogout]);
+  }, []);
+
+  const handleLogout = () => {
+    // Restart ambient music when logging out
+    SoundManager.playAmbient();
+
+    // Navigate back to login screen
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Login' }],
+    });
+  };
 
   const handleItemPress = (itemId: number) => {
     // Play interaction sound
@@ -135,33 +140,16 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     // Find the selected category
     const category = categoryItems.find(i => i.id === itemId);
     if (category) {
-      setSelectedCategory(category);
-
-      // Navigate to QuizDisplay screen with animation
-      setShowQuizDisplay(true);
-      Animated.timing(quizDisplayAnimation, {
-        toValue: 1,
-        duration: 300,
-        useNativeDriver: true,
-      }).start();
+      // Navigate to Quiz screen with appropriate parameters
+      navigation.navigate('Quiz', {
+        userId: userId,
+        category: category.title,
+      });
     }
   };
 
-  const handleQuizDisplayBack = () => {
-    // Animate quiz display exit
-    Animated.timing(quizDisplayAnimation, {
-      toValue: 0,
-      duration: 300,
-      useNativeDriver: true,
-    }).start(() => {
-      setShowQuizDisplay(false);
-      setSelectedCategory(null);
-    });
-  };
-
-  const handleSelectDifficulty = (difficulty: string) => {
-    console.log(`Selected difficulty: ${difficulty} for category: ${selectedCategory?.title}`);
-    // Here you would implement the logic to start the quiz with the selected difficulty
+  const handleOpenSettings = () => {
+    navigation.navigate('Settings', { userId: userId });
   };
 
   const renderCategoryItem = ({item}: {item: CategoryItem}) => (
@@ -191,64 +179,37 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
       >
         <View style={styles.backgroundContainer} />
 
-        {!showQuizDisplay && (
-          <>
-            <UserHeader
-              username={user?.name || 'USER'}
-              xpCurrent={50}
-              xpRequired={100}
-            />
+        <UserHeader
+          username={user?.name || 'USER'}
+          xpCurrent={user?.xp || 50}
+          xpRequired={(user?.level || 1) * 100}
+          onSettingsPress={handleOpenSettings}
+          onLogoutPress={handleLogout}
+        />
 
-            <Animated.View style={styles.dashboardLayout}>
-              <FlatList
-                overScrollMode="never"
-                data={categoryItems}
-                renderItem={renderCategoryItem}
-                keyExtractor={item => item.id.toString()}
-                numColumns={2}
-                style={{
-                  flex: 1,
-                  marginTop: 110,
-                }}
-                contentContainerStyle={{
-                  ...styles.contentContainer,
-                  paddingTop: 40,
-                }}
-                showsVerticalScrollIndicator={false}
-                columnWrapperStyle={styles.gridRow}
-              />
-
-              <View style={styles.footer}>
-                <Text style={styles.footerText}>BrainBuzz • Dashboard v1.0</Text>
-              </View>
-            </Animated.View>
-          </>
-        )}
-
-        {showQuizDisplay && selectedCategory && (
-          <Animated.View
+        <Animated.View style={styles.dashboardLayout}>
+          <FlatList
+            overScrollMode="never"
+            data={categoryItems}
+            renderItem={renderCategoryItem}
+            keyExtractor={item => item.id.toString()}
+            numColumns={2}
             style={{
-              ...StyleSheet.absoluteFillObject,
-              opacity: quizDisplayAnimation,
-              transform: [
-                {
-                  translateX: quizDisplayAnimation.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: [50, 0],
-                  }),
-                },
-              ],
-              zIndex: 20,
-              elevation: 5,
-            }}>
-            <QuizDisplay
-              userId={userId}
-              onBack={handleQuizDisplayBack}
-              category={selectedCategory.title}
-              onSelectDifficulty={handleSelectDifficulty}
-            />
-          </Animated.View>
-        )}
+              flex: 1,
+              marginTop: 110,
+            }}
+            contentContainerStyle={{
+              ...styles.contentContainer,
+              paddingTop: 40,
+            }}
+            showsVerticalScrollIndicator={false}
+            columnWrapperStyle={styles.gridRow}
+          />
+
+          <View style={styles.footer}>
+            <Text style={styles.footerText}>BrainBuzz • Dashboard v1.0</Text>
+          </View>
+        </Animated.View>
       </Animated.View>
 
       {/* Loading Overlay */}

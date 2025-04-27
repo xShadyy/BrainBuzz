@@ -5,21 +5,13 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {useUser} from '../utils/UserContext';
 import SoundManager from '../utils/SoundManager';
 import {styles, configureStatusBar} from './QuizDisplay.styles';
+import { StackScreenProps } from '@react-navigation/stack';
+import { RootStackParamList } from '../navigation/AppNavigator';
 
-interface QuizDisplayProps {
-  userId: number;
-  onBack: () => void;
-  category: string;
-  onSelectDifficulty: (difficulty: string) => void;
-  onLogout?: () => void; // Kept for backward compatibility
-}
+type QuizDisplayProps = StackScreenProps<RootStackParamList, 'Quiz'>;
 
-export const QuizDisplay: React.FC<QuizDisplayProps> = ({
-  userId,
-  onBack,
-  category,
-  onSelectDifficulty,
-}) => {
+export const QuizDisplay: React.FC<QuizDisplayProps> = ({ navigation, route }) => {
+  const { userId, category } = route.params;
   const {user, refreshUser} = useUser();
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
 
@@ -44,20 +36,54 @@ export const QuizDisplay: React.FC<QuizDisplayProps> = ({
   }, [userId, refreshUser]);
 
   const difficulties = [
-    {id: 'easy', title: 'Easy', color: '#4CAF50'},
-    {id: 'medium', title: 'Medium', color: '#FF9800'},
-    {id: 'hard', title: 'Hard', color: '#F44336'},
+    {
+      id: 'hard',
+      title: 'Hard',
+      styleClass: styles.hardButton,
+      multiplier: '3x',
+      icon: 'whatshot',
+    },
+    {
+      id: 'medium',
+      title: 'Medium',
+      styleClass: styles.mediumButton,
+      multiplier: '2x',
+      icon: 'bolt',
+    },
+    {
+      id: 'easy',
+      title: 'Easy',
+      styleClass: styles.easyButton,
+      multiplier: '1x',
+      icon: 'stars',
+    },
   ];
 
   const handleDifficultySelect = (difficulty: string) => {
-    SoundManager.playInteraction();
     setSelectedDifficulty(difficulty);
-    onSelectDifficulty(difficulty);
+
+    // Handle difficulty selection
+    console.log(`Selected difficulty: ${difficulty} for category: ${category}`);
+
+    // In a real implementation, you would probably navigate to a quiz game screen
+    // navigation.navigate('QuizGame', { userId, category, difficulty });
   };
 
   const handleBackPress = () => {
     SoundManager.playInteraction();
-    onBack();
+    navigation.goBack();
+  };
+
+  const handleLogout = () => {
+    SoundManager.playInteraction();
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Login' }],
+    });
+  };
+
+  const handleOpenSettings = () => {
+    navigation.navigate('Settings', { userId: userId });
   };
 
   // Calculate some example XP for visual demonstration
@@ -73,36 +99,45 @@ export const QuizDisplay: React.FC<QuizDisplayProps> = ({
         username={user?.name}
         xpCurrent={userXpCurrent}
         xpRequired={userXpRequired}
+        onSettingsPress={handleOpenSettings}
+        onLogoutPress={handleLogout}
       />
 
       <View style={styles.contentContainer}>
-        <View style={styles.header}>
-          <TouchableOpacity
-            onPress={handleBackPress}
-            style={styles.backButton}
-            accessibilityLabel="Go back">
-            <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
-          </TouchableOpacity>
-          <Text style={styles.categoryTitle}>{category} Quiz</Text>
-        </View>
-
-        <View style={styles.instructionsContainer}>
-          <Text style={styles.instructionText}>
-            Choose a difficulty level to start the quiz
-          </Text>
-        </View>
-
         <ScrollView contentContainerStyle={styles.difficultiesContainer}>
+          <TouchableOpacity
+            style={styles.backToCategoriesButton}
+            onPress={handleBackPress}>
+            <MaterialIcons name="arrow-back" size={20} color="#FFFFFF" />
+            <Text style={styles.backToCategoriesText}>Back to Categories</Text>
+          </TouchableOpacity>
+
+          <Text style={styles.categoryText}>Quiz Category: {category}</Text>
+          <Text style={styles.chooseText}>Choose Difficulty</Text>
+
           {difficulties.map(difficulty => (
             <TouchableOpacity
               key={difficulty.id}
               style={[
                 styles.difficultyButton,
-                {backgroundColor: difficulty.color},
-                selectedDifficulty === difficulty.id && styles.selectedDifficulty,
+                difficulty.styleClass,
+                selectedDifficulty === difficulty.id && styles.selectedDifficultyButton,
               ]}
               onPress={() => handleDifficultySelect(difficulty.id)}>
-              <Text style={styles.difficultyText}>{difficulty.title}</Text>
+              <View style={styles.difficultyIconContainer}>
+                <MaterialIcons
+                  name={difficulty.icon}
+                  size={28}
+                  color="#FFFFFF"
+                  style={styles.difficultyIcon}
+                />
+                <Text style={styles.difficultyText}>{difficulty.title}</Text>
+              </View>
+              <View style={styles.multiplierContainer}>
+                <Text style={styles.multiplierText}>
+                  {difficulty.multiplier}
+                </Text>
+              </View>
             </TouchableOpacity>
           ))}
         </ScrollView>
