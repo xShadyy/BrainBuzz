@@ -9,8 +9,11 @@ import { Easing, Animated } from 'react-native';
 import { WelcomeScreen } from '../screens/WelcomeScreen';
 import { LoginScreen } from '../screens/LoginScreen';
 import { DashboardScreen } from '../screens/DashboardScreen';
-import { QuizDisplay } from '../screens/QuizDisplay';
-import { Settings } from '../screens/Settings';
+import { QuizScreen } from '../screens/QuizScreen';
+import { SettingsScreen } from '../screens/SettingsScreen';
+
+// TESTING MODE: Set to true to skip welcome and login screens
+const TEST_MODE = true; // Toggle this for testing
 
 // Define the parameter types for each screen
 export type RootStackParamList = {
@@ -68,7 +71,7 @@ const screenOptions: StackNavigationOptions = {
     close: {
       animation: 'timing' as const,
       config: {
-        duration: 300,
+        duration: 200,
         easing: Easing.in(Easing.poly(4)),
       },
     },
@@ -76,16 +79,23 @@ const screenOptions: StackNavigationOptions = {
 };
 
 export const AppNavigator: React.FC = () => {
+  // Default user ID for testing
+  const testUserId = 1;
+
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Welcome"
+        initialRouteName={TEST_MODE ? 'Dashboard' : 'Welcome'}
         screenOptions={screenOptions}>
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
-        <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Dashboard" component={DashboardScreen} />
-        <Stack.Screen name="Quiz" component={QuizDisplay} />
-        <Stack.Screen name="Settings" component={Settings} />
+        {!TEST_MODE && <Stack.Screen name="Welcome" component={WelcomeScreen} />}
+        {!TEST_MODE && <Stack.Screen name="Login" component={LoginScreen} />}
+        <Stack.Screen
+          name="Dashboard"
+          component={DashboardScreen}
+          initialParams={TEST_MODE ? { userId: testUserId } : undefined}
+        />
+        <Stack.Screen name="Quiz" component={QuizScreen} />
+        <Stack.Screen name="Settings" component={SettingsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -4,13 +4,13 @@ import {UserHeader} from '../components/UserHeader';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {useUser} from '../utils/UserContext';
 import SoundManager from '../utils/SoundManager';
-import {styles, configureStatusBar} from './QuizDisplay.styles';
+import {styles, configureStatusBar} from './QuizScreen.styles';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParamList } from '../navigation/AppNavigator';
 
-type QuizDisplayProps = StackScreenProps<RootStackParamList, 'Quiz'>;
+type QuizScreenProps = StackScreenProps<RootStackParamList, 'Quiz'>;
 
-export const QuizDisplay: React.FC<QuizDisplayProps> = ({ navigation, route }) => {
+export const QuizScreen: React.FC<QuizScreenProps> = ({ navigation, route }) => {
   const { userId, category } = route.params;
   const {user, refreshUser} = useUser();
   const [selectedDifficulty, setSelectedDifficulty] = useState<string | null>(null);
@@ -70,8 +70,8 @@ export const QuizDisplay: React.FC<QuizDisplayProps> = ({ navigation, route }) =
   };
 
   const handleBackPress = () => {
-    SoundManager.playInteraction();
     navigation.goBack();
+    SoundManager.playInteraction();  // Sound will play but won't block navigation
   };
 
   const handleLogout = () => {
@@ -104,42 +104,46 @@ export const QuizDisplay: React.FC<QuizDisplayProps> = ({ navigation, route }) =
       />
 
       <View style={styles.contentContainer}>
-        <ScrollView contentContainerStyle={styles.difficultiesContainer}>
-          <TouchableOpacity
-            style={styles.backToCategoriesButton}
-            onPress={handleBackPress}>
-            <MaterialIcons name="arrow-back" size={20} color="#FFFFFF" />
-            <Text style={styles.backToCategoriesText}>Back to Categories</Text>
-          </TouchableOpacity>
+        <ScrollView
+          contentContainerStyle={styles.scrollViewContainer}
+          showsVerticalScrollIndicator={false}>
+          <View style={styles.centeringContainer}>
+            <Text style={styles.categoryText}>Quiz Category: {category}</Text>
+            <Text style={styles.chooseText}>Choose Difficulty</Text>
 
-          <Text style={styles.categoryText}>Quiz Category: {category}</Text>
-          <Text style={styles.chooseText}>Choose Difficulty</Text>
+            {difficulties.map(difficulty => (
+              <TouchableOpacity
+                key={difficulty.id}
+                style={[
+                  styles.difficultyButton,
+                  difficulty.styleClass,
+                  selectedDifficulty === difficulty.id && styles.selectedDifficultyButton,
+                ]}
+                onPress={() => handleDifficultySelect(difficulty.id)}>
+                <View style={styles.difficultyIconContainer}>
+                  <MaterialIcons
+                    name={difficulty.icon}
+                    size={28}
+                    color="#FFFFFF"
+                    style={styles.difficultyIcon}
+                  />
+                  <Text style={styles.difficultyText}>{difficulty.title}</Text>
+                </View>
+                <View style={styles.multiplierContainer}>
+                  <Text style={styles.multiplierText}>
+                    {difficulty.multiplier}
+                  </Text>
+                </View>
+              </TouchableOpacity>
+            ))}
 
-          {difficulties.map(difficulty => (
             <TouchableOpacity
-              key={difficulty.id}
-              style={[
-                styles.difficultyButton,
-                difficulty.styleClass,
-                selectedDifficulty === difficulty.id && styles.selectedDifficultyButton,
-              ]}
-              onPress={() => handleDifficultySelect(difficulty.id)}>
-              <View style={styles.difficultyIconContainer}>
-                <MaterialIcons
-                  name={difficulty.icon}
-                  size={28}
-                  color="#FFFFFF"
-                  style={styles.difficultyIcon}
-                />
-                <Text style={styles.difficultyText}>{difficulty.title}</Text>
-              </View>
-              <View style={styles.multiplierContainer}>
-                <Text style={styles.multiplierText}>
-                  {difficulty.multiplier}
-                </Text>
-              </View>
+              style={styles.backToCategoriesButton}
+              onPress={handleBackPress}>
+              <MaterialIcons name="arrow-back" size={20} color="#FFFFFF" />
+              <Text style={styles.backToCategoriesText}>Back to Categories</Text>
             </TouchableOpacity>
-          ))}
+          </View>
         </ScrollView>
       </View>
     </View>

@@ -14,7 +14,7 @@ import {
   Platform,
   Dimensions,
 } from 'react-native';
-import {styles} from './Settings.styles';
+import {styles} from './SettingsScreen.styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import LottieView from 'lottie-react-native';
 import {db} from '../database';
@@ -32,7 +32,7 @@ interface FireLevel {
   progress: number;
 }
 
-export const Settings: React.FC<SettingsScreenProps> = ({ navigation, route }) => {
+export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, route }) => {
   const { userId } = route.params;
   const {user, refreshUser} = useUser();
   const [isEditingName, setIsEditingName] = useState(false);
