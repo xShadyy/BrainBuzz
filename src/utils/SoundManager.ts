@@ -1,105 +1,258 @@
-import { AppState, AppStateStatus } from 'react-native';
-const Sound = require('react-native-sound');
+import {AppState, AppStateStatus, NativeModules} from 'react-native';
+import Sound from 'react-native-sound';
 
+// Sound files
 const ambientSource = require('../assets/sounds/ambient.mp3');
-const zapSource = require('../assets/sounds/zap.mp3');
+const interactionSource = require('../assets/sounds/interaction.mp3');
+const zap1Source = require('../assets/sounds/zap1.mp3');
+const zap2Source = require('../assets/sounds/zap2.mp3');
+const loginSuccessSource = require('../assets/sounds/login_success.mp3');
+
+// Android AudioManager interface
+interface AudioManagerConstants {
+  AUDIOFOCUS_GAIN: number;
+  AUDIOFOCUS_LOSS: number;
+  AUDIOFOCUS_LOSS_TRANSIENT: number;
+  AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK: number;
+}
+
+const AudioFocusModule = NativeModules.AudioFocusModule || {
+  requestAudioFocus: () => Promise.resolve(true),
+  abandonAudioFocus: () => Promise.resolve(),
+  constants: {} as AudioManagerConstants,
+};
 
 class SoundManager {
-  private static ambient: any = null;
-  private static zap: any = null;
-  private static zap2: any = null;
-  private static appStateSubscription: { remove: () => void } | null = null;
-  private static currentAppState: AppStateStatus = AppState.currentState;
+  // Ambient sound
+  private static ambient: Sound | null = null;
+  private static ambientVolume = 0.5;
+  private static ambientEnabled = true;
 
-  static init() {
-    Sound.setCategory('Playback');
+  // Sound pools
+  private static zap1Pool: Sound[] = [];
+  private static zap2Pool: Sound[] = [];
+  private static POOL_SIZE = 3;
 
-    if (!this.ambient) {
-      this.ambient = new Sound(ambientSource, (err: any) => {
-        if (err) {
-          console.warn('SoundManager: ambient load failed', err);
-          return;
-        }
-        this.ambient.setNumberOfLoops(-1);
-        this.ambient.setVolume(0.7);
-        this.ambient.play((success: boolean) => {
-          if (!success) {console.warn('SoundManager: ambient playback error');}
-        });
-      });
+  // Other sounds
+  private static interaction: Sound | null = null;
+  private static loginSuccess: Sound | null = null;
+
+  // App state management
+  private static appStateSubscription: {remove: () => void} | null = null;
+  private static currentAppState: AppStateStatus = 'active';
+  private static hasAudioFocus = false;
+
+  static async init() {
+    // Initialize audio subsystem
+    Sound.setCategory('Playback', true);
+
+    // Load sounds
+    try {
+      this.ambient = await this.loadSound(ambientSource);
+      this.interaction = await this.loadSound(interactionSource);
+      this.loginSuccess = await this.loadSound(loginSuccessSource);
+      this.zap1Pool = await this.createSoundPool(zap1Source, this.POOL_SIZE);
+      this.zap2Pool = await this.createSoundPool(zap2Source, this.POOL_SIZE);
+    } catch (error) {
+      console.error('Sound initialization failed:', error);
     }
 
-    if (!this.zap) {
-      this.zap = new Sound(zapSource, (err: any) => {
-        if (err) {
-          console.warn('SoundManager: zap load failed', err);
-        }
-      });
-    }
+    // Set up app state listener
+    this.appStateSubscription = AppState.addEventListener(
+      'change',
+      this.handleAppStateChange,
+    );
 
-    if (!this.zap2) {
-      this.zap2 = new Sound(zapSource, (err: any) => {
-        if (err) {
-          console.warn('SoundManager: zap2 load failed', err);
-        }
-      });
-    }
-
-    if (!this.appStateSubscription) {
-      this.appStateSubscription = AppState.addEventListener('change', this.handleAppStateChange);
-    }
+    // Initial audio focus
+    await this.handleAudioFocus('active');
   }
 
-  private static handleAppStateChange = (nextAppState: AppStateStatus) => {
-    if (
-      this.currentAppState.match(/inactive|background/) &&
-      nextAppState === 'active'
-    ) {
-      this.ambient?.play();
-    } else if (
-      nextAppState.match(/inactive|background/)
-    ) {
-      this.ambient?.pause();
-
-      if (this.zap && this.zap.isPlaying()) {
-        this.zap.stop();
-      }
-
-      if (this.zap2 && this.zap2.isPlaying()) {
-        this.zap2.stop();
-      }
+  // -- Ambient Music Control --
+  static async playAmbient() {
+    if (!this.ambientEnabled || !this.ambient) {
+      return;
     }
-    this.currentAppState = nextAppState;
+
+    if (this.ambient.isPlaying()) {
+      return;
+    }
+
+    this.ambient.setNumberOfLoops(-1);
+    this.ambient.setVolume(this.ambientVolume);
+    this.ambient.play(success => {
+      if (!success) {
+        console.warn('Ambient playback failed');
+      }
+    });
+  }
+
+  static async fadeOutAmbient(duration = 2000) {
+    if (!this.ambient) {
+      return;
+    }
+
+    const startVolume = this.ambient.getVolume();
+    const steps = 20;
+    const stepTime = duration / steps;
+
+    for (let i = 1; i <= steps; i++) {
+      setTimeout(() => {
+        const newVolume = startVolume * (1 - i / steps);
+        this.ambient?.setVolume(newVolume);
+      }, i * stepTime);
+    }
+
+    setTimeout(() => {
+      this.ambient?.stop();
+      this.ambientEnabled = false;
+    }, duration);
+  }
+
+  // -- Sound Effects --
+  static playZap1() {
+    this.playFromPool(this.zap1Pool, 0.8);
+  }
+
+  static playZap2() {
+    this.playFromPool(this.zap2Pool, 0.8);
+  }
+
+  static playInteraction() {
+    this.playSound(this.interaction, 1.0);
+  }
+
+  static playLoginSuccess() {
+    this.playSound(this.loginSuccess, 1.0);
+    this.fadeOutAmbient();
+  }
+
+  // -- App State Management --
+  private static handleAppStateChange = async (nextState: AppStateStatus) => {
+    if (nextState === 'active') {
+      await this.handleAudioFocus('active');
+      this.resumeAllSounds();
+    } else {
+      await this.handleAudioFocus('background');
+      this.pauseAllSounds();
+    }
+    this.currentAppState = nextState;
   };
 
-  static playZap() {
-    if (this.zap && this.currentAppState === 'active') {
-      this.zap.setVolume(1);
-      this.zap.play((success: boolean) => {
-        if (!success) {console.warn('SoundManager: zap playback error');}
+  private static async handleAudioFocus(state: 'active' | 'background') {
+    if (state === 'active') {
+      try {
+        this.hasAudioFocus = await AudioFocusModule.requestAudioFocus();
+        if (this.hasAudioFocus) {
+          Sound.setCategory('Playback', true);
+        }
+      } catch (error) {
+        console.warn('Audio focus request failed:', error);
+        this.hasAudioFocus = false;
+      }
+    } else {
+      try {
+        await AudioFocusModule.abandonAudioFocus();
+      } catch (error) {
+        console.warn('Audio focus abandonment failed:', error);
+      }
+      this.hasAudioFocus = false;
+    }
+  }
+
+  // -- Helper Methods --
+  private static loadSound(source: any): Promise<Sound> {
+    return new Promise((resolve, reject) => {
+      const sound = new Sound(source, error => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(sound);
+        }
+      });
+    });
+  }
+
+  private static async createSoundPool(
+    source: any,
+    size: number,
+  ): Promise<Sound[]> {
+    const pool: Sound[] = [];
+    for (let i = 0; i < size; i++) {
+      try {
+        const sound = await this.loadSound(source);
+        pool.push(sound);
+      } catch (error) {
+        console.warn('Sound pool creation error:', error);
+      }
+    }
+    return pool;
+  }
+
+  private static playFromPool(pool: Sound[], volume: number) {
+    if (!this.hasAudioFocus) {
+      return;
+    }
+
+    const availableSound = pool.find((s: Sound) => !s.isPlaying());
+    if (availableSound) {
+      availableSound.setVolume(volume);
+      availableSound.play(success => {
+        if (!success) {
+          console.warn('Pool sound playback failed');
+        }
       });
     }
   }
 
-  static playSecondZap() {
-    if (this.zap2 && this.currentAppState === 'active') {
-      this.zap2.setVolume(1);
-      this.zap2.play((success: boolean) => {
-        if (!success) {console.warn('SoundManager: zap2 playback error');}
-      });
+  private static playSound(sound: Sound | null, volume: number) {
+    if (!this.hasAudioFocus || !sound) {
+      return;
+    }
+
+    sound.setVolume(volume);
+    sound.play(success => {
+      if (!success) {
+        console.warn('Sound playback failed');
+      }
+    });
+  }
+
+  private static pauseAllSounds() {
+    this.ambient?.pause();
+    this.zap1Pool.forEach((s: Sound) => s.pause());
+    this.zap2Pool.forEach((s: Sound) => s.pause());
+    this.interaction?.pause();
+    this.loginSuccess?.pause();
+  }
+
+  private static resumeAllSounds() {
+    if (this.ambientEnabled) {
+      this.playAmbient();
     }
   }
 
   static release() {
-    if (this.appStateSubscription) {
-      this.appStateSubscription.remove();
-      this.appStateSubscription = null;
-    }
-    this.ambient?.stop(() => this.ambient?.release());
-    this.zap?.release();
-    this.zap2?.release();
-    this.ambient = null;
-    this.zap = null;
-    this.zap2 = null;
+    this.appStateSubscription?.remove();
+
+    this.ambient?.stop();
+    this.ambient?.release();
+
+    this.zap1Pool.forEach((s: Sound) => {
+      s.stop();
+      s.release();
+    });
+    this.zap2Pool.forEach((s: Sound) => {
+      s.stop();
+      s.release();
+    });
+
+    this.interaction?.stop();
+    this.interaction?.release();
+
+    this.loginSuccess?.stop();
+    this.loginSuccess?.release();
+
+    AudioFocusModule.abandonAudioFocus().catch(() => {});
   }
 }
 

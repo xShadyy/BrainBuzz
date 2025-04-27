@@ -1,49 +1,41 @@
-/* eslint-disable react-native/no-inline-styles */
+
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * BrainBuzz App
  *
  * @format
  */
 
-import React, {useState, useEffect} from 'react';
-import {SafeAreaView, StatusBar, useColorScheme, View} from 'react-native';
-import {WelcomeScreen} from './src/screens/WelcomeScreen';
+import React, { useEffect } from 'react';
+import { StatusBar } from 'react-native';
+import { AppNavigator } from './src/navigation';
+import SoundManager from './src/utils/SoundManager';
+import { UserProvider } from './src/utils/UserContext';
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  const [showWelcome, setShowWelcome] = useState(true);
-
   useEffect(() => {
+    // Set status bar to translucent for the entire app
+    StatusBar.setTranslucent(true);
+    StatusBar.setBackgroundColor('transparent');
+
     console.log('App mounted, initializing ambient sound');
 
-    const timeoutId = setTimeout(() => {
-    }, 500);
+    // Initialize sound manager
+    SoundManager.init().then(() => {
+      // Start playing ambient music
+      SoundManager.playAmbient();
+    });
 
     return () => {
-      clearTimeout(timeoutId);
       console.log('App unmounted, stopping all sounds');
+      SoundManager.release();
     };
   }, []);
 
-  const handleWelcomeFinish = () => {
-    setShowWelcome(false);
-  };
-
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: isDarkMode ? '#1C1C1E' : '#FFFFFF'}}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={isDarkMode ? '#1C1C1E' : '#FFFFFF'}
-      />
-      <View style={{flex: 1}}>
-        {showWelcome ? (
-          <WelcomeScreen onFinish={handleWelcomeFinish} />
-        ) : (
-          null
-        )}
-      </View>
-    </SafeAreaView>
+    <UserProvider>
+      <StatusBar translucent backgroundColor="transparent" />
+      <AppNavigator />
+    </UserProvider>
   );
 }
 
