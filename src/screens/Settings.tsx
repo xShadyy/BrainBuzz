@@ -37,12 +37,9 @@ export const Settings: React.FC<SettingsScreenProps> = ({ navigation, route }) =
   const {user, refreshUser} = useUser();
   const [isEditingName, setIsEditingName] = useState(false);
   const [newName, setNewName] = useState('');
-  const [isLoading, setIsLoading] = useState(true);
-  const [initialLoadDone, setInitialLoadDone] = useState(false);
-  const loaderOpacity = useRef(new Animated.Value(1)).current;
-  const contentOpacity = useRef(new Animated.Value(0)).current;
-  const [loaderVisible, setLoaderVisible] = useState(true);
-  const minLoadingTime = 1000;
+
+  // Remove loading states - we don't need the loading animation anymore
+  const contentOpacity = useRef(new Animated.Value(1)).current; // Start fully visible
 
   const fireLevels: FireLevel[] = [
     {
@@ -96,41 +93,13 @@ export const Settings: React.FC<SettingsScreenProps> = ({ navigation, route }) =
   ];
 
   useEffect(() => {
+    // Initialize name if user exists
     if (user) {
       setNewName(user.name);
-      setInitialLoadDone(true);
     } else if (userId) {
-      refreshUser(userId).then(() => {
-        setInitialLoadDone(true);
-      });
+      refreshUser(userId);
     }
   }, [userId, user, refreshUser]);
-
-  useEffect(() => {
-    if (!initialLoadDone) {return;}
-
-    const timer = setTimeout(() => {
-      Animated.parallel([
-        Animated.timing(loaderOpacity, {
-          toValue: 0,
-          duration: 800,
-          useNativeDriver: true,
-        }),
-        Animated.timing(contentOpacity, {
-          toValue: 1,
-          duration: 800,
-          useNativeDriver: true,
-        }),
-      ]).start(({finished}) => {
-        if (finished) {
-          setLoaderVisible(false);
-          setIsLoading(false);
-        }
-      });
-    }, minLoadingTime);
-
-    return () => clearTimeout(timer);
-  }, [initialLoadDone, loaderOpacity, contentOpacity, minLoadingTime]);
 
   const handleBackPress = () => {
     SoundManager.playInteraction();
@@ -306,28 +275,6 @@ export const Settings: React.FC<SettingsScreenProps> = ({ navigation, route }) =
           </View>
         </View>
       </Animated.View>
-
-      {loaderVisible && (
-        <Animated.View
-          style={[
-            StyleSheet.absoluteFillObject,
-            {
-              backgroundColor: '#272727',
-              justifyContent: 'center',
-              alignItems: 'center',
-              zIndex: 10,
-              opacity: loaderOpacity,
-            },
-          ]}
-          pointerEvents="auto">
-          <LottieView
-            source={require('../assets/animations/loader.json')}
-            autoPlay
-            loop
-            style={{width: 150, height: 150}}
-          />
-        </Animated.View>
-      )}
     </View>
   );
 };
