@@ -1,14 +1,21 @@
-// Quiz.styles.ts
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
+    backgroundColor: '#1D1D1D',
+  },
+  content: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#000000',          // pure black
+    marginTop: 150,
+  },
+  bottomContainer: {
+    padding: 20, // Adjust this to increase/decrease bottom spacing
+    alignItems: 'center',
   },
   questionCount: {
     fontSize: 16,
@@ -67,48 +74,6 @@ export const styles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 6,
   },
-  feedbackContainer: {
-    position: 'absolute',
-    bottom: 100,
-    alignItems: 'center',
-  },
-  feedbackAnimationOverlay: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    width: '100%',
-    height: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-    zIndex: 10,
-    backgroundColor: 'rgba(0,0,0,0.25)', // subtle overlay
-  },
-  correctText: {
-    fontSize: 24,
-    fontFamily: 'Lexend-Bold',
-    color: '#4CAF50',
-    textShadowColor: 'rgba(76, 175, 80, 0.5)',
-    textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 10,
-  },
-  wrongText: {
-    fontSize: 24,
-    fontFamily: 'Lexend-Bold',
-    color: '#F44336',
-    textShadowColor: 'rgba(244, 67, 54, 0.5)',
-    textShadowOffset: { width: 0, height: 0 },
-    textShadowRadius: 10,
-  },
-  errorText: {
-    fontSize: 16,
-    fontFamily: 'Lexend-Medium',
-    color: '#FFFFFF',
-    textAlign: 'center',
-    opacity: 0.8,
-    padding: 20,
-  },
   progressBar: {
     width: '100%',
     height: 6,
@@ -148,13 +113,32 @@ export const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 8,
-    marginBottom: 16,
-    alignSelf: 'flex-start',
-  },
-  endQuizButtonText: {
+    },
+    endQuizButtonText: {
     fontSize: 14,
     fontFamily: 'Lexend-Medium',
     color: '#FFFFFF',
     marginLeft: 5,
   },
-});
+  feedbackAnimationOverlay: {
+    position: 'absolute',
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    width: '100%',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    zIndex: 10,
+    backgroundColor: 'rgba(0,0,0,0.25)',
+  },
+  errorText: {
+    fontSize: 16,
+    fontFamily: 'Lexend-Medium',
+    color: '#FFFFFF',
+    textAlign: 'center',
+    opacity: 0.8,
+    padding: 20,
+  },
+  });

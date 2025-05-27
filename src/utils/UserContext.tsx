@@ -1,4 +1,4 @@
-import React, {createContext, useState, useContext, useRef} from 'react';
+import React, {createContext, useState, useContext, useRef, useCallback} from 'react';
 import {db} from '../database';
 import {User} from '../database/types';
 
@@ -40,7 +40,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({children}) => {
     }
   };
 
-  const refreshUser = async (userId: number) => {
+  const refreshUser = useCallback(async (userId: number) => {
     // Prevent multiple concurrent refreshUser calls
     if (isRefreshingRef.current) {
       return;
@@ -62,7 +62,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({children}) => {
       setIsLoading(false);
       isRefreshingRef.current = false;
     }
-  };
+  }, []);
 
   const logout = () => {
     setUser(null);

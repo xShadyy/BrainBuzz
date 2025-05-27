@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   // Root container
   container: {
     flex: 1,
-    backgroundColor: '#000000',    // ← pure black
+    backgroundColor: '#1D1D1D',    // ← pure black
   },
 
   // Header
