@@ -93,7 +93,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
     {
       animation: require('../../assets/animations/fire_cherry_pink_light.json'),
       name: 'Eternal Storm',
-      color: '#FFFFFF',
+      color: '#BD3039',
       progress: 0,
     },
   ];

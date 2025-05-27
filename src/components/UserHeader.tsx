@@ -74,7 +74,7 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
   // Get color for current level's XP bar
   const getLevelColor = (level: number) => {
     const levelColors = [
-      '#FFFFFF', // Level 1 - Eternal Storm (white)
+      '#BD3039', // Level 1 - Eternal Storm (white)
       '#A9B7C0', // Level 2 - Mystical Aura (gray)
       '#50CB86', // Level 3 - Jade Pyre (green)
       '#6EEB83', // Level 4 - Emerald Inferno (light green)

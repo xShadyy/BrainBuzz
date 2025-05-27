@@ -11,7 +11,7 @@ export class LevelManager {
     {
       animation: require('../assets/animations/fire_cherry_pink_light.json'),
       name: 'Eternal Storm',
-      color: '#FFFFFF',
+      color: '#BD3039',
       level: 8,
     },
     {
