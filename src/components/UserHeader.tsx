@@ -60,11 +60,14 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
     SoundManager.playInteraction();
     Alert.alert('Confirm', 'Do you want to logout?', [
       {text: 'Cancel', style: 'cancel'},
-      {text: 'Yes', onPress: () => {
-        if (onLogoutPress) {
-          onLogoutPress();
-        }
-      }},
+      {
+        text: 'Yes',
+        onPress: () => {
+          if (onLogoutPress) {
+            onLogoutPress();
+          }
+        },
+      },
     ]);
   };
 

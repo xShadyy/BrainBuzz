@@ -1,6 +1,6 @@
 import {StyleSheet, StatusBar, Dimensions} from 'react-native';
 
-const { height} = Dimensions.get('window');
+const {height} = Dimensions.get('window');
 
 // Helper for responsive sizing
 const responsiveSize = (size: number) => {
@@ -125,21 +125,21 @@ export const styles = StyleSheet.create({
   easyButton: {
     backgroundColor: '#4CAF50',
     shadowColor: 'rgba(76, 175, 80, 0.7)',
-    shadowOffset: { width: 0, height: 0 },
+    shadowOffset: {width: 0, height: 0},
     shadowOpacity: 1,
     shadowRadius: 10,
   },
   mediumButton: {
     backgroundColor: '#FF9800',
     shadowColor: 'rgba(255, 152, 0, 0.7)',
-    shadowOffset: { width: 0, height: 0 },
+    shadowOffset: {width: 0, height: 0},
     shadowOpacity: 1,
     shadowRadius: 10,
   },
   hardButton: {
     backgroundColor: '#F44336',
     shadowColor: 'rgba(244, 67, 54, 0.7)',
-    shadowOffset: { width: 0, height: 0 },
+    shadowOffset: {width: 0, height: 0},
     shadowOpacity: 1,
     shadowRadius: 10,
   },

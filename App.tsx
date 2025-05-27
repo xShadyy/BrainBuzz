@@ -4,11 +4,11 @@
  * @format
  */
 
-import React, { useEffect } from 'react';
-import { StatusBar } from 'react-native';
-import { AppNavigator } from './src/navigation';
+import React, {useEffect} from 'react';
+import {StatusBar} from 'react-native';
+import {AppNavigator} from './src/navigation';
 import SoundManager from './src/utils/SoundManager';
-import { UserProvider } from './src/utils/UserContext';
+import {UserProvider} from './src/utils/UserContext';
 
 function App(): React.JSX.Element {
   useEffect(() => {

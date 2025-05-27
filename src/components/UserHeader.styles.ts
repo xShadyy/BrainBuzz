@@ -1,7 +1,8 @@
 import {StyleSheet, StatusBar, Platform} from 'react-native';
 
 // Get the status bar height for proper padding
-const STATUS_BAR_HEIGHT = Platform.OS === 'android' ? StatusBar.currentHeight || 0 : 0;
+const STATUS_BAR_HEIGHT =
+  Platform.OS === 'android' ? StatusBar.currentHeight || 0 : 0;
 
 export const styles = StyleSheet.create({
   container: {

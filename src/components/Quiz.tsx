@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, TouchableOpacity, Animated } from 'react-native';
-import { styles } from './Quiz.styles.ts';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React, {useState, useEffect, useCallback, useRef} from 'react';
+import {View, Text, TouchableOpacity, Animated, StyleSheet} from 'react-native';
+import LottieView from 'lottie-react-native';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import SoundManager from '../utils/SoundManager';
+import {styles} from './Quiz.styles';
 
 interface Question {
   id: number;
@@ -20,9 +24,10 @@ interface QuizProps {
   categoryId: number;
   difficulty: string;
   onComplete?: (score: number, totalQuestions: number) => void;
+  onEndQuiz?: () => void;
 }
 
-const Quiz: React.FC<QuizProps> = ({ categoryId, difficulty, onComplete }) => {
+const Quiz: React.FC<QuizProps> = ({categoryId, difficulty, onComplete, onEndQuiz}) => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -31,42 +36,45 @@ const Quiz: React.FC<QuizProps> = ({ categoryId, difficulty, onComplete }) => {
   const [score, setScore] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [progressAnim] = useState(new Animated.Value(0));
+  const scoreRef = useRef(0);
+  const [showResults, setShowResults] = useState(false);
+  const [finalScore, setFinalScore] = useState(0);
+  const [showFeedback, setShowFeedback] = useState(false);
+  const [feedbackType, setFeedbackType] = useState<'correct' | 'incorrect' | null>(null);
+  const quizDataLoaded = useRef(false);
 
   useEffect(() => {
     const loadQuizData = async () => {
+      if (quizDataLoaded.current) {return;}
       try {
-        console.log('Loading quiz data for category:', categoryId, 'difficulty:', difficulty);
-
-        // Load questions and answers from JSON files
         const questionsData = require('../../android/app/src/main/assets/quiz_data/questions.json');
         const answersData = require('../../android/app/src/main/assets/quiz_data/answers.json');
 
-        console.log('Questions loaded:', questionsData.length);
-        console.log('Answers loaded:', answersData.length);
-
-        // Filter questions by category and difficulty
         const filteredQuestions = questionsData.filter(
           (q: Question) => q.category_id === categoryId && q.difficulty === difficulty
         );
 
-        console.log('Filtered questions:', filteredQuestions.length);
-
         if (filteredQuestions.length === 0) {
-          setError(`No questions found for category ID ${categoryId} with difficulty ${difficulty}`);
+          setError('No questions found for this category and difficulty');
+          return;
         }
 
+        console.log(`[Quiz] Loaded ${filteredQuestions.length} questions for category ${categoryId}, difficulty ${difficulty}`);
+        quizDataLoaded.current = true;
         setQuestions(filteredQuestions);
         setAnswers(answersData);
       } catch (err) {
-        console.error('Error loading quiz data:', err);
+        console.error('Failed to load quiz data:', err);
         setError('Failed to load quiz data. Please try again later.');
       }
     };
-
     loadQuizData();
-  }, [categoryId, difficulty]);
+  }, [categoryId, difficulty]); // Only run once on mount
 
-  // Update progress bar when question changes
+  useEffect(() => {
+    scoreRef.current = score;
+  }, [score]);
+
   useEffect(() => {
     if (questions.length > 0) {
       Animated.timing(progressAnim, {
@@ -77,48 +85,65 @@ const Quiz: React.FC<QuizProps> = ({ categoryId, difficulty, onComplete }) => {
     }
   }, [currentQuestionIndex, questions.length, progressAnim]);
 
-  // Get answers for the current question
-  const getCurrentQuestionAnswers = (): Answer[] => {
-    if (!questions || questions.length === 0 || !answers || answers.length === 0) {
+  const getCurrentQuestionAnswers = useCallback(() => {
+    if (questions.length === 0 || answers.length === 0) {
       return [];
     }
-
     const currentQuestion = questions[currentQuestionIndex];
     if (!currentQuestion) {
+      console.error(`[Quiz] No question found at index ${currentQuestionIndex}`);
       return [];
     }
-
-    const questionAnswers = answers.filter(answer => answer.question_id === currentQuestion.id);
-    console.log('Answers for question:', currentQuestion.id, 'count:', questionAnswers.length);
+    const questionAnswers = answers.filter(ans => ans.question_id === currentQuestion.id);
+    console.log(`[Quiz] Found ${questionAnswers.length} answers for question ${currentQuestion.id}`);
     return questionAnswers;
-  };
+  }, [questions, answers, currentQuestionIndex]);
 
-  const handleAnswerSelect = (answerId: number) => {
-    setSelectedAnswerId(answerId);
+  const handleAnswerSelect = useCallback((answerId: number) => {
+    if (selectedAnswerId !== null) {return;}
 
-    const selectedAnswer = answers.find(answer => answer.id === answerId);
-    const correct = selectedAnswer?.is_correct || false;
-
-    setIsCorrect(correct);
+    // Play sound immediately before any state changes or animation
+    const selected = answers.find(ans => ans.id === answerId);
+    const correct = selected?.is_correct ?? false;
 
     if (correct) {
-      setScore(prevScore => prevScore + 1);
+      SoundManager.playQuizCorrect();
+    } else {
+      SoundManager.playQuizIncorrect();
     }
 
-    // Move to the next question after a short delay
-    setTimeout(() => {
+    setSelectedAnswerId(answerId);
+    setIsCorrect(correct);
+    setShowFeedback(true);
+    setFeedbackType(correct ? 'correct' : 'incorrect');
+
+    if (correct) {
+      setScore(prev => {
+        const updated = prev + 1;
+        scoreRef.current = updated;
+        return updated;
+      });
+    }
+
+    // Use setTimeout to delay moving to the next question
+    const timer = setTimeout(() => {
+      setShowFeedback(false);
+      setFeedbackType(null);
+
       if (currentQuestionIndex < questions.length - 1) {
         setCurrentQuestionIndex(prevIndex => prevIndex + 1);
         setSelectedAnswerId(null);
         setIsCorrect(null);
+        console.log(`[Quiz] Moving to question ${currentQuestionIndex + 1}`);
       } else {
-        // Quiz is complete
-        if (onComplete) {
-          onComplete(score + (correct ? 1 : 0), questions.length);
-        }
+        setFinalScore(scoreRef.current);
+        setShowResults(true);
+        if (onComplete) {onComplete(scoreRef.current, questions.length);}
       }
     }, 1500);
-  };
+
+    return () => clearTimeout(timer);
+  }, [selectedAnswerId, answers, currentQuestionIndex, questions.length, onComplete]);
 
   if (error) {
     return (
@@ -128,42 +153,49 @@ const Quiz: React.FC<QuizProps> = ({ categoryId, difficulty, onComplete }) => {
     );
   }
 
-  if (!questions || questions.length === 0) {
+  if (questions.length === 0) {
     return (
       <View style={styles.container}>
-        <Text style={styles.errorText}>No questions found for this category and difficulty.</Text>
+        <LottieView source={require('../assets/animations/loader_small.json')} autoPlay loop />
+      </View>
+    );
+  }
+
+  if (showResults) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.questionText}>Quiz Complete!</Text>
+        <Text style={styles.scoreText}>Your Score: {finalScore} / {questions.length}</Text>
+        <TouchableOpacity style={styles.endQuizButton} onPress={onEndQuiz}>
+          <Text style={styles.endQuizButtonText}>Back</Text>
+        </TouchableOpacity>
       </View>
     );
   }
 
   const currentQuestion = questions[currentQuestionIndex];
-  if (!currentQuestion) {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.errorText}>Question not found.</Text>
-      </View>
-    );
-  }
-
   const questionAnswers = getCurrentQuestionAnswers();
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity style={styles.endQuizButton} onPress={onEndQuiz}>
+        <MaterialIcons name="arrow-back" size={18} color="#FFFFFF" />
+        <Text style={styles.endQuizButtonText}>End Quiz</Text>
+      </TouchableOpacity>
+
       <Text style={styles.questionCount}>
         Question {currentQuestionIndex + 1} of {questions.length}
       </Text>
 
-      {/* Progress Bar */}
       <View style={styles.progressBar}>
         <Animated.View
-          style={[styles.progressFill, { width: progressAnim.interpolate({
-            inputRange: [0, 1],
-            outputRange: ['0%', '100%'],
-          }) }]}
+          style={[
+            styles.progressFill,
+            { width: progressAnim.interpolate({ inputRange: [0, 1], outputRange: ['0%', '100%'] }) },
+          ]}
         />
       </View>
 
-      {/* Score Display */}
       <View style={styles.scoreContainer}>
         <Text style={styles.scoreText}>Score:</Text>
         <Text style={styles.scoreValue}>{score}</Text>
@@ -172,31 +204,36 @@ const Quiz: React.FC<QuizProps> = ({ categoryId, difficulty, onComplete }) => {
       <Text style={styles.questionText}>{currentQuestion.text}</Text>
 
       <View style={styles.answersContainer}>
-        {questionAnswers && questionAnswers.length > 0 ? (
-          questionAnswers.map((answer) => (
-            <TouchableOpacity
-              key={answer.id}
-              style={[
-                styles.answerButton,
-                selectedAnswerId === answer.id &&
-                  (answer.is_correct ? styles.correctAnswer : styles.wrongAnswer),
-              ]}
-              onPress={() => handleAnswerSelect(answer.id)}
-              disabled={selectedAnswerId !== null}
-            >
-              <Text style={styles.answerText}>{answer.text}</Text>
-            </TouchableOpacity>
-          ))
-        ) : (
-          <Text style={styles.errorText}>No answers available for this question.</Text>
-        )}
+        {questionAnswers.map(answer => (
+          <TouchableOpacity
+            key={answer.id}
+            style={[
+              styles.answerButton,
+              selectedAnswerId === answer.id &&
+                (answer.is_correct ? styles.correctAnswer : styles.wrongAnswer),
+            ]}
+            onPress={() => handleAnswerSelect(answer.id)}
+            activeOpacity={0.8}
+          >
+            <Text style={styles.answerText}>{answer.text}</Text>
+          </TouchableOpacity>
+        ))}
       </View>
 
-      {isCorrect !== null && (
-        <View style={styles.feedbackContainer}>
-          <Text style={isCorrect ? styles.correctText : styles.wrongText}>
-            {isCorrect ? 'Correct!' : 'Wrong!'}
-          </Text>
+      {/* Feedback Animation Overlay */}
+      {showFeedback && feedbackType && (
+        <View style={[StyleSheet.absoluteFill, {zIndex: 10, alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(0,0,0,0.25)'}]} pointerEvents="none">
+          <LottieView
+            source={
+              feedbackType === 'correct'
+                ? require('../assets/animations/correct.json')
+                : require('../assets/animations/incorrect.json')
+            }
+            autoPlay
+            loop={false}
+            style={{ width: 220, height: 220, alignSelf: 'center' }}
+            resizeMode="cover"
+          />
         </View>
       )}
     </View>

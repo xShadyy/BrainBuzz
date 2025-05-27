@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react-native/no-inline-styles */
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState, useRef, useCallback} from 'react';
 import {
   View,
   Text,
@@ -20,8 +20,8 @@ import LottieView from 'lottie-react-native';
 import {db} from '../../database';
 import SoundManager from '../../utils/SoundManager';
 import {useUser} from '../../utils/UserContext';
-import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../../navigation/AppNavigator';
+import {StackScreenProps} from '@react-navigation/stack';
+import {RootStackParamList} from '../../navigation/AppNavigator';
 
 type SettingsScreenProps = StackScreenProps<RootStackParamList, 'Settings'>;
 
@@ -32,11 +32,15 @@ interface FireLevel {
   progress: number;
 }
 
-export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, route }) => {
-  const { userId } = route.params;
+export const SettingsScreen: React.FC<SettingsScreenProps> = ({
+  navigation,
+  route,
+}) => {
+  const {userId} = route.params;
   const {user, refreshUser} = useUser();
   const [isEditingName, setIsEditingName] = useState(false);
   const [newName, setNewName] = useState('');
+  const hasInitialized = useRef(false);
 
   // Remove loading states - we don't need the loading animation anymore
   const contentOpacity = useRef(new Animated.Value(1)).current; // Start fully visible
@@ -92,14 +96,28 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, rout
     },
   ];
 
-  useEffect(() => {
-    // Initialize name if user exists
+  // Use useCallback to memoize the initialization function
+  const initializeUser = useCallback(async () => {
+    if (hasInitialized.current) {return;}
+
     if (user) {
       setNewName(user.name);
     } else if (userId) {
-      refreshUser(userId);
+      await refreshUser(userId);
     }
+    hasInitialized.current = true;
   }, [userId, user, refreshUser]);
+
+  useEffect(() => {
+    initializeUser();
+  }, [initializeUser]);
+
+  useEffect(() => {
+    // Update name when user changes
+    if (user && !isEditingName) {
+      setNewName(user.name);
+    }
+  }, [user, isEditingName]);
 
   const handleBackPress = () => {
     SoundManager.playInteraction();
@@ -117,7 +135,9 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, rout
       return;
     }
 
-    if (!user) {return;}
+    if (!user) {
+      return;
+    }
 
     try {
       const updatedUser = {...user, name: newName.trim()};
@@ -139,7 +159,9 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, rout
   };
 
   const formatDate = (timestamp?: number) => {
-    if (!timestamp) {return 'Unknown';}
+    if (!timestamp) {
+      return 'Unknown';
+    }
     const date = new Date(timestamp);
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
@@ -150,7 +172,11 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, rout
 
   return (
     <View style={styles.container}>
-      <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle="light-content"
+      />
 
       <Animated.View style={{flex: 1, opacity: contentOpacity}}>
         <View style={styles.headerContainer}>
@@ -178,7 +204,9 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, rout
                         onPress={handleEditName}>
                         <MaterialIcons name="edit" size={18} color="#FFC107" />
                       </TouchableOpacity>
-                      <Text style={styles.fieldValue}>{user?.name || 'Unknown'}</Text>
+                      <Text style={styles.fieldValue}>
+                        {user?.name || 'Unknown'}
+                      </Text>
                     </View>
                   </View>
                 ) : (
@@ -196,7 +224,9 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, rout
                       <TouchableOpacity
                         style={[
                           styles.saveButton,
-                          newName.trim() === user?.name?.trim() && {opacity: 0.5},
+                          newName.trim() === user?.name?.trim() && {
+                            opacity: 0.5,
+                          },
                         ]}
                         onPress={() => {
                           SoundManager.playInteraction();
@@ -220,25 +250,33 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, rout
 
                 <View style={styles.fieldContainer}>
                   <Text style={styles.fieldLabel}>Email</Text>
-                  <Text style={styles.fieldValue}>{user?.email || 'Unknown'}</Text>
+                  <Text style={styles.fieldValue}>
+                    {user?.email || 'Unknown'}
+                  </Text>
                 </View>
 
                 <View style={styles.fieldContainer}>
                   <Text style={styles.fieldLabel}>Account Created</Text>
-                  <Text style={styles.fieldValue}>{formatDate(user?.creationDate)}</Text>
+                  <Text style={styles.fieldValue}>
+                    {formatDate(user?.creationDate)}
+                  </Text>
                 </View>
               </View>
             </View>
 
             <View style={styles.animationProgressContainer}>
-              <Text style={styles.animationProgressTitle}>Fire Animation Progress</Text>
+              <Text style={styles.animationProgressTitle}>
+                Fire Animation Progress
+              </Text>
               {fireLevels.map((level, index) => {
                 const isLastItem = index === fireLevels.length - 1;
                 return (
-                  <View key={index} style={[
-                    styles.levelRowContainer,
-                    isLastItem ? {marginBottom: 2} : null,
-                  ]}>
+                  <View
+                    key={index}
+                    style={[
+                      styles.levelRowContainer,
+                      isLastItem ? {marginBottom: 2} : null,
+                    ]}>
                     <View style={styles.animationContainer}>
                       <LottieView
                         source={level.animation}
@@ -251,18 +289,26 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({ navigation, rout
                       <View
                         style={[
                           styles.progressBarFill,
-                          {width: `${level.progress}%`, backgroundColor: level.color},
+                          {
+                            width: `${level.progress}%`,
+                            backgroundColor: level.color,
+                          },
                         ]}
                       />
                       {[25, 50, 75].map(checkpoint => (
                         <View
                           key={checkpoint}
-                          style={[styles.checkpointMarker, {left: `${checkpoint}%`}]}
+                          style={[
+                            styles.checkpointMarker,
+                            {left: `${checkpoint}%`},
+                          ]}
                         />
                       ))}
                     </View>
                     <View style={styles.levelNameContainer}>
-                      <Text style={[styles.levelName, {color: level.color}]}>{level.name}</Text>
+                      <Text style={[styles.levelName, {color: level.color}]}>
+                        {level.name}
+                      </Text>
                     </View>
                   </View>
                 );

@@ -1,24 +1,18 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useRef, useState} from 'react';
-import {
-  View,
-  LogBox,
-  Animated,
-  Text,
-  TouchableOpacity,
-} from 'react-native';
+import {View, LogBox, Animated, Text, TouchableOpacity} from 'react-native';
 import LottieView from 'lottie-react-native';
 import {styles} from './WelcomeScreen.styles';
 import SoundManager from '../../utils/SoundManager';
-import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../../navigation/AppNavigator';
+import {StackScreenProps} from '@react-navigation/stack';
+import {RootStackParamList} from '../../navigation/AppNavigator';
 
 LogBox.ignoreLogs(['ViewPropTypes will be removed']);
 
 type WelcomeScreenProps = StackScreenProps<RootStackParamList, 'Welcome'>;
 
-export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
+export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({navigation}) => {
   const [showLightning, setShowLightning] = useState(false);
   const [showText, setShowText] = useState(false);
   const [showEnterButton, setShowEnterButton] = useState(false);

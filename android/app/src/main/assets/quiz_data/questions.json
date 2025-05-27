@@ -3,181 +3,181 @@
     "id": 1,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 13 + 12?"
+    "text": "What is 5 + 7?"
   },
   {
     "id": 2,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 9 + 29?"
+    "text": "What is 8 × 3?"
   },
   {
     "id": 3,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 30 + 19?"
+    "text": "What is 15 - 6?"
   },
   {
     "id": 4,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 16 + 15?"
+    "text": "What is 9 ÷ 3?"
   },
   {
     "id": 5,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 4 + 4?"
+    "text": "What is the value of π (pi) rounded to two decimal places?"
   },
   {
     "id": 6,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 30 + 21?"
+    "text": "What is 2 squared?"
   },
   {
     "id": 7,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 18 + 3?"
+    "text": "What is 100 divided by 10?"
   },
   {
     "id": 8,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 6 + 21?"
+    "text": "What is 7 × 6?"
   },
   {
     "id": 9,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 3 + 4?"
+    "text": "What is the square root of 81?"
   },
   {
     "id": 10,
     "category_id": 1,
     "difficulty": "EASY",
-    "text": "What is 21 + 25?"
+    "text": "What is 50% of 20?"
   },
   {
     "id": 11,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 6 \u00d7 11?"
+    "text": "What is 12 × 12?"
   },
   {
     "id": 12,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 15 \u00d7 17?"
+    "text": "What is the cube of 3?"
   },
   {
     "id": 13,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 9 \u00d7 3?"
+    "text": "What is 25% of 80?"
   },
   {
     "id": 14,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 3 \u00d7 14?"
+    "text": "What is 7 squared?"
   },
   {
     "id": 15,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 13 \u00d7 8?"
+    "text": "What is the next prime after 11?"
   },
   {
     "id": 16,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 2 \u00d7 30?"
+    "text": "What is 1000 minus 456?"
   },
   {
     "id": 17,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 27 \u00d7 28?"
+    "text": "What is 18 ÷ 2 + 7?"
   },
   {
     "id": 18,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 27 \u00d7 9?"
+    "text": "What is the value of 2^5?"
   },
   {
     "id": 19,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 9 \u00d7 13?"
+    "text": "What is 1/4 as a decimal?"
   },
   {
     "id": 20,
     "category_id": 1,
     "difficulty": "MEDIUM",
-    "text": "What is 27 \u00d7 23?"
+    "text": "What is 15% of 200?"
   },
   {
     "id": 21,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 39 \u00f7 3?"
+    "text": "What is the derivative of x^2?"
   },
   {
     "id": 22,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 375 \u00f7 25?"
+    "text": "What is the integral of 2x dx?"
   },
   {
     "id": 23,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 598 \u00f7 23?"
+    "text": "What is the value of sin(90°)?"
   },
   {
     "id": 24,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 285 \u00f7 19?"
+    "text": "What is the solution to the equation 2x + 3 = 11?"
   },
   {
     "id": 25,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 456 \u00f7 24?"
+    "text": "What is the factorial of 5?"
   },
   {
     "id": 26,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 6 \u00f7 2?"
+    "text": "What is the value of log10(1000)?"
   },
   {
     "id": 27,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 288 \u00f7 18?"
+    "text": "What is the sum of the angles in a pentagon?"
   },
   {
     "id": 28,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 135 \u00f7 9?"
+    "text": "What is the value of e (Euler's number) rounded to two decimal places?"
   },
   {
     "id": 29,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 144 \u00f7 6?"
+    "text": "What is 2 to the power of 8?"
   },
   {
     "id": 30,
     "category_id": 1,
     "difficulty": "HARD",
-    "text": "What is 330 \u00f7 30?"
+    "text": "What is the quadratic formula?"
   },
   {
     "id": 31,
@@ -189,367 +189,367 @@
     "id": 32,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "What is the chemical symbol for water?"
+    "text": "What planet is known as the Red Planet?"
   },
   {
     "id": 33,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "What is the chemical symbol for water?"
+    "text": "What gas do plants absorb from the atmosphere?"
   },
   {
     "id": 34,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "What is the chemical symbol for water?"
+    "text": "How many states of matter are commonly recognized?"
   },
   {
     "id": 35,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the center of an atom called?"
   },
   {
     "id": 36,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "What is the chemical symbol for water?"
+    "text": "What force keeps us on the ground?"
   },
   {
     "id": 37,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "What is the chemical symbol for water?"
+    "text": "Which organ do we use for tasting?"
   },
   {
     "id": 38,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "What is the chemical symbol for water?"
+    "text": "What do bees produce?"
   },
   {
     "id": 39,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the boiling point of water at sea level (°C)?"
   },
   {
     "id": 40,
     "category_id": 2,
     "difficulty": "EASY",
-    "text": "What is the chemical symbol for water?"
+    "text": "What phenomenon splits white light into a spectrum of colors?"
   },
   {
     "id": 41,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the pH value of pure water?"
   },
   {
     "id": 42,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "Who developed the theory of relativity?"
   },
   {
     "id": 43,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the chemical formula for table salt?"
   },
   {
     "id": 44,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "Which organ pumps blood through the body?"
   },
   {
     "id": 45,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "What process do plants use to make food?"
   },
   {
     "id": 46,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "Which particle has a negative charge?"
   },
   {
     "id": 47,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the unit of electrical resistance?"
   },
   {
     "id": 48,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "Approximately what is the speed of light in vacuum (km/s)?"
   },
   {
     "id": 49,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the chemical symbol for gold?"
   },
   {
     "id": 50,
     "category_id": 2,
     "difficulty": "MEDIUM",
-    "text": "What is the chemical symbol for water?"
+    "text": "Which vitamin does sunlight help produce in skin?"
   },
   {
     "id": 51,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the powerhouse of the cell?"
   },
   {
     "id": 52,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "Who formulated the law of universal gravitation?"
   },
   {
     "id": 53,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the chemical formula for ozone?"
   },
   {
     "id": 54,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the SI unit of luminous intensity?"
   },
   {
     "id": 55,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the acceleration due to Earth's gravity (m/s²)?"
   },
   {
     "id": 56,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "Which bond involves sharing electron pairs between atoms?"
   },
   {
     "id": 57,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "What is the most abundant gas in Earth's atmosphere?"
   },
   {
     "id": 58,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "Which effect demonstrates wave-particle duality?"
   },
   {
     "id": 59,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "Avogadro's number of particles is approximately?"
   },
   {
     "id": 60,
     "category_id": 2,
     "difficulty": "HARD",
-    "text": "What is the chemical symbol for water?"
+    "text": "Which branch of physics studies motion without regard to its causes?"
   },
   {
     "id": 61,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "Who was the first President of the United States?"
   },
   {
     "id": 62,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "In which year did World War II end?"
   },
   {
     "id": 63,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "Which ancient civilization built the pyramids?"
   },
   {
     "id": 64,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "Who discovered America in 1492?"
   },
   {
     "id": 65,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "What was the name of the ship on which the Pilgrims traveled to America?"
   },
   {
     "id": 66,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "Who was the Queen of England during the Spanish Armada in 1588?"
   },
   {
     "id": 67,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "What wall fell in 1989?"
   },
   {
     "id": 68,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "Who was the first man to walk on the moon?"
   },
   {
     "id": 69,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "Which empire was ruled by Genghis Khan?"
   },
   {
     "id": 70,
     "category_id": 3,
     "difficulty": "EASY",
-    "text": "Who was the first President of the USA?"
+    "text": "What was the primary language of the Roman Empire?"
   },
   {
     "id": 71,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "What year did the French Revolution begin?"
   },
   {
     "id": 72,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "Who was the longest-reigning British monarch before Queen Elizabeth II?"
   },
   {
     "id": 73,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "Which treaty ended World War I?"
   },
   {
     "id": 74,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "What was the name of the first permanent English settlement in the Americas?"
   },
   {
     "id": 75,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "Who was the US President during the Civil War?"
   },
   {
     "id": 76,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "In what year did the Berlin Wall go up?"
   },
   {
     "id": 77,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "Who led the Salt March in India?"
   },
   {
     "id": 78,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "Which battle is considered Napoleon’s final defeat?"
   },
   {
     "id": 79,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "What pandemic occurred in 1918?"
   },
   {
     "id": 80,
     "category_id": 3,
     "difficulty": "MEDIUM",
-    "text": "Who was the first President of the USA?"
+    "text": "Who was known as the Sun King?"
   },
   {
     "id": 81,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "Which Pharaoh commissioned the Great Pyramid of Giza?"
   },
   {
     "id": 82,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "What was the capital of the Byzantine Empire?"
   },
   {
     "id": 83,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "In which year did the Battle of Hastings take place?"
   },
   {
     "id": 84,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "Which empire did Justinian I rule?"
   },
   {
     "id": 85,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "Who wrote the '95 Theses'?"
   },
   {
     "id": 86,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "What dynasty ruled China from 1368 to 1644?"
   },
   {
     "id": 87,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "Who was the first emperor of a unified China?"
   },
   {
     "id": 88,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "What was the main cause of the War of the Roses?"
   },
   {
     "id": 89,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "Which treaty ended the Thirty Years' War?"
   },
   {
     "id": 90,
     "category_id": 3,
     "difficulty": "HARD",
-    "text": "Who was the first President of the USA?"
+    "text": "Who was the last Tsar of Russia?"
   },
   {
     "id": 91,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "What is the capital of France?"
+    "text": "What is the largest continent by area?"
   },
   {
     "id": 92,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "What is the capital of France?"
+    "text": "Which is the longest river in the world?"
   },
   {
     "id": 93,
@@ -561,523 +561,523 @@
     "id": 94,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "What is the capital of France?"
+    "text": "Which ocean is the largest?"
   },
   {
     "id": 95,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "What is the capital of France?"
+    "text": "Mount Everest is located in which mountain range?"
   },
   {
     "id": 96,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "What is the capital of France?"
+    "text": "What is the smallest country by area?"
   },
   {
     "id": 97,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "What is the capital of France?"
+    "text": "Which country has the most population?"
   },
   {
     "id": 98,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "What is the capital of France?"
+    "text": "Which desert covers much of northern Africa?"
   },
   {
     "id": 99,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "What is the capital of France?"
+    "text": "What is the capital of Japan?"
   },
   {
     "id": 100,
     "category_id": 4,
     "difficulty": "EASY",
-    "text": "What is the capital of France?"
+    "text": "Which U.S. state is the Grand Canyon located in?"
   },
   {
     "id": 101,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "What country has the city of Karachi?"
   },
   {
     "id": 102,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "Which ocean lies between Africa and Australia?"
   },
   {
     "id": 103,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "What is the capital of Australia?"
   },
   {
     "id": 104,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "Which river flows through Baghdad?"
   },
   {
     "id": 105,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "What is the longest mountain range in the world?"
   },
   {
     "id": 106,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "Which country is both in Europe and Asia?"
   },
   {
     "id": 107,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "What is the capital of Canada?"
   },
   {
     "id": 108,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "Which sea is shrinking due to irrigation projects?"
   },
   {
     "id": 109,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "What U.S. state is known as the 'Land of 10,000 Lakes'?"
   },
   {
     "id": 110,
     "category_id": 4,
     "difficulty": "MEDIUM",
-    "text": "What is the capital of France?"
+    "text": "What strait separates Europe and Asia in Turkey?"
   },
   {
     "id": 111,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "What is the capital of Mongolia?"
   },
   {
     "id": 112,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "Which country has the most time zones?"
   },
   {
     "id": 113,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "What is the deepest ocean trench?"
   },
   {
     "id": 114,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "Which desert is the coldest on Earth?"
   },
   {
     "id": 115,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "What is the largest lake by volume?"
   },
   {
     "id": 116,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "Which country is known as the 'Land of the Rising Sun'?"
   },
   {
     "id": 117,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "In which country is the Danube Delta primarily located?"
   },
   {
     "id": 118,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "What is the highest waterfall in the world?"
   },
   {
     "id": 119,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "Which line of latitude is at 0°?"
   },
   {
     "id": 120,
     "category_id": 4,
     "difficulty": "HARD",
-    "text": "What is the capital of France?"
+    "text": "Which U.S. state is the easternmost by longitude?"
   },
   {
     "id": 121,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the most spoken language in the world?"
   },
   {
     "id": 122,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What language is spoken in Brazil?"
   },
   {
     "id": 123,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which language uses the Cyrillic alphabet?"
   },
   {
     "id": 124,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the official language of Egypt?"
   },
   {
     "id": 125,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What language do they speak in Japan?"
   },
   {
     "id": 126,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which Romance language is spoken in Italy?"
   },
   {
     "id": 127,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What language is primarily spoken in Argentina?"
   },
   {
     "id": 128,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which language has the most native speakers in India?"
   },
   {
     "id": 129,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the language of Shakespeare's plays?"
   },
   {
     "id": 130,
     "category_id": 5,
     "difficulty": "EASY",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which language is written right to left?"
   },
   {
     "id": 131,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What family does the German language belong to?"
   },
   {
     "id": 132,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the term for a word that has the opposite meaning of another?"
   },
   {
     "id": 133,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which language is the ancestor of modern Spanish, French, and Italian?"
   },
   {
     "id": 134,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the writing system used for Korean?"
   },
   {
     "id": 135,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which language is known as the 'language of diplomacy' historically?"
   },
   {
     "id": 136,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "In linguistics, what is a morpheme?"
   },
   {
     "id": 137,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which language has the most vowel phonemes?"
   },
   {
     "id": 138,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the study of language origin called?"
   },
   {
     "id": 139,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which language is primarily spoken in Ethiopia?"
   },
   {
     "id": 140,
     "category_id": 5,
     "difficulty": "MEDIUM",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which writing system uses characters called 'kanji'?"
   },
   {
     "id": 141,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the ISO 639-1 code for English?"
   },
   {
     "id": 142,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which linguist developed the structuralist theory of language?"
   },
   {
     "id": 143,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the term for a language that has no known relatives?"
   },
   {
     "id": 144,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "In phonetics, what does IPA stand for?"
   },
   {
     "id": 145,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which language uses agglutinative grammar extensively?"
   },
   {
     "id": 146,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is a diglossia society?"
   },
   {
     "id": 147,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which branch studies language change over time?"
   },
   {
     "id": 148,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the center of the Ural Mountains a division between?"
   },
   {
     "id": 149,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "Which two languages form a portmanteau in 'Spanglish'?"
   },
   {
     "id": 150,
     "category_id": 5,
     "difficulty": "HARD",
-    "text": "Which language is primarily spoken in Brazil?"
+    "text": "What is the term for the smallest contrastive sound unit in a language?"
   },
   {
     "id": 151,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'Romeo and Juliet'?"
   },
   {
     "id": 152,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "What is the title of George Orwell's novel about a dystopian future?"
   },
   {
     "id": 153,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who is the author of 'Pride and Prejudice'?"
   },
   {
     "id": 154,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "What is the first book in the 'Harry Potter' series?"
   },
   {
     "id": 155,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'The Odyssey'?"
   },
   {
     "id": 156,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "'To Kill a Mockingbird' was written by which author?"
   },
   {
     "id": 157,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who is the famous detective created by Sir Arthur Conan Doyle?"
   },
   {
     "id": 158,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Which epic poem begins with 'Sing, O goddess, the anger of Achilles'?"
   },
   {
     "id": 159,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'Moby-Dick'?"
   },
   {
     "id": 160,
     "category_id": 6,
     "difficulty": "EASY",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote the play 'Hamlet'?"
   },
   {
     "id": 161,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "In which Shakespeare play does the character Shylock appear?"
   },
   {
     "id": 162,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'One Hundred Years of Solitude'?"
   },
   {
     "id": 163,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "'Les Misérables' was written by which author?"
   },
   {
     "id": 164,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'The Great Gatsby'?"
   },
   {
     "id": 165,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Which American poet wrote 'The Raven'?"
   },
   {
     "id": 166,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who is the author of 'The Catcher in the Rye'?"
   },
   {
     "id": 167,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'Don Quixote'?"
   },
   {
     "id": 168,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Which novel begins 'Call me Ishmael'?"
   },
   {
     "id": 169,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'War and Peace'?"
   },
   {
     "id": 170,
     "category_id": 6,
     "difficulty": "MEDIUM",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "'The Sun Also Rises' was authored by which writer?"
   },
   {
     "id": 171,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote the epic poem 'Paradise Lost'?"
   },
   {
     "id": 172,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Which novel is narrated by the monster it creates?"
   },
   {
     "id": 173,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'In Search of Lost Time'?"
   },
   {
     "id": 174,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Which play features the characters Rosencrantz and Guildenstern?"
   },
   {
     "id": 175,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who is the author of 'The Sound and the Fury'?"
   },
   {
     "id": 176,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'Heart of Darkness'?"
   },
   {
     "id": 177,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Which novel ends with 'So we beat on, boats against the current, borne back ceaselessly into the past.'?"
   },
   {
     "id": 178,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote the play 'Waiting for Godot'?"
   },
   {
     "id": 179,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Which poet wrote 'The Waste Land'?"
   },
   {
     "id": 180,
     "category_id": 6,
     "difficulty": "HARD",
-    "text": "Who wrote \"Romeo and Juliet\"?"
+    "text": "Who wrote 'Beloved'?"
   },
   {
     "id": 181,
@@ -1089,955 +1089,955 @@
     "id": 182,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "The Starry Night is a painting by which artist?"
   },
   {
     "id": 183,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which country is home to the Louvre Museum?"
   },
   {
     "id": 184,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "What is the art style characterized by small dots called?"
   },
   {
     "id": 185,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Who sculpted David?"
   },
   {
     "id": 186,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "'The Persistence of Memory' features melting what?"
   },
   {
     "id": 187,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which artist is known for the Campbell's Soup Cans series?"
   },
   {
     "id": 188,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "What is the primary painting medium using water-soluble pigments?"
   },
   {
     "id": 189,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which art movement is Salvador Dalí associated with?"
   },
   {
     "id": 190,
     "category_id": 7,
     "difficulty": "EASY",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "What do you call art made from assembling different pieces of paper?"
   },
   {
     "id": 191,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Who painted 'Guernica'?"
   },
   {
     "id": 192,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which Dutch artist cut off his own ear?"
   },
   {
     "id": 193,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "'The Thinker' was sculpted by which artist?"
   },
   {
     "id": 194,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which Russian painter founded Suprematism?"
   },
   {
     "id": 195,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "The term 'sfumato' is associated with which artist?"
   },
   {
     "id": 196,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "'Les Demoiselles d'Avignon' is by which artist?"
   },
   {
     "id": 197,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which technique uses plaster on walls?"
   },
   {
     "id": 198,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Who painted 'The Birth of Venus'?"
   },
   {
     "id": 199,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which movement is characterized by drip painting?"
   },
   {
     "id": 200,
     "category_id": 7,
     "difficulty": "MEDIUM",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which artist is known for large-scale color fields?"
   },
   {
     "id": 201,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Who painted 'The Garden of Earthly Delights'?"
   },
   {
     "id": 202,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "What style uses fragmented, geometric forms?"
   },
   {
     "id": 203,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Who wrote 'The Work of Art in the Age of Mechanical Reproduction'?"
   },
   {
     "id": 204,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which painter had a Blue and Rose period?"
   },
   {
     "id": 205,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which Renaissance artist sculpted The Pietà?"
   },
   {
     "id": 206,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "What term describes ready-made anti-art objects?"
   },
   {
     "id": 207,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Who coined the term 'Installation art'?"
   },
   {
     "id": 208,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which painter used drip technique in the mid-20th century?"
   },
   {
     "id": 209,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Who is iconic in Pop Art alongside Warhol?"
   },
   {
     "id": 210,
     "category_id": 7,
     "difficulty": "HARD",
-    "text": "Which artist painted the Mona Lisa?"
+    "text": "Which movement started in Zurich in 1916?"
   },
   {
     "id": 211,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Who is known as the 'King of Pop'?"
   },
   {
     "id": 212,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Which instrument has 88 keys?"
   },
   {
     "id": 213,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "How many strings does a standard violin have?"
   },
   {
     "id": 214,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Which composer wrote the 'Fifth Symphony'?"
   },
   {
     "id": 215,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "What is the musical symbol for silence?"
   },
   {
     "id": 216,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Which genre is characterized by improvisation and swing rhythms?"
   },
   {
     "id": 217,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "What is the name of Beethoven's only opera?"
   },
   {
     "id": 218,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Who sang 'Rolling in the Deep'?"
   },
   {
     "id": 219,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "How many notes are in an octave (diatonic)?"
   },
   {
     "id": 220,
     "category_id": 8,
     "difficulty": "EASY",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Which instrument is also called a 'strad'?"
   },
   {
     "id": 221,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Who composed 'Water Music'?"
   },
   {
     "id": 222,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "What is the term for gradually getting louder?"
   },
   {
     "id": 223,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Which instrument uses a double reed?"
   },
   {
     "id": 224,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Who wrote 'The Four Seasons'?"
   },
   {
     "id": 225,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Which choir uses unchanged voices?"
   },
   {
     "id": 226,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "What symbol raises a note by a semitone?"
   },
   {
     "id": 227,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Which composer became deaf later in life?"
   },
   {
     "id": 228,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Distance between same notes is called an?"
   },
   {
     "id": 229,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Italian term for soft playing?"
   },
   {
     "id": 230,
     "category_id": 8,
     "difficulty": "MEDIUM",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Which scale has no sharps or flats?"
   },
   {
     "id": 231,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Original row in 12-tone serial music is called?"
   },
   {
     "id": 232,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Who wrote 'Le sacre du printemps'?"
   },
   {
     "id": 233,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Italian term for smooth, connected style?"
   },
   {
     "id": 234,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Who composed 'Don Giovanni'?"
   },
   {
     "id": 235,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Study of the structure of music is called?"
   },
   {
     "id": 236,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Bassoon belongs to which family?"
   },
   {
     "id": 237,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Rapid, ornamental soprano passage is called?"
   },
   {
     "id": 238,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Who composed the 1812 Overture?"
   },
   {
     "id": 239,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Time signature for waltz?"
   },
   {
     "id": 240,
     "category_id": 8,
     "difficulty": "HARD",
-    "text": "Who is known as the \"King of Pop\"?"
+    "text": "Tuning system with 12 equal semitones?"
   },
   {
     "id": 241,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "What does CPU stand for?"
   },
   {
     "id": 242,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "What is the primary language for web page structure?"
   },
   {
     "id": 243,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "What does RAM stand for?"
   },
   {
     "id": 244,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "Which device is used to input text into a computer?"
   },
   {
     "id": 245,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "What does GPU stand for?"
   },
   {
     "id": 246,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "What is the shortcut for copy in Windows?"
   },
   {
     "id": 247,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "Which storage is non-volatile?"
   },
   {
     "id": 248,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "What is an example of an operating system?"
   },
   {
     "id": 249,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "What does URL stand for?"
   },
   {
     "id": 250,
     "category_id": 9,
     "difficulty": "EASY",
-    "text": "Who founded Microsoft?"
+    "text": "Which company developed the iPhone?"
   },
   {
     "id": 251,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "What does HTTP stand for?"
   },
   {
     "id": 252,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "Which language is primarily used for Android development?"
   },
   {
     "id": 253,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "What is the file extension for Python scripts?"
   },
   {
     "id": 254,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "What does DNS stand for in networking?"
   },
   {
     "id": 255,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "Which technology is used for contactless payments?"
   },
   {
     "id": 256,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "What is the database type that stores data in tables?"
   },
   {
     "id": 257,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "What does SSD stand for?"
   },
   {
     "id": 258,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "Which protocol is secure version of HTTP?"
   },
   {
     "id": 259,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "What does API stand for?"
   },
   {
     "id": 260,
     "category_id": 9,
     "difficulty": "MEDIUM",
-    "text": "Who founded Microsoft?"
+    "text": "What is virtualization of hardware called?"
   },
   {
     "id": 261,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "What does ACID stand for in database systems?"
   },
   {
     "id": 262,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "Which algorithm is used for public-key cryptography?"
   },
   {
     "id": 263,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "What topology has all nodes connected to a central hub?"
   },
   {
     "id": 264,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "What is the time complexity of quicksort in average case?"
   },
   {
     "id": 265,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "Which layer of OSI model handles routing?"
   },
   {
     "id": 266,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "What does RAID 0 provide?"
   },
   {
     "id": 267,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "Which technology underpins blockchain?"
   },
   {
     "id": 268,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "What does OAuth provide?"
   },
   {
     "id": 269,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "Which memory hierarchy is fastest?"
   },
   {
     "id": 270,
     "category_id": 9,
     "difficulty": "HARD",
-    "text": "Who founded Microsoft?"
+    "text": "What is the purpose of DNS caching?"
   },
   {
     "id": 271,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "How many players are there in a soccer team on the field?"
   },
   {
     "id": 272,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What sport uses a racket and shuttlecock?"
   },
   {
     "id": 273,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "How many minutes does an NBA game last (regulation)?"
   },
   {
     "id": 274,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Which sport is known as 'America's Pastime'?"
   },
   {
     "id": 275,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "How many holes are there in a standard round of golf?"
   },
   {
     "id": 276,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What is the height of a basketball hoop (in feet)?"
   },
   {
     "id": 277,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "In which sport do you score a 'try'?"
   },
   {
     "id": 278,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Which country won the FIFA World Cup in 2018?"
   },
   {
     "id": 279,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What color belt is the highest in judo?"
   },
   {
     "id": 280,
     "category_id": 10,
     "difficulty": "EASY",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Which sport uses the term 'love' for zero score?"
   },
   {
     "id": 281,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "How many players are on a baseball field for one team?"
   },
   {
     "id": 282,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What is the maximum score in 10-pin bowling?"
   },
   {
     "id": 283,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Which country hosted the 2016 Summer Olympics?"
   },
   {
     "id": 284,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What is the term for three strikes in bowling?"
   },
   {
     "id": 285,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "In which sport is the Davis Cup contested?"
   },
   {
     "id": 286,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What is a perfect score in gymnastics vault?"
   },
   {
     "id": 287,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Which NFL team has a star on its helmet?"
   },
   {
     "id": 288,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "How many points is a touchdown worth in American football?"
   },
   {
     "id": 289,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What distance is a marathon race?"
   },
   {
     "id": 290,
     "category_id": 10,
     "difficulty": "MEDIUM",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Which tennis tournament is played on clay courts?"
   },
   {
     "id": 291,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Which country has won the most Rugby World Cups?"
   },
   {
     "id": 292,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What is the term for a score of three under par in golf?"
   },
   {
     "id": 293,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Who holds the record for most home runs in a single MLB season?"
   },
   {
     "id": 294,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What is the length of an Olympic swimming pool?"
   },
   {
     "id": 295,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Which boxer was known as 'The Greatest'?"
   },
   {
     "id": 296,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "In which sport is a 'hat trick' scoring term also used besides hockey?"
   },
   {
     "id": 297,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What is the regulation size of a basketball?"
   },
   {
     "id": 298,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "Which athlete is known as the 'Fastest Man Alive'?"
   },
   {
     "id": 299,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "How many Grand Slam titles did Serena Williams win in singles?"
   },
   {
     "id": 300,
     "category_id": 10,
     "difficulty": "HARD",
-    "text": "How many players are on a soccer team on the field?"
+    "text": "What does NBA stand for?"
   },
   {
     "id": 301,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What nutrient is most important for building muscle?"
   },
   {
     "id": 302,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What vitamin is known as ascorbic acid?"
   },
   {
     "id": 303,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "How many chambers does the human heart have?"
   },
   {
     "id": 304,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What mineral is essential for strong bones?"
   },
   {
     "id": 305,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What organ filters toxins from your blood?"
   },
   {
     "id": 306,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "How many hours of sleep are recommended for adults?"
   },
   {
     "id": 307,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What does BMI stand for?"
   },
   {
     "id": 308,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "Which nutrient provides the most energy per gram?"
   },
   {
     "id": 309,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What vitamin is produced when skin is exposed to sunlight?"
   },
   {
     "id": 310,
     "category_id": 11,
     "difficulty": "EASY",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What is the body's first line of defense against pathogens?"
   },
   {
     "id": 311,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What is the normal resting heart rate range for adults (bpm)?"
   },
   {
     "id": 312,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "Which blood type is known as the universal donor?"
   },
   {
     "id": 313,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What is the primary function of red blood cells?"
   },
   {
     "id": 314,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "Which vitamin is fat-soluble?"
   },
   {
     "id": 315,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What does HDL stand for?"
   },
   {
     "id": 316,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What part of the brain controls balance?"
   },
   {
     "id": 317,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What is insulin produced by?"
   },
   {
     "id": 318,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What is the medical term for high blood pressure?"
   },
   {
     "id": 319,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "Which organ produces bile?"
   },
   {
     "id": 320,
     "category_id": 11,
     "difficulty": "MEDIUM",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What measurement indicates lung function?"
   },
   {
     "id": 321,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What is the normal range for adult blood pH?"
   },
   {
     "id": 322,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "Which neurotransmitter is associated with pleasure?"
   },
   {
     "id": 323,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What is the primary structure of proteins determined by?"
   },
   {
     "id": 324,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What is the glomerular filtration rate (GFR) a measure of?"
   },
   {
     "id": 325,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "Which hormone regulates blood sugar?"
   },
   {
     "id": 326,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What does PCR stand for in medical testing?"
   },
   {
     "id": 327,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What is the function of alveoli in the lungs?"
   },
   {
     "id": 328,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "Which vitamin deficiency causes scurvy?"
   },
   {
     "id": 329,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "What does ECG measure?"
   },
   {
     "id": 330,
     "category_id": 11,
     "difficulty": "HARD",
-    "text": "What vitamin do you get from sunlight?"
+    "text": "Which cell type is responsible for antibody production?"
   },
   {
     "id": 331,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the name of our galaxy?"
   },
   {
     "id": 332,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "Which planet is known as the Blue Planet?"
   },
   {
     "id": 333,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the closest star to Earth?"
   },
   {
     "id": 334,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the name of the Earth's natural satellite?"
   },
   {
     "id": 335,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "Which planet is the hottest in our solar system?"
   },
   {
     "id": 336,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What force keeps planets in orbit around the Sun?"
   },
   {
     "id": 337,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is a group of stars forming a pattern called?"
   },
   {
     "id": 338,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "Which planet has a ring system?"
   },
   {
     "id": 339,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What do we call a small rocky body orbiting the Sun?"
   },
   {
     "id": 340,
     "category_id": 12,
     "difficulty": "EASY",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the study of celestial objects called?"
   },
   {
     "id": 341,
@@ -2049,474 +2049,474 @@
     "id": 342,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the name of NASA's most famous space telescope?"
   },
   {
     "id": 343,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What phenomenon causes the Solar corona to be visible during a total solar eclipse?"
   },
   {
     "id": 344,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "Which dwarf planet was once considered the ninth planet?"
   },
   {
     "id": 345,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the term for a star that suddenly increases greatly in brightness?"
   },
   {
     "id": 346,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What galaxy is the closest spiral galaxy to the Milky Way?"
   },
   {
     "id": 347,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "Which planet has the most moons in our solar system?"
   },
   {
     "id": 348,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the name of the boundary around a black hole beyond which nothing can escape?"
   },
   {
     "id": 349,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the unit of distance used to measure interstellar space?"
   },
   {
     "id": 350,
     "category_id": 12,
     "difficulty": "MEDIUM",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the name of the first artificial Earth satellite?"
   },
   {
     "id": 351,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What process powers stars by fusing hydrogen into helium?"
   },
   {
     "id": 352,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "Which element is most abundant in the Sun?"
   },
   {
     "id": 353,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the Chandrasekhar limit associated with?"
   },
   {
     "id": 354,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the approximate age of the universe?"
   },
   {
     "id": 355,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the term for the apparent shift in wavelength of light from moving objects?"
   },
   {
     "id": 356,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What type of galaxy is the Milky Way?"
   },
   {
     "id": 357,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "Which mission landed the first humans on the Moon?"
   },
   {
     "id": 358,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the name of the theoretical boundary at which gravitational pull becomes so great that spacetime breaks down?"
   },
   {
     "id": 359,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "Which phenomenon describes the expansion of the universe accelerating?"
   },
   {
     "id": 360,
     "category_id": 12,
     "difficulty": "HARD",
-    "text": "Which planet is known as the Red Planet?"
+    "text": "What is the most common type of star in the Milky Way?"
   },
   {
     "id": 361,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who directed 'Jurassic Park'?"
   },
   {
     "id": 362,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "What movie features a character named Indiana Jones?"
   },
   {
     "id": 363,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who played Jack in 'Titanic'?"
   },
   {
     "id": 364,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which movie is famous for the line 'May the Force be with you'?"
   },
   {
     "id": 365,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "What is the highest-grossing film of all time as of 2021?"
   },
   {
     "id": 366,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who voiced Woody in 'Toy Story'?"
   },
   {
     "id": 367,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which movie features the song 'My Heart Will Go On'?"
   },
   {
     "id": 368,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who directed 'Inception'?"
   },
   {
     "id": 369,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "What is the name of the wizarding school in 'Harry Potter'?"
   },
   {
     "id": 370,
     "category_id": 13,
     "difficulty": "EASY",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which movie has the character Darth Vader?"
   },
   {
     "id": 371,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who directed 'Pulp Fiction'?"
   },
   {
     "id": 372,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which film won Best Picture at the 2020 Oscars?"
   },
   {
     "id": 373,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who composed the score for 'The Lord of the Rings' trilogy?"
   },
   {
     "id": 374,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which actor portrayed the Joker in 'The Dark Knight'?"
   },
   {
     "id": 375,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "What is the name of the fictional African country in 'Black Panther'?"
   },
   {
     "id": 376,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which movie features the song 'Circle of Life'?"
   },
   {
     "id": 377,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who directed 'The Grand Budapest Hotel'?"
   },
   {
     "id": 378,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which film is known for the line 'I'm gonna make him an offer he can't refuse'?"
   },
   {
     "id": 379,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who played the lead role in 'The Matrix'?"
   },
   {
     "id": 380,
     "category_id": 13,
     "difficulty": "MEDIUM",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "What year was 'The Shawshank Redemption' released?"
   },
   {
     "id": 381,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which film technique uses non-linear storytelling prominently in 'Pulp Fiction'?"
   },
   {
     "id": 382,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who directed '2001: A Space Odyssey'?"
   },
   {
     "id": 383,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which French New Wave director made 'Breathless'?"
   },
   {
     "id": 384,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "What is the MacGuffin in 'North by Northwest'?"
   },
   {
     "id": 385,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which cinematographer worked on 'Blade Runner'?"
   },
   {
     "id": 386,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "What is the term for filming in a single continuous shot, as seen in '1917'?"
   },
   {
     "id": 387,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which composer scored 'Psycho'?"
   },
   {
     "id": 388,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Which film movement is characterized by realism and location shooting in post-war Italy?"
   },
   {
     "id": 389,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "Who directed 'The Seventh Seal' featuring a chess game with Death?"
   },
   {
     "id": 390,
     "category_id": 13,
     "difficulty": "HARD",
-    "text": "Who directed \"Jurassic Park\"?"
+    "text": "What is the name of the fictional hotel in 'The Shining'?"
   },
   {
     "id": 391,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "Which animal is known as the king of the jungle?"
   },
   {
     "id": 392,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "What mammal is the only one that can fly?"
   },
   {
     "id": 393,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "Which bird is known for mimicking sounds?"
   },
   {
     "id": 394,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "What is a baby cat called?"
   },
   {
     "id": 395,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "Which animal is the largest land animal?"
   },
   {
     "id": 396,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "What do pandas primarily eat?"
   },
   {
     "id": 397,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "Which animal is famous for its black and white stripes?"
   },
   {
     "id": 398,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "Which sea creature has eight legs?"
   },
   {
     "id": 399,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "Which animal carries its baby in a pouch?"
   },
   {
     "id": 400,
     "category_id": 14,
     "difficulty": "EASY",
-    "text": "What is the largest land animal?"
+    "text": "What is the fastest land animal?"
   },
   {
     "id": 401,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "Which bird is a universal symbol of peace?"
   },
   {
     "id": 402,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "What is the largest species of shark?"
   },
   {
     "id": 403,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "Which animal is known for having a long neck?"
   },
   {
     "id": 404,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "What is the term for a group of lions?"
   },
   {
     "id": 405,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "Which reptile can change its skin color?"
   },
   {
     "id": 406,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "Which animal is known for building dams?"
   },
   {
     "id": 407,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "What mammal lays eggs?"
   },
   {
     "id": 408,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "Which bird is flightless?"
   },
   {
     "id": 409,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "Which animal has the longest migration?"
   },
   {
     "id": 410,
     "category_id": 14,
     "difficulty": "MEDIUM",
-    "text": "What is the largest land animal?"
+    "text": "Which animal is known as man's best friend?"
   },
   {
     "id": 411,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "What is the fastest marine animal?"
   },
   {
     "id": 412,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "Which animal has the most powerful bite?"
   },
   {
     "id": 413,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "What is the only venomous snake native to the UK?"
   },
   {
     "id": 414,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "Which mammal is known for echolocation?"
   },
   {
     "id": 415,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "What is the study of insects called?"
   },
   {
     "id": 416,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "Which bird lays the largest egg by volume?"
   },
   {
     "id": 417,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "Which primate is known for using tools?"
   },
   {
     "id": 418,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "What is the largest species of cat?"
   },
   {
     "id": 419,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "Which fish is known for its electric shock?"
   },
   {
     "id": 420,
     "category_id": 14,
     "difficulty": "HARD",
-    "text": "What is the largest land animal?"
+    "text": "What is the only mammal capable of true flight?"
   }
 ]

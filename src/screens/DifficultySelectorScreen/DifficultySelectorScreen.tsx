@@ -1,43 +1,56 @@
-import React, {useState, useEffect} from 'react';
-import {View, Text, TouchableOpacity, ScrollView, StatusBar} from 'react-native';
+import React, {useState, useEffect, useCallback} from 'react';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  ScrollView,
+  StatusBar,
+} from 'react-native';
 import {UserHeader} from '../../components/UserHeader';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {useUser} from '../../utils/UserContext';
 import SoundManager from '../../utils/SoundManager';
 import {styles, configureStatusBar} from './DifficultySelectorScreen.styles';
-import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../../navigation/AppNavigator';
+import {StackScreenProps} from '@react-navigation/stack';
+import {RootStackParamList} from '../../navigation/AppNavigator';
 
-type DifficultySelectorScreenProps = StackScreenProps<RootStackParamList, 'Quiz'>;
+type DifficultySelectorScreenProps = StackScreenProps<
+  RootStackParamList,
+  'Quiz'
+>;
 
-export const DifficultySelectorScreen: React.FC<DifficultySelectorScreenProps> = ({ navigation, route }) => {
-  const { userId, category } = route.params;
+export const DifficultySelectorScreen: React.FC<
+  DifficultySelectorScreenProps
+> = ({navigation, route}) => {
+  const {userId, category} = route.params;
   const {user, refreshUser} = useUser();
   const [categoryId, setCategoryId] = useState<number | null>(null);
+
+  // Extract loadUserData to a useCallback for memoization
+  const loadUserData = useCallback(async () => {
+    if (userId) {
+      await refreshUser(userId);
+    }
+  }, [userId, refreshUser]);
+
+  // Extract loadCategoryId to a useCallback for memoization
+  const loadCategoryId = useCallback(async () => {
+    try {
+      const categoriesData = require('../../../android/app/src/main/assets/quiz_data/categories.json');
+      const foundCategory = categoriesData.find(
+        (cat: any) => cat.name === category,
+      );
+      if (foundCategory) {
+        setCategoryId(foundCategory.id);
+      }
+    } catch (error) {
+      console.error('Failed to load category ID:', error);
+    }
+  }, [category]);
 
   // Fetch user data when component mounts and configure status bar
   useEffect(() => {
     configureStatusBar();
-
-    const loadUserData = async () => {
-      if (userId) {
-        await refreshUser(userId);
-      }
-    };
-
-    // Load the categories to get the correct category ID
-    const loadCategoryId = async () => {
-      try {
-        const categoriesData = require('../../../android/app/src/main/assets/quiz_data/categories.json');
-        const foundCategory = categoriesData.find((cat: any) => cat.name === category);
-        if (foundCategory) {
-          setCategoryId(foundCategory.id);
-        }
-      } catch (error) {
-        console.error('Failed to load category ID:', error);
-      }
-    };
-
     loadUserData();
     loadCategoryId();
 
@@ -47,7 +60,7 @@ export const DifficultySelectorScreen: React.FC<DifficultySelectorScreenProps> =
     return () => {
       // Clean up if needed
     };
-  }, [userId, refreshUser, category]);
+  }, [loadUserData, loadCategoryId]); // Depend on memoized callbacks
 
   const difficulties = [
     {
@@ -91,19 +104,19 @@ export const DifficultySelectorScreen: React.FC<DifficultySelectorScreenProps> =
 
   const handleBackPress = () => {
     SoundManager.playInteraction();
-    navigation.navigate('Dashboard', { userId });
+    navigation.navigate('Dashboard', {userId});
   };
 
   const handleLogout = () => {
     SoundManager.playInteraction();
     navigation.reset({
       index: 0,
-      routes: [{ name: 'Login' }],
+      routes: [{name: 'Login'}],
     });
   };
 
   const handleOpenSettings = () => {
-    navigation.navigate('Settings', { userId: userId });
+    navigation.navigate('Settings', {userId: userId});
   };
 
   const userXpCurrent = user?.xp || 50;
@@ -129,10 +142,7 @@ export const DifficultySelectorScreen: React.FC<DifficultySelectorScreenProps> =
           {difficulties.map(difficulty => (
             <TouchableOpacity
               key={difficulty.id}
-              style={[
-                styles.difficultyButton,
-                difficulty.styleClass,
-              ]}
+              style={[styles.difficultyButton, difficulty.styleClass]}
               onPress={() => handleDifficultySelect(difficulty.id)}>
               <View style={styles.difficultyIconContainer}>
                 <MaterialIcons
@@ -165,4 +175,3 @@ export const DifficultySelectorScreen: React.FC<DifficultySelectorScreenProps> =
 function alert(_arg0: string) {
   throw new Error('Function not implemented.');
 }
-

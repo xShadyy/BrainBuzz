@@ -1,6 +1,6 @@
-import React, { createContext, useState, useContext, useRef } from 'react';
-import { db } from '../database';
-import { User } from '../database/types';
+import React, {createContext, useState, useContext, useRef} from 'react';
+import {db} from '../database';
+import {User} from '../database/types';
 
 interface UserContextType {
   user: User | null;
@@ -24,7 +24,7 @@ interface UserProviderProps {
   children: React.ReactNode;
 }
 
-export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+export const UserProvider: React.FC<UserProviderProps> = ({children}) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const isRefreshingRef = useRef<boolean>(false); // Track if refreshUser is already in progress
@@ -78,9 +78,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   };
 
   return (
-    <UserContext.Provider value={contextValue}>
-      {children}
-    </UserContext.Provider>
+    <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
   );
 };
 
