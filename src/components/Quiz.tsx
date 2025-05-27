@@ -195,8 +195,7 @@ const Quiz: React.FC<QuizProps> = ({categoryId, difficulty, onComplete, onEndQui
           />
         </View>
         <View style={styles.scoreContainer}>
-          <Text style={styles.scoreText}>Score:</Text>
-          <Text style={styles.scoreValue}>{score}</Text>
+          <Text style={styles.scoreText}>Score: {score} / {questions.length}</Text>
         </View>
         <Text style={styles.questionText}>{currentQuestion.text}</Text>
         <View style={styles.answersContainer}>

@@ -42,12 +42,15 @@ export const styles = StyleSheet.create({
     marginRight: 10,
   },
   username: {
-    fontSize: 20,
+    fontSize: 25,
     fontFamily: 'Supercharge-JRgPo',
-    color: '#FFFFFF',
+    color: '#FFC800',
     marginBottom: 4,
     textTransform: 'uppercase',
     flexShrink: 1,
+    textShadowColor: 'rgba(255, 200, 0, 0.3)',
+    textShadowOffset: {width: 0, height: 1},
+    textShadowRadius: 2,
   },
   levelContainer: {
     flexDirection: 'row',
@@ -74,7 +77,6 @@ export const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   xpBarFill: {
-    backgroundColor: '#FFEB74',
     height: '100%',
     borderRadius: 4,
   },

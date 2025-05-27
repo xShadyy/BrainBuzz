@@ -60,12 +60,13 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
                 )
                 
                 val id = database.userDao().insert(user)
-                
-                val resultMap = WritableNativeMap()
+                  val resultMap = WritableNativeMap()
                 resultMap.putInt("id", id.toInt())
                 resultMap.putString("name", user.name)
                 resultMap.putString("email", user.email)
                 resultMap.putDouble("creationDate", user.creationDate.toDouble())
+                resultMap.putInt("xp", user.xp)
+                resultMap.putInt("level", user.level)
                 
                 promise.resolve(resultMap)
             } catch (e: Exception) {
@@ -76,8 +77,7 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
     }
 
     @ReactMethod
-    fun loginUser(email: String, password: String, promise: Promise) {
-        executorService.execute {
+    fun loginUser(email: String, password: String, promise: Promise) {        executorService.execute {
             try {
                 val user = database.userDao().login(email, password)
                 if (user == null) {
@@ -90,6 +90,8 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
                 userMap.putString("name", user.name)
                 userMap.putString("email", user.email)
                 userMap.putDouble("creationDate", user.creationDate.toDouble())
+                userMap.putInt("xp", user.xp)
+                userMap.putInt("level", user.level)
                 
                 promise.resolve(userMap)
             } catch (e: Exception) {
@@ -105,13 +107,14 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
             try {
                 val users = database.userDao().getAll()
                 val resultArray = WritableNativeArray()
-                
-                for (user in users) {
+                  for (user in users) {
                     val userMap = WritableNativeMap()
                     userMap.putInt("id", user.id)
                     userMap.putString("name", user.name)
                     userMap.putString("email", user.email)
                     userMap.putDouble("creationDate", user.creationDate.toDouble())
+                    userMap.putInt("xp", user.xp)
+                    userMap.putInt("level", user.level)
                     resultArray.pushMap(userMap)
                 }
                 
@@ -124,8 +127,7 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
     }
 
     @ReactMethod
-    fun getUserById(userId: Int, promise: Promise) {
-        executorService.execute {
+    fun getUserById(userId: Int, promise: Promise) {        executorService.execute {
             try {
                 val user = database.userDao().getById(userId)
                 if (user == null) {
@@ -138,6 +140,8 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
                 userMap.putString("name", user.name)
                 userMap.putString("email", user.email)
                 userMap.putDouble("creationDate", user.creationDate.toDouble())
+                userMap.putInt("xp", user.xp)
+                userMap.putInt("level", user.level)
                 
                 promise.resolve(userMap)
             } catch (e: Exception) {
@@ -191,8 +195,7 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
                     promise.reject("USER_NOT_FOUND", "User not found")
                     return@execute
                 }
-                
-                database.userDao().delete(user)
+                  database.userDao().delete(user)
                 promise.resolve(true)
             } catch (e: Exception) {
                 Log.e("DatabaseModule", "Error deleting user", e)
@@ -212,5 +215,51 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
                 promise.reject("DB_ERROR", "Error deleting all users: ${e.message}")
             }
         }
+    }
+
+    @ReactMethod
+    fun awardXP(userId: Int, xpAmount: Int, promise: Promise) {
+        executorService.execute {
+            try {
+                val user = database.userDao().getById(userId)
+                if (user == null) {
+                    promise.reject("USER_NOT_FOUND", "User not found")
+                    return@execute
+                }                // Calculate new XP and level
+                val newXP = minOf(user.xp + xpAmount, 9999) // Cap XP at 9999
+                val newLevel = calculateLevelFromXP(newXP)
+
+                // Update user with new XP and level
+                database.userDao().awardXP(userId, newXP - user.xp, newLevel)
+
+                // Fetch updated user
+                val updatedUser = database.userDao().getById(userId)
+                if (updatedUser != null) {
+                    val userMap = WritableNativeMap()
+                    userMap.putInt("id", updatedUser.id)
+                    userMap.putString("name", updatedUser.name)
+                    userMap.putString("email", updatedUser.email)
+                    userMap.putDouble("creationDate", updatedUser.creationDate.toDouble())
+                    userMap.putInt("xp", updatedUser.xp)
+                    userMap.putInt("level", updatedUser.level)
+                    promise.resolve(userMap)
+                } else {
+                    promise.reject("DB_ERROR", "Failed to fetch updated user")
+                }
+            } catch (e: Exception) {
+                Log.e("DatabaseModule", "Error awarding XP", e)
+                promise.reject("DB_ERROR", "Error awarding XP: ${e.message}")
+            }
+        }
+    }    private fun calculateLevelFromXP(xp: Int): Int {
+        // New level progression: 0, 500, 750, 1125, 1688, 2531, 3797, 5696 XP
+        val levelThresholds = intArrayOf(0, 500, 750, 1125, 1688, 2531, 3797, 5696)
+        
+        for (i in levelThresholds.size - 1 downTo 0) {
+            if (xp >= levelThresholds[i]) {
+                return minOf(i + 1, 8) // Cap at level 8
+            }
+        }
+        return 1
     }
 }

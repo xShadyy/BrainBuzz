@@ -5,10 +5,12 @@ import {
   TouchableOpacity,
   ScrollView,
   StatusBar,
+  Alert,
 } from 'react-native';
 import {UserHeader} from '../../components/UserHeader';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {useUser} from '../../utils/UserContext';
+import {useFocusEffect} from '@react-navigation/native';
 import SoundManager from '../../utils/SoundManager';
 import {styles, configureStatusBar} from './DifficultySelectorScreen.styles';
 import {StackScreenProps} from '@react-navigation/stack';
@@ -47,6 +49,15 @@ export const DifficultySelectorScreen: React.FC<
       console.error('Failed to load category ID:', error);
     }
   }, [category]);
+
+  // Refresh user data when screen comes into focus (e.g., returning from QuizScreen)
+  useFocusEffect(
+    useCallback(() => {
+      if (userId) {
+        refreshUser(userId);
+      }
+    }, [userId, refreshUser])
+  );
 
   // Fetch user data when component mounts and configure status bar
   useEffect(() => {
@@ -98,7 +109,7 @@ export const DifficultySelectorScreen: React.FC<
         category,
       });
     } else {
-      alert('Unable to load category information. Please try again.');
+      Alert.alert('Error', 'Unable to load category information. Please try again.');
     }
   };
 
@@ -119,17 +130,12 @@ export const DifficultySelectorScreen: React.FC<
     navigation.navigate('Settings', {userId: userId});
   };
 
-  const userXpCurrent = user?.xp || 50;
-  const userXpRequired = (user?.level || 1) * 100;
-
   return (
     <View style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" />
 
       <UserHeader
         username={user?.name}
-        xpCurrent={userXpCurrent}
-        xpRequired={userXpRequired}
         onSettingsPress={handleOpenSettings}
         onLogoutPress={handleLogout}
       />
@@ -171,7 +177,3 @@ export const DifficultySelectorScreen: React.FC<
     </View>
   );
 };
-
-function alert(_arg0: string) {
-  throw new Error('Function not implemented.');
-}

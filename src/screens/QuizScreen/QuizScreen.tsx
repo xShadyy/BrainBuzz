@@ -6,6 +6,7 @@ import {RootStackParamList} from '../../navigation/AppNavigator';
 import Quiz from '../../components/Quiz';
 import {UserHeader} from '../../components/UserHeader';
 import {useUser} from '../../utils/UserContext';
+import {db} from '../../database';
 import SoundManager from '../../utils/SoundManager';
 import LottieView from 'lottie-react-native';
 import countdownAnimation from '../../assets/animations/countdown.json';
@@ -85,11 +86,41 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
     }
   }, [showCountdown, countdownFinished]);
 
-  const handleQuizComplete = (score: number, totalQuestions: number) => {
+  const handleQuizComplete = async (score: number, totalQuestions: number) => {
     SoundManager.playInteraction();
-    Alert.alert('Quiz Completed!', `Your score: ${score}/${totalQuestions}`, [
-      {text: 'OK', onPress: () => navigation.goBack()},
-    ]);
+
+    // Convert difficulty to lowercase for calculation
+    const difficultyLower = difficulty.toLowerCase();
+    // Calculate XP reward based on difficulty and performance
+    const xpReward = db.calculateXPReward(score, totalQuestions, difficultyLower);
+
+    try {
+      // Award XP to user
+      if (userId) {
+        const updatedUser = await db.awardXP(userId, xpReward);
+        if (updatedUser) {
+          // Refresh user context with updated data
+          await refreshUser(userId);
+        }
+      }
+
+      Alert.alert(
+        'Quiz Completed!',
+        `Your score: ${score}/${totalQuestions}\nXP earned: +${xpReward}`,
+        [
+          {text: 'OK', onPress: () => navigation.goBack()},
+        ],
+      );
+    } catch (error) {
+      console.error('Error awarding XP:', error);
+      Alert.alert(
+        'Quiz Completed!',
+        `Your score: ${score}/${totalQuestions}\nNote: XP could not be saved`,
+        [
+          {text: 'OK', onPress: () => navigation.goBack()},
+        ],
+      );
+    }
   };
 
   const handleEndQuiz = () => {

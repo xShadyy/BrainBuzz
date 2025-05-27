@@ -58,20 +58,12 @@ export const styles = StyleSheet.create({
     backgroundColor: 'rgba(76, 175, 80, 0.3)',
     borderColor: '#4CAF50',
     transform: [{ scale: 1.02 }],
-    shadowColor: '#4CAF50',
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.8,
-    shadowRadius: 10,
     elevation: 6,
   },
   wrongAnswer: {
     backgroundColor: 'rgba(244, 67, 54, 0.3)',
     borderColor: '#F44336',
     transform: [{ scale: 1.02 }],
-    shadowColor: '#F44336',
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.8,
-    shadowRadius: 10,
     elevation: 6,
   },
   progressBar: {
@@ -131,7 +123,6 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     zIndex: 10,
-    backgroundColor: 'rgba(0,0,0,0.25)',
   },
   errorText: {
     fontSize: 16,
