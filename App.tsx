@@ -1,4 +1,3 @@
-
 /**
  * BrainBuzz App
  *
@@ -6,27 +5,22 @@
  */
 
 import React, { useEffect } from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, LogBox } from 'react-native';
 import { AppNavigator } from './src/navigation';
 import SoundManager from './src/utils/SoundManager';
 import { UserProvider } from './src/utils/UserContext';
 
+LogBox.ignoreLogs([
+  'Text strings must be rendered within a <Text> component',
+]);
+
 function App(): React.JSX.Element {
   useEffect(() => {
-    // Set status bar to translucent for the entire app
-    StatusBar.setTranslucent(true);
-    StatusBar.setBackgroundColor('transparent');
-
-    console.log('App mounted, initializing ambient sound');
-
-    // Initialize sound manager
     SoundManager.init().then(() => {
-      // Start playing ambient music
       SoundManager.playAmbient();
     });
 
     return () => {
-      console.log('App unmounted, stopping all sounds');
       SoundManager.release();
     };
   }, []);

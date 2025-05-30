@@ -23,4 +23,7 @@ export interface DatabaseModule {
     password: string;
   }): Promise<User>;
   loginUser(email: string, password: string): Promise<User>;
+
+  // XP and Level methods
+  awardXP(userId: number, xpAmount: number): Promise<User | null>;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {
   View,
   TextInput,
@@ -14,15 +14,15 @@ import {
 } from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import LottieView from 'lottie-react-native';
-import { styles } from './LoginScreen.styles.ts';
-import { db } from '../database';
-import SoundManager from '../utils/SoundManager';
-import { StackScreenProps } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigation/AppNavigator';
+import {styles} from './LoginScreen.styles.ts';
+import {db} from '../../database';
+import SoundManager from '../../utils/SoundManager';
+import {StackScreenProps} from '@react-navigation/stack';
+import {RootStackParamList} from '../../navigation/AppNavigator';
 
 type LoginScreenProps = StackScreenProps<RootStackParamList, 'Login'>;
 
-export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
+export const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
@@ -151,8 +151,11 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   const handleAnimationFinish = () => {
     if (successUserId) {
       setShowSuccessAnimation(false);
-      // Navigate to Dashboard with the userId
-      navigation.replace('Dashboard', { userId: successUserId });
+      // Navigate to Dashboard with the userId and a fromLogin flag
+      navigation.replace('Dashboard', {
+        userId: successUserId,
+        fromLogin: true,
+      });
     }
   };
 
@@ -162,7 +165,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
       <StatusBar backgroundColor="transparent" translucent />
 
       <LottieView
-        source={require('../assets/animations/background.json')}
+        source={require('../../assets/animations/background.json')}
         autoPlay
         loop
         style={styles.backgroundAnimation}
@@ -172,9 +175,8 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
       <KeyboardAvoidingView behavior="padding" style={styles.keyboardAvoidView}>
         <ScrollView
           contentContainerStyle={styles.scrollContainer}
-          keyboardShouldPersistTaps="handled"
-        >
-          <Animated.View style={[styles.formContainer, { opacity: formOpacity }]}>
+          keyboardShouldPersistTaps="handled">
+          <Animated.View style={[styles.formContainer, {opacity: formOpacity}]}>
             {isRegistering && (
               <View style={styles.inputContainer}>
                 <Text style={styles.label}>Name</Text>
@@ -217,7 +219,8 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
                   onChangeText={setPassword}
                   secureTextEntry={!showPassword}
                 />
-                <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
+                <TouchableOpacity
+                  onPress={() => setShowPassword(!showPassword)}>
                   <MaterialIcons
                     name={showPassword ? 'visibility' : 'visibility-off'}
                     size={24}
@@ -239,9 +242,14 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
                     onChangeText={setConfirmPassword}
                     secureTextEntry={!showConfirmPassword}
                   />
-                  <TouchableOpacity onPress={() => setShowConfirmPassword(!showConfirmPassword)}>
+                  <TouchableOpacity
+                    onPress={() =>
+                      setShowConfirmPassword(!showConfirmPassword)
+                    }>
                     <MaterialIcons
-                      name={showConfirmPassword ? 'visibility' : 'visibility-off'}
+                      name={
+                        showConfirmPassword ? 'visibility' : 'visibility-off'
+                      }
                       size={24}
                       color="#AAA"
                     />
@@ -255,8 +263,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={isRegistering ? handleRegister : handleLogin}
-              disabled={isLoading}
-            >
+              disabled={isLoading}>
               {isLoading ? (
                 <ActivityIndicator color="#FFFFFF" />
               ) : (
@@ -269,8 +276,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
             <TouchableOpacity
               style={styles.switchModeButton}
               onPress={toggleMode}
-              disabled={isLoading}
-            >
+              disabled={isLoading}>
               <Text style={styles.switchModeText}>
                 {isRegistering
                   ? 'Already have an account? Login'
@@ -288,13 +294,12 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
         onShow={() => {
           StatusBar.setTranslucent(false);
           StatusBar.setBackgroundColor('#0A0A3C');
-        }}
-      >
+        }}>
         <View style={styles.successAnimationContainer}>
           <View style={styles.successAnimationWrapper}>
             <LottieView
               ref={successAnimationRef}
-              source={require('../assets/animations/check.json')}
+              source={require('../../assets/animations/check.json')}
               autoPlay
               loop={false}
               style={styles.successAnimation}

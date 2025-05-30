@@ -7,6 +7,9 @@ const interactionSource = require('../assets/sounds/interaction.mp3');
 const zap1Source = require('../assets/sounds/zap1.mp3');
 const zap2Source = require('../assets/sounds/zap2.mp3');
 const loginSuccessSource = require('../assets/sounds/login_success.mp3');
+const countdownSource = require('../assets/sounds/countdown.mp3');
+const quizCorrectSource = require('../assets/sounds/quiz_correct.mp3');
+const quizIncorrectSource = require('../assets/sounds/quiz_incorrect.mp3');
 
 // Android AudioManager interface
 interface AudioManagerConstants {
@@ -28,33 +31,52 @@ class SoundManager {
   private static ambientVolume = 0.5;
   private static ambientEnabled = true;
 
+  // Removed global and per-effect volume controls
+  private static readonly DEFAULT_ZAP1_VOLUME = 0.8;
+  private static readonly DEFAULT_ZAP2_VOLUME = 0.8;
+  private static readonly DEFAULT_INTERACTION_VOLUME = 1.0;
+  private static readonly DEFAULT_LOGIN_SUCCESS_VOLUME = 1.0;
+  private static readonly DEFAULT_COUNTDOWN_VOLUME = 1.0;
+  private static readonly DEFAULT_QUIZ_CORRECT_VOLUME = 1.0;
+  private static readonly DEFAULT_QUIZ_INCORRECT_VOLUME = 1.0;
+
   // Sound pools
   private static zap1Pool: Sound[] = [];
   private static zap2Pool: Sound[] = [];
+  private static interactionPool: Sound[] = [];
+  private static loginSuccessPool: Sound[] = [];
+  private static countdownPool: Sound[] = [];
+  private static quizCorrectPool: Sound[] = [];
+  private static quizIncorrectPool: Sound[] = [];
   private static POOL_SIZE = 3;
-
-  // Other sounds
-  private static interaction: Sound | null = null;
-  private static loginSuccess: Sound | null = null;
 
   // App state management
   private static appStateSubscription: {remove: () => void} | null = null;
   private static currentAppState: AppStateStatus = 'active';
   private static hasAudioFocus = false;
 
+  private static _initialized = false;
+
   static async init() {
+    if (this._initialized) {return;}
+    this._initialized = true;
     // Initialize audio subsystem
     Sound.setCategory('Playback', true);
+    console.log('[SoundManager] Initializing sounds...');
 
     // Load sounds
     try {
       this.ambient = await this.loadSound(ambientSource);
-      this.interaction = await this.loadSound(interactionSource);
-      this.loginSuccess = await this.loadSound(loginSuccessSource);
       this.zap1Pool = await this.createSoundPool(zap1Source, this.POOL_SIZE);
       this.zap2Pool = await this.createSoundPool(zap2Source, this.POOL_SIZE);
+      this.interactionPool = await this.createSoundPool(interactionSource, this.POOL_SIZE);
+      this.loginSuccessPool = await this.createSoundPool(loginSuccessSource, this.POOL_SIZE);
+      this.countdownPool = await this.createSoundPool(countdownSource, this.POOL_SIZE);
+      this.quizCorrectPool = await this.createSoundPool(quizCorrectSource, this.POOL_SIZE);
+      this.quizIncorrectPool = await this.createSoundPool(quizIncorrectSource, this.POOL_SIZE);
+      console.log('[SoundManager] All sounds loaded successfully');
     } catch (error) {
-      console.error('Sound initialization failed:', error);
+      console.error('[SoundManager] Sound initialization failed:', error);
     }
 
     // Set up app state listener
@@ -110,20 +132,64 @@ class SoundManager {
 
   // -- Sound Effects --
   static playZap1() {
-    this.playFromPool(this.zap1Pool, 0.8);
+    this.playFromPool(this.zap1Pool, this.DEFAULT_ZAP1_VOLUME);
   }
 
   static playZap2() {
-    this.playFromPool(this.zap2Pool, 0.8);
+    this.playFromPool(this.zap2Pool, this.DEFAULT_ZAP2_VOLUME);
   }
 
   static playInteraction() {
-    this.playSound(this.interaction, 1.0);
+    this.playFromPool(this.interactionPool, this.DEFAULT_INTERACTION_VOLUME);
   }
 
   static playLoginSuccess() {
-    this.playSound(this.loginSuccess, 1.0);
+    this.playFromPool(this.loginSuccessPool, this.DEFAULT_LOGIN_SUCCESS_VOLUME);
     this.fadeOutAmbient();
+  }
+
+  static playCountdown() {
+    this.playFromPool(this.countdownPool, this.DEFAULT_COUNTDOWN_VOLUME);
+  }
+
+  static playQuizCorrect() {
+    if (!this.quizCorrectPool || this.quizCorrectPool.length === 0) {
+      console.warn('[SoundManager] quizCorrectPool is empty or not loaded');
+      return;
+    }
+    const availableSound = this.quizCorrectPool.find((s: Sound) => !s.isPlaying());
+    if (!availableSound) {
+      console.warn('[SoundManager] No available quizCorrect sound in pool');
+      return;
+    }
+    availableSound.setVolume(this.DEFAULT_QUIZ_CORRECT_VOLUME);
+    availableSound.play(success => {
+      if (!success) {
+        console.warn('[SoundManager] quizCorrect sound playback failed');
+      } else {
+        console.log('[SoundManager] quizCorrect sound played');
+      }
+    });
+  }
+
+  static playQuizIncorrect() {
+    if (!this.quizIncorrectPool || this.quizIncorrectPool.length === 0) {
+      console.warn('[SoundManager] quizIncorrectPool is empty or not loaded');
+      return;
+    }
+    const availableSound = this.quizIncorrectPool.find((s: Sound) => !s.isPlaying());
+    if (!availableSound) {
+      console.warn('[SoundManager] No available quizIncorrect sound in pool');
+      return;
+    }
+    availableSound.setVolume(this.DEFAULT_QUIZ_INCORRECT_VOLUME);
+    availableSound.play(success => {
+      if (!success) {
+        console.warn('[SoundManager] quizIncorrect sound playback failed');
+      } else {
+        console.log('[SoundManager] quizIncorrect sound played');
+      }
+    });
   }
 
   // -- App State Management --
@@ -206,13 +272,15 @@ class SoundManager {
 
   private static playSound(sound: Sound | null, volume: number) {
     if (!this.hasAudioFocus || !sound) {
+      console.warn('[SoundManager] playSound: No audio focus or sound not loaded');
       return;
     }
-
     sound.setVolume(volume);
     sound.play(success => {
       if (!success) {
-        console.warn('Sound playback failed');
+        console.warn('[SoundManager] Sound playback failed');
+      } else {
+        console.log('[SoundManager] Sound played successfully');
       }
     });
   }
@@ -221,8 +289,11 @@ class SoundManager {
     this.ambient?.pause();
     this.zap1Pool.forEach((s: Sound) => s.pause());
     this.zap2Pool.forEach((s: Sound) => s.pause());
-    this.interaction?.pause();
-    this.loginSuccess?.pause();
+    this.interactionPool.forEach((s: Sound) => s.pause());
+    this.loginSuccessPool.forEach((s: Sound) => s.pause());
+    this.countdownPool.forEach((s: Sound) => s.pause());
+    this.quizCorrectPool.forEach((s: Sound) => s.pause());
+    this.quizIncorrectPool.forEach((s: Sound) => s.pause());
   }
 
   private static resumeAllSounds() {
@@ -237,20 +308,12 @@ class SoundManager {
     this.ambient?.stop();
     this.ambient?.release();
 
-    this.zap1Pool.forEach((s: Sound) => {
-      s.stop();
-      s.release();
+    [this.zap1Pool, this.zap2Pool, this.interactionPool, this.loginSuccessPool, this.countdownPool, this.quizCorrectPool, this.quizIncorrectPool].forEach(pool => {
+      pool.forEach((s: Sound) => {
+        s.stop();
+        s.release();
+      });
     });
-    this.zap2Pool.forEach((s: Sound) => {
-      s.stop();
-      s.release();
-    });
-
-    this.interaction?.stop();
-    this.interaction?.release();
-
-    this.loginSuccess?.stop();
-    this.loginSuccess?.release();
 
     AudioFocusModule.abandonAudioFocus().catch(() => {});
   }

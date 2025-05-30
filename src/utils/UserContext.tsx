@@ -1,11 +1,12 @@
-import React, { createContext, useState, useContext, useRef } from 'react';
-import { db } from '../database';
-import { User } from '../database/types';
+import React, {createContext, useState, useContext, useRef, useCallback} from 'react';
+import {db} from '../database';
+import {User} from '../database/types';
 
 interface UserContextType {
   user: User | null;
   isLoading: boolean;
   setUser: (user: User | null) => void;
+  updateUser: (updatedUser: User) => void;
   refreshUser: (userId: number) => Promise<void>;
   logout: () => void;
 }
@@ -14,6 +15,7 @@ export const UserContext = createContext<UserContextType>({
   user: null,
   isLoading: true,
   setUser: () => {},
+  updateUser: () => {},
   refreshUser: async () => {},
   logout: () => {},
 });
@@ -22,12 +24,23 @@ interface UserProviderProps {
   children: React.ReactNode;
 }
 
-export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
+export const UserProvider: React.FC<UserProviderProps> = ({children}) => {
   const [user, setUser] = useState<User | null>(null);
-  const [isLoading, setIsLoading] = useState<boolean>(false); // Change to false by default
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const isRefreshingRef = useRef<boolean>(false); // Track if refreshUser is already in progress
 
-  const refreshUser = async (userId: number) => {
+  const updateUser = (updatedUser: User) => {
+    setUser(updatedUser);
+
+    // Also update in the database if we have an ID
+    if (updatedUser.id) {
+      db.updateUser(updatedUser).catch(error => {
+        console.error('Error updating user:', error);
+      });
+    }
+  };
+
+  const refreshUser = useCallback(async (userId: number) => {
     // Prevent multiple concurrent refreshUser calls
     if (isRefreshingRef.current) {
       return;
@@ -49,7 +62,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
       setIsLoading(false);
       isRefreshingRef.current = false;
     }
-  };
+  }, []);
 
   const logout = () => {
     setUser(null);
@@ -59,14 +72,13 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     user,
     isLoading,
     setUser,
+    updateUser,
     refreshUser,
     logout,
   };
 
   return (
-    <UserContext.Provider value={contextValue}>
-      {children}
-    </UserContext.Provider>
+    <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
   );
 };
 

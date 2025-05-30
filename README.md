@@ -42,13 +42,3 @@ Challenge yourself and discover a world of insight
 </p>
 
 ---
-
-## Getting Started
-
-1. **Clone & Install**  
-   ```shell
-   git clone https://github.com/xShadyy/BrainBuzz.git
-   cd BrainBuzz
-   npm install
-   npm run start
-   npm run android

@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Math"
+  },
+  {
+    "id": 2,
+    "name": "Science"
+  },
+  {
+    "id": 3,
+    "name": "History"
+  },
+  {
+    "id": 4,
+    "name": "Geography"
+  },
+  {
+    "id": 5,
+    "name": "Languages"
+  },
+  {
+    "id": 6,
+    "name": "Literature"
+  },
+  {
+    "id": 7,
+    "name": "Art"
+  },
+  {
+    "id": 8,
+    "name": "Music"
+  },
+  {
+    "id": 9,
+    "name": "Technology"
+  },
+  {
+    "id": 10,
+    "name": "Sports"
+  },
+  {
+    "id": 11,
+    "name": "Health"
+  },
+  {
+    "id": 12,
+    "name": "Space"
+  },
+  {
+    "id": 13,
+    "name": "Movies"
+  },
+  {
+    "id": 14,
+    "name": "Animals"
+  }
+]

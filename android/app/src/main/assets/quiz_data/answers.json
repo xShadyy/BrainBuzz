@@ -1,0 +1,10082 @@
+[
+  {
+    "id": 1,
+    "question_id": 1,
+    "text": "A. 10",
+    "is_correct": false
+  },
+  {
+    "id": 2,
+    "question_id": 1,
+    "text": "B. 12",
+    "is_correct": true
+  },
+  {
+    "id": 3,
+    "question_id": 1,
+    "text": "C. 11",
+    "is_correct": false
+  },
+  {
+    "id": 4,
+    "question_id": 1,
+    "text": "D. 13",
+    "is_correct": false
+  },
+  {
+    "id": 5,
+    "question_id": 2,
+    "text": "A. 18",
+    "is_correct": false
+  },
+  {
+    "id": 6,
+    "question_id": 2,
+    "text": "B. 24",
+    "is_correct": true
+  },
+  {
+    "id": 7,
+    "question_id": 2,
+    "text": "C. 26",
+    "is_correct": false
+  },
+  {
+    "id": 8,
+    "question_id": 2,
+    "text": "D. 21",
+    "is_correct": false
+  },
+  {
+    "id": 9,
+    "question_id": 3,
+    "text": "A. 8",
+    "is_correct": false
+  },
+  {
+    "id": 10,
+    "question_id": 3,
+    "text": "B. 9",
+    "is_correct": true
+  },
+  {
+    "id": 11,
+    "question_id": 3,
+    "text": "C. 11",
+    "is_correct": false
+  },
+  {
+    "id": 12,
+    "question_id": 3,
+    "text": "D. 10",
+    "is_correct": false
+  },
+  {
+    "id": 13,
+    "question_id": 4,
+    "text": "A. 3",
+    "is_correct": true
+  },
+  {
+    "id": 14,
+    "question_id": 4,
+    "text": "B. 2",
+    "is_correct": false
+  },
+  {
+    "id": 15,
+    "question_id": 4,
+    "text": "C. 4",
+    "is_correct": false
+  },
+  {
+    "id": 16,
+    "question_id": 4,
+    "text": "D. 6",
+    "is_correct": false
+  },
+  {
+    "id": 17,
+    "question_id": 5,
+    "text": "A. 3.14",
+    "is_correct": true
+  },
+  {
+    "id": 18,
+    "question_id": 5,
+    "text": "B. 3.41",
+    "is_correct": false
+  },
+  {
+    "id": 19,
+    "question_id": 5,
+    "text": "C. 1.62",
+    "is_correct": false
+  },
+  {
+    "id": 20,
+    "question_id": 5,
+    "text": "D. 2.72",
+    "is_correct": false
+  },
+  {
+    "id": 21,
+    "question_id": 6,
+    "text": "A. 6",
+    "is_correct": false
+  },
+  {
+    "id": 22,
+    "question_id": 6,
+    "text": "B. 2",
+    "is_correct": false
+  },
+  {
+    "id": 23,
+    "question_id": 6,
+    "text": "C. 8",
+    "is_correct": false
+  },
+  {
+    "id": 24,
+    "question_id": 6,
+    "text": "D. 4",
+    "is_correct": true
+  },
+  {
+    "id": 25,
+    "question_id": 7,
+    "text": "A. 20",
+    "is_correct": false
+  },
+  {
+    "id": 26,
+    "question_id": 7,
+    "text": "B. 10",
+    "is_correct": true
+  },
+  {
+    "id": 27,
+    "question_id": 7,
+    "text": "C. 5",
+    "is_correct": false
+  },
+  {
+    "id": 28,
+    "question_id": 7,
+    "text": "D. 15",
+    "is_correct": false
+  },
+  {
+    "id": 29,
+    "question_id": 8,
+    "text": "A. 56",
+    "is_correct": false
+  },
+  {
+    "id": 30,
+    "question_id": 8,
+    "text": "B. 42",
+    "is_correct": true
+  },
+  {
+    "id": 31,
+    "question_id": 8,
+    "text": "C. 36",
+    "is_correct": false
+  },
+  {
+    "id": 32,
+    "question_id": 8,
+    "text": "D. 48",
+    "is_correct": false
+  },
+  {
+    "id": 33,
+    "question_id": 9,
+    "text": "A. 6",
+    "is_correct": false
+  },
+  {
+    "id": 34,
+    "question_id": 9,
+    "text": "B. 9",
+    "is_correct": true
+  },
+  {
+    "id": 35,
+    "question_id": 9,
+    "text": "C. 7",
+    "is_correct": false
+  },
+  {
+    "id": 36,
+    "question_id": 9,
+    "text": "D. 8",
+    "is_correct": false
+  },
+  {
+    "id": 37,
+    "question_id": 10,
+    "text": "A. 15",
+    "is_correct": false
+  },
+  {
+    "id": 38,
+    "question_id": 10,
+    "text": "B. 10",
+    "is_correct": true
+  },
+  {
+    "id": 39,
+    "question_id": 10,
+    "text": "C. 20",
+    "is_correct": false
+  },
+  {
+    "id": 40,
+    "question_id": 10,
+    "text": "D. 5",
+    "is_correct": false
+  },
+  {
+    "id": 41,
+    "question_id": 11,
+    "text": "A. 124",
+    "is_correct": false
+  },
+  {
+    "id": 42,
+    "question_id": 11,
+    "text": "B. 132",
+    "is_correct": false
+  },
+  {
+    "id": 43,
+    "question_id": 11,
+    "text": "C. 144",
+    "is_correct": true
+  },
+  {
+    "id": 44,
+    "question_id": 11,
+    "text": "D. 156",
+    "is_correct": false
+  },
+  {
+    "id": 45,
+    "question_id": 12,
+    "text": "A. 6",
+    "is_correct": false
+  },
+  {
+    "id": 46,
+    "question_id": 12,
+    "text": "B. 9",
+    "is_correct": false
+  },
+  {
+    "id": 47,
+    "question_id": 12,
+    "text": "C. 27",
+    "is_correct": true
+  },
+  {
+    "id": 48,
+    "question_id": 12,
+    "text": "D. 18",
+    "is_correct": false
+  },
+  {
+    "id": 49,
+    "question_id": 13,
+    "text": "A. 10",
+    "is_correct": false
+  },
+  {
+    "id": 50,
+    "question_id": 13,
+    "text": "B. 20",
+    "is_correct": true
+  },
+  {
+    "id": 51,
+    "question_id": 13,
+    "text": "C. 25",
+    "is_correct": false
+  },
+  {
+    "id": 52,
+    "question_id": 13,
+    "text": "D. 15",
+    "is_correct": false
+  },
+  {
+    "id": 53,
+    "question_id": 14,
+    "text": "A. 49",
+    "is_correct": true
+  },
+  {
+    "id": 54,
+    "question_id": 14,
+    "text": "B. 21",
+    "is_correct": false
+  },
+  {
+    "id": 55,
+    "question_id": 14,
+    "text": "C. 14",
+    "is_correct": false
+  },
+  {
+    "id": 56,
+    "question_id": 14,
+    "text": "D. 36",
+    "is_correct": false
+  },
+  {
+    "id": 57,
+    "question_id": 15,
+    "text": "A. 15",
+    "is_correct": false
+  },
+  {
+    "id": 58,
+    "question_id": 15,
+    "text": "B. 13",
+    "is_correct": true
+  },
+  {
+    "id": 59,
+    "question_id": 15,
+    "text": "C. 19",
+    "is_correct": false
+  },
+  {
+    "id": 60,
+    "question_id": 15,
+    "text": "D. 17",
+    "is_correct": false
+  },
+  {
+    "id": 61,
+    "question_id": 16,
+    "text": "A. 444",
+    "is_correct": false
+  },
+  {
+    "id": 62,
+    "question_id": 16,
+    "text": "B. 654",
+    "is_correct": false
+  },
+  {
+    "id": 63,
+    "question_id": 16,
+    "text": "C. 554",
+    "is_correct": false
+  },
+  {
+    "id": 64,
+    "question_id": 16,
+    "text": "D. 544",
+    "is_correct": true
+  },
+  {
+    "id": 65,
+    "question_id": 17,
+    "text": "A. 20",
+    "is_correct": false
+  },
+  {
+    "id": 66,
+    "question_id": 17,
+    "text": "B. 16",
+    "is_correct": true
+  },
+  {
+    "id": 67,
+    "question_id": 17,
+    "text": "C. 12",
+    "is_correct": false
+  },
+  {
+    "id": 68,
+    "question_id": 17,
+    "text": "D. 18",
+    "is_correct": false
+  },
+  {
+    "id": 69,
+    "question_id": 18,
+    "text": "A. 16",
+    "is_correct": false
+  },
+  {
+    "id": 70,
+    "question_id": 18,
+    "text": "B. 10",
+    "is_correct": false
+  },
+  {
+    "id": 71,
+    "question_id": 18,
+    "text": "C. 64",
+    "is_correct": false
+  },
+  {
+    "id": 72,
+    "question_id": 18,
+    "text": "D. 32",
+    "is_correct": true
+  },
+  {
+    "id": 73,
+    "question_id": 19,
+    "text": "A. 0.4",
+    "is_correct": false
+  },
+  {
+    "id": 74,
+    "question_id": 19,
+    "text": "B. 0.75",
+    "is_correct": false
+  },
+  {
+    "id": 75,
+    "question_id": 19,
+    "text": "C. 0.25",
+    "is_correct": true
+  },
+  {
+    "id": 76,
+    "question_id": 19,
+    "text": "D. 0.5",
+    "is_correct": false
+  },
+  {
+    "id": 77,
+    "question_id": 20,
+    "text": "A. 30",
+    "is_correct": true
+  },
+  {
+    "id": 78,
+    "question_id": 20,
+    "text": "B. 25",
+    "is_correct": false
+  },
+  {
+    "id": 79,
+    "question_id": 20,
+    "text": "C. 35",
+    "is_correct": false
+  },
+  {
+    "id": 80,
+    "question_id": 20,
+    "text": "D. 40",
+    "is_correct": false
+  },
+  {
+    "id": 81,
+    "question_id": 21,
+    "text": "A. x",
+    "is_correct": false
+  },
+  {
+    "id": 82,
+    "question_id": 21,
+    "text": "B. 2",
+    "is_correct": false
+  },
+  {
+    "id": 83,
+    "question_id": 21,
+    "text": "C. 2x",
+    "is_correct": true
+  },
+  {
+    "id": 84,
+    "question_id": 21,
+    "text": "D. x^2",
+    "is_correct": false
+  },
+  {
+    "id": 85,
+    "question_id": 22,
+    "text": "A. 2x + C",
+    "is_correct": false
+  },
+  {
+    "id": 86,
+    "question_id": 22,
+    "text": "B. x^2 + C",
+    "is_correct": true
+  },
+  {
+    "id": 87,
+    "question_id": 22,
+    "text": "C. 2x^2 + C",
+    "is_correct": false
+  },
+  {
+    "id": 88,
+    "question_id": 22,
+    "text": "D. x^2",
+    "is_correct": false
+  },
+  {
+    "id": 89,
+    "question_id": 23,
+    "text": "A. 0.5",
+    "is_correct": false
+  },
+  {
+    "id": 90,
+    "question_id": 23,
+    "text": "B. 1",
+    "is_correct": true
+  },
+  {
+    "id": 91,
+    "question_id": 23,
+    "text": "C. 0",
+    "is_correct": false
+  },
+  {
+    "id": 92,
+    "question_id": 23,
+    "text": "D. -1",
+    "is_correct": false
+  },
+  {
+    "id": 93,
+    "question_id": 24,
+    "text": "A. 6",
+    "is_correct": false
+  },
+  {
+    "id": 94,
+    "question_id": 24,
+    "text": "B. 3",
+    "is_correct": false
+  },
+  {
+    "id": 95,
+    "question_id": 24,
+    "text": "C. 5",
+    "is_correct": false
+  },
+  {
+    "id": 96,
+    "question_id": 24,
+    "text": "D. 4",
+    "is_correct": true
+  },
+  {
+    "id": 97,
+    "question_id": 25,
+    "text": "A. 120",
+    "is_correct": true
+  },
+  {
+    "id": 98,
+    "question_id": 25,
+    "text": "B. 100",
+    "is_correct": false
+  },
+  {
+    "id": 99,
+    "question_id": 25,
+    "text": "C. 60",
+    "is_correct": false
+  },
+  {
+    "id": 100,
+    "question_id": 25,
+    "text": "D. 24",
+    "is_correct": false
+  },
+  {
+    "id": 101,
+    "question_id": 26,
+    "text": "A. 4",
+    "is_correct": false
+  },
+  {
+    "id": 102,
+    "question_id": 26,
+    "text": "B. 3",
+    "is_correct": true
+  },
+  {
+    "id": 103,
+    "question_id": 26,
+    "text": "C. 1",
+    "is_correct": false
+  },
+  {
+    "id": 104,
+    "question_id": 26,
+    "text": "D. 2",
+    "is_correct": false
+  },
+  {
+    "id": 105,
+    "question_id": 27,
+    "text": "A. 540",
+    "is_correct": true
+  },
+  {
+    "id": 106,
+    "question_id": 27,
+    "text": "B. 180",
+    "is_correct": false
+  },
+  {
+    "id": 107,
+    "question_id": 27,
+    "text": "C. 720",
+    "is_correct": false
+  },
+  {
+    "id": 108,
+    "question_id": 27,
+    "text": "D. 360",
+    "is_correct": false
+  },
+  {
+    "id": 109,
+    "question_id": 28,
+    "text": "A. 2.17",
+    "is_correct": false
+  },
+  {
+    "id": 110,
+    "question_id": 28,
+    "text": "B. 2.71",
+    "is_correct": true
+  },
+  {
+    "id": 111,
+    "question_id": 28,
+    "text": "C. 1.62",
+    "is_correct": false
+  },
+  {
+    "id": 112,
+    "question_id": 28,
+    "text": "D. 3.14",
+    "is_correct": false
+  },
+  {
+    "id": 113,
+    "question_id": 29,
+    "text": "A. 256",
+    "is_correct": true
+  },
+  {
+    "id": 114,
+    "question_id": 29,
+    "text": "B. 16",
+    "is_correct": false
+  },
+  {
+    "id": 115,
+    "question_id": 29,
+    "text": "C. 128",
+    "is_correct": false
+  },
+  {
+    "id": 116,
+    "question_id": 29,
+    "text": "D. 64",
+    "is_correct": false
+  },
+  {
+    "id": 117,
+    "question_id": 30,
+    "text": "A. a\u00b2+b\u00b2=c\u00b2",
+    "is_correct": false
+  },
+  {
+    "id": 118,
+    "question_id": 30,
+    "text": "B. 2\u03c0r",
+    "is_correct": false
+  },
+  {
+    "id": 119,
+    "question_id": 30,
+    "text": "C. (-b\u00b1\u221a(b\u00b2-4ac))/(2a)",
+    "is_correct": true
+  },
+  {
+    "id": 120,
+    "question_id": 30,
+    "text": "D. \u03c0r\u00b2",
+    "is_correct": false
+  },
+  {
+    "id": 121,
+    "question_id": 31,
+    "text": "A. CO2",
+    "is_correct": false
+  },
+  {
+    "id": 122,
+    "question_id": 31,
+    "text": "B. H2O",
+    "is_correct": true
+  },
+  {
+    "id": 123,
+    "question_id": 31,
+    "text": "C. O2",
+    "is_correct": false
+  },
+  {
+    "id": 124,
+    "question_id": 31,
+    "text": "D. NaCl",
+    "is_correct": false
+  },
+  {
+    "id": 125,
+    "question_id": 32,
+    "text": "A. Venus",
+    "is_correct": false
+  },
+  {
+    "id": 126,
+    "question_id": 32,
+    "text": "B. Earth",
+    "is_correct": false
+  },
+  {
+    "id": 127,
+    "question_id": 32,
+    "text": "C. Jupiter",
+    "is_correct": false
+  },
+  {
+    "id": 128,
+    "question_id": 32,
+    "text": "D. Mars",
+    "is_correct": true
+  },
+  {
+    "id": 129,
+    "question_id": 33,
+    "text": "A. Oxygen",
+    "is_correct": false
+  },
+  {
+    "id": 130,
+    "question_id": 33,
+    "text": "B. Hydrogen",
+    "is_correct": false
+  },
+  {
+    "id": 131,
+    "question_id": 33,
+    "text": "C. Nitrogen",
+    "is_correct": false
+  },
+  {
+    "id": 132,
+    "question_id": 33,
+    "text": "D. Carbon dioxide",
+    "is_correct": true
+  },
+  {
+    "id": 133,
+    "question_id": 34,
+    "text": "A. 4",
+    "is_correct": false
+  },
+  {
+    "id": 134,
+    "question_id": 34,
+    "text": "B. 3",
+    "is_correct": true
+  },
+  {
+    "id": 135,
+    "question_id": 34,
+    "text": "C. 2",
+    "is_correct": false
+  },
+  {
+    "id": 136,
+    "question_id": 34,
+    "text": "D. 5",
+    "is_correct": false
+  },
+  {
+    "id": 137,
+    "question_id": 35,
+    "text": "A. Neutron",
+    "is_correct": false
+  },
+  {
+    "id": 138,
+    "question_id": 35,
+    "text": "B. Electron",
+    "is_correct": false
+  },
+  {
+    "id": 139,
+    "question_id": 35,
+    "text": "C. Proton",
+    "is_correct": false
+  },
+  {
+    "id": 140,
+    "question_id": 35,
+    "text": "D. Nucleus",
+    "is_correct": true
+  },
+  {
+    "id": 141,
+    "question_id": 36,
+    "text": "A. Gravity",
+    "is_correct": true
+  },
+  {
+    "id": 142,
+    "question_id": 36,
+    "text": "B. Friction",
+    "is_correct": false
+  },
+  {
+    "id": 143,
+    "question_id": 36,
+    "text": "C. Magnetism",
+    "is_correct": false
+  },
+  {
+    "id": 144,
+    "question_id": 36,
+    "text": "D. Electricity",
+    "is_correct": false
+  },
+  {
+    "id": 145,
+    "question_id": 37,
+    "text": "A. Nose",
+    "is_correct": false
+  },
+  {
+    "id": 146,
+    "question_id": 37,
+    "text": "B. Skin",
+    "is_correct": false
+  },
+  {
+    "id": 147,
+    "question_id": 37,
+    "text": "C. Tongue",
+    "is_correct": true
+  },
+  {
+    "id": 148,
+    "question_id": 37,
+    "text": "D. Eyes",
+    "is_correct": false
+  },
+  {
+    "id": 149,
+    "question_id": 38,
+    "text": "A. Milk",
+    "is_correct": false
+  },
+  {
+    "id": 150,
+    "question_id": 38,
+    "text": "B. Bread",
+    "is_correct": false
+  },
+  {
+    "id": 151,
+    "question_id": 38,
+    "text": "C. Wine",
+    "is_correct": false
+  },
+  {
+    "id": 152,
+    "question_id": 38,
+    "text": "D. Honey",
+    "is_correct": true
+  },
+  {
+    "id": 153,
+    "question_id": 39,
+    "text": "A. 50",
+    "is_correct": false
+  },
+  {
+    "id": 154,
+    "question_id": 39,
+    "text": "B. 100",
+    "is_correct": true
+  },
+  {
+    "id": 155,
+    "question_id": 39,
+    "text": "C. 90",
+    "is_correct": false
+  },
+  {
+    "id": 156,
+    "question_id": 39,
+    "text": "D. 120",
+    "is_correct": false
+  },
+  {
+    "id": 157,
+    "question_id": 40,
+    "text": "A. Dispersion",
+    "is_correct": true
+  },
+  {
+    "id": 158,
+    "question_id": 40,
+    "text": "B. Diffraction",
+    "is_correct": false
+  },
+  {
+    "id": 159,
+    "question_id": 40,
+    "text": "C. Refraction",
+    "is_correct": false
+  },
+  {
+    "id": 160,
+    "question_id": 40,
+    "text": "D. Reflection",
+    "is_correct": false
+  },
+  {
+    "id": 161,
+    "question_id": 41,
+    "text": "A. 14",
+    "is_correct": false
+  },
+  {
+    "id": 162,
+    "question_id": 41,
+    "text": "B. 1",
+    "is_correct": false
+  },
+  {
+    "id": 163,
+    "question_id": 41,
+    "text": "C. 7",
+    "is_correct": true
+  },
+  {
+    "id": 164,
+    "question_id": 41,
+    "text": "D. 0",
+    "is_correct": false
+  },
+  {
+    "id": 165,
+    "question_id": 42,
+    "text": "A. Einstein",
+    "is_correct": true
+  },
+  {
+    "id": 166,
+    "question_id": 42,
+    "text": "B. Newton",
+    "is_correct": false
+  },
+  {
+    "id": 167,
+    "question_id": 42,
+    "text": "C. Tesla",
+    "is_correct": false
+  },
+  {
+    "id": 168,
+    "question_id": 42,
+    "text": "D. Bohr",
+    "is_correct": false
+  },
+  {
+    "id": 169,
+    "question_id": 43,
+    "text": "A. CaCl2",
+    "is_correct": false
+  },
+  {
+    "id": 170,
+    "question_id": 43,
+    "text": "B. NaCl",
+    "is_correct": true
+  },
+  {
+    "id": 171,
+    "question_id": 43,
+    "text": "C. Na2SO4",
+    "is_correct": false
+  },
+  {
+    "id": 172,
+    "question_id": 43,
+    "text": "D. KCl",
+    "is_correct": false
+  },
+  {
+    "id": 173,
+    "question_id": 44,
+    "text": "A. Lungs",
+    "is_correct": false
+  },
+  {
+    "id": 174,
+    "question_id": 44,
+    "text": "B. Liver",
+    "is_correct": false
+  },
+  {
+    "id": 175,
+    "question_id": 44,
+    "text": "C. Brain",
+    "is_correct": false
+  },
+  {
+    "id": 176,
+    "question_id": 44,
+    "text": "D. Heart",
+    "is_correct": true
+  },
+  {
+    "id": 177,
+    "question_id": 45,
+    "text": "A. Digestion",
+    "is_correct": false
+  },
+  {
+    "id": 178,
+    "question_id": 45,
+    "text": "B. Photosynthesis",
+    "is_correct": true
+  },
+  {
+    "id": 179,
+    "question_id": 45,
+    "text": "C. Fermentation",
+    "is_correct": false
+  },
+  {
+    "id": 180,
+    "question_id": 45,
+    "text": "D. Respiration",
+    "is_correct": false
+  },
+  {
+    "id": 181,
+    "question_id": 46,
+    "text": "A. Neutron",
+    "is_correct": false
+  },
+  {
+    "id": 182,
+    "question_id": 46,
+    "text": "B. Photon",
+    "is_correct": false
+  },
+  {
+    "id": 183,
+    "question_id": 46,
+    "text": "C. Proton",
+    "is_correct": false
+  },
+  {
+    "id": 184,
+    "question_id": 46,
+    "text": "D. Electron",
+    "is_correct": true
+  },
+  {
+    "id": 185,
+    "question_id": 47,
+    "text": "A. Ampere",
+    "is_correct": false
+  },
+  {
+    "id": 186,
+    "question_id": 47,
+    "text": "B. Volt",
+    "is_correct": false
+  },
+  {
+    "id": 187,
+    "question_id": 47,
+    "text": "C. Ohm",
+    "is_correct": true
+  },
+  {
+    "id": 188,
+    "question_id": 47,
+    "text": "D. Watt",
+    "is_correct": false
+  },
+  {
+    "id": 189,
+    "question_id": 48,
+    "text": "A. 3000",
+    "is_correct": false
+  },
+  {
+    "id": 190,
+    "question_id": 48,
+    "text": "B. 150000",
+    "is_correct": false
+  },
+  {
+    "id": 191,
+    "question_id": 48,
+    "text": "C. 30000",
+    "is_correct": false
+  },
+  {
+    "id": 192,
+    "question_id": 48,
+    "text": "D. 300000",
+    "is_correct": true
+  },
+  {
+    "id": 193,
+    "question_id": 49,
+    "text": "A. Au",
+    "is_correct": true
+  },
+  {
+    "id": 194,
+    "question_id": 49,
+    "text": "B. Gd",
+    "is_correct": false
+  },
+  {
+    "id": 195,
+    "question_id": 49,
+    "text": "C. Ga",
+    "is_correct": false
+  },
+  {
+    "id": 196,
+    "question_id": 49,
+    "text": "D. Ag",
+    "is_correct": false
+  },
+  {
+    "id": 197,
+    "question_id": 50,
+    "text": "A. Vitamin B",
+    "is_correct": false
+  },
+  {
+    "id": 198,
+    "question_id": 50,
+    "text": "B. Vitamin D",
+    "is_correct": true
+  },
+  {
+    "id": 199,
+    "question_id": 50,
+    "text": "C. Vitamin A",
+    "is_correct": false
+  },
+  {
+    "id": 200,
+    "question_id": 50,
+    "text": "D. Vitamin C",
+    "is_correct": false
+  },
+  {
+    "id": 201,
+    "question_id": 51,
+    "text": "A. Mitochondria",
+    "is_correct": true
+  },
+  {
+    "id": 202,
+    "question_id": 51,
+    "text": "B. Nucleus",
+    "is_correct": false
+  },
+  {
+    "id": 203,
+    "question_id": 51,
+    "text": "C. Golgi apparatus",
+    "is_correct": false
+  },
+  {
+    "id": 204,
+    "question_id": 51,
+    "text": "D. Ribosome",
+    "is_correct": false
+  },
+  {
+    "id": 205,
+    "question_id": 52,
+    "text": "A. Einstein",
+    "is_correct": false
+  },
+  {
+    "id": 206,
+    "question_id": 52,
+    "text": "B. Galileo",
+    "is_correct": false
+  },
+  {
+    "id": 207,
+    "question_id": 52,
+    "text": "C. Newton",
+    "is_correct": true
+  },
+  {
+    "id": 208,
+    "question_id": 52,
+    "text": "D. Hubble",
+    "is_correct": false
+  },
+  {
+    "id": 209,
+    "question_id": 53,
+    "text": "A. O2",
+    "is_correct": false
+  },
+  {
+    "id": 210,
+    "question_id": 53,
+    "text": "B. O3",
+    "is_correct": true
+  },
+  {
+    "id": 211,
+    "question_id": 53,
+    "text": "C. OOO",
+    "is_correct": false
+  },
+  {
+    "id": 212,
+    "question_id": 53,
+    "text": "D. O4",
+    "is_correct": false
+  },
+  {
+    "id": 213,
+    "question_id": 54,
+    "text": "A. Lumen",
+    "is_correct": false
+  },
+  {
+    "id": 214,
+    "question_id": 54,
+    "text": "B. Watt",
+    "is_correct": false
+  },
+  {
+    "id": 215,
+    "question_id": 54,
+    "text": "C. Candela",
+    "is_correct": true
+  },
+  {
+    "id": 216,
+    "question_id": 54,
+    "text": "D. Lux",
+    "is_correct": false
+  },
+  {
+    "id": 217,
+    "question_id": 55,
+    "text": "A. 8.9",
+    "is_correct": false
+  },
+  {
+    "id": 218,
+    "question_id": 55,
+    "text": "B. 10.8",
+    "is_correct": false
+  },
+  {
+    "id": 219,
+    "question_id": 55,
+    "text": "C. 9.2",
+    "is_correct": false
+  },
+  {
+    "id": 220,
+    "question_id": 55,
+    "text": "D. 9.8",
+    "is_correct": true
+  },
+  {
+    "id": 221,
+    "question_id": 56,
+    "text": "A. Ionic",
+    "is_correct": false
+  },
+  {
+    "id": 222,
+    "question_id": 56,
+    "text": "B. Covalent",
+    "is_correct": true
+  },
+  {
+    "id": 223,
+    "question_id": 56,
+    "text": "C. Metallic",
+    "is_correct": false
+  },
+  {
+    "id": 224,
+    "question_id": 56,
+    "text": "D. Hydrogen",
+    "is_correct": false
+  },
+  {
+    "id": 225,
+    "question_id": 57,
+    "text": "A. Carbon dioxide",
+    "is_correct": false
+  },
+  {
+    "id": 226,
+    "question_id": 57,
+    "text": "B. Argon",
+    "is_correct": false
+  },
+  {
+    "id": 227,
+    "question_id": 57,
+    "text": "C. Oxygen",
+    "is_correct": false
+  },
+  {
+    "id": 228,
+    "question_id": 57,
+    "text": "D. Nitrogen",
+    "is_correct": true
+  },
+  {
+    "id": 229,
+    "question_id": 58,
+    "text": "A. Photoelectric effect",
+    "is_correct": true
+  },
+  {
+    "id": 230,
+    "question_id": 58,
+    "text": "B. Reflection",
+    "is_correct": false
+  },
+  {
+    "id": 231,
+    "question_id": 58,
+    "text": "C. Diffraction",
+    "is_correct": false
+  },
+  {
+    "id": 232,
+    "question_id": 58,
+    "text": "D. Elasticity",
+    "is_correct": false
+  },
+  {
+    "id": 233,
+    "question_id": 59,
+    "text": "A. 1.60e-19",
+    "is_correct": false
+  },
+  {
+    "id": 234,
+    "question_id": 59,
+    "text": "B. 6.02e23",
+    "is_correct": true
+  },
+  {
+    "id": 235,
+    "question_id": 59,
+    "text": "C. 3.14e23",
+    "is_correct": false
+  },
+  {
+    "id": 236,
+    "question_id": 59,
+    "text": "D. 9.81e22",
+    "is_correct": false
+  },
+  {
+    "id": 237,
+    "question_id": 60,
+    "text": "A. Electrodynamics",
+    "is_correct": false
+  },
+  {
+    "id": 238,
+    "question_id": 60,
+    "text": "B. Optics",
+    "is_correct": false
+  },
+  {
+    "id": 239,
+    "question_id": 60,
+    "text": "C. Kinematics",
+    "is_correct": true
+  },
+  {
+    "id": 240,
+    "question_id": 60,
+    "text": "D. Thermodynamics",
+    "is_correct": false
+  },
+  {
+    "id": 241,
+    "question_id": 61,
+    "text": "A. George Washington",
+    "is_correct": true
+  },
+  {
+    "id": 242,
+    "question_id": 61,
+    "text": "B. Abraham Lincoln",
+    "is_correct": false
+  },
+  {
+    "id": 243,
+    "question_id": 61,
+    "text": "C. Thomas Jefferson",
+    "is_correct": false
+  },
+  {
+    "id": 244,
+    "question_id": 61,
+    "text": "D. John Adams",
+    "is_correct": false
+  },
+  {
+    "id": 245,
+    "question_id": 62,
+    "text": "A. 1945",
+    "is_correct": true
+  },
+  {
+    "id": 246,
+    "question_id": 62,
+    "text": "B. 1939",
+    "is_correct": false
+  },
+  {
+    "id": 247,
+    "question_id": 62,
+    "text": "C. 1965",
+    "is_correct": false
+  },
+  {
+    "id": 248,
+    "question_id": 62,
+    "text": "D. 1918",
+    "is_correct": false
+  },
+  {
+    "id": 249,
+    "question_id": 63,
+    "text": "A. Aztecs",
+    "is_correct": false
+  },
+  {
+    "id": 250,
+    "question_id": 63,
+    "text": "B. Egyptians",
+    "is_correct": true
+  },
+  {
+    "id": 251,
+    "question_id": 63,
+    "text": "C. Romans",
+    "is_correct": false
+  },
+  {
+    "id": 252,
+    "question_id": 63,
+    "text": "D. Greeks",
+    "is_correct": false
+  },
+  {
+    "id": 253,
+    "question_id": 64,
+    "text": "A. Ferdinand Magellan",
+    "is_correct": false
+  },
+  {
+    "id": 254,
+    "question_id": 64,
+    "text": "B. Christopher Columbus",
+    "is_correct": true
+  },
+  {
+    "id": 255,
+    "question_id": 64,
+    "text": "C. Vasco da Gama",
+    "is_correct": false
+  },
+  {
+    "id": 256,
+    "question_id": 64,
+    "text": "D. James Cook",
+    "is_correct": false
+  },
+  {
+    "id": 257,
+    "question_id": 65,
+    "text": "A. Beagle",
+    "is_correct": false
+  },
+  {
+    "id": 258,
+    "question_id": 65,
+    "text": "B. Mayflower",
+    "is_correct": true
+  },
+  {
+    "id": 259,
+    "question_id": 65,
+    "text": "C. Santa Maria",
+    "is_correct": false
+  },
+  {
+    "id": 260,
+    "question_id": 65,
+    "text": "D. Endeavour",
+    "is_correct": false
+  },
+  {
+    "id": 261,
+    "question_id": 66,
+    "text": "A. Victoria",
+    "is_correct": false
+  },
+  {
+    "id": 262,
+    "question_id": 66,
+    "text": "B. Anne",
+    "is_correct": false
+  },
+  {
+    "id": 263,
+    "question_id": 66,
+    "text": "C. Elizabeth I",
+    "is_correct": true
+  },
+  {
+    "id": 264,
+    "question_id": 66,
+    "text": "D. Mary I",
+    "is_correct": false
+  },
+  {
+    "id": 265,
+    "question_id": 67,
+    "text": "A. Wailing Wall",
+    "is_correct": false
+  },
+  {
+    "id": 266,
+    "question_id": 67,
+    "text": "B. Berlin Wall",
+    "is_correct": true
+  },
+  {
+    "id": 267,
+    "question_id": 67,
+    "text": "C. Hadrian's Wall",
+    "is_correct": false
+  },
+  {
+    "id": 268,
+    "question_id": 67,
+    "text": "D. Great Wall of China",
+    "is_correct": false
+  },
+  {
+    "id": 269,
+    "question_id": 68,
+    "text": "A. Buzz Aldrin",
+    "is_correct": false
+  },
+  {
+    "id": 270,
+    "question_id": 68,
+    "text": "B. Neil Armstrong",
+    "is_correct": true
+  },
+  {
+    "id": 271,
+    "question_id": 68,
+    "text": "C. Yuri Gagarin",
+    "is_correct": false
+  },
+  {
+    "id": 272,
+    "question_id": 68,
+    "text": "D. Michael Collins",
+    "is_correct": false
+  },
+  {
+    "id": 273,
+    "question_id": 69,
+    "text": "A. Roman Empire",
+    "is_correct": false
+  },
+  {
+    "id": 274,
+    "question_id": 69,
+    "text": "B. Ottoman Empire",
+    "is_correct": false
+  },
+  {
+    "id": 275,
+    "question_id": 69,
+    "text": "C. Mongol Empire",
+    "is_correct": true
+  },
+  {
+    "id": 276,
+    "question_id": 69,
+    "text": "D. Persian Empire",
+    "is_correct": false
+  },
+  {
+    "id": 277,
+    "question_id": 70,
+    "text": "A. Greek",
+    "is_correct": false
+  },
+  {
+    "id": 278,
+    "question_id": 70,
+    "text": "B. English",
+    "is_correct": false
+  },
+  {
+    "id": 279,
+    "question_id": 70,
+    "text": "C. Arabic",
+    "is_correct": false
+  },
+  {
+    "id": 280,
+    "question_id": 70,
+    "text": "D. Latin",
+    "is_correct": true
+  },
+  {
+    "id": 281,
+    "question_id": 71,
+    "text": "A. 1804",
+    "is_correct": false
+  },
+  {
+    "id": 282,
+    "question_id": 71,
+    "text": "B. 1799",
+    "is_correct": false
+  },
+  {
+    "id": 283,
+    "question_id": 71,
+    "text": "C. 1789",
+    "is_correct": true
+  },
+  {
+    "id": 284,
+    "question_id": 71,
+    "text": "D. 1776",
+    "is_correct": false
+  },
+  {
+    "id": 285,
+    "question_id": 72,
+    "text": "A. King George III",
+    "is_correct": false
+  },
+  {
+    "id": 286,
+    "question_id": 72,
+    "text": "B. Queen Victoria",
+    "is_correct": true
+  },
+  {
+    "id": 287,
+    "question_id": 72,
+    "text": "C. King Henry VIII",
+    "is_correct": false
+  },
+  {
+    "id": 288,
+    "question_id": 72,
+    "text": "D. Queen Anne",
+    "is_correct": false
+  },
+  {
+    "id": 289,
+    "question_id": 73,
+    "text": "A. Treaty of Paris",
+    "is_correct": false
+  },
+  {
+    "id": 290,
+    "question_id": 73,
+    "text": "B. Treaty of Ghent",
+    "is_correct": false
+  },
+  {
+    "id": 291,
+    "question_id": 73,
+    "text": "C. Treaty of Tordesillas",
+    "is_correct": false
+  },
+  {
+    "id": 292,
+    "question_id": 73,
+    "text": "D. Treaty of Versailles",
+    "is_correct": true
+  },
+  {
+    "id": 293,
+    "question_id": 74,
+    "text": "A. Plymouth",
+    "is_correct": false
+  },
+  {
+    "id": 294,
+    "question_id": 74,
+    "text": "B. Jamestown",
+    "is_correct": true
+  },
+  {
+    "id": 295,
+    "question_id": 74,
+    "text": "C. Roanoke",
+    "is_correct": false
+  },
+  {
+    "id": 296,
+    "question_id": 74,
+    "text": "D. St. Augustine",
+    "is_correct": false
+  },
+  {
+    "id": 297,
+    "question_id": 75,
+    "text": "A. Abraham Lincoln",
+    "is_correct": true
+  },
+  {
+    "id": 298,
+    "question_id": 75,
+    "text": "B. Ulysses S. Grant",
+    "is_correct": false
+  },
+  {
+    "id": 299,
+    "question_id": 75,
+    "text": "C. Andrew Johnson",
+    "is_correct": false
+  },
+  {
+    "id": 300,
+    "question_id": 75,
+    "text": "D. James Buchanan",
+    "is_correct": false
+  },
+  {
+    "id": 301,
+    "question_id": 76,
+    "text": "A. 1953",
+    "is_correct": false
+  },
+  {
+    "id": 302,
+    "question_id": 76,
+    "text": "B. 1961",
+    "is_correct": true
+  },
+  {
+    "id": 303,
+    "question_id": 76,
+    "text": "C. 1975",
+    "is_correct": false
+  },
+  {
+    "id": 304,
+    "question_id": 76,
+    "text": "D. 1989",
+    "is_correct": false
+  },
+  {
+    "id": 305,
+    "question_id": 77,
+    "text": "A. Bhagat Singh",
+    "is_correct": false
+  },
+  {
+    "id": 306,
+    "question_id": 77,
+    "text": "B. Jawaharlal Nehru",
+    "is_correct": false
+  },
+  {
+    "id": 307,
+    "question_id": 77,
+    "text": "C. Subhas Chandra Bose",
+    "is_correct": false
+  },
+  {
+    "id": 308,
+    "question_id": 77,
+    "text": "D. Mahatma Gandhi",
+    "is_correct": true
+  },
+  {
+    "id": 309,
+    "question_id": 78,
+    "text": "A. Battle of the Bulge",
+    "is_correct": false
+  },
+  {
+    "id": 310,
+    "question_id": 78,
+    "text": "B. Battle of Waterloo",
+    "is_correct": true
+  },
+  {
+    "id": 311,
+    "question_id": 78,
+    "text": "C. Battle of Trafalgar",
+    "is_correct": false
+  },
+  {
+    "id": 312,
+    "question_id": 78,
+    "text": "D. Battle of Austerlitz",
+    "is_correct": false
+  },
+  {
+    "id": 313,
+    "question_id": 79,
+    "text": "A. Cholera",
+    "is_correct": false
+  },
+  {
+    "id": 314,
+    "question_id": 79,
+    "text": "B. Black Death",
+    "is_correct": false
+  },
+  {
+    "id": 315,
+    "question_id": 79,
+    "text": "C. Spanish Flu",
+    "is_correct": true
+  },
+  {
+    "id": 316,
+    "question_id": 79,
+    "text": "D. Asian Flu",
+    "is_correct": false
+  },
+  {
+    "id": 317,
+    "question_id": 80,
+    "text": "A. Philip II",
+    "is_correct": false
+  },
+  {
+    "id": 318,
+    "question_id": 80,
+    "text": "B. Henry VIII",
+    "is_correct": false
+  },
+  {
+    "id": 319,
+    "question_id": 80,
+    "text": "C. Peter the Great",
+    "is_correct": false
+  },
+  {
+    "id": 320,
+    "question_id": 80,
+    "text": "D. Louis XIV",
+    "is_correct": true
+  },
+  {
+    "id": 321,
+    "question_id": 81,
+    "text": "A. Tutankhamun",
+    "is_correct": false
+  },
+  {
+    "id": 322,
+    "question_id": 81,
+    "text": "B. Khufu",
+    "is_correct": true
+  },
+  {
+    "id": 323,
+    "question_id": 81,
+    "text": "C. Ramses II",
+    "is_correct": false
+  },
+  {
+    "id": 324,
+    "question_id": 81,
+    "text": "D. Cleopatra",
+    "is_correct": false
+  },
+  {
+    "id": 325,
+    "question_id": 82,
+    "text": "A. Istanbul",
+    "is_correct": false
+  },
+  {
+    "id": 326,
+    "question_id": 82,
+    "text": "B. Athens",
+    "is_correct": false
+  },
+  {
+    "id": 327,
+    "question_id": 82,
+    "text": "C. Constantinople",
+    "is_correct": true
+  },
+  {
+    "id": 328,
+    "question_id": 82,
+    "text": "D. Rome",
+    "is_correct": false
+  },
+  {
+    "id": 329,
+    "question_id": 83,
+    "text": "A. 1215",
+    "is_correct": false
+  },
+  {
+    "id": 330,
+    "question_id": 83,
+    "text": "B. 1066",
+    "is_correct": true
+  },
+  {
+    "id": 331,
+    "question_id": 83,
+    "text": "C. 1415",
+    "is_correct": false
+  },
+  {
+    "id": 332,
+    "question_id": 83,
+    "text": "D. 1060",
+    "is_correct": false
+  },
+  {
+    "id": 333,
+    "question_id": 84,
+    "text": "A. Ottoman Empire",
+    "is_correct": false
+  },
+  {
+    "id": 334,
+    "question_id": 84,
+    "text": "B. Holy Roman Empire",
+    "is_correct": false
+  },
+  {
+    "id": 335,
+    "question_id": 84,
+    "text": "C. Byzantine Empire",
+    "is_correct": true
+  },
+  {
+    "id": 336,
+    "question_id": 84,
+    "text": "D. Persian Empire",
+    "is_correct": false
+  },
+  {
+    "id": 337,
+    "question_id": 85,
+    "text": "A. Jan Hus",
+    "is_correct": false
+  },
+  {
+    "id": 338,
+    "question_id": 85,
+    "text": "B. Martin Luther",
+    "is_correct": true
+  },
+  {
+    "id": 339,
+    "question_id": 85,
+    "text": "C. Henry VIII",
+    "is_correct": false
+  },
+  {
+    "id": 340,
+    "question_id": 85,
+    "text": "D. John Calvin",
+    "is_correct": false
+  },
+  {
+    "id": 341,
+    "question_id": 86,
+    "text": "A. Tang",
+    "is_correct": false
+  },
+  {
+    "id": 342,
+    "question_id": 86,
+    "text": "B. Ming",
+    "is_correct": true
+  },
+  {
+    "id": 343,
+    "question_id": 86,
+    "text": "C. Han",
+    "is_correct": false
+  },
+  {
+    "id": 344,
+    "question_id": 86,
+    "text": "D. Qing",
+    "is_correct": false
+  },
+  {
+    "id": 345,
+    "question_id": 87,
+    "text": "A. Qin Shi Huang",
+    "is_correct": true
+  },
+  {
+    "id": 346,
+    "question_id": 87,
+    "text": "B. Han Wudi",
+    "is_correct": false
+  },
+  {
+    "id": 347,
+    "question_id": 87,
+    "text": "C. Gaozu",
+    "is_correct": false
+  },
+  {
+    "id": 348,
+    "question_id": 87,
+    "text": "D. Emperor Wu",
+    "is_correct": false
+  },
+  {
+    "id": 349,
+    "question_id": 88,
+    "text": "A. Religious conflict",
+    "is_correct": false
+  },
+  {
+    "id": 350,
+    "question_id": 88,
+    "text": "B. Economic crisis",
+    "is_correct": false
+  },
+  {
+    "id": 351,
+    "question_id": 88,
+    "text": "C. Territorial expansion",
+    "is_correct": false
+  },
+  {
+    "id": 352,
+    "question_id": 88,
+    "text": "D. Succession dispute",
+    "is_correct": true
+  },
+  {
+    "id": 353,
+    "question_id": 89,
+    "text": "A. Treaty of Ghent",
+    "is_correct": false
+  },
+  {
+    "id": 354,
+    "question_id": 89,
+    "text": "B. Treaty of Utrecht",
+    "is_correct": false
+  },
+  {
+    "id": 355,
+    "question_id": 89,
+    "text": "C. Treaty of Vienna",
+    "is_correct": false
+  },
+  {
+    "id": 356,
+    "question_id": 89,
+    "text": "D. Treaty of Westphalia",
+    "is_correct": true
+  },
+  {
+    "id": 357,
+    "question_id": 90,
+    "text": "A. Nicholas II",
+    "is_correct": true
+  },
+  {
+    "id": 358,
+    "question_id": 90,
+    "text": "B. Ivan the Terrible",
+    "is_correct": false
+  },
+  {
+    "id": 359,
+    "question_id": 90,
+    "text": "C. Alexander III",
+    "is_correct": false
+  },
+  {
+    "id": 360,
+    "question_id": 90,
+    "text": "D. Peter the Great",
+    "is_correct": false
+  },
+  {
+    "id": 361,
+    "question_id": 91,
+    "text": "A. North America",
+    "is_correct": false
+  },
+  {
+    "id": 362,
+    "question_id": 91,
+    "text": "B. Asia",
+    "is_correct": true
+  },
+  {
+    "id": 363,
+    "question_id": 91,
+    "text": "C. Europe",
+    "is_correct": false
+  },
+  {
+    "id": 364,
+    "question_id": 91,
+    "text": "D. Africa",
+    "is_correct": false
+  },
+  {
+    "id": 365,
+    "question_id": 92,
+    "text": "A. Yangtze",
+    "is_correct": false
+  },
+  {
+    "id": 366,
+    "question_id": 92,
+    "text": "B. Mississippi",
+    "is_correct": false
+  },
+  {
+    "id": 367,
+    "question_id": 92,
+    "text": "C. Nile",
+    "is_correct": true
+  },
+  {
+    "id": 368,
+    "question_id": 92,
+    "text": "D. Amazon",
+    "is_correct": false
+  },
+  {
+    "id": 369,
+    "question_id": 93,
+    "text": "A. Berlin",
+    "is_correct": false
+  },
+  {
+    "id": 370,
+    "question_id": 93,
+    "text": "B. Paris",
+    "is_correct": true
+  },
+  {
+    "id": 371,
+    "question_id": 93,
+    "text": "C. Madrid",
+    "is_correct": false
+  },
+  {
+    "id": 372,
+    "question_id": 93,
+    "text": "D. Rome",
+    "is_correct": false
+  },
+  {
+    "id": 373,
+    "question_id": 94,
+    "text": "A. Atlantic",
+    "is_correct": false
+  },
+  {
+    "id": 374,
+    "question_id": 94,
+    "text": "B. Arctic",
+    "is_correct": false
+  },
+  {
+    "id": 375,
+    "question_id": 94,
+    "text": "C. Indian",
+    "is_correct": false
+  },
+  {
+    "id": 376,
+    "question_id": 94,
+    "text": "D. Pacific",
+    "is_correct": true
+  },
+  {
+    "id": 377,
+    "question_id": 95,
+    "text": "A. Himalayas",
+    "is_correct": true
+  },
+  {
+    "id": 378,
+    "question_id": 95,
+    "text": "B. Alps",
+    "is_correct": false
+  },
+  {
+    "id": 379,
+    "question_id": 95,
+    "text": "C. Rockies",
+    "is_correct": false
+  },
+  {
+    "id": 380,
+    "question_id": 95,
+    "text": "D. Andes",
+    "is_correct": false
+  },
+  {
+    "id": 381,
+    "question_id": 96,
+    "text": "A. San Marino",
+    "is_correct": false
+  },
+  {
+    "id": 382,
+    "question_id": 96,
+    "text": "B. Monaco",
+    "is_correct": false
+  },
+  {
+    "id": 383,
+    "question_id": 96,
+    "text": "C. Nauru",
+    "is_correct": false
+  },
+  {
+    "id": 384,
+    "question_id": 96,
+    "text": "D. Vatican City",
+    "is_correct": true
+  },
+  {
+    "id": 385,
+    "question_id": 97,
+    "text": "A. USA",
+    "is_correct": false
+  },
+  {
+    "id": 386,
+    "question_id": 97,
+    "text": "B. India",
+    "is_correct": false
+  },
+  {
+    "id": 387,
+    "question_id": 97,
+    "text": "C. Russia",
+    "is_correct": false
+  },
+  {
+    "id": 388,
+    "question_id": 97,
+    "text": "D. China",
+    "is_correct": true
+  },
+  {
+    "id": 389,
+    "question_id": 98,
+    "text": "A. Mojave",
+    "is_correct": false
+  },
+  {
+    "id": 390,
+    "question_id": 98,
+    "text": "B. Sahara",
+    "is_correct": true
+  },
+  {
+    "id": 391,
+    "question_id": 98,
+    "text": "C. Kalahari",
+    "is_correct": false
+  },
+  {
+    "id": 392,
+    "question_id": 98,
+    "text": "D. Gobi",
+    "is_correct": false
+  },
+  {
+    "id": 393,
+    "question_id": 99,
+    "text": "A. Bangkok",
+    "is_correct": false
+  },
+  {
+    "id": 394,
+    "question_id": 99,
+    "text": "B. Beijing",
+    "is_correct": false
+  },
+  {
+    "id": 395,
+    "question_id": 99,
+    "text": "C. Tokyo",
+    "is_correct": true
+  },
+  {
+    "id": 396,
+    "question_id": 99,
+    "text": "D. Seoul",
+    "is_correct": false
+  },
+  {
+    "id": 397,
+    "question_id": 100,
+    "text": "A. Arizona",
+    "is_correct": true
+  },
+  {
+    "id": 398,
+    "question_id": 100,
+    "text": "B. Utah",
+    "is_correct": false
+  },
+  {
+    "id": 399,
+    "question_id": 100,
+    "text": "C. Nevada",
+    "is_correct": false
+  },
+  {
+    "id": 400,
+    "question_id": 100,
+    "text": "D. Colorado",
+    "is_correct": false
+  },
+  {
+    "id": 401,
+    "question_id": 101,
+    "text": "A. Pakistan",
+    "is_correct": true
+  },
+  {
+    "id": 402,
+    "question_id": 101,
+    "text": "B. India",
+    "is_correct": false
+  },
+  {
+    "id": 403,
+    "question_id": 101,
+    "text": "C. Bangladesh",
+    "is_correct": false
+  },
+  {
+    "id": 404,
+    "question_id": 101,
+    "text": "D. Afghanistan",
+    "is_correct": false
+  },
+  {
+    "id": 405,
+    "question_id": 102,
+    "text": "A. Atlantic",
+    "is_correct": false
+  },
+  {
+    "id": 406,
+    "question_id": 102,
+    "text": "B. Indian",
+    "is_correct": true
+  },
+  {
+    "id": 407,
+    "question_id": 102,
+    "text": "C. Pacific",
+    "is_correct": false
+  },
+  {
+    "id": 408,
+    "question_id": 102,
+    "text": "D. Southern",
+    "is_correct": false
+  },
+  {
+    "id": 409,
+    "question_id": 103,
+    "text": "A. Melbourne",
+    "is_correct": false
+  },
+  {
+    "id": 410,
+    "question_id": 103,
+    "text": "B. Sydney",
+    "is_correct": false
+  },
+  {
+    "id": 411,
+    "question_id": 103,
+    "text": "C. Canberra",
+    "is_correct": true
+  },
+  {
+    "id": 412,
+    "question_id": 103,
+    "text": "D. Perth",
+    "is_correct": false
+  },
+  {
+    "id": 413,
+    "question_id": 104,
+    "text": "A. Tigris",
+    "is_correct": true
+  },
+  {
+    "id": 414,
+    "question_id": 104,
+    "text": "B. Jordan",
+    "is_correct": false
+  },
+  {
+    "id": 415,
+    "question_id": 104,
+    "text": "C. Euphrates",
+    "is_correct": false
+  },
+  {
+    "id": 416,
+    "question_id": 104,
+    "text": "D. Nile",
+    "is_correct": false
+  },
+  {
+    "id": 417,
+    "question_id": 105,
+    "text": "A. Himalayas",
+    "is_correct": false
+  },
+  {
+    "id": 418,
+    "question_id": 105,
+    "text": "B. Andes",
+    "is_correct": true
+  },
+  {
+    "id": 419,
+    "question_id": 105,
+    "text": "C. Alps",
+    "is_correct": false
+  },
+  {
+    "id": 420,
+    "question_id": 105,
+    "text": "D. Rockies",
+    "is_correct": false
+  },
+  {
+    "id": 421,
+    "question_id": 106,
+    "text": "A. Russia",
+    "is_correct": true
+  },
+  {
+    "id": 422,
+    "question_id": 106,
+    "text": "B. Germany",
+    "is_correct": false
+  },
+  {
+    "id": 423,
+    "question_id": 106,
+    "text": "C. Egypt",
+    "is_correct": false
+  },
+  {
+    "id": 424,
+    "question_id": 106,
+    "text": "D. Spain",
+    "is_correct": false
+  },
+  {
+    "id": 425,
+    "question_id": 107,
+    "text": "A. Ottawa",
+    "is_correct": true
+  },
+  {
+    "id": 426,
+    "question_id": 107,
+    "text": "B. Toronto",
+    "is_correct": false
+  },
+  {
+    "id": 427,
+    "question_id": 107,
+    "text": "C. Montreal",
+    "is_correct": false
+  },
+  {
+    "id": 428,
+    "question_id": 107,
+    "text": "D. Vancouver",
+    "is_correct": false
+  },
+  {
+    "id": 429,
+    "question_id": 108,
+    "text": "A. Dead Sea",
+    "is_correct": false
+  },
+  {
+    "id": 430,
+    "question_id": 108,
+    "text": "B. Aral Sea",
+    "is_correct": true
+  },
+  {
+    "id": 431,
+    "question_id": 108,
+    "text": "C. Red Sea",
+    "is_correct": false
+  },
+  {
+    "id": 432,
+    "question_id": 108,
+    "text": "D. Black Sea",
+    "is_correct": false
+  },
+  {
+    "id": 433,
+    "question_id": 109,
+    "text": "A. Minnesota",
+    "is_correct": true
+  },
+  {
+    "id": 434,
+    "question_id": 109,
+    "text": "B. Wisconsin",
+    "is_correct": false
+  },
+  {
+    "id": 435,
+    "question_id": 109,
+    "text": "C. Florida",
+    "is_correct": false
+  },
+  {
+    "id": 436,
+    "question_id": 109,
+    "text": "D. Michigan",
+    "is_correct": false
+  },
+  {
+    "id": 437,
+    "question_id": 110,
+    "text": "A. Straits of Magellan",
+    "is_correct": false
+  },
+  {
+    "id": 438,
+    "question_id": 110,
+    "text": "B. Suez",
+    "is_correct": false
+  },
+  {
+    "id": 439,
+    "question_id": 110,
+    "text": "C. Bosphorus",
+    "is_correct": true
+  },
+  {
+    "id": 440,
+    "question_id": 110,
+    "text": "D. Dardanelles",
+    "is_correct": false
+  },
+  {
+    "id": 441,
+    "question_id": 111,
+    "text": "A. Ulaanbaatar",
+    "is_correct": true
+  },
+  {
+    "id": 442,
+    "question_id": 111,
+    "text": "B. Bishkek",
+    "is_correct": false
+  },
+  {
+    "id": 443,
+    "question_id": 111,
+    "text": "C. Tashkent",
+    "is_correct": false
+  },
+  {
+    "id": 444,
+    "question_id": 111,
+    "text": "D. Astana",
+    "is_correct": false
+  },
+  {
+    "id": 445,
+    "question_id": 112,
+    "text": "A. France",
+    "is_correct": true
+  },
+  {
+    "id": 446,
+    "question_id": 112,
+    "text": "B. Russia",
+    "is_correct": false
+  },
+  {
+    "id": 447,
+    "question_id": 112,
+    "text": "C. China",
+    "is_correct": false
+  },
+  {
+    "id": 448,
+    "question_id": 112,
+    "text": "D. USA",
+    "is_correct": false
+  },
+  {
+    "id": 449,
+    "question_id": 113,
+    "text": "A. Java Trench",
+    "is_correct": false
+  },
+  {
+    "id": 450,
+    "question_id": 113,
+    "text": "B. Philippine Trench",
+    "is_correct": false
+  },
+  {
+    "id": 451,
+    "question_id": 113,
+    "text": "C. Mariana Trench",
+    "is_correct": true
+  },
+  {
+    "id": 452,
+    "question_id": 113,
+    "text": "D. Tonga Trench",
+    "is_correct": false
+  },
+  {
+    "id": 453,
+    "question_id": 114,
+    "text": "A. Kalahari",
+    "is_correct": false
+  },
+  {
+    "id": 454,
+    "question_id": 114,
+    "text": "B. Gobi",
+    "is_correct": false
+  },
+  {
+    "id": 455,
+    "question_id": 114,
+    "text": "C. Antarctic",
+    "is_correct": true
+  },
+  {
+    "id": 456,
+    "question_id": 114,
+    "text": "D. Sahara",
+    "is_correct": false
+  },
+  {
+    "id": 457,
+    "question_id": 115,
+    "text": "A. Lake Superior",
+    "is_correct": false
+  },
+  {
+    "id": 458,
+    "question_id": 115,
+    "text": "B. Caspian Sea",
+    "is_correct": true
+  },
+  {
+    "id": 459,
+    "question_id": 115,
+    "text": "C. Lake Victoria",
+    "is_correct": false
+  },
+  {
+    "id": 460,
+    "question_id": 115,
+    "text": "D. Lake Baikal",
+    "is_correct": false
+  },
+  {
+    "id": 461,
+    "question_id": 116,
+    "text": "A. Japan",
+    "is_correct": true
+  },
+  {
+    "id": 462,
+    "question_id": 116,
+    "text": "B. South Korea",
+    "is_correct": false
+  },
+  {
+    "id": 463,
+    "question_id": 116,
+    "text": "C. Thailand",
+    "is_correct": false
+  },
+  {
+    "id": 464,
+    "question_id": 116,
+    "text": "D. China",
+    "is_correct": false
+  },
+  {
+    "id": 465,
+    "question_id": 117,
+    "text": "A. Bulgaria",
+    "is_correct": false
+  },
+  {
+    "id": 466,
+    "question_id": 117,
+    "text": "B. Romania",
+    "is_correct": true
+  },
+  {
+    "id": 467,
+    "question_id": 117,
+    "text": "C. Ukraine",
+    "is_correct": false
+  },
+  {
+    "id": 468,
+    "question_id": 117,
+    "text": "D. Serbia",
+    "is_correct": false
+  },
+  {
+    "id": 469,
+    "question_id": 118,
+    "text": "A. Victoria Falls",
+    "is_correct": false
+  },
+  {
+    "id": 470,
+    "question_id": 118,
+    "text": "B. Angel Falls",
+    "is_correct": true
+  },
+  {
+    "id": 471,
+    "question_id": 118,
+    "text": "C. Yosemite Falls",
+    "is_correct": false
+  },
+  {
+    "id": 472,
+    "question_id": 118,
+    "text": "D. Niagara Falls",
+    "is_correct": false
+  },
+  {
+    "id": 473,
+    "question_id": 119,
+    "text": "A. Tropic of Capricorn",
+    "is_correct": false
+  },
+  {
+    "id": 474,
+    "question_id": 119,
+    "text": "B. Tropic of Cancer",
+    "is_correct": false
+  },
+  {
+    "id": 475,
+    "question_id": 119,
+    "text": "C. Prime Meridian",
+    "is_correct": false
+  },
+  {
+    "id": 476,
+    "question_id": 119,
+    "text": "D. Equator",
+    "is_correct": true
+  },
+  {
+    "id": 477,
+    "question_id": 120,
+    "text": "A. Florida",
+    "is_correct": false
+  },
+  {
+    "id": 478,
+    "question_id": 120,
+    "text": "B. New York",
+    "is_correct": false
+  },
+  {
+    "id": 479,
+    "question_id": 120,
+    "text": "C. Maine",
+    "is_correct": false
+  },
+  {
+    "id": 480,
+    "question_id": 120,
+    "text": "D. Alaska",
+    "is_correct": true
+  },
+  {
+    "id": 481,
+    "question_id": 121,
+    "text": "A. English",
+    "is_correct": false
+  },
+  {
+    "id": 482,
+    "question_id": 121,
+    "text": "B. Hindi",
+    "is_correct": false
+  },
+  {
+    "id": 483,
+    "question_id": 121,
+    "text": "C. Spanish",
+    "is_correct": false
+  },
+  {
+    "id": 484,
+    "question_id": 121,
+    "text": "D. Mandarin Chinese",
+    "is_correct": true
+  },
+  {
+    "id": 485,
+    "question_id": 122,
+    "text": "A. Spanish",
+    "is_correct": false
+  },
+  {
+    "id": 486,
+    "question_id": 122,
+    "text": "B. French",
+    "is_correct": false
+  },
+  {
+    "id": 487,
+    "question_id": 122,
+    "text": "C. Portuguese",
+    "is_correct": true
+  },
+  {
+    "id": 488,
+    "question_id": 122,
+    "text": "D. English",
+    "is_correct": false
+  },
+  {
+    "id": 489,
+    "question_id": 123,
+    "text": "A. Greek",
+    "is_correct": false
+  },
+  {
+    "id": 490,
+    "question_id": 123,
+    "text": "B. Arabic",
+    "is_correct": false
+  },
+  {
+    "id": 491,
+    "question_id": 123,
+    "text": "C. Hebrew",
+    "is_correct": false
+  },
+  {
+    "id": 492,
+    "question_id": 123,
+    "text": "D. Russian",
+    "is_correct": true
+  },
+  {
+    "id": 493,
+    "question_id": 124,
+    "text": "A. Arabic",
+    "is_correct": true
+  },
+  {
+    "id": 494,
+    "question_id": 124,
+    "text": "B. English",
+    "is_correct": false
+  },
+  {
+    "id": 495,
+    "question_id": 124,
+    "text": "C. French",
+    "is_correct": false
+  },
+  {
+    "id": 496,
+    "question_id": 124,
+    "text": "D. Spanish",
+    "is_correct": false
+  },
+  {
+    "id": 497,
+    "question_id": 125,
+    "text": "A. Chinese",
+    "is_correct": false
+  },
+  {
+    "id": 498,
+    "question_id": 125,
+    "text": "B. Japanese",
+    "is_correct": true
+  },
+  {
+    "id": 499,
+    "question_id": 125,
+    "text": "C. Korean",
+    "is_correct": false
+  },
+  {
+    "id": 500,
+    "question_id": 125,
+    "text": "D. Thai",
+    "is_correct": false
+  },
+  {
+    "id": 501,
+    "question_id": 126,
+    "text": "A. German",
+    "is_correct": false
+  },
+  {
+    "id": 502,
+    "question_id": 126,
+    "text": "B. Dutch",
+    "is_correct": false
+  },
+  {
+    "id": 503,
+    "question_id": 126,
+    "text": "C. Swedish",
+    "is_correct": false
+  },
+  {
+    "id": 504,
+    "question_id": 126,
+    "text": "D. Italian",
+    "is_correct": true
+  },
+  {
+    "id": 505,
+    "question_id": 127,
+    "text": "A. French",
+    "is_correct": false
+  },
+  {
+    "id": 506,
+    "question_id": 127,
+    "text": "B. Portuguese",
+    "is_correct": false
+  },
+  {
+    "id": 507,
+    "question_id": 127,
+    "text": "C. Italian",
+    "is_correct": false
+  },
+  {
+    "id": 508,
+    "question_id": 127,
+    "text": "D. Spanish",
+    "is_correct": true
+  },
+  {
+    "id": 509,
+    "question_id": 128,
+    "text": "A. Marathi",
+    "is_correct": false
+  },
+  {
+    "id": 510,
+    "question_id": 128,
+    "text": "B. Bengali",
+    "is_correct": false
+  },
+  {
+    "id": 511,
+    "question_id": 128,
+    "text": "C. Hindi",
+    "is_correct": true
+  },
+  {
+    "id": 512,
+    "question_id": 128,
+    "text": "D. Telugu",
+    "is_correct": false
+  },
+  {
+    "id": 513,
+    "question_id": 129,
+    "text": "A. English",
+    "is_correct": true
+  },
+  {
+    "id": 514,
+    "question_id": 129,
+    "text": "B. Latin",
+    "is_correct": false
+  },
+  {
+    "id": 515,
+    "question_id": 129,
+    "text": "C. French",
+    "is_correct": false
+  },
+  {
+    "id": 516,
+    "question_id": 129,
+    "text": "D. Greek",
+    "is_correct": false
+  },
+  {
+    "id": 517,
+    "question_id": 130,
+    "text": "A. Spanish",
+    "is_correct": false
+  },
+  {
+    "id": 518,
+    "question_id": 130,
+    "text": "B. German",
+    "is_correct": false
+  },
+  {
+    "id": 519,
+    "question_id": 130,
+    "text": "C. Hebrew",
+    "is_correct": true
+  },
+  {
+    "id": 520,
+    "question_id": 130,
+    "text": "D. English",
+    "is_correct": false
+  },
+  {
+    "id": 521,
+    "question_id": 131,
+    "text": "A. Celtic",
+    "is_correct": false
+  },
+  {
+    "id": 522,
+    "question_id": 131,
+    "text": "B. Slavic",
+    "is_correct": false
+  },
+  {
+    "id": 523,
+    "question_id": 131,
+    "text": "C. Romance",
+    "is_correct": false
+  },
+  {
+    "id": 524,
+    "question_id": 131,
+    "text": "D. Germanic",
+    "is_correct": true
+  },
+  {
+    "id": 525,
+    "question_id": 132,
+    "text": "A. Synonym",
+    "is_correct": false
+  },
+  {
+    "id": 526,
+    "question_id": 132,
+    "text": "B. Homonym",
+    "is_correct": false
+  },
+  {
+    "id": 527,
+    "question_id": 132,
+    "text": "C. Euphemism",
+    "is_correct": false
+  },
+  {
+    "id": 528,
+    "question_id": 132,
+    "text": "D. Antonym",
+    "is_correct": true
+  },
+  {
+    "id": 529,
+    "question_id": 133,
+    "text": "A. Sanskrit",
+    "is_correct": false
+  },
+  {
+    "id": 530,
+    "question_id": 133,
+    "text": "B. Greek",
+    "is_correct": false
+  },
+  {
+    "id": 531,
+    "question_id": 133,
+    "text": "C. Phoenician",
+    "is_correct": false
+  },
+  {
+    "id": 532,
+    "question_id": 133,
+    "text": "D. Latin",
+    "is_correct": true
+  },
+  {
+    "id": 533,
+    "question_id": 134,
+    "text": "A. Cyrillic",
+    "is_correct": false
+  },
+  {
+    "id": 534,
+    "question_id": 134,
+    "text": "B. Latin",
+    "is_correct": false
+  },
+  {
+    "id": 535,
+    "question_id": 134,
+    "text": "C. Hangul",
+    "is_correct": true
+  },
+  {
+    "id": 536,
+    "question_id": 134,
+    "text": "D. Kanji",
+    "is_correct": false
+  },
+  {
+    "id": 537,
+    "question_id": 135,
+    "text": "A. Arabic",
+    "is_correct": false
+  },
+  {
+    "id": 538,
+    "question_id": 135,
+    "text": "B. French",
+    "is_correct": true
+  },
+  {
+    "id": 539,
+    "question_id": 135,
+    "text": "C. Latin",
+    "is_correct": false
+  },
+  {
+    "id": 540,
+    "question_id": 135,
+    "text": "D. English",
+    "is_correct": false
+  },
+  {
+    "id": 541,
+    "question_id": 136,
+    "text": "A. Meaningful unit",
+    "is_correct": true
+  },
+  {
+    "id": 542,
+    "question_id": 136,
+    "text": "B. Sentence unit",
+    "is_correct": false
+  },
+  {
+    "id": 543,
+    "question_id": 136,
+    "text": "C. Sound unit",
+    "is_correct": false
+  },
+  {
+    "id": 544,
+    "question_id": 136,
+    "text": "D. Word unit",
+    "is_correct": false
+  },
+  {
+    "id": 545,
+    "question_id": 137,
+    "text": "A. Arabic",
+    "is_correct": true
+  },
+  {
+    "id": 546,
+    "question_id": 137,
+    "text": "B. Mandarin",
+    "is_correct": false
+  },
+  {
+    "id": 547,
+    "question_id": 137,
+    "text": "C. German",
+    "is_correct": false
+  },
+  {
+    "id": 548,
+    "question_id": 137,
+    "text": "D. English",
+    "is_correct": false
+  },
+  {
+    "id": 549,
+    "question_id": 138,
+    "text": "A. Syntax",
+    "is_correct": false
+  },
+  {
+    "id": 550,
+    "question_id": 138,
+    "text": "B. Etymology",
+    "is_correct": true
+  },
+  {
+    "id": 551,
+    "question_id": 138,
+    "text": "C. Semantics",
+    "is_correct": false
+  },
+  {
+    "id": 552,
+    "question_id": 138,
+    "text": "D. Morphology",
+    "is_correct": false
+  },
+  {
+    "id": 553,
+    "question_id": 139,
+    "text": "A. Somali",
+    "is_correct": false
+  },
+  {
+    "id": 554,
+    "question_id": 139,
+    "text": "B. Swahili",
+    "is_correct": false
+  },
+  {
+    "id": 555,
+    "question_id": 139,
+    "text": "C. Arabic",
+    "is_correct": false
+  },
+  {
+    "id": 556,
+    "question_id": 139,
+    "text": "D. Amharic",
+    "is_correct": true
+  },
+  {
+    "id": 557,
+    "question_id": 140,
+    "text": "A. Japanese",
+    "is_correct": true
+  },
+  {
+    "id": 558,
+    "question_id": 140,
+    "text": "B. Korean",
+    "is_correct": false
+  },
+  {
+    "id": 559,
+    "question_id": 140,
+    "text": "C. Vietnamese",
+    "is_correct": false
+  },
+  {
+    "id": 560,
+    "question_id": 140,
+    "text": "D. Chinese",
+    "is_correct": false
+  },
+  {
+    "id": 561,
+    "question_id": 141,
+    "text": "A. EI",
+    "is_correct": false
+  },
+  {
+    "id": 562,
+    "question_id": 141,
+    "text": "B. ENG",
+    "is_correct": false
+  },
+  {
+    "id": 563,
+    "question_id": 141,
+    "text": "C. EN",
+    "is_correct": true
+  },
+  {
+    "id": 564,
+    "question_id": 141,
+    "text": "D. EG",
+    "is_correct": false
+  },
+  {
+    "id": 565,
+    "question_id": 142,
+    "text": "A. Roman Jakobson",
+    "is_correct": false
+  },
+  {
+    "id": 566,
+    "question_id": 142,
+    "text": "B. Ferdinand de Saussure",
+    "is_correct": true
+  },
+  {
+    "id": 567,
+    "question_id": 142,
+    "text": "C. Edward Sapir",
+    "is_correct": false
+  },
+  {
+    "id": 568,
+    "question_id": 142,
+    "text": "D. Noam Chomsky",
+    "is_correct": false
+  },
+  {
+    "id": 569,
+    "question_id": 143,
+    "text": "A. Creole",
+    "is_correct": false
+  },
+  {
+    "id": 570,
+    "question_id": 143,
+    "text": "B. Isolate",
+    "is_correct": true
+  },
+  {
+    "id": 571,
+    "question_id": 143,
+    "text": "C. Dialect",
+    "is_correct": false
+  },
+  {
+    "id": 572,
+    "question_id": 143,
+    "text": "D. Pidgin",
+    "is_correct": false
+  },
+  {
+    "id": 573,
+    "question_id": 144,
+    "text": "A. International Phonetic Association",
+    "is_correct": false
+  },
+  {
+    "id": 574,
+    "question_id": 144,
+    "text": "B. International Phonology Association",
+    "is_correct": false
+  },
+  {
+    "id": 575,
+    "question_id": 144,
+    "text": "C. Index of Phonetic Accuracy",
+    "is_correct": false
+  },
+  {
+    "id": 576,
+    "question_id": 144,
+    "text": "D. International Phonetic Alphabet",
+    "is_correct": true
+  },
+  {
+    "id": 577,
+    "question_id": 145,
+    "text": "A. Spanish",
+    "is_correct": false
+  },
+  {
+    "id": 578,
+    "question_id": 145,
+    "text": "B. French",
+    "is_correct": false
+  },
+  {
+    "id": 579,
+    "question_id": 145,
+    "text": "C. English",
+    "is_correct": false
+  },
+  {
+    "id": 580,
+    "question_id": 145,
+    "text": "D. Turkish",
+    "is_correct": true
+  },
+  {
+    "id": 581,
+    "question_id": 146,
+    "text": "A. A language without writing",
+    "is_correct": false
+  },
+  {
+    "id": 582,
+    "question_id": 146,
+    "text": "B. One language with two dialects",
+    "is_correct": false
+  },
+  {
+    "id": 583,
+    "question_id": 146,
+    "text": "C. A language with many dialects",
+    "is_correct": false
+  },
+  {
+    "id": 584,
+    "question_id": 146,
+    "text": "D. Two languages used under different conditions",
+    "is_correct": true
+  },
+  {
+    "id": 585,
+    "question_id": 147,
+    "text": "A. Diachronic linguistics",
+    "is_correct": true
+  },
+  {
+    "id": 586,
+    "question_id": 147,
+    "text": "B. Sociolinguistics",
+    "is_correct": false
+  },
+  {
+    "id": 587,
+    "question_id": 147,
+    "text": "C. Synchronic linguistics",
+    "is_correct": false
+  },
+  {
+    "id": 588,
+    "question_id": 147,
+    "text": "D. Psycholinguistics",
+    "is_correct": false
+  },
+  {
+    "id": 589,
+    "question_id": 148,
+    "text": "A. Africa and Asia",
+    "is_correct": false
+  },
+  {
+    "id": 590,
+    "question_id": 148,
+    "text": "B. Europe and Asia",
+    "is_correct": true
+  },
+  {
+    "id": 591,
+    "question_id": 148,
+    "text": "C. North and South America",
+    "is_correct": false
+  },
+  {
+    "id": 592,
+    "question_id": 148,
+    "text": "D. Europe and Africa",
+    "is_correct": false
+  },
+  {
+    "id": 593,
+    "question_id": 149,
+    "text": "A. Spanish and English",
+    "is_correct": true
+  },
+  {
+    "id": 594,
+    "question_id": 149,
+    "text": "B. Spanish and Portuguese",
+    "is_correct": false
+  },
+  {
+    "id": 595,
+    "question_id": 149,
+    "text": "C. Spanish and German",
+    "is_correct": false
+  },
+  {
+    "id": 596,
+    "question_id": 149,
+    "text": "D. English and French",
+    "is_correct": false
+  },
+  {
+    "id": 597,
+    "question_id": 150,
+    "text": "A. Syntax",
+    "is_correct": false
+  },
+  {
+    "id": 598,
+    "question_id": 150,
+    "text": "B. Phoneme",
+    "is_correct": true
+  },
+  {
+    "id": 599,
+    "question_id": 150,
+    "text": "C. Sememe",
+    "is_correct": false
+  },
+  {
+    "id": 600,
+    "question_id": 150,
+    "text": "D. Morpheme",
+    "is_correct": false
+  },
+  {
+    "id": 601,
+    "question_id": 151,
+    "text": "A. Austen",
+    "is_correct": false
+  },
+  {
+    "id": 602,
+    "question_id": 151,
+    "text": "B. Dickens",
+    "is_correct": false
+  },
+  {
+    "id": 603,
+    "question_id": 151,
+    "text": "C. Hemingway",
+    "is_correct": false
+  },
+  {
+    "id": 604,
+    "question_id": 151,
+    "text": "D. Shakespeare",
+    "is_correct": true
+  },
+  {
+    "id": 605,
+    "question_id": 152,
+    "text": "A. Brave New World",
+    "is_correct": false
+  },
+  {
+    "id": 606,
+    "question_id": 152,
+    "text": "B. 1984",
+    "is_correct": true
+  },
+  {
+    "id": 607,
+    "question_id": 152,
+    "text": "C. Fahrenheit 451",
+    "is_correct": false
+  },
+  {
+    "id": 608,
+    "question_id": 152,
+    "text": "D. Animal Farm",
+    "is_correct": false
+  },
+  {
+    "id": 609,
+    "question_id": 153,
+    "text": "A. Charlotte Bronte",
+    "is_correct": false
+  },
+  {
+    "id": 610,
+    "question_id": 153,
+    "text": "B. Mary Shelley",
+    "is_correct": false
+  },
+  {
+    "id": 611,
+    "question_id": 153,
+    "text": "C. Emily Bronte",
+    "is_correct": false
+  },
+  {
+    "id": 612,
+    "question_id": 153,
+    "text": "D. Jane Austen",
+    "is_correct": true
+  },
+  {
+    "id": 613,
+    "question_id": 154,
+    "text": "A. The Philosopher's Stone",
+    "is_correct": true
+  },
+  {
+    "id": 614,
+    "question_id": 154,
+    "text": "B. Prisoner of Azkaban",
+    "is_correct": false
+  },
+  {
+    "id": 615,
+    "question_id": 154,
+    "text": "C. Goblet of Fire",
+    "is_correct": false
+  },
+  {
+    "id": 616,
+    "question_id": 154,
+    "text": "D. Chamber of Secrets",
+    "is_correct": false
+  },
+  {
+    "id": 617,
+    "question_id": 155,
+    "text": "A. Plato",
+    "is_correct": false
+  },
+  {
+    "id": 618,
+    "question_id": 155,
+    "text": "B. Homer",
+    "is_correct": true
+  },
+  {
+    "id": 619,
+    "question_id": 155,
+    "text": "C. Virgil",
+    "is_correct": false
+  },
+  {
+    "id": 620,
+    "question_id": 155,
+    "text": "D. Sophocles",
+    "is_correct": false
+  },
+  {
+    "id": 621,
+    "question_id": 156,
+    "text": "A. Ernest Hemingway",
+    "is_correct": false
+  },
+  {
+    "id": 622,
+    "question_id": 156,
+    "text": "B. Mark Twain",
+    "is_correct": false
+  },
+  {
+    "id": 623,
+    "question_id": 156,
+    "text": "C. Harper Lee",
+    "is_correct": true
+  },
+  {
+    "id": 624,
+    "question_id": 156,
+    "text": "D. F. Scott Fitzgerald",
+    "is_correct": false
+  },
+  {
+    "id": 625,
+    "question_id": 157,
+    "text": "A. Sherlock Holmes",
+    "is_correct": true
+  },
+  {
+    "id": 626,
+    "question_id": 157,
+    "text": "B. Hercule Poirot",
+    "is_correct": false
+  },
+  {
+    "id": 627,
+    "question_id": 157,
+    "text": "C. Miss Marple",
+    "is_correct": false
+  },
+  {
+    "id": 628,
+    "question_id": 157,
+    "text": "D. Sam Spade",
+    "is_correct": false
+  },
+  {
+    "id": 629,
+    "question_id": 158,
+    "text": "A. Beowulf",
+    "is_correct": false
+  },
+  {
+    "id": 630,
+    "question_id": 158,
+    "text": "B. The Iliad",
+    "is_correct": true
+  },
+  {
+    "id": 631,
+    "question_id": 158,
+    "text": "C. The Odyssey",
+    "is_correct": false
+  },
+  {
+    "id": 632,
+    "question_id": 158,
+    "text": "D. Aeneid",
+    "is_correct": false
+  },
+  {
+    "id": 633,
+    "question_id": 159,
+    "text": "A. Herman Melville",
+    "is_correct": true
+  },
+  {
+    "id": 634,
+    "question_id": 159,
+    "text": "B. Jules Verne",
+    "is_correct": false
+  },
+  {
+    "id": 635,
+    "question_id": 159,
+    "text": "C. Jack London",
+    "is_correct": false
+  },
+  {
+    "id": 636,
+    "question_id": 159,
+    "text": "D. Charles Dickens",
+    "is_correct": false
+  },
+  {
+    "id": 637,
+    "question_id": 160,
+    "text": "A. Ben Jonson",
+    "is_correct": false
+  },
+  {
+    "id": 638,
+    "question_id": 160,
+    "text": "B. George Bernard Shaw",
+    "is_correct": false
+  },
+  {
+    "id": 639,
+    "question_id": 160,
+    "text": "C. Christopher Marlowe",
+    "is_correct": false
+  },
+  {
+    "id": 640,
+    "question_id": 160,
+    "text": "D. William Shakespeare",
+    "is_correct": true
+  },
+  {
+    "id": 641,
+    "question_id": 161,
+    "text": "A. Julius Caesar",
+    "is_correct": false
+  },
+  {
+    "id": 642,
+    "question_id": 161,
+    "text": "B. Othello",
+    "is_correct": false
+  },
+  {
+    "id": 643,
+    "question_id": 161,
+    "text": "C. The Merchant of Venice",
+    "is_correct": true
+  },
+  {
+    "id": 644,
+    "question_id": 161,
+    "text": "D. Macbeth",
+    "is_correct": false
+  },
+  {
+    "id": 645,
+    "question_id": 162,
+    "text": "A. Gabriel Garcia Marquez",
+    "is_correct": true
+  },
+  {
+    "id": 646,
+    "question_id": 162,
+    "text": "B. Pablo Neruda",
+    "is_correct": false
+  },
+  {
+    "id": 647,
+    "question_id": 162,
+    "text": "C. Isabel Allende",
+    "is_correct": false
+  },
+  {
+    "id": 648,
+    "question_id": 162,
+    "text": "D. Jorge Luis Borges",
+    "is_correct": false
+  },
+  {
+    "id": 649,
+    "question_id": 163,
+    "text": "A. Gustave Flaubert",
+    "is_correct": false
+  },
+  {
+    "id": 650,
+    "question_id": 163,
+    "text": "B. Honor\u00e9 de Balzac",
+    "is_correct": false
+  },
+  {
+    "id": 651,
+    "question_id": 163,
+    "text": "C. Alexandre Dumas",
+    "is_correct": false
+  },
+  {
+    "id": 652,
+    "question_id": 163,
+    "text": "D. Victor Hugo",
+    "is_correct": true
+  },
+  {
+    "id": 653,
+    "question_id": 164,
+    "text": "A. John Steinbeck",
+    "is_correct": false
+  },
+  {
+    "id": 654,
+    "question_id": 164,
+    "text": "B. Ernest Hemingway",
+    "is_correct": false
+  },
+  {
+    "id": 655,
+    "question_id": 164,
+    "text": "C. T. S. Eliot",
+    "is_correct": false
+  },
+  {
+    "id": 656,
+    "question_id": 164,
+    "text": "D. F. Scott Fitzgerald",
+    "is_correct": true
+  },
+  {
+    "id": 657,
+    "question_id": 165,
+    "text": "A. Robert Frost",
+    "is_correct": false
+  },
+  {
+    "id": 658,
+    "question_id": 165,
+    "text": "B. Walt Whitman",
+    "is_correct": false
+  },
+  {
+    "id": 659,
+    "question_id": 165,
+    "text": "C. Edgar Allan Poe",
+    "is_correct": true
+  },
+  {
+    "id": 660,
+    "question_id": 165,
+    "text": "D. Emily Dickinson",
+    "is_correct": false
+  },
+  {
+    "id": 661,
+    "question_id": 166,
+    "text": "A. Jack Kerouac",
+    "is_correct": false
+  },
+  {
+    "id": 662,
+    "question_id": 166,
+    "text": "B. Allen Ginsberg",
+    "is_correct": false
+  },
+  {
+    "id": 663,
+    "question_id": 166,
+    "text": "C. William S. Burroughs",
+    "is_correct": false
+  },
+  {
+    "id": 664,
+    "question_id": 166,
+    "text": "D. J.D. Salinger",
+    "is_correct": true
+  },
+  {
+    "id": 665,
+    "question_id": 167,
+    "text": "A. Lope de Vega",
+    "is_correct": false
+  },
+  {
+    "id": 666,
+    "question_id": 167,
+    "text": "B. Miguel de Cervantes",
+    "is_correct": true
+  },
+  {
+    "id": 667,
+    "question_id": 167,
+    "text": "C. Pablo Neruda",
+    "is_correct": false
+  },
+  {
+    "id": 668,
+    "question_id": 167,
+    "text": "D. Federico Garc\u00eda Lorca",
+    "is_correct": false
+  },
+  {
+    "id": 669,
+    "question_id": 168,
+    "text": "A. Moby-Dick",
+    "is_correct": true
+  },
+  {
+    "id": 670,
+    "question_id": 168,
+    "text": "B. The Sea Wolf",
+    "is_correct": false
+  },
+  {
+    "id": 671,
+    "question_id": 168,
+    "text": "C. The Old Man and the Sea",
+    "is_correct": false
+  },
+  {
+    "id": 672,
+    "question_id": 168,
+    "text": "D. Heart of Darkness",
+    "is_correct": false
+  },
+  {
+    "id": 673,
+    "question_id": 169,
+    "text": "A. Leo Tolstoy",
+    "is_correct": true
+  },
+  {
+    "id": 674,
+    "question_id": 169,
+    "text": "B. Nikolai Gogol",
+    "is_correct": false
+  },
+  {
+    "id": 675,
+    "question_id": 169,
+    "text": "C. Anton Chekhov",
+    "is_correct": false
+  },
+  {
+    "id": 676,
+    "question_id": 169,
+    "text": "D. Fyodor Dostoevsky",
+    "is_correct": false
+  },
+  {
+    "id": 677,
+    "question_id": 170,
+    "text": "A. F. Scott Fitzgerald",
+    "is_correct": false
+  },
+  {
+    "id": 678,
+    "question_id": 170,
+    "text": "B. Ernest Hemingway",
+    "is_correct": true
+  },
+  {
+    "id": 679,
+    "question_id": 170,
+    "text": "C. William Faulkner",
+    "is_correct": false
+  },
+  {
+    "id": 680,
+    "question_id": 170,
+    "text": "D. John Steinbeck",
+    "is_correct": false
+  },
+  {
+    "id": 681,
+    "question_id": 171,
+    "text": "A. Geoffrey Chaucer",
+    "is_correct": false
+  },
+  {
+    "id": 682,
+    "question_id": 171,
+    "text": "B. William Blake",
+    "is_correct": false
+  },
+  {
+    "id": 683,
+    "question_id": 171,
+    "text": "C. John Donne",
+    "is_correct": false
+  },
+  {
+    "id": 684,
+    "question_id": 171,
+    "text": "D. John Milton",
+    "is_correct": true
+  },
+  {
+    "id": 685,
+    "question_id": 172,
+    "text": "A. The Invisible Man",
+    "is_correct": false
+  },
+  {
+    "id": 686,
+    "question_id": 172,
+    "text": "B. Frankenstein",
+    "is_correct": true
+  },
+  {
+    "id": 687,
+    "question_id": 172,
+    "text": "C. Dr Jekyll and Mr Hyde",
+    "is_correct": false
+  },
+  {
+    "id": 688,
+    "question_id": 172,
+    "text": "D. Dracula",
+    "is_correct": false
+  },
+  {
+    "id": 689,
+    "question_id": 173,
+    "text": "A. Voltaire",
+    "is_correct": false
+  },
+  {
+    "id": 690,
+    "question_id": 173,
+    "text": "B. Marcel Proust",
+    "is_correct": true
+  },
+  {
+    "id": 691,
+    "question_id": 173,
+    "text": "C. Albert Camus",
+    "is_correct": false
+  },
+  {
+    "id": 692,
+    "question_id": 173,
+    "text": "D. Jean-Paul Sartre",
+    "is_correct": false
+  },
+  {
+    "id": 693,
+    "question_id": 174,
+    "text": "A. Othello",
+    "is_correct": false
+  },
+  {
+    "id": 694,
+    "question_id": 174,
+    "text": "B. Hamlet",
+    "is_correct": true
+  },
+  {
+    "id": 695,
+    "question_id": 174,
+    "text": "C. King Lear",
+    "is_correct": false
+  },
+  {
+    "id": 696,
+    "question_id": 174,
+    "text": "D. Macbeth",
+    "is_correct": false
+  },
+  {
+    "id": 697,
+    "question_id": 175,
+    "text": "A. Virginia Woolf",
+    "is_correct": false
+  },
+  {
+    "id": 698,
+    "question_id": 175,
+    "text": "B. F. Scott Fitzgerald",
+    "is_correct": false
+  },
+  {
+    "id": 699,
+    "question_id": 175,
+    "text": "C. William Faulkner",
+    "is_correct": true
+  },
+  {
+    "id": 700,
+    "question_id": 175,
+    "text": "D. Ernest Hemingway",
+    "is_correct": false
+  },
+  {
+    "id": 701,
+    "question_id": 176,
+    "text": "A. Henry James",
+    "is_correct": false
+  },
+  {
+    "id": 702,
+    "question_id": 176,
+    "text": "B. Rudyard Kipling",
+    "is_correct": false
+  },
+  {
+    "id": 703,
+    "question_id": 176,
+    "text": "C. H. G. Wells",
+    "is_correct": false
+  },
+  {
+    "id": 704,
+    "question_id": 176,
+    "text": "D. Joseph Conrad",
+    "is_correct": true
+  },
+  {
+    "id": 705,
+    "question_id": 177,
+    "text": "A. The Great Gatsby",
+    "is_correct": true
+  },
+  {
+    "id": 706,
+    "question_id": 177,
+    "text": "B. Tender Is the Night",
+    "is_correct": false
+  },
+  {
+    "id": 707,
+    "question_id": 177,
+    "text": "C. The Sun Also Rises",
+    "is_correct": false
+  },
+  {
+    "id": 708,
+    "question_id": 177,
+    "text": "D. This Side of Paradise",
+    "is_correct": false
+  },
+  {
+    "id": 709,
+    "question_id": 178,
+    "text": "A. Harold Pinter",
+    "is_correct": false
+  },
+  {
+    "id": 710,
+    "question_id": 178,
+    "text": "B. Arthur Miller",
+    "is_correct": false
+  },
+  {
+    "id": 711,
+    "question_id": 178,
+    "text": "C. Eugene Ionesco",
+    "is_correct": false
+  },
+  {
+    "id": 712,
+    "question_id": 178,
+    "text": "D. Samuel Beckett",
+    "is_correct": true
+  },
+  {
+    "id": 713,
+    "question_id": 179,
+    "text": "A. W. B. Yeats",
+    "is_correct": false
+  },
+  {
+    "id": 714,
+    "question_id": 179,
+    "text": "B. Robert Frost",
+    "is_correct": false
+  },
+  {
+    "id": 715,
+    "question_id": 179,
+    "text": "C. T. S. Eliot",
+    "is_correct": true
+  },
+  {
+    "id": 716,
+    "question_id": 179,
+    "text": "D. Sylvia Plath",
+    "is_correct": false
+  },
+  {
+    "id": 717,
+    "question_id": 180,
+    "text": "A. Maya Angelou",
+    "is_correct": false
+  },
+  {
+    "id": 718,
+    "question_id": 180,
+    "text": "B. Zora Neale Hurston",
+    "is_correct": false
+  },
+  {
+    "id": 719,
+    "question_id": 180,
+    "text": "C. Toni Morrison",
+    "is_correct": true
+  },
+  {
+    "id": 720,
+    "question_id": 180,
+    "text": "D. Alice Walker",
+    "is_correct": false
+  },
+  {
+    "id": 721,
+    "question_id": 181,
+    "text": "A. Leonardo da Vinci",
+    "is_correct": true
+  },
+  {
+    "id": 722,
+    "question_id": 181,
+    "text": "B. Vincent van Gogh",
+    "is_correct": false
+  },
+  {
+    "id": 723,
+    "question_id": 181,
+    "text": "C. Pablo Picasso",
+    "is_correct": false
+  },
+  {
+    "id": 724,
+    "question_id": 181,
+    "text": "D. Michelangelo",
+    "is_correct": false
+  },
+  {
+    "id": 725,
+    "question_id": 182,
+    "text": "A. Vincent van Gogh",
+    "is_correct": true
+  },
+  {
+    "id": 726,
+    "question_id": 182,
+    "text": "B. Edgar Degas",
+    "is_correct": false
+  },
+  {
+    "id": 727,
+    "question_id": 182,
+    "text": "C. Paul C\u00e9zanne",
+    "is_correct": false
+  },
+  {
+    "id": 728,
+    "question_id": 182,
+    "text": "D. Claude Monet",
+    "is_correct": false
+  },
+  {
+    "id": 729,
+    "question_id": 183,
+    "text": "A. Spain",
+    "is_correct": false
+  },
+  {
+    "id": 730,
+    "question_id": 183,
+    "text": "B. UK",
+    "is_correct": false
+  },
+  {
+    "id": 731,
+    "question_id": 183,
+    "text": "C. France",
+    "is_correct": true
+  },
+  {
+    "id": 732,
+    "question_id": 183,
+    "text": "D. Italy",
+    "is_correct": false
+  },
+  {
+    "id": 733,
+    "question_id": 184,
+    "text": "A. Surrealism",
+    "is_correct": false
+  },
+  {
+    "id": 734,
+    "question_id": 184,
+    "text": "B. Cubism",
+    "is_correct": false
+  },
+  {
+    "id": 735,
+    "question_id": 184,
+    "text": "C. Impressionism",
+    "is_correct": false
+  },
+  {
+    "id": 736,
+    "question_id": 184,
+    "text": "D. Pointillism",
+    "is_correct": true
+  },
+  {
+    "id": 737,
+    "question_id": 185,
+    "text": "A. Michelangelo",
+    "is_correct": true
+  },
+  {
+    "id": 738,
+    "question_id": 185,
+    "text": "B. Rodin",
+    "is_correct": false
+  },
+  {
+    "id": 739,
+    "question_id": 185,
+    "text": "C. Donatello",
+    "is_correct": false
+  },
+  {
+    "id": 740,
+    "question_id": 185,
+    "text": "D. Bernini",
+    "is_correct": false
+  },
+  {
+    "id": 741,
+    "question_id": 186,
+    "text": "A. Clocks",
+    "is_correct": true
+  },
+  {
+    "id": 742,
+    "question_id": 186,
+    "text": "B. Candles",
+    "is_correct": false
+  },
+  {
+    "id": 743,
+    "question_id": 186,
+    "text": "C. Chairs",
+    "is_correct": false
+  },
+  {
+    "id": 744,
+    "question_id": 186,
+    "text": "D. Books",
+    "is_correct": false
+  },
+  {
+    "id": 745,
+    "question_id": 187,
+    "text": "A. Andy Warhol",
+    "is_correct": true
+  },
+  {
+    "id": 746,
+    "question_id": 187,
+    "text": "B. Roy Lichtenstein",
+    "is_correct": false
+  },
+  {
+    "id": 747,
+    "question_id": 187,
+    "text": "C. Jackson Pollock",
+    "is_correct": false
+  },
+  {
+    "id": 748,
+    "question_id": 187,
+    "text": "D. Mark Rothko",
+    "is_correct": false
+  },
+  {
+    "id": 749,
+    "question_id": 188,
+    "text": "A. Acrylic",
+    "is_correct": false
+  },
+  {
+    "id": 750,
+    "question_id": 188,
+    "text": "B. Watercolor",
+    "is_correct": true
+  },
+  {
+    "id": 751,
+    "question_id": 188,
+    "text": "C. Oil",
+    "is_correct": false
+  },
+  {
+    "id": 752,
+    "question_id": 188,
+    "text": "D. Pastel",
+    "is_correct": false
+  },
+  {
+    "id": 753,
+    "question_id": 189,
+    "text": "A. Surrealism",
+    "is_correct": true
+  },
+  {
+    "id": 754,
+    "question_id": 189,
+    "text": "B. Realism",
+    "is_correct": false
+  },
+  {
+    "id": 755,
+    "question_id": 189,
+    "text": "C. Cubism",
+    "is_correct": false
+  },
+  {
+    "id": 756,
+    "question_id": 189,
+    "text": "D. Impressionism",
+    "is_correct": false
+  },
+  {
+    "id": 757,
+    "question_id": 190,
+    "text": "A. Fresco",
+    "is_correct": false
+  },
+  {
+    "id": 758,
+    "question_id": 190,
+    "text": "B. Mosaic",
+    "is_correct": false
+  },
+  {
+    "id": 759,
+    "question_id": 190,
+    "text": "C. Tapestry",
+    "is_correct": false
+  },
+  {
+    "id": 760,
+    "question_id": 190,
+    "text": "D. Collage",
+    "is_correct": true
+  },
+  {
+    "id": 761,
+    "question_id": 191,
+    "text": "A. Diego Rivera",
+    "is_correct": false
+  },
+  {
+    "id": 762,
+    "question_id": 191,
+    "text": "B. Frida Kahlo",
+    "is_correct": false
+  },
+  {
+    "id": 763,
+    "question_id": 191,
+    "text": "C. Pablo Picasso",
+    "is_correct": true
+  },
+  {
+    "id": 764,
+    "question_id": 191,
+    "text": "D. Georges Braque",
+    "is_correct": false
+  },
+  {
+    "id": 765,
+    "question_id": 192,
+    "text": "A. Rembrandt",
+    "is_correct": false
+  },
+  {
+    "id": 766,
+    "question_id": 192,
+    "text": "B. Vermeer",
+    "is_correct": false
+  },
+  {
+    "id": 767,
+    "question_id": 192,
+    "text": "C. Vincent van Gogh",
+    "is_correct": true
+  },
+  {
+    "id": 768,
+    "question_id": 192,
+    "text": "D. Mondrian",
+    "is_correct": false
+  },
+  {
+    "id": 769,
+    "question_id": 193,
+    "text": "A. Auguste Rodin",
+    "is_correct": true
+  },
+  {
+    "id": 770,
+    "question_id": 193,
+    "text": "B. Constantin Br\u00e2ncu\u0219i",
+    "is_correct": false
+  },
+  {
+    "id": 771,
+    "question_id": 193,
+    "text": "C. Henry Moore",
+    "is_correct": false
+  },
+  {
+    "id": 772,
+    "question_id": 193,
+    "text": "D. Alberto Giacometti",
+    "is_correct": false
+  },
+  {
+    "id": 773,
+    "question_id": 194,
+    "text": "A. Wassily Kandinsky",
+    "is_correct": false
+  },
+  {
+    "id": 774,
+    "question_id": 194,
+    "text": "B. El Lissitzky",
+    "is_correct": false
+  },
+  {
+    "id": 775,
+    "question_id": 194,
+    "text": "C. Marc Chagall",
+    "is_correct": false
+  },
+  {
+    "id": 776,
+    "question_id": 194,
+    "text": "D. Kazimir Malevich",
+    "is_correct": true
+  },
+  {
+    "id": 777,
+    "question_id": 195,
+    "text": "A. Caravaggio",
+    "is_correct": false
+  },
+  {
+    "id": 778,
+    "question_id": 195,
+    "text": "B. Raphael",
+    "is_correct": false
+  },
+  {
+    "id": 779,
+    "question_id": 195,
+    "text": "C. Leonardo da Vinci",
+    "is_correct": true
+  },
+  {
+    "id": 780,
+    "question_id": 195,
+    "text": "D. Titian",
+    "is_correct": false
+  },
+  {
+    "id": 781,
+    "question_id": 196,
+    "text": "A. Georges Braque",
+    "is_correct": false
+  },
+  {
+    "id": 782,
+    "question_id": 196,
+    "text": "B. Juan Gris",
+    "is_correct": false
+  },
+  {
+    "id": 783,
+    "question_id": 196,
+    "text": "C. Henri Matisse",
+    "is_correct": false
+  },
+  {
+    "id": 784,
+    "question_id": 196,
+    "text": "D. Pablo Picasso",
+    "is_correct": true
+  },
+  {
+    "id": 785,
+    "question_id": 197,
+    "text": "A. Fresco",
+    "is_correct": true
+  },
+  {
+    "id": 786,
+    "question_id": 197,
+    "text": "B. Encaustic",
+    "is_correct": false
+  },
+  {
+    "id": 787,
+    "question_id": 197,
+    "text": "C. Muralism",
+    "is_correct": false
+  },
+  {
+    "id": 788,
+    "question_id": 197,
+    "text": "D. Tempera",
+    "is_correct": false
+  },
+  {
+    "id": 789,
+    "question_id": 198,
+    "text": "A. Titian",
+    "is_correct": false
+  },
+  {
+    "id": 790,
+    "question_id": 198,
+    "text": "B. Leonardo da Vinci",
+    "is_correct": false
+  },
+  {
+    "id": 791,
+    "question_id": 198,
+    "text": "C. Sandro Botticelli",
+    "is_correct": true
+  },
+  {
+    "id": 792,
+    "question_id": 198,
+    "text": "D. Raphael",
+    "is_correct": false
+  },
+  {
+    "id": 793,
+    "question_id": 199,
+    "text": "A. Fauvism",
+    "is_correct": false
+  },
+  {
+    "id": 794,
+    "question_id": 199,
+    "text": "B. Abstract Expressionism",
+    "is_correct": true
+  },
+  {
+    "id": 795,
+    "question_id": 199,
+    "text": "C. Cubism",
+    "is_correct": false
+  },
+  {
+    "id": 796,
+    "question_id": 199,
+    "text": "D. Impressionism",
+    "is_correct": false
+  },
+  {
+    "id": 797,
+    "question_id": 200,
+    "text": "A. Mark Rothko",
+    "is_correct": true
+  },
+  {
+    "id": 798,
+    "question_id": 200,
+    "text": "B. Willem de Kooning",
+    "is_correct": false
+  },
+  {
+    "id": 799,
+    "question_id": 200,
+    "text": "C. Jackson Pollock",
+    "is_correct": false
+  },
+  {
+    "id": 800,
+    "question_id": 200,
+    "text": "D. Barnett Newman",
+    "is_correct": false
+  },
+  {
+    "id": 801,
+    "question_id": 201,
+    "text": "A. Hieronymus Bosch",
+    "is_correct": true
+  },
+  {
+    "id": 802,
+    "question_id": 201,
+    "text": "B. Albrecht D\u00fcrer",
+    "is_correct": false
+  },
+  {
+    "id": 803,
+    "question_id": 201,
+    "text": "C. Jan van Eyck",
+    "is_correct": false
+  },
+  {
+    "id": 804,
+    "question_id": 201,
+    "text": "D. Pieter Bruegel",
+    "is_correct": false
+  },
+  {
+    "id": 805,
+    "question_id": 202,
+    "text": "A. Futurism",
+    "is_correct": false
+  },
+  {
+    "id": 806,
+    "question_id": 202,
+    "text": "B. Expressionism",
+    "is_correct": false
+  },
+  {
+    "id": 807,
+    "question_id": 202,
+    "text": "C. Cubism",
+    "is_correct": true
+  },
+  {
+    "id": 808,
+    "question_id": 202,
+    "text": "D. Impressionism",
+    "is_correct": false
+  },
+  {
+    "id": 809,
+    "question_id": 203,
+    "text": "A. Michel Foucault",
+    "is_correct": false
+  },
+  {
+    "id": 810,
+    "question_id": 203,
+    "text": "B. Jean Baudrillard",
+    "is_correct": false
+  },
+  {
+    "id": 811,
+    "question_id": 203,
+    "text": "C. Walter Benjamin",
+    "is_correct": true
+  },
+  {
+    "id": 812,
+    "question_id": 203,
+    "text": "D. Theodor Adorno",
+    "is_correct": false
+  },
+  {
+    "id": 813,
+    "question_id": 204,
+    "text": "A. Paul Klee",
+    "is_correct": false
+  },
+  {
+    "id": 814,
+    "question_id": 204,
+    "text": "B. Marc Chagall",
+    "is_correct": false
+  },
+  {
+    "id": 815,
+    "question_id": 204,
+    "text": "C. Pablo Picasso",
+    "is_correct": true
+  },
+  {
+    "id": 816,
+    "question_id": 204,
+    "text": "D. Henri Matisse",
+    "is_correct": false
+  },
+  {
+    "id": 817,
+    "question_id": 205,
+    "text": "A. Michelangelo",
+    "is_correct": true
+  },
+  {
+    "id": 818,
+    "question_id": 205,
+    "text": "B. Bernini",
+    "is_correct": false
+  },
+  {
+    "id": 819,
+    "question_id": 205,
+    "text": "C. Cellini",
+    "is_correct": false
+  },
+  {
+    "id": 820,
+    "question_id": 205,
+    "text": "D. Donatello",
+    "is_correct": false
+  },
+  {
+    "id": 821,
+    "question_id": 206,
+    "text": "A. Dadaism",
+    "is_correct": true
+  },
+  {
+    "id": 822,
+    "question_id": 206,
+    "text": "B. Minimalism",
+    "is_correct": false
+  },
+  {
+    "id": 823,
+    "question_id": 206,
+    "text": "C. Constructivism",
+    "is_correct": false
+  },
+  {
+    "id": 824,
+    "question_id": 206,
+    "text": "D. Surrealism",
+    "is_correct": false
+  },
+  {
+    "id": 825,
+    "question_id": 207,
+    "text": "A. Harald Szeemann",
+    "is_correct": false
+  },
+  {
+    "id": 826,
+    "question_id": 207,
+    "text": "B. Lucy Lippard",
+    "is_correct": true
+  },
+  {
+    "id": 827,
+    "question_id": 207,
+    "text": "C. Rosalind Krauss",
+    "is_correct": false
+  },
+  {
+    "id": 828,
+    "question_id": 207,
+    "text": "D. Clement Greenberg",
+    "is_correct": false
+  },
+  {
+    "id": 829,
+    "question_id": 208,
+    "text": "A. Jackson Pollock",
+    "is_correct": true
+  },
+  {
+    "id": 830,
+    "question_id": 208,
+    "text": "B. Willem de Kooning",
+    "is_correct": false
+  },
+  {
+    "id": 831,
+    "question_id": 208,
+    "text": "C. Franz Kline",
+    "is_correct": false
+  },
+  {
+    "id": 832,
+    "question_id": 208,
+    "text": "D. Mark Rothko",
+    "is_correct": false
+  },
+  {
+    "id": 833,
+    "question_id": 209,
+    "text": "A. Roy Lichtenstein",
+    "is_correct": true
+  },
+  {
+    "id": 834,
+    "question_id": 209,
+    "text": "B. Keith Haring",
+    "is_correct": false
+  },
+  {
+    "id": 835,
+    "question_id": 209,
+    "text": "C. Robert Rauschenberg",
+    "is_correct": false
+  },
+  {
+    "id": 836,
+    "question_id": 209,
+    "text": "D. Jasper Johns",
+    "is_correct": false
+  },
+  {
+    "id": 837,
+    "question_id": 210,
+    "text": "A. Expressionism",
+    "is_correct": false
+  },
+  {
+    "id": 838,
+    "question_id": 210,
+    "text": "B. Futurism",
+    "is_correct": false
+  },
+  {
+    "id": 839,
+    "question_id": 210,
+    "text": "C. Surrealism",
+    "is_correct": false
+  },
+  {
+    "id": 840,
+    "question_id": 210,
+    "text": "D. Dada",
+    "is_correct": true
+  },
+  {
+    "id": 841,
+    "question_id": 211,
+    "text": "A. Madonna",
+    "is_correct": false
+  },
+  {
+    "id": 842,
+    "question_id": 211,
+    "text": "B. Prince",
+    "is_correct": false
+  },
+  {
+    "id": 843,
+    "question_id": 211,
+    "text": "C. Elvis Presley",
+    "is_correct": false
+  },
+  {
+    "id": 844,
+    "question_id": 211,
+    "text": "D. Michael Jackson",
+    "is_correct": true
+  },
+  {
+    "id": 845,
+    "question_id": 212,
+    "text": "A. Guitar",
+    "is_correct": false
+  },
+  {
+    "id": 846,
+    "question_id": 212,
+    "text": "B. Violin",
+    "is_correct": false
+  },
+  {
+    "id": 847,
+    "question_id": 212,
+    "text": "C. Harp",
+    "is_correct": false
+  },
+  {
+    "id": 848,
+    "question_id": 212,
+    "text": "D. Piano",
+    "is_correct": true
+  },
+  {
+    "id": 849,
+    "question_id": 213,
+    "text": "A. 12",
+    "is_correct": false
+  },
+  {
+    "id": 850,
+    "question_id": 213,
+    "text": "B. 4",
+    "is_correct": true
+  },
+  {
+    "id": 851,
+    "question_id": 213,
+    "text": "C. 8",
+    "is_correct": false
+  },
+  {
+    "id": 852,
+    "question_id": 213,
+    "text": "D. 6",
+    "is_correct": false
+  },
+  {
+    "id": 853,
+    "question_id": 214,
+    "text": "A. Beethoven",
+    "is_correct": true
+  },
+  {
+    "id": 854,
+    "question_id": 214,
+    "text": "B. Mozart",
+    "is_correct": false
+  },
+  {
+    "id": 855,
+    "question_id": 214,
+    "text": "C. Tchaikovsky",
+    "is_correct": false
+  },
+  {
+    "id": 856,
+    "question_id": 214,
+    "text": "D. Bach",
+    "is_correct": false
+  },
+  {
+    "id": 857,
+    "question_id": 215,
+    "text": "A. Fermata",
+    "is_correct": false
+  },
+  {
+    "id": 858,
+    "question_id": 215,
+    "text": "B. Crescendo",
+    "is_correct": false
+  },
+  {
+    "id": 859,
+    "question_id": 215,
+    "text": "C. Rest",
+    "is_correct": true
+  },
+  {
+    "id": 860,
+    "question_id": 215,
+    "text": "D. Accent",
+    "is_correct": false
+  },
+  {
+    "id": 861,
+    "question_id": 216,
+    "text": "A. Jazz",
+    "is_correct": true
+  },
+  {
+    "id": 862,
+    "question_id": 216,
+    "text": "B. Classical",
+    "is_correct": false
+  },
+  {
+    "id": 863,
+    "question_id": 216,
+    "text": "C. Rock",
+    "is_correct": false
+  },
+  {
+    "id": 864,
+    "question_id": 216,
+    "text": "D. Pop",
+    "is_correct": false
+  },
+  {
+    "id": 865,
+    "question_id": 217,
+    "text": "A. The Magic Flute",
+    "is_correct": false
+  },
+  {
+    "id": 866,
+    "question_id": 217,
+    "text": "B. Fidelio",
+    "is_correct": true
+  },
+  {
+    "id": 867,
+    "question_id": 217,
+    "text": "C. Don Giovanni",
+    "is_correct": false
+  },
+  {
+    "id": 868,
+    "question_id": 217,
+    "text": "D. Carmen",
+    "is_correct": false
+  },
+  {
+    "id": 869,
+    "question_id": 218,
+    "text": "A. Beyonc\u00e9",
+    "is_correct": false
+  },
+  {
+    "id": 870,
+    "question_id": 218,
+    "text": "B. Adele",
+    "is_correct": true
+  },
+  {
+    "id": 871,
+    "question_id": 218,
+    "text": "C. Taylor Swift",
+    "is_correct": false
+  },
+  {
+    "id": 872,
+    "question_id": 218,
+    "text": "D. Rihanna",
+    "is_correct": false
+  },
+  {
+    "id": 873,
+    "question_id": 219,
+    "text": "A. 7",
+    "is_correct": false
+  },
+  {
+    "id": 874,
+    "question_id": 219,
+    "text": "B. 8",
+    "is_correct": true
+  },
+  {
+    "id": 875,
+    "question_id": 219,
+    "text": "C. 5",
+    "is_correct": false
+  },
+  {
+    "id": 876,
+    "question_id": 219,
+    "text": "D. 12",
+    "is_correct": false
+  },
+  {
+    "id": 877,
+    "question_id": 220,
+    "text": "A. Double bass",
+    "is_correct": false
+  },
+  {
+    "id": 878,
+    "question_id": 220,
+    "text": "B. Viola",
+    "is_correct": false
+  },
+  {
+    "id": 879,
+    "question_id": 220,
+    "text": "C. Cello",
+    "is_correct": false
+  },
+  {
+    "id": 880,
+    "question_id": 220,
+    "text": "D. Violin",
+    "is_correct": true
+  },
+  {
+    "id": 881,
+    "question_id": 221,
+    "text": "A. Handel",
+    "is_correct": true
+  },
+  {
+    "id": 882,
+    "question_id": 221,
+    "text": "B. Vivaldi",
+    "is_correct": false
+  },
+  {
+    "id": 883,
+    "question_id": 221,
+    "text": "C. Mozart",
+    "is_correct": false
+  },
+  {
+    "id": 884,
+    "question_id": 221,
+    "text": "D. Bach",
+    "is_correct": false
+  },
+  {
+    "id": 885,
+    "question_id": 222,
+    "text": "A. Decrescendo",
+    "is_correct": false
+  },
+  {
+    "id": 886,
+    "question_id": 222,
+    "text": "B. Staccato",
+    "is_correct": false
+  },
+  {
+    "id": 887,
+    "question_id": 222,
+    "text": "C. Legato",
+    "is_correct": false
+  },
+  {
+    "id": 888,
+    "question_id": 222,
+    "text": "D. Crescendo",
+    "is_correct": true
+  },
+  {
+    "id": 889,
+    "question_id": 223,
+    "text": "A. Oboe",
+    "is_correct": true
+  },
+  {
+    "id": 890,
+    "question_id": 223,
+    "text": "B. Saxophone",
+    "is_correct": false
+  },
+  {
+    "id": 891,
+    "question_id": 223,
+    "text": "C. Flute",
+    "is_correct": false
+  },
+  {
+    "id": 892,
+    "question_id": 223,
+    "text": "D. Clarinet",
+    "is_correct": false
+  },
+  {
+    "id": 893,
+    "question_id": 224,
+    "text": "A. Mozart",
+    "is_correct": false
+  },
+  {
+    "id": 894,
+    "question_id": 224,
+    "text": "B. Handel",
+    "is_correct": false
+  },
+  {
+    "id": 895,
+    "question_id": 224,
+    "text": "C. Bach",
+    "is_correct": false
+  },
+  {
+    "id": 896,
+    "question_id": 224,
+    "text": "D. Vivaldi",
+    "is_correct": true
+  },
+  {
+    "id": 897,
+    "question_id": 225,
+    "text": "A. Mixed choir",
+    "is_correct": false
+  },
+  {
+    "id": 898,
+    "question_id": 225,
+    "text": "B. Men's choir",
+    "is_correct": false
+  },
+  {
+    "id": 899,
+    "question_id": 225,
+    "text": "C. Children's choir",
+    "is_correct": false
+  },
+  {
+    "id": 900,
+    "question_id": 225,
+    "text": "D. Boy choir",
+    "is_correct": true
+  },
+  {
+    "id": 901,
+    "question_id": 226,
+    "text": "A. Double sharp",
+    "is_correct": false
+  },
+  {
+    "id": 902,
+    "question_id": 226,
+    "text": "B. Flat",
+    "is_correct": false
+  },
+  {
+    "id": 903,
+    "question_id": 226,
+    "text": "C. Sharp",
+    "is_correct": true
+  },
+  {
+    "id": 904,
+    "question_id": 226,
+    "text": "D. Natural",
+    "is_correct": false
+  },
+  {
+    "id": 905,
+    "question_id": 227,
+    "text": "A. Haydn",
+    "is_correct": false
+  },
+  {
+    "id": 906,
+    "question_id": 227,
+    "text": "B. Beethoven",
+    "is_correct": true
+  },
+  {
+    "id": 907,
+    "question_id": 227,
+    "text": "C. Mozart",
+    "is_correct": false
+  },
+  {
+    "id": 908,
+    "question_id": 227,
+    "text": "D. Chopin",
+    "is_correct": false
+  },
+  {
+    "id": 909,
+    "question_id": 228,
+    "text": "A. Fifth",
+    "is_correct": false
+  },
+  {
+    "id": 910,
+    "question_id": 228,
+    "text": "B. Second",
+    "is_correct": false
+  },
+  {
+    "id": 911,
+    "question_id": 228,
+    "text": "C. Third",
+    "is_correct": false
+  },
+  {
+    "id": 912,
+    "question_id": 228,
+    "text": "D. Octave",
+    "is_correct": true
+  },
+  {
+    "id": 913,
+    "question_id": 229,
+    "text": "A. Forte",
+    "is_correct": false
+  },
+  {
+    "id": 914,
+    "question_id": 229,
+    "text": "B. Allegro",
+    "is_correct": false
+  },
+  {
+    "id": 915,
+    "question_id": 229,
+    "text": "C. Piano",
+    "is_correct": true
+  },
+  {
+    "id": 916,
+    "question_id": 229,
+    "text": "D. Adagio",
+    "is_correct": false
+  },
+  {
+    "id": 917,
+    "question_id": 230,
+    "text": "A. F major",
+    "is_correct": false
+  },
+  {
+    "id": 918,
+    "question_id": 230,
+    "text": "B. C major",
+    "is_correct": true
+  },
+  {
+    "id": 919,
+    "question_id": 230,
+    "text": "C. D major",
+    "is_correct": false
+  },
+  {
+    "id": 920,
+    "question_id": 230,
+    "text": "D. G major",
+    "is_correct": false
+  },
+  {
+    "id": 921,
+    "question_id": 231,
+    "text": "A. Retrograde",
+    "is_correct": false
+  },
+  {
+    "id": 922,
+    "question_id": 231,
+    "text": "B. Inversion",
+    "is_correct": false
+  },
+  {
+    "id": 923,
+    "question_id": 231,
+    "text": "C. Prime",
+    "is_correct": true
+  },
+  {
+    "id": 924,
+    "question_id": 231,
+    "text": "D. Original",
+    "is_correct": false
+  },
+  {
+    "id": 925,
+    "question_id": 232,
+    "text": "A. Debussy",
+    "is_correct": false
+  },
+  {
+    "id": 926,
+    "question_id": 232,
+    "text": "B. Stravinsky",
+    "is_correct": true
+  },
+  {
+    "id": 927,
+    "question_id": 232,
+    "text": "C. Ravel",
+    "is_correct": false
+  },
+  {
+    "id": 928,
+    "question_id": 232,
+    "text": "D. Prokofiev",
+    "is_correct": false
+  },
+  {
+    "id": 929,
+    "question_id": 233,
+    "text": "A. Tenuto",
+    "is_correct": false
+  },
+  {
+    "id": 930,
+    "question_id": 233,
+    "text": "B. Legato",
+    "is_correct": true
+  },
+  {
+    "id": 931,
+    "question_id": 233,
+    "text": "C. Staccato",
+    "is_correct": false
+  },
+  {
+    "id": 932,
+    "question_id": 233,
+    "text": "D. Marcato",
+    "is_correct": false
+  },
+  {
+    "id": 933,
+    "question_id": 234,
+    "text": "A. Wagner",
+    "is_correct": false
+  },
+  {
+    "id": 934,
+    "question_id": 234,
+    "text": "B. Mozart",
+    "is_correct": true
+  },
+  {
+    "id": 935,
+    "question_id": 234,
+    "text": "C. Verdi",
+    "is_correct": false
+  },
+  {
+    "id": 936,
+    "question_id": 234,
+    "text": "D. Puccini",
+    "is_correct": false
+  },
+  {
+    "id": 937,
+    "question_id": 235,
+    "text": "A. Musicology",
+    "is_correct": false
+  },
+  {
+    "id": 938,
+    "question_id": 235,
+    "text": "B. Counterpoint",
+    "is_correct": false
+  },
+  {
+    "id": 939,
+    "question_id": 235,
+    "text": "C. Harmony",
+    "is_correct": false
+  },
+  {
+    "id": 940,
+    "question_id": 235,
+    "text": "D. Music theory",
+    "is_correct": true
+  },
+  {
+    "id": 941,
+    "question_id": 236,
+    "text": "A. Woodwind",
+    "is_correct": true
+  },
+  {
+    "id": 942,
+    "question_id": 236,
+    "text": "B. Percussion",
+    "is_correct": false
+  },
+  {
+    "id": 943,
+    "question_id": 236,
+    "text": "C. Strings",
+    "is_correct": false
+  },
+  {
+    "id": 944,
+    "question_id": 236,
+    "text": "D. Brass",
+    "is_correct": false
+  },
+  {
+    "id": 945,
+    "question_id": 237,
+    "text": "A. Arpeggio",
+    "is_correct": false
+  },
+  {
+    "id": 946,
+    "question_id": 237,
+    "text": "B. Coloratura",
+    "is_correct": true
+  },
+  {
+    "id": 947,
+    "question_id": 237,
+    "text": "C. Cadenza",
+    "is_correct": false
+  },
+  {
+    "id": 948,
+    "question_id": 237,
+    "text": "D. Trill",
+    "is_correct": false
+  },
+  {
+    "id": 949,
+    "question_id": 238,
+    "text": "A. Liszt",
+    "is_correct": false
+  },
+  {
+    "id": 950,
+    "question_id": 238,
+    "text": "B. Beethoven",
+    "is_correct": false
+  },
+  {
+    "id": 951,
+    "question_id": 238,
+    "text": "C. Tchaikovsky",
+    "is_correct": true
+  },
+  {
+    "id": 952,
+    "question_id": 238,
+    "text": "D. Chopin",
+    "is_correct": false
+  },
+  {
+    "id": 953,
+    "question_id": 239,
+    "text": "A. 2/4",
+    "is_correct": false
+  },
+  {
+    "id": 954,
+    "question_id": 239,
+    "text": "B. 6/8",
+    "is_correct": false
+  },
+  {
+    "id": 955,
+    "question_id": 239,
+    "text": "C. 3/4",
+    "is_correct": true
+  },
+  {
+    "id": 956,
+    "question_id": 239,
+    "text": "D. 4/4",
+    "is_correct": false
+  },
+  {
+    "id": 957,
+    "question_id": 240,
+    "text": "A. Meantone",
+    "is_correct": false
+  },
+  {
+    "id": 958,
+    "question_id": 240,
+    "text": "B. Equal temperament",
+    "is_correct": true
+  },
+  {
+    "id": 959,
+    "question_id": 240,
+    "text": "C. Pythagorean",
+    "is_correct": false
+  },
+  {
+    "id": 960,
+    "question_id": 240,
+    "text": "D. Just intonation",
+    "is_correct": false
+  },
+  {
+    "id": 961,
+    "question_id": 241,
+    "text": "A. Central Processing Unit",
+    "is_correct": true
+  },
+  {
+    "id": 962,
+    "question_id": 241,
+    "text": "B. Central Performance Unit",
+    "is_correct": false
+  },
+  {
+    "id": 963,
+    "question_id": 241,
+    "text": "C. Control Processing Unit",
+    "is_correct": false
+  },
+  {
+    "id": 964,
+    "question_id": 241,
+    "text": "D. Computer Power Unit",
+    "is_correct": false
+  },
+  {
+    "id": 965,
+    "question_id": 242,
+    "text": "A. HTML",
+    "is_correct": true
+  },
+  {
+    "id": 966,
+    "question_id": 242,
+    "text": "B. C++",
+    "is_correct": false
+  },
+  {
+    "id": 967,
+    "question_id": 242,
+    "text": "C. Java",
+    "is_correct": false
+  },
+  {
+    "id": 968,
+    "question_id": 242,
+    "text": "D. Python",
+    "is_correct": false
+  },
+  {
+    "id": 969,
+    "question_id": 243,
+    "text": "A. Rapid Access Module",
+    "is_correct": false
+  },
+  {
+    "id": 970,
+    "question_id": 243,
+    "text": "B. Running Active Memory",
+    "is_correct": false
+  },
+  {
+    "id": 971,
+    "question_id": 243,
+    "text": "C. Random Access Memory",
+    "is_correct": true
+  },
+  {
+    "id": 972,
+    "question_id": 243,
+    "text": "D. Readily Available Memory",
+    "is_correct": false
+  },
+  {
+    "id": 973,
+    "question_id": 244,
+    "text": "A. Monitor",
+    "is_correct": false
+  },
+  {
+    "id": 974,
+    "question_id": 244,
+    "text": "B. Keyboard",
+    "is_correct": true
+  },
+  {
+    "id": 975,
+    "question_id": 244,
+    "text": "C. Printer",
+    "is_correct": false
+  },
+  {
+    "id": 976,
+    "question_id": 244,
+    "text": "D. Speaker",
+    "is_correct": false
+  },
+  {
+    "id": 977,
+    "question_id": 245,
+    "text": "A. Graphics Power Unit",
+    "is_correct": false
+  },
+  {
+    "id": 978,
+    "question_id": 245,
+    "text": "B. General Processing Unit",
+    "is_correct": false
+  },
+  {
+    "id": 979,
+    "question_id": 245,
+    "text": "C. Graphics Processing Unit",
+    "is_correct": true
+  },
+  {
+    "id": 980,
+    "question_id": 245,
+    "text": "D. Graphical Performance Unit",
+    "is_correct": false
+  },
+  {
+    "id": 981,
+    "question_id": 246,
+    "text": "A. Ctrl + Z",
+    "is_correct": false
+  },
+  {
+    "id": 982,
+    "question_id": 246,
+    "text": "B. Ctrl + C",
+    "is_correct": true
+  },
+  {
+    "id": 983,
+    "question_id": 246,
+    "text": "C. Ctrl + X",
+    "is_correct": false
+  },
+  {
+    "id": 984,
+    "question_id": 246,
+    "text": "D. Ctrl + V",
+    "is_correct": false
+  },
+  {
+    "id": 985,
+    "question_id": 247,
+    "text": "A. Registry",
+    "is_correct": false
+  },
+  {
+    "id": 986,
+    "question_id": 247,
+    "text": "B. Cache",
+    "is_correct": false
+  },
+  {
+    "id": 987,
+    "question_id": 247,
+    "text": "C. RAM",
+    "is_correct": false
+  },
+  {
+    "id": 988,
+    "question_id": 247,
+    "text": "D. SSD",
+    "is_correct": true
+  },
+  {
+    "id": 989,
+    "question_id": 248,
+    "text": "A. Python",
+    "is_correct": false
+  },
+  {
+    "id": 990,
+    "question_id": 248,
+    "text": "B. HTML",
+    "is_correct": false
+  },
+  {
+    "id": 991,
+    "question_id": 248,
+    "text": "C. Photoshop",
+    "is_correct": false
+  },
+  {
+    "id": 992,
+    "question_id": 248,
+    "text": "D. Linux",
+    "is_correct": true
+  },
+  {
+    "id": 993,
+    "question_id": 249,
+    "text": "A. Universal Resource Link",
+    "is_correct": false
+  },
+  {
+    "id": 994,
+    "question_id": 249,
+    "text": "B. Uniform Reference Locator",
+    "is_correct": false
+  },
+  {
+    "id": 995,
+    "question_id": 249,
+    "text": "C. Unique Resource Link",
+    "is_correct": false
+  },
+  {
+    "id": 996,
+    "question_id": 249,
+    "text": "D. Uniform Resource Locator",
+    "is_correct": true
+  },
+  {
+    "id": 997,
+    "question_id": 250,
+    "text": "A. Google",
+    "is_correct": false
+  },
+  {
+    "id": 998,
+    "question_id": 250,
+    "text": "B. Apple",
+    "is_correct": true
+  },
+  {
+    "id": 999,
+    "question_id": 250,
+    "text": "C. Microsoft",
+    "is_correct": false
+  },
+  {
+    "id": 1000,
+    "question_id": 250,
+    "text": "D. Samsung",
+    "is_correct": false
+  },
+  {
+    "id": 1001,
+    "question_id": 251,
+    "text": "A. HighText Transfer Protocol",
+    "is_correct": false
+  },
+  {
+    "id": 1002,
+    "question_id": 251,
+    "text": "B. HyperTransfer Text Protocol",
+    "is_correct": false
+  },
+  {
+    "id": 1003,
+    "question_id": 251,
+    "text": "C. HyperText Transfer Protocol",
+    "is_correct": true
+  },
+  {
+    "id": 1004,
+    "question_id": 251,
+    "text": "D. HyperText Transmission Procedure",
+    "is_correct": false
+  },
+  {
+    "id": 1005,
+    "question_id": 252,
+    "text": "A. Both Java and Kotlin",
+    "is_correct": true
+  },
+  {
+    "id": 1006,
+    "question_id": 252,
+    "text": "B. Java",
+    "is_correct": false
+  },
+  {
+    "id": 1007,
+    "question_id": 252,
+    "text": "C. Swift",
+    "is_correct": false
+  },
+  {
+    "id": 1008,
+    "question_id": 252,
+    "text": "D. Kotlin",
+    "is_correct": false
+  },
+  {
+    "id": 1009,
+    "question_id": 253,
+    "text": "A. .txt",
+    "is_correct": false
+  },
+  {
+    "id": 1010,
+    "question_id": 253,
+    "text": "B. .java",
+    "is_correct": false
+  },
+  {
+    "id": 1011,
+    "question_id": 253,
+    "text": "C. .py",
+    "is_correct": true
+  },
+  {
+    "id": 1012,
+    "question_id": 253,
+    "text": "D. .exe",
+    "is_correct": false
+  },
+  {
+    "id": 1013,
+    "question_id": 254,
+    "text": "A. Digital Name System",
+    "is_correct": false
+  },
+  {
+    "id": 1014,
+    "question_id": 254,
+    "text": "B. Domain Navigation Service",
+    "is_correct": false
+  },
+  {
+    "id": 1015,
+    "question_id": 254,
+    "text": "C. Direct Network Service",
+    "is_correct": false
+  },
+  {
+    "id": 1016,
+    "question_id": 254,
+    "text": "D. Domain Name System",
+    "is_correct": true
+  },
+  {
+    "id": 1017,
+    "question_id": 255,
+    "text": "A. Infrared",
+    "is_correct": false
+  },
+  {
+    "id": 1018,
+    "question_id": 255,
+    "text": "B. Wi-Fi",
+    "is_correct": false
+  },
+  {
+    "id": 1019,
+    "question_id": 255,
+    "text": "C. Bluetooth",
+    "is_correct": false
+  },
+  {
+    "id": 1020,
+    "question_id": 255,
+    "text": "D. NFC",
+    "is_correct": true
+  },
+  {
+    "id": 1021,
+    "question_id": 256,
+    "text": "A. Relational",
+    "is_correct": true
+  },
+  {
+    "id": 1022,
+    "question_id": 256,
+    "text": "B. Graph",
+    "is_correct": false
+  },
+  {
+    "id": 1023,
+    "question_id": 256,
+    "text": "C. Document",
+    "is_correct": false
+  },
+  {
+    "id": 1024,
+    "question_id": 256,
+    "text": "D. NoSQL",
+    "is_correct": false
+  },
+  {
+    "id": 1025,
+    "question_id": 257,
+    "text": "A. Solid State Drive",
+    "is_correct": true
+  },
+  {
+    "id": 1026,
+    "question_id": 257,
+    "text": "B. System State Drive",
+    "is_correct": false
+  },
+  {
+    "id": 1027,
+    "question_id": 257,
+    "text": "C. Sequential Storage Device",
+    "is_correct": false
+  },
+  {
+    "id": 1028,
+    "question_id": 257,
+    "text": "D. Solid Storage Disk",
+    "is_correct": false
+  },
+  {
+    "id": 1029,
+    "question_id": 258,
+    "text": "A. HTTPS",
+    "is_correct": true
+  },
+  {
+    "id": 1030,
+    "question_id": 258,
+    "text": "B. FTPS",
+    "is_correct": false
+  },
+  {
+    "id": 1031,
+    "question_id": 258,
+    "text": "C. SFTP",
+    "is_correct": false
+  },
+  {
+    "id": 1032,
+    "question_id": 258,
+    "text": "D. SSH",
+    "is_correct": false
+  },
+  {
+    "id": 1033,
+    "question_id": 259,
+    "text": "A. Application Process Integration",
+    "is_correct": false
+  },
+  {
+    "id": 1034,
+    "question_id": 259,
+    "text": "B. Application Programming Interface",
+    "is_correct": true
+  },
+  {
+    "id": 1035,
+    "question_id": 259,
+    "text": "C. Applied Programming Integration",
+    "is_correct": false
+  },
+  {
+    "id": 1036,
+    "question_id": 259,
+    "text": "D. Applied Protocol Interface",
+    "is_correct": false
+  },
+  {
+    "id": 1037,
+    "question_id": 260,
+    "text": "A. Emulation",
+    "is_correct": false
+  },
+  {
+    "id": 1038,
+    "question_id": 260,
+    "text": "B. Hypervisor",
+    "is_correct": true
+  },
+  {
+    "id": 1039,
+    "question_id": 260,
+    "text": "C. Containerization",
+    "is_correct": false
+  },
+  {
+    "id": 1040,
+    "question_id": 260,
+    "text": "D. Simulation",
+    "is_correct": false
+  },
+  {
+    "id": 1041,
+    "question_id": 261,
+    "text": "A. Atomicity, Concurrency, Isolation, Durability",
+    "is_correct": false
+  },
+  {
+    "id": 1042,
+    "question_id": 261,
+    "text": "B. Availability, Consistency, Integrity, Durability",
+    "is_correct": false
+  },
+  {
+    "id": 1043,
+    "question_id": 261,
+    "text": "C. Atomicity, Consistency, Integration, Durability",
+    "is_correct": false
+  },
+  {
+    "id": 1044,
+    "question_id": 261,
+    "text": "D. Atomicity, Consistency, Isolation, Durability",
+    "is_correct": true
+  },
+  {
+    "id": 1045,
+    "question_id": 262,
+    "text": "A. SHA",
+    "is_correct": false
+  },
+  {
+    "id": 1046,
+    "question_id": 262,
+    "text": "B. AES",
+    "is_correct": false
+  },
+  {
+    "id": 1047,
+    "question_id": 262,
+    "text": "C. RSA",
+    "is_correct": true
+  },
+  {
+    "id": 1048,
+    "question_id": 262,
+    "text": "D. MD5",
+    "is_correct": false
+  },
+  {
+    "id": 1049,
+    "question_id": 263,
+    "text": "A. Ring",
+    "is_correct": false
+  },
+  {
+    "id": 1050,
+    "question_id": 263,
+    "text": "B. Bus",
+    "is_correct": false
+  },
+  {
+    "id": 1051,
+    "question_id": 263,
+    "text": "C. Star",
+    "is_correct": true
+  },
+  {
+    "id": 1052,
+    "question_id": 263,
+    "text": "D. Mesh",
+    "is_correct": false
+  },
+  {
+    "id": 1053,
+    "question_id": 264,
+    "text": "A. O(n log n)",
+    "is_correct": true
+  },
+  {
+    "id": 1054,
+    "question_id": 264,
+    "text": "B. O(n)",
+    "is_correct": false
+  },
+  {
+    "id": 1055,
+    "question_id": 264,
+    "text": "C. O(n^2)",
+    "is_correct": false
+  },
+  {
+    "id": 1056,
+    "question_id": 264,
+    "text": "D. O(log n)",
+    "is_correct": false
+  },
+  {
+    "id": 1057,
+    "question_id": 265,
+    "text": "A. Network",
+    "is_correct": true
+  },
+  {
+    "id": 1058,
+    "question_id": 265,
+    "text": "B. Transport",
+    "is_correct": false
+  },
+  {
+    "id": 1059,
+    "question_id": 265,
+    "text": "C. Data Link",
+    "is_correct": false
+  },
+  {
+    "id": 1060,
+    "question_id": 265,
+    "text": "D. Session",
+    "is_correct": false
+  },
+  {
+    "id": 1061,
+    "question_id": 266,
+    "text": "A. Backup",
+    "is_correct": false
+  },
+  {
+    "id": 1062,
+    "question_id": 266,
+    "text": "B. Mirroring",
+    "is_correct": false
+  },
+  {
+    "id": 1063,
+    "question_id": 266,
+    "text": "C. Parity",
+    "is_correct": false
+  },
+  {
+    "id": 1064,
+    "question_id": 266,
+    "text": "D. Striping",
+    "is_correct": true
+  },
+  {
+    "id": 1065,
+    "question_id": 267,
+    "text": "A. Relational Database",
+    "is_correct": false
+  },
+  {
+    "id": 1066,
+    "question_id": 267,
+    "text": "B. Distributed Ledger",
+    "is_correct": true
+  },
+  {
+    "id": 1067,
+    "question_id": 267,
+    "text": "C. Cloud Storage",
+    "is_correct": false
+  },
+  {
+    "id": 1068,
+    "question_id": 267,
+    "text": "D. Client-Server",
+    "is_correct": false
+  },
+  {
+    "id": 1069,
+    "question_id": 268,
+    "text": "A. Encryption",
+    "is_correct": false
+  },
+  {
+    "id": 1070,
+    "question_id": 268,
+    "text": "B. Authentication",
+    "is_correct": false
+  },
+  {
+    "id": 1071,
+    "question_id": 268,
+    "text": "C. Authorization",
+    "is_correct": true
+  },
+  {
+    "id": 1072,
+    "question_id": 268,
+    "text": "D. Compression",
+    "is_correct": false
+  },
+  {
+    "id": 1073,
+    "question_id": 269,
+    "text": "A. Register",
+    "is_correct": true
+  },
+  {
+    "id": 1074,
+    "question_id": 269,
+    "text": "B. Cache",
+    "is_correct": false
+  },
+  {
+    "id": 1075,
+    "question_id": 269,
+    "text": "C. SSD",
+    "is_correct": false
+  },
+  {
+    "id": 1076,
+    "question_id": 269,
+    "text": "D. RAM",
+    "is_correct": false
+  },
+  {
+    "id": 1077,
+    "question_id": 270,
+    "text": "A. Reduce lookup time",
+    "is_correct": true
+  },
+  {
+    "id": 1078,
+    "question_id": 270,
+    "text": "B. Store files",
+    "is_correct": false
+  },
+  {
+    "id": 1079,
+    "question_id": 270,
+    "text": "C. Block requests",
+    "is_correct": false
+  },
+  {
+    "id": 1080,
+    "question_id": 270,
+    "text": "D. Increase latency",
+    "is_correct": false
+  },
+  {
+    "id": 1081,
+    "question_id": 271,
+    "text": "A. 5",
+    "is_correct": false
+  },
+  {
+    "id": 1082,
+    "question_id": 271,
+    "text": "B. 7",
+    "is_correct": false
+  },
+  {
+    "id": 1083,
+    "question_id": 271,
+    "text": "C. 9",
+    "is_correct": false
+  },
+  {
+    "id": 1084,
+    "question_id": 271,
+    "text": "D. 11",
+    "is_correct": true
+  },
+  {
+    "id": 1085,
+    "question_id": 272,
+    "text": "A. Table Tennis",
+    "is_correct": false
+  },
+  {
+    "id": 1086,
+    "question_id": 272,
+    "text": "B. Tennis",
+    "is_correct": false
+  },
+  {
+    "id": 1087,
+    "question_id": 272,
+    "text": "C. Squash",
+    "is_correct": false
+  },
+  {
+    "id": 1088,
+    "question_id": 272,
+    "text": "D. Badminton",
+    "is_correct": true
+  },
+  {
+    "id": 1089,
+    "question_id": 273,
+    "text": "A. 90",
+    "is_correct": false
+  },
+  {
+    "id": 1090,
+    "question_id": 273,
+    "text": "B. 48",
+    "is_correct": true
+  },
+  {
+    "id": 1091,
+    "question_id": 273,
+    "text": "C. 60",
+    "is_correct": false
+  },
+  {
+    "id": 1092,
+    "question_id": 273,
+    "text": "D. 40",
+    "is_correct": false
+  },
+  {
+    "id": 1093,
+    "question_id": 274,
+    "text": "A. Hockey",
+    "is_correct": false
+  },
+  {
+    "id": 1094,
+    "question_id": 274,
+    "text": "B. Basketball",
+    "is_correct": false
+  },
+  {
+    "id": 1095,
+    "question_id": 274,
+    "text": "C. Baseball",
+    "is_correct": true
+  },
+  {
+    "id": 1096,
+    "question_id": 274,
+    "text": "D. Football",
+    "is_correct": false
+  },
+  {
+    "id": 1097,
+    "question_id": 275,
+    "text": "A. 18",
+    "is_correct": true
+  },
+  {
+    "id": 1098,
+    "question_id": 275,
+    "text": "B. 24",
+    "is_correct": false
+  },
+  {
+    "id": 1099,
+    "question_id": 275,
+    "text": "C. 12",
+    "is_correct": false
+  },
+  {
+    "id": 1100,
+    "question_id": 275,
+    "text": "D. 9",
+    "is_correct": false
+  },
+  {
+    "id": 1101,
+    "question_id": 276,
+    "text": "A. 10",
+    "is_correct": true
+  },
+  {
+    "id": 1102,
+    "question_id": 276,
+    "text": "B. 12",
+    "is_correct": false
+  },
+  {
+    "id": 1103,
+    "question_id": 276,
+    "text": "C. 11",
+    "is_correct": false
+  },
+  {
+    "id": 1104,
+    "question_id": 276,
+    "text": "D. 8",
+    "is_correct": false
+  },
+  {
+    "id": 1105,
+    "question_id": 277,
+    "text": "A. Basketball",
+    "is_correct": false
+  },
+  {
+    "id": 1106,
+    "question_id": 277,
+    "text": "B. Football",
+    "is_correct": false
+  },
+  {
+    "id": 1107,
+    "question_id": 277,
+    "text": "C. Rugby",
+    "is_correct": true
+  },
+  {
+    "id": 1108,
+    "question_id": 277,
+    "text": "D. Cricket",
+    "is_correct": false
+  },
+  {
+    "id": 1109,
+    "question_id": 278,
+    "text": "A. Germany",
+    "is_correct": false
+  },
+  {
+    "id": 1110,
+    "question_id": 278,
+    "text": "B. Croatia",
+    "is_correct": false
+  },
+  {
+    "id": 1111,
+    "question_id": 278,
+    "text": "C. Brazil",
+    "is_correct": false
+  },
+  {
+    "id": 1112,
+    "question_id": 278,
+    "text": "D. France",
+    "is_correct": true
+  },
+  {
+    "id": 1113,
+    "question_id": 279,
+    "text": "A. Blue",
+    "is_correct": false
+  },
+  {
+    "id": 1114,
+    "question_id": 279,
+    "text": "B. Red",
+    "is_correct": false
+  },
+  {
+    "id": 1115,
+    "question_id": 279,
+    "text": "C. Black",
+    "is_correct": true
+  },
+  {
+    "id": 1116,
+    "question_id": 279,
+    "text": "D. Brown",
+    "is_correct": false
+  },
+  {
+    "id": 1117,
+    "question_id": 280,
+    "text": "A. Volleyball",
+    "is_correct": false
+  },
+  {
+    "id": 1118,
+    "question_id": 280,
+    "text": "B. Tennis",
+    "is_correct": true
+  },
+  {
+    "id": 1119,
+    "question_id": 280,
+    "text": "C. Badminton",
+    "is_correct": false
+  },
+  {
+    "id": 1120,
+    "question_id": 280,
+    "text": "D. Squash",
+    "is_correct": false
+  },
+  {
+    "id": 1121,
+    "question_id": 281,
+    "text": "A. 9",
+    "is_correct": true
+  },
+  {
+    "id": 1122,
+    "question_id": 281,
+    "text": "B. 10",
+    "is_correct": false
+  },
+  {
+    "id": 1123,
+    "question_id": 281,
+    "text": "C. 7",
+    "is_correct": false
+  },
+  {
+    "id": 1124,
+    "question_id": 281,
+    "text": "D. 11",
+    "is_correct": false
+  },
+  {
+    "id": 1125,
+    "question_id": 282,
+    "text": "A. 150",
+    "is_correct": false
+  },
+  {
+    "id": 1126,
+    "question_id": 282,
+    "text": "B. 100",
+    "is_correct": false
+  },
+  {
+    "id": 1127,
+    "question_id": 282,
+    "text": "C. 200",
+    "is_correct": false
+  },
+  {
+    "id": 1128,
+    "question_id": 282,
+    "text": "D. 300",
+    "is_correct": true
+  },
+  {
+    "id": 1129,
+    "question_id": 283,
+    "text": "A. Brazil",
+    "is_correct": true
+  },
+  {
+    "id": 1130,
+    "question_id": 283,
+    "text": "B. China",
+    "is_correct": false
+  },
+  {
+    "id": 1131,
+    "question_id": 283,
+    "text": "C. Greece",
+    "is_correct": false
+  },
+  {
+    "id": 1132,
+    "question_id": 283,
+    "text": "D. UK",
+    "is_correct": false
+  },
+  {
+    "id": 1133,
+    "question_id": 284,
+    "text": "A. Triple",
+    "is_correct": false
+  },
+  {
+    "id": 1134,
+    "question_id": 284,
+    "text": "B. Hat-trick",
+    "is_correct": false
+  },
+  {
+    "id": 1135,
+    "question_id": 284,
+    "text": "C. Turkey",
+    "is_correct": true
+  },
+  {
+    "id": 1136,
+    "question_id": 284,
+    "text": "D. Strikeout",
+    "is_correct": false
+  },
+  {
+    "id": 1137,
+    "question_id": 285,
+    "text": "A. Tennis",
+    "is_correct": true
+  },
+  {
+    "id": 1138,
+    "question_id": 285,
+    "text": "B. Rugby",
+    "is_correct": false
+  },
+  {
+    "id": 1139,
+    "question_id": 285,
+    "text": "C. Cricket",
+    "is_correct": false
+  },
+  {
+    "id": 1140,
+    "question_id": 285,
+    "text": "D. Football",
+    "is_correct": false
+  },
+  {
+    "id": 1141,
+    "question_id": 286,
+    "text": "A. 10",
+    "is_correct": true
+  },
+  {
+    "id": 1142,
+    "question_id": 286,
+    "text": "B. 9",
+    "is_correct": false
+  },
+  {
+    "id": 1143,
+    "question_id": 286,
+    "text": "C. 9.5",
+    "is_correct": false
+  },
+  {
+    "id": 1144,
+    "question_id": 286,
+    "text": "D. 8.5",
+    "is_correct": false
+  },
+  {
+    "id": 1145,
+    "question_id": 287,
+    "text": "A. San Francisco 49ers",
+    "is_correct": false
+  },
+  {
+    "id": 1146,
+    "question_id": 287,
+    "text": "B. New England Patriots",
+    "is_correct": false
+  },
+  {
+    "id": 1147,
+    "question_id": 287,
+    "text": "C. Dallas Cowboys",
+    "is_correct": true
+  },
+  {
+    "id": 1148,
+    "question_id": 287,
+    "text": "D. Green Bay Packers",
+    "is_correct": false
+  },
+  {
+    "id": 1149,
+    "question_id": 288,
+    "text": "A. 3",
+    "is_correct": false
+  },
+  {
+    "id": 1150,
+    "question_id": 288,
+    "text": "B. 1",
+    "is_correct": false
+  },
+  {
+    "id": 1151,
+    "question_id": 288,
+    "text": "C. 2",
+    "is_correct": false
+  },
+  {
+    "id": 1152,
+    "question_id": 288,
+    "text": "D. 6",
+    "is_correct": true
+  },
+  {
+    "id": 1153,
+    "question_id": 289,
+    "text": "A. 100 km",
+    "is_correct": false
+  },
+  {
+    "id": 1154,
+    "question_id": 289,
+    "text": "B. 21.097 km",
+    "is_correct": false
+  },
+  {
+    "id": 1155,
+    "question_id": 289,
+    "text": "C. 42.195 km",
+    "is_correct": true
+  },
+  {
+    "id": 1156,
+    "question_id": 289,
+    "text": "D. 50 km",
+    "is_correct": false
+  },
+  {
+    "id": 1157,
+    "question_id": 290,
+    "text": "A. Wimbledon",
+    "is_correct": false
+  },
+  {
+    "id": 1158,
+    "question_id": 290,
+    "text": "B. French Open",
+    "is_correct": true
+  },
+  {
+    "id": 1159,
+    "question_id": 290,
+    "text": "C. Australian Open",
+    "is_correct": false
+  },
+  {
+    "id": 1160,
+    "question_id": 290,
+    "text": "D. US Open",
+    "is_correct": false
+  },
+  {
+    "id": 1161,
+    "question_id": 291,
+    "text": "A. South Africa",
+    "is_correct": false
+  },
+  {
+    "id": 1162,
+    "question_id": 291,
+    "text": "B. Australia",
+    "is_correct": false
+  },
+  {
+    "id": 1163,
+    "question_id": 291,
+    "text": "C. New Zealand",
+    "is_correct": true
+  },
+  {
+    "id": 1164,
+    "question_id": 291,
+    "text": "D. England",
+    "is_correct": false
+  },
+  {
+    "id": 1165,
+    "question_id": 292,
+    "text": "A. Eagle",
+    "is_correct": false
+  },
+  {
+    "id": 1166,
+    "question_id": 292,
+    "text": "B. Albatross",
+    "is_correct": true
+  },
+  {
+    "id": 1167,
+    "question_id": 292,
+    "text": "C. Birdie",
+    "is_correct": false
+  },
+  {
+    "id": 1168,
+    "question_id": 292,
+    "text": "D. Bogey",
+    "is_correct": false
+  },
+  {
+    "id": 1169,
+    "question_id": 293,
+    "text": "A. Babe Ruth",
+    "is_correct": false
+  },
+  {
+    "id": 1170,
+    "question_id": 293,
+    "text": "B. Barry Bonds",
+    "is_correct": true
+  },
+  {
+    "id": 1171,
+    "question_id": 293,
+    "text": "C. Sammy Sosa",
+    "is_correct": false
+  },
+  {
+    "id": 1172,
+    "question_id": 293,
+    "text": "D. Mark McGwire",
+    "is_correct": false
+  },
+  {
+    "id": 1173,
+    "question_id": 294,
+    "text": "A. 50 meters",
+    "is_correct": true
+  },
+  {
+    "id": 1174,
+    "question_id": 294,
+    "text": "B. 100 meters",
+    "is_correct": false
+  },
+  {
+    "id": 1175,
+    "question_id": 294,
+    "text": "C. 25 meters",
+    "is_correct": false
+  },
+  {
+    "id": 1176,
+    "question_id": 294,
+    "text": "D. 75 meters",
+    "is_correct": false
+  },
+  {
+    "id": 1177,
+    "question_id": 295,
+    "text": "A. Muhammad Ali",
+    "is_correct": true
+  },
+  {
+    "id": 1178,
+    "question_id": 295,
+    "text": "B. George Foreman",
+    "is_correct": false
+  },
+  {
+    "id": 1179,
+    "question_id": 295,
+    "text": "C. Mike Tyson",
+    "is_correct": false
+  },
+  {
+    "id": 1180,
+    "question_id": 295,
+    "text": "D. Joe Frazier",
+    "is_correct": false
+  },
+  {
+    "id": 1181,
+    "question_id": 296,
+    "text": "A. Tennis",
+    "is_correct": false
+  },
+  {
+    "id": 1182,
+    "question_id": 296,
+    "text": "B. Cricket",
+    "is_correct": true
+  },
+  {
+    "id": 1183,
+    "question_id": 296,
+    "text": "C. Basketball",
+    "is_correct": false
+  },
+  {
+    "id": 1184,
+    "question_id": 296,
+    "text": "D. Baseball",
+    "is_correct": false
+  },
+  {
+    "id": 1185,
+    "question_id": 297,
+    "text": "A. Size 6",
+    "is_correct": false
+  },
+  {
+    "id": 1186,
+    "question_id": 297,
+    "text": "B. Size 7",
+    "is_correct": true
+  },
+  {
+    "id": 1187,
+    "question_id": 297,
+    "text": "C. Size 8",
+    "is_correct": false
+  },
+  {
+    "id": 1188,
+    "question_id": 297,
+    "text": "D. Size 5",
+    "is_correct": false
+  },
+  {
+    "id": 1189,
+    "question_id": 298,
+    "text": "A. Carl Lewis",
+    "is_correct": false
+  },
+  {
+    "id": 1190,
+    "question_id": 298,
+    "text": "B. Justin Gatlin",
+    "is_correct": false
+  },
+  {
+    "id": 1191,
+    "question_id": 298,
+    "text": "C. Usain Bolt",
+    "is_correct": true
+  },
+  {
+    "id": 1192,
+    "question_id": 298,
+    "text": "D. Yohan Blake",
+    "is_correct": false
+  },
+  {
+    "id": 1193,
+    "question_id": 299,
+    "text": "A. 21",
+    "is_correct": false
+  },
+  {
+    "id": 1194,
+    "question_id": 299,
+    "text": "B. 20",
+    "is_correct": false
+  },
+  {
+    "id": 1195,
+    "question_id": 299,
+    "text": "C. 23",
+    "is_correct": true
+  },
+  {
+    "id": 1196,
+    "question_id": 299,
+    "text": "D. 18",
+    "is_correct": false
+  },
+  {
+    "id": 1197,
+    "question_id": 300,
+    "text": "A. National Basketball Association",
+    "is_correct": true
+  },
+  {
+    "id": 1198,
+    "question_id": 300,
+    "text": "B. New Basketball Alliance",
+    "is_correct": false
+  },
+  {
+    "id": 1199,
+    "question_id": 300,
+    "text": "C. National Baseball Association",
+    "is_correct": false
+  },
+  {
+    "id": 1200,
+    "question_id": 300,
+    "text": "D. National Boat Association",
+    "is_correct": false
+  },
+  {
+    "id": 1201,
+    "question_id": 301,
+    "text": "A. Protein",
+    "is_correct": true
+  },
+  {
+    "id": 1202,
+    "question_id": 301,
+    "text": "B. Carbohydrates",
+    "is_correct": false
+  },
+  {
+    "id": 1203,
+    "question_id": 301,
+    "text": "C. Fat",
+    "is_correct": false
+  },
+  {
+    "id": 1204,
+    "question_id": 301,
+    "text": "D. Vitamin C",
+    "is_correct": false
+  },
+  {
+    "id": 1205,
+    "question_id": 302,
+    "text": "A. Vitamin A",
+    "is_correct": false
+  },
+  {
+    "id": 1206,
+    "question_id": 302,
+    "text": "B. Vitamin C",
+    "is_correct": true
+  },
+  {
+    "id": 1207,
+    "question_id": 302,
+    "text": "C. Vitamin B12",
+    "is_correct": false
+  },
+  {
+    "id": 1208,
+    "question_id": 302,
+    "text": "D. Vitamin D",
+    "is_correct": false
+  },
+  {
+    "id": 1209,
+    "question_id": 303,
+    "text": "A. 2",
+    "is_correct": false
+  },
+  {
+    "id": 1210,
+    "question_id": 303,
+    "text": "B. 5",
+    "is_correct": false
+  },
+  {
+    "id": 1211,
+    "question_id": 303,
+    "text": "C. 3",
+    "is_correct": false
+  },
+  {
+    "id": 1212,
+    "question_id": 303,
+    "text": "D. 4",
+    "is_correct": true
+  },
+  {
+    "id": 1213,
+    "question_id": 304,
+    "text": "A. Calcium",
+    "is_correct": true
+  },
+  {
+    "id": 1214,
+    "question_id": 304,
+    "text": "B. Zinc",
+    "is_correct": false
+  },
+  {
+    "id": 1215,
+    "question_id": 304,
+    "text": "C. Iron",
+    "is_correct": false
+  },
+  {
+    "id": 1216,
+    "question_id": 304,
+    "text": "D. Potassium",
+    "is_correct": false
+  },
+  {
+    "id": 1217,
+    "question_id": 305,
+    "text": "A. Kidneys",
+    "is_correct": false
+  },
+  {
+    "id": 1218,
+    "question_id": 305,
+    "text": "B. Liver",
+    "is_correct": true
+  },
+  {
+    "id": 1219,
+    "question_id": 305,
+    "text": "C. Pancreas",
+    "is_correct": false
+  },
+  {
+    "id": 1220,
+    "question_id": 305,
+    "text": "D. Lungs",
+    "is_correct": false
+  },
+  {
+    "id": 1221,
+    "question_id": 306,
+    "text": "A. 5-6",
+    "is_correct": false
+  },
+  {
+    "id": 1222,
+    "question_id": 306,
+    "text": "B. 7-9",
+    "is_correct": true
+  },
+  {
+    "id": 1223,
+    "question_id": 306,
+    "text": "C. 4-5",
+    "is_correct": false
+  },
+  {
+    "id": 1224,
+    "question_id": 306,
+    "text": "D. 10-12",
+    "is_correct": false
+  },
+  {
+    "id": 1225,
+    "question_id": 307,
+    "text": "A. Bone Mass Index",
+    "is_correct": false
+  },
+  {
+    "id": 1226,
+    "question_id": 307,
+    "text": "B. Body Muscle Index",
+    "is_correct": false
+  },
+  {
+    "id": 1227,
+    "question_id": 307,
+    "text": "C. Body Mass Index",
+    "is_correct": true
+  },
+  {
+    "id": 1228,
+    "question_id": 307,
+    "text": "D. Blood Mass Index",
+    "is_correct": false
+  },
+  {
+    "id": 1229,
+    "question_id": 308,
+    "text": "A. Protein",
+    "is_correct": false
+  },
+  {
+    "id": 1230,
+    "question_id": 308,
+    "text": "B. Vitamin",
+    "is_correct": false
+  },
+  {
+    "id": 1231,
+    "question_id": 308,
+    "text": "C. Fat",
+    "is_correct": true
+  },
+  {
+    "id": 1232,
+    "question_id": 308,
+    "text": "D. Carbohydrate",
+    "is_correct": false
+  },
+  {
+    "id": 1233,
+    "question_id": 309,
+    "text": "A. Vitamin B6",
+    "is_correct": false
+  },
+  {
+    "id": 1234,
+    "question_id": 309,
+    "text": "B. Vitamin D",
+    "is_correct": true
+  },
+  {
+    "id": 1235,
+    "question_id": 309,
+    "text": "C. Vitamin C",
+    "is_correct": false
+  },
+  {
+    "id": 1236,
+    "question_id": 309,
+    "text": "D. Vitamin K",
+    "is_correct": false
+  },
+  {
+    "id": 1237,
+    "question_id": 310,
+    "text": "A. White blood cells",
+    "is_correct": false
+  },
+  {
+    "id": 1238,
+    "question_id": 310,
+    "text": "B. Stomach acid",
+    "is_correct": false
+  },
+  {
+    "id": 1239,
+    "question_id": 310,
+    "text": "C. Antibodies",
+    "is_correct": false
+  },
+  {
+    "id": 1240,
+    "question_id": 310,
+    "text": "D. Skin",
+    "is_correct": true
+  },
+  {
+    "id": 1241,
+    "question_id": 311,
+    "text": "A. 60-100",
+    "is_correct": true
+  },
+  {
+    "id": 1242,
+    "question_id": 311,
+    "text": "B. 120-140",
+    "is_correct": false
+  },
+  {
+    "id": 1243,
+    "question_id": 311,
+    "text": "C. 40-60",
+    "is_correct": false
+  },
+  {
+    "id": 1244,
+    "question_id": 311,
+    "text": "D. 100-120",
+    "is_correct": false
+  },
+  {
+    "id": 1245,
+    "question_id": 312,
+    "text": "A. A+",
+    "is_correct": false
+  },
+  {
+    "id": 1246,
+    "question_id": 312,
+    "text": "B. B-",
+    "is_correct": false
+  },
+  {
+    "id": 1247,
+    "question_id": 312,
+    "text": "C. AB+",
+    "is_correct": false
+  },
+  {
+    "id": 1248,
+    "question_id": 312,
+    "text": "D. O-",
+    "is_correct": true
+  },
+  {
+    "id": 1249,
+    "question_id": 313,
+    "text": "A. Clot blood",
+    "is_correct": false
+  },
+  {
+    "id": 1250,
+    "question_id": 313,
+    "text": "B. Regulate temperature",
+    "is_correct": false
+  },
+  {
+    "id": 1251,
+    "question_id": 313,
+    "text": "C. Carry oxygen",
+    "is_correct": true
+  },
+  {
+    "id": 1252,
+    "question_id": 313,
+    "text": "D. Fight infection",
+    "is_correct": false
+  },
+  {
+    "id": 1253,
+    "question_id": 314,
+    "text": "A. Vitamin B12",
+    "is_correct": false
+  },
+  {
+    "id": 1254,
+    "question_id": 314,
+    "text": "B. Vitamin C",
+    "is_correct": false
+  },
+  {
+    "id": 1255,
+    "question_id": 314,
+    "text": "C. Vitamin B",
+    "is_correct": false
+  },
+  {
+    "id": 1256,
+    "question_id": 314,
+    "text": "D. Vitamin A",
+    "is_correct": true
+  },
+  {
+    "id": 1257,
+    "question_id": 315,
+    "text": "A. High-Density Lipoprotein",
+    "is_correct": true
+  },
+  {
+    "id": 1258,
+    "question_id": 315,
+    "text": "B. High-Degree Lipoprotein",
+    "is_correct": false
+  },
+  {
+    "id": 1259,
+    "question_id": 315,
+    "text": "C. High-Density Lipase",
+    "is_correct": false
+  },
+  {
+    "id": 1260,
+    "question_id": 315,
+    "text": "D. Heavy-Density Lipoprotein",
+    "is_correct": false
+  },
+  {
+    "id": 1261,
+    "question_id": 316,
+    "text": "A. Medulla",
+    "is_correct": false
+  },
+  {
+    "id": 1262,
+    "question_id": 316,
+    "text": "B. Cerebellum",
+    "is_correct": true
+  },
+  {
+    "id": 1263,
+    "question_id": 316,
+    "text": "C. Hypothalamus",
+    "is_correct": false
+  },
+  {
+    "id": 1264,
+    "question_id": 316,
+    "text": "D. Cerebrum",
+    "is_correct": false
+  },
+  {
+    "id": 1265,
+    "question_id": 317,
+    "text": "A. Liver",
+    "is_correct": false
+  },
+  {
+    "id": 1266,
+    "question_id": 317,
+    "text": "B. Pancreas",
+    "is_correct": true
+  },
+  {
+    "id": 1267,
+    "question_id": 317,
+    "text": "C. Gallbladder",
+    "is_correct": false
+  },
+  {
+    "id": 1268,
+    "question_id": 317,
+    "text": "D. Stomach",
+    "is_correct": false
+  },
+  {
+    "id": 1269,
+    "question_id": 318,
+    "text": "A. Hypoglycemia",
+    "is_correct": false
+  },
+  {
+    "id": 1270,
+    "question_id": 318,
+    "text": "B. Hypertension",
+    "is_correct": true
+  },
+  {
+    "id": 1271,
+    "question_id": 318,
+    "text": "C. Hypotension",
+    "is_correct": false
+  },
+  {
+    "id": 1272,
+    "question_id": 318,
+    "text": "D. Hyperlipidemia",
+    "is_correct": false
+  },
+  {
+    "id": 1273,
+    "question_id": 319,
+    "text": "A. Kidneys",
+    "is_correct": false
+  },
+  {
+    "id": 1274,
+    "question_id": 319,
+    "text": "B. Pancreas",
+    "is_correct": false
+  },
+  {
+    "id": 1275,
+    "question_id": 319,
+    "text": "C. Gallbladder",
+    "is_correct": false
+  },
+  {
+    "id": 1276,
+    "question_id": 319,
+    "text": "D. Liver",
+    "is_correct": true
+  },
+  {
+    "id": 1277,
+    "question_id": 320,
+    "text": "A. ECG",
+    "is_correct": false
+  },
+  {
+    "id": 1278,
+    "question_id": 320,
+    "text": "B. EEG",
+    "is_correct": false
+  },
+  {
+    "id": 1279,
+    "question_id": 320,
+    "text": "C. MRI",
+    "is_correct": false
+  },
+  {
+    "id": 1280,
+    "question_id": 320,
+    "text": "D. Spirometry",
+    "is_correct": true
+  },
+  {
+    "id": 1281,
+    "question_id": 321,
+    "text": "A. 7.35-7.45",
+    "is_correct": true
+  },
+  {
+    "id": 1282,
+    "question_id": 321,
+    "text": "B. 6.0-6.5",
+    "is_correct": false
+  },
+  {
+    "id": 1283,
+    "question_id": 321,
+    "text": "C. 6.8-7.0",
+    "is_correct": false
+  },
+  {
+    "id": 1284,
+    "question_id": 321,
+    "text": "D. 7.8-8.0",
+    "is_correct": false
+  },
+  {
+    "id": 1285,
+    "question_id": 322,
+    "text": "A. Acetylcholine",
+    "is_correct": false
+  },
+  {
+    "id": 1286,
+    "question_id": 322,
+    "text": "B. Serotonin",
+    "is_correct": false
+  },
+  {
+    "id": 1287,
+    "question_id": 322,
+    "text": "C. GABA",
+    "is_correct": false
+  },
+  {
+    "id": 1288,
+    "question_id": 322,
+    "text": "D. Dopamine",
+    "is_correct": true
+  },
+  {
+    "id": 1289,
+    "question_id": 323,
+    "text": "A. Amino acid sequence",
+    "is_correct": true
+  },
+  {
+    "id": 1290,
+    "question_id": 323,
+    "text": "B. Ionic bonds",
+    "is_correct": false
+  },
+  {
+    "id": 1291,
+    "question_id": 323,
+    "text": "C. Disulfide bridges",
+    "is_correct": false
+  },
+  {
+    "id": 1292,
+    "question_id": 323,
+    "text": "D. Hydrogen bonds",
+    "is_correct": false
+  },
+  {
+    "id": 1293,
+    "question_id": 324,
+    "text": "A. Lung function",
+    "is_correct": false
+  },
+  {
+    "id": 1294,
+    "question_id": 324,
+    "text": "B. Heart function",
+    "is_correct": false
+  },
+  {
+    "id": 1295,
+    "question_id": 324,
+    "text": "C. Liver function",
+    "is_correct": false
+  },
+  {
+    "id": 1296,
+    "question_id": 324,
+    "text": "D. Kidney function",
+    "is_correct": true
+  },
+  {
+    "id": 1297,
+    "question_id": 325,
+    "text": "A. Thyroxine",
+    "is_correct": false
+  },
+  {
+    "id": 1298,
+    "question_id": 325,
+    "text": "B. Adrenaline",
+    "is_correct": false
+  },
+  {
+    "id": 1299,
+    "question_id": 325,
+    "text": "C. Insulin",
+    "is_correct": true
+  },
+  {
+    "id": 1300,
+    "question_id": 325,
+    "text": "D. Cortisol",
+    "is_correct": false
+  },
+  {
+    "id": 1301,
+    "question_id": 326,
+    "text": "A. Polymerase Chemical Reaction",
+    "is_correct": false
+  },
+  {
+    "id": 1302,
+    "question_id": 326,
+    "text": "B. Protein Chemical Reaction",
+    "is_correct": false
+  },
+  {
+    "id": 1303,
+    "question_id": 326,
+    "text": "C. Polymerase Chain Reaction",
+    "is_correct": true
+  },
+  {
+    "id": 1304,
+    "question_id": 326,
+    "text": "D. Protein Chain Reaction",
+    "is_correct": false
+  },
+  {
+    "id": 1305,
+    "question_id": 327,
+    "text": "A. Blood filtration",
+    "is_correct": false
+  },
+  {
+    "id": 1306,
+    "question_id": 327,
+    "text": "B. Gas exchange",
+    "is_correct": true
+  },
+  {
+    "id": 1307,
+    "question_id": 327,
+    "text": "C. Hormone production",
+    "is_correct": false
+  },
+  {
+    "id": 1308,
+    "question_id": 327,
+    "text": "D. Muscle contraction",
+    "is_correct": false
+  },
+  {
+    "id": 1309,
+    "question_id": 328,
+    "text": "A. Vitamin B12",
+    "is_correct": false
+  },
+  {
+    "id": 1310,
+    "question_id": 328,
+    "text": "B. Vitamin C",
+    "is_correct": true
+  },
+  {
+    "id": 1311,
+    "question_id": 328,
+    "text": "C. Vitamin D",
+    "is_correct": false
+  },
+  {
+    "id": 1312,
+    "question_id": 328,
+    "text": "D. Vitamin A",
+    "is_correct": false
+  },
+  {
+    "id": 1313,
+    "question_id": 329,
+    "text": "A. Muscle activity",
+    "is_correct": false
+  },
+  {
+    "id": 1314,
+    "question_id": 329,
+    "text": "B. Brain waves",
+    "is_correct": false
+  },
+  {
+    "id": 1315,
+    "question_id": 329,
+    "text": "C. Blood pressure",
+    "is_correct": false
+  },
+  {
+    "id": 1316,
+    "question_id": 329,
+    "text": "D. Heart electrical activity",
+    "is_correct": true
+  },
+  {
+    "id": 1317,
+    "question_id": 330,
+    "text": "A. Neutrophils",
+    "is_correct": false
+  },
+  {
+    "id": 1318,
+    "question_id": 330,
+    "text": "B. Macrophages",
+    "is_correct": false
+  },
+  {
+    "id": 1319,
+    "question_id": 330,
+    "text": "C. B cells",
+    "is_correct": true
+  },
+  {
+    "id": 1320,
+    "question_id": 330,
+    "text": "D. T cells",
+    "is_correct": false
+  },
+  {
+    "id": 1321,
+    "question_id": 331,
+    "text": "A. Milky Way",
+    "is_correct": true
+  },
+  {
+    "id": 1322,
+    "question_id": 331,
+    "text": "B. Sombrero",
+    "is_correct": false
+  },
+  {
+    "id": 1323,
+    "question_id": 331,
+    "text": "C. Whirlpool",
+    "is_correct": false
+  },
+  {
+    "id": 1324,
+    "question_id": 331,
+    "text": "D. Andromeda",
+    "is_correct": false
+  },
+  {
+    "id": 1325,
+    "question_id": 332,
+    "text": "A. Earth",
+    "is_correct": true
+  },
+  {
+    "id": 1326,
+    "question_id": 332,
+    "text": "B. Mars",
+    "is_correct": false
+  },
+  {
+    "id": 1327,
+    "question_id": 332,
+    "text": "C. Uranus",
+    "is_correct": false
+  },
+  {
+    "id": 1328,
+    "question_id": 332,
+    "text": "D. Neptune",
+    "is_correct": false
+  },
+  {
+    "id": 1329,
+    "question_id": 333,
+    "text": "A. Alpha Centauri",
+    "is_correct": false
+  },
+  {
+    "id": 1330,
+    "question_id": 333,
+    "text": "B. Sirius",
+    "is_correct": false
+  },
+  {
+    "id": 1331,
+    "question_id": 333,
+    "text": "C. Proxima Centauri",
+    "is_correct": false
+  },
+  {
+    "id": 1332,
+    "question_id": 333,
+    "text": "D. The Sun",
+    "is_correct": true
+  },
+  {
+    "id": 1333,
+    "question_id": 334,
+    "text": "A. Phobos",
+    "is_correct": false
+  },
+  {
+    "id": 1334,
+    "question_id": 334,
+    "text": "B. Deimos",
+    "is_correct": false
+  },
+  {
+    "id": 1335,
+    "question_id": 334,
+    "text": "C. Europa",
+    "is_correct": false
+  },
+  {
+    "id": 1336,
+    "question_id": 334,
+    "text": "D. Moon",
+    "is_correct": true
+  },
+  {
+    "id": 1337,
+    "question_id": 335,
+    "text": "A. Mars",
+    "is_correct": false
+  },
+  {
+    "id": 1338,
+    "question_id": 335,
+    "text": "B. Jupiter",
+    "is_correct": false
+  },
+  {
+    "id": 1339,
+    "question_id": 335,
+    "text": "C. Venus",
+    "is_correct": true
+  },
+  {
+    "id": 1340,
+    "question_id": 335,
+    "text": "D. Mercury",
+    "is_correct": false
+  },
+  {
+    "id": 1341,
+    "question_id": 336,
+    "text": "A. Magnetism",
+    "is_correct": false
+  },
+  {
+    "id": 1342,
+    "question_id": 336,
+    "text": "B. Gravity",
+    "is_correct": true
+  },
+  {
+    "id": 1343,
+    "question_id": 336,
+    "text": "C. Electromagnetism",
+    "is_correct": false
+  },
+  {
+    "id": 1344,
+    "question_id": 336,
+    "text": "D. Friction",
+    "is_correct": false
+  },
+  {
+    "id": 1345,
+    "question_id": 337,
+    "text": "A. Galaxy",
+    "is_correct": false
+  },
+  {
+    "id": 1346,
+    "question_id": 337,
+    "text": "B. Cluster",
+    "is_correct": false
+  },
+  {
+    "id": 1347,
+    "question_id": 337,
+    "text": "C. Nebula",
+    "is_correct": false
+  },
+  {
+    "id": 1348,
+    "question_id": 337,
+    "text": "D. Constellation",
+    "is_correct": true
+  },
+  {
+    "id": 1349,
+    "question_id": 338,
+    "text": "A. Saturn",
+    "is_correct": true
+  },
+  {
+    "id": 1350,
+    "question_id": 338,
+    "text": "B. Earth",
+    "is_correct": false
+  },
+  {
+    "id": 1351,
+    "question_id": 338,
+    "text": "C. Venus",
+    "is_correct": false
+  },
+  {
+    "id": 1352,
+    "question_id": 338,
+    "text": "D. Mars",
+    "is_correct": false
+  },
+  {
+    "id": 1353,
+    "question_id": 339,
+    "text": "A. Asteroid",
+    "is_correct": true
+  },
+  {
+    "id": 1354,
+    "question_id": 339,
+    "text": "B. Moon",
+    "is_correct": false
+  },
+  {
+    "id": 1355,
+    "question_id": 339,
+    "text": "C. Meteor",
+    "is_correct": false
+  },
+  {
+    "id": 1356,
+    "question_id": 339,
+    "text": "D. Comet",
+    "is_correct": false
+  },
+  {
+    "id": 1357,
+    "question_id": 340,
+    "text": "A. Geology",
+    "is_correct": false
+  },
+  {
+    "id": 1358,
+    "question_id": 340,
+    "text": "B. Biology",
+    "is_correct": false
+  },
+  {
+    "id": 1359,
+    "question_id": 340,
+    "text": "C. Oceanography",
+    "is_correct": false
+  },
+  {
+    "id": 1360,
+    "question_id": 340,
+    "text": "D. Astronomy",
+    "is_correct": true
+  },
+  {
+    "id": 1361,
+    "question_id": 341,
+    "text": "A. Mercury",
+    "is_correct": false
+  },
+  {
+    "id": 1362,
+    "question_id": 341,
+    "text": "B. Saturn",
+    "is_correct": false
+  },
+  {
+    "id": 1363,
+    "question_id": 341,
+    "text": "C. Mars",
+    "is_correct": true
+  },
+  {
+    "id": 1364,
+    "question_id": 341,
+    "text": "D. Jupiter",
+    "is_correct": false
+  },
+  {
+    "id": 1365,
+    "question_id": 342,
+    "text": "A. Kepler",
+    "is_correct": false
+  },
+  {
+    "id": 1366,
+    "question_id": 342,
+    "text": "B. Spitzer",
+    "is_correct": false
+  },
+  {
+    "id": 1367,
+    "question_id": 342,
+    "text": "C. James Webb",
+    "is_correct": false
+  },
+  {
+    "id": 1368,
+    "question_id": 342,
+    "text": "D. Hubble",
+    "is_correct": true
+  },
+  {
+    "id": 1369,
+    "question_id": 343,
+    "text": "A. Chromosphere",
+    "is_correct": false
+  },
+  {
+    "id": 1370,
+    "question_id": 343,
+    "text": "B. Umbra",
+    "is_correct": false
+  },
+  {
+    "id": 1371,
+    "question_id": 343,
+    "text": "C. Photosphere",
+    "is_correct": false
+  },
+  {
+    "id": 1372,
+    "question_id": 343,
+    "text": "D. Corona",
+    "is_correct": true
+  },
+  {
+    "id": 1373,
+    "question_id": 344,
+    "text": "A. Ceres",
+    "is_correct": false
+  },
+  {
+    "id": 1374,
+    "question_id": 344,
+    "text": "B. Eris",
+    "is_correct": false
+  },
+  {
+    "id": 1375,
+    "question_id": 344,
+    "text": "C. Makemake",
+    "is_correct": false
+  },
+  {
+    "id": 1376,
+    "question_id": 344,
+    "text": "D. Pluto",
+    "is_correct": true
+  },
+  {
+    "id": 1377,
+    "question_id": 345,
+    "text": "A. Pulsar",
+    "is_correct": false
+  },
+  {
+    "id": 1378,
+    "question_id": 345,
+    "text": "B. Nova",
+    "is_correct": true
+  },
+  {
+    "id": 1379,
+    "question_id": 345,
+    "text": "C. Quasar",
+    "is_correct": false
+  },
+  {
+    "id": 1380,
+    "question_id": 345,
+    "text": "D. Supernova",
+    "is_correct": false
+  },
+  {
+    "id": 1381,
+    "question_id": 346,
+    "text": "A. Andromeda",
+    "is_correct": true
+  },
+  {
+    "id": 1382,
+    "question_id": 346,
+    "text": "B. Triangulum",
+    "is_correct": false
+  },
+  {
+    "id": 1383,
+    "question_id": 346,
+    "text": "C. Whirlpool",
+    "is_correct": false
+  },
+  {
+    "id": 1384,
+    "question_id": 346,
+    "text": "D. Sombrero",
+    "is_correct": false
+  },
+  {
+    "id": 1385,
+    "question_id": 347,
+    "text": "A. Saturn",
+    "is_correct": false
+  },
+  {
+    "id": 1386,
+    "question_id": 347,
+    "text": "B. Neptune",
+    "is_correct": false
+  },
+  {
+    "id": 1387,
+    "question_id": 347,
+    "text": "C. Uranus",
+    "is_correct": false
+  },
+  {
+    "id": 1388,
+    "question_id": 347,
+    "text": "D. Jupiter",
+    "is_correct": true
+  },
+  {
+    "id": 1389,
+    "question_id": 348,
+    "text": "A. Event Horizon",
+    "is_correct": true
+  },
+  {
+    "id": 1390,
+    "question_id": 348,
+    "text": "B. Accretion Disk",
+    "is_correct": false
+  },
+  {
+    "id": 1391,
+    "question_id": 348,
+    "text": "C. Singularity",
+    "is_correct": false
+  },
+  {
+    "id": 1392,
+    "question_id": 348,
+    "text": "D. Photon Sphere",
+    "is_correct": false
+  },
+  {
+    "id": 1393,
+    "question_id": 349,
+    "text": "A. Astronomical unit",
+    "is_correct": false
+  },
+  {
+    "id": 1394,
+    "question_id": 349,
+    "text": "B. Parsec",
+    "is_correct": false
+  },
+  {
+    "id": 1395,
+    "question_id": 349,
+    "text": "C. Kilometer",
+    "is_correct": false
+  },
+  {
+    "id": 1396,
+    "question_id": 349,
+    "text": "D. Light-year",
+    "is_correct": true
+  },
+  {
+    "id": 1397,
+    "question_id": 350,
+    "text": "A. Apollo 11",
+    "is_correct": false
+  },
+  {
+    "id": 1398,
+    "question_id": 350,
+    "text": "B. Sputnik 1",
+    "is_correct": true
+  },
+  {
+    "id": 1399,
+    "question_id": 350,
+    "text": "C. Voyager 1",
+    "is_correct": false
+  },
+  {
+    "id": 1400,
+    "question_id": 350,
+    "text": "D. Explorer 1",
+    "is_correct": false
+  },
+  {
+    "id": 1401,
+    "question_id": 351,
+    "text": "A. Nuclear fission",
+    "is_correct": false
+  },
+  {
+    "id": 1402,
+    "question_id": 351,
+    "text": "B. Radioactive decay",
+    "is_correct": false
+  },
+  {
+    "id": 1403,
+    "question_id": 351,
+    "text": "C. Chemical combustion",
+    "is_correct": false
+  },
+  {
+    "id": 1404,
+    "question_id": 351,
+    "text": "D. Nuclear fusion",
+    "is_correct": true
+  },
+  {
+    "id": 1405,
+    "question_id": 352,
+    "text": "A. Oxygen",
+    "is_correct": false
+  },
+  {
+    "id": 1406,
+    "question_id": 352,
+    "text": "B. Hydrogen",
+    "is_correct": true
+  },
+  {
+    "id": 1407,
+    "question_id": 352,
+    "text": "C. Carbon",
+    "is_correct": false
+  },
+  {
+    "id": 1408,
+    "question_id": 352,
+    "text": "D. Helium",
+    "is_correct": false
+  },
+  {
+    "id": 1409,
+    "question_id": 353,
+    "text": "A. Neutron star radius",
+    "is_correct": false
+  },
+  {
+    "id": 1410,
+    "question_id": 353,
+    "text": "B. Galaxy rotation",
+    "is_correct": false
+  },
+  {
+    "id": 1411,
+    "question_id": 353,
+    "text": "C. Black hole spin",
+    "is_correct": false
+  },
+  {
+    "id": 1412,
+    "question_id": 353,
+    "text": "D. White dwarf mass",
+    "is_correct": true
+  },
+  {
+    "id": 1413,
+    "question_id": 354,
+    "text": "A. 5,000 years",
+    "is_correct": false
+  },
+  {
+    "id": 1414,
+    "question_id": 354,
+    "text": "B. 20 billion years",
+    "is_correct": false
+  },
+  {
+    "id": 1415,
+    "question_id": 354,
+    "text": "C. 4.5 billion years",
+    "is_correct": false
+  },
+  {
+    "id": 1416,
+    "question_id": 354,
+    "text": "D. 13.8 billion years",
+    "is_correct": true
+  },
+  {
+    "id": 1417,
+    "question_id": 355,
+    "text": "A. Doppler effect",
+    "is_correct": false
+  },
+  {
+    "id": 1418,
+    "question_id": 355,
+    "text": "B. Redshift",
+    "is_correct": true
+  },
+  {
+    "id": 1419,
+    "question_id": 355,
+    "text": "C. Blueshift",
+    "is_correct": false
+  },
+  {
+    "id": 1420,
+    "question_id": 355,
+    "text": "D. Gravitational lensing",
+    "is_correct": false
+  },
+  {
+    "id": 1421,
+    "question_id": 356,
+    "text": "A. Barred spiral",
+    "is_correct": true
+  },
+  {
+    "id": 1422,
+    "question_id": 356,
+    "text": "B. Irregular",
+    "is_correct": false
+  },
+  {
+    "id": 1423,
+    "question_id": 356,
+    "text": "C. Lenticular",
+    "is_correct": false
+  },
+  {
+    "id": 1424,
+    "question_id": 356,
+    "text": "D. Elliptical",
+    "is_correct": false
+  },
+  {
+    "id": 1425,
+    "question_id": 357,
+    "text": "A. Sputnik 2",
+    "is_correct": false
+  },
+  {
+    "id": 1426,
+    "question_id": 357,
+    "text": "B. Vostok 1",
+    "is_correct": false
+  },
+  {
+    "id": 1427,
+    "question_id": 357,
+    "text": "C. Explorer 1",
+    "is_correct": false
+  },
+  {
+    "id": 1428,
+    "question_id": 357,
+    "text": "D. Apollo 11",
+    "is_correct": true
+  },
+  {
+    "id": 1429,
+    "question_id": 358,
+    "text": "A. Ergosphere",
+    "is_correct": false
+  },
+  {
+    "id": 1430,
+    "question_id": 358,
+    "text": "B. Event Horizon",
+    "is_correct": false
+  },
+  {
+    "id": 1431,
+    "question_id": 358,
+    "text": "C. Singularity",
+    "is_correct": true
+  },
+  {
+    "id": 1432,
+    "question_id": 358,
+    "text": "D. Planck length",
+    "is_correct": false
+  },
+  {
+    "id": 1433,
+    "question_id": 359,
+    "text": "A. Gravitational waves",
+    "is_correct": false
+  },
+  {
+    "id": 1434,
+    "question_id": 359,
+    "text": "B. Dark matter",
+    "is_correct": false
+  },
+  {
+    "id": 1435,
+    "question_id": 359,
+    "text": "C. Dark energy",
+    "is_correct": true
+  },
+  {
+    "id": 1436,
+    "question_id": 359,
+    "text": "D. Cosmic microwave background",
+    "is_correct": false
+  },
+  {
+    "id": 1437,
+    "question_id": 360,
+    "text": "A. Red dwarf",
+    "is_correct": true
+  },
+  {
+    "id": 1438,
+    "question_id": 360,
+    "text": "B. Yellow dwarf",
+    "is_correct": false
+  },
+  {
+    "id": 1439,
+    "question_id": 360,
+    "text": "C. White dwarf",
+    "is_correct": false
+  },
+  {
+    "id": 1440,
+    "question_id": 360,
+    "text": "D. Blue giant",
+    "is_correct": false
+  },
+  {
+    "id": 1441,
+    "question_id": 361,
+    "text": "A. George Lucas",
+    "is_correct": false
+  },
+  {
+    "id": 1442,
+    "question_id": 361,
+    "text": "B. Steven Spielberg",
+    "is_correct": true
+  },
+  {
+    "id": 1443,
+    "question_id": 361,
+    "text": "C. Ridley Scott",
+    "is_correct": false
+  },
+  {
+    "id": 1444,
+    "question_id": 361,
+    "text": "D. James Cameron",
+    "is_correct": false
+  },
+  {
+    "id": 1445,
+    "question_id": 362,
+    "text": "A. Terminator",
+    "is_correct": false
+  },
+  {
+    "id": 1446,
+    "question_id": 362,
+    "text": "B. E.T.",
+    "is_correct": false
+  },
+  {
+    "id": 1447,
+    "question_id": 362,
+    "text": "C. Raiders of the Lost Ark",
+    "is_correct": true
+  },
+  {
+    "id": 1448,
+    "question_id": 362,
+    "text": "D. Star Wars",
+    "is_correct": false
+  },
+  {
+    "id": 1449,
+    "question_id": 363,
+    "text": "A. Leonardo DiCaprio",
+    "is_correct": true
+  },
+  {
+    "id": 1450,
+    "question_id": 363,
+    "text": "B. Johnny Depp",
+    "is_correct": false
+  },
+  {
+    "id": 1451,
+    "question_id": 363,
+    "text": "C. Tom Cruise",
+    "is_correct": false
+  },
+  {
+    "id": 1452,
+    "question_id": 363,
+    "text": "D. Brad Pitt",
+    "is_correct": false
+  },
+  {
+    "id": 1453,
+    "question_id": 364,
+    "text": "A. Star Trek",
+    "is_correct": false
+  },
+  {
+    "id": 1454,
+    "question_id": 364,
+    "text": "B. Guardians of the Galaxy",
+    "is_correct": false
+  },
+  {
+    "id": 1455,
+    "question_id": 364,
+    "text": "C. Battlestar Galactica",
+    "is_correct": false
+  },
+  {
+    "id": 1456,
+    "question_id": 364,
+    "text": "D. Star Wars",
+    "is_correct": true
+  },
+  {
+    "id": 1457,
+    "question_id": 365,
+    "text": "A. Star Wars: The Force Awakens",
+    "is_correct": false
+  },
+  {
+    "id": 1458,
+    "question_id": 365,
+    "text": "B. Titanic",
+    "is_correct": false
+  },
+  {
+    "id": 1459,
+    "question_id": 365,
+    "text": "C. Avengers: Endgame",
+    "is_correct": false
+  },
+  {
+    "id": 1460,
+    "question_id": 365,
+    "text": "D. Avatar",
+    "is_correct": true
+  },
+  {
+    "id": 1461,
+    "question_id": 366,
+    "text": "A. John Goodman",
+    "is_correct": false
+  },
+  {
+    "id": 1462,
+    "question_id": 366,
+    "text": "B. Tom Hanks",
+    "is_correct": true
+  },
+  {
+    "id": 1463,
+    "question_id": 366,
+    "text": "C. Tim Allen",
+    "is_correct": false
+  },
+  {
+    "id": 1464,
+    "question_id": 366,
+    "text": "D. Billy Crystal",
+    "is_correct": false
+  },
+  {
+    "id": 1465,
+    "question_id": 367,
+    "text": "A. Ghost",
+    "is_correct": false
+  },
+  {
+    "id": 1466,
+    "question_id": 367,
+    "text": "B. The Bodyguard",
+    "is_correct": false
+  },
+  {
+    "id": 1467,
+    "question_id": 367,
+    "text": "C. Titanic",
+    "is_correct": true
+  },
+  {
+    "id": 1468,
+    "question_id": 367,
+    "text": "D. Pretty Woman",
+    "is_correct": false
+  },
+  {
+    "id": 1469,
+    "question_id": 368,
+    "text": "A. Quentin Tarantino",
+    "is_correct": false
+  },
+  {
+    "id": 1470,
+    "question_id": 368,
+    "text": "B. Martin Scorsese",
+    "is_correct": false
+  },
+  {
+    "id": 1471,
+    "question_id": 368,
+    "text": "C. Christopher Nolan",
+    "is_correct": true
+  },
+  {
+    "id": 1472,
+    "question_id": 368,
+    "text": "D. James Cameron",
+    "is_correct": false
+  },
+  {
+    "id": 1473,
+    "question_id": 369,
+    "text": "A. Ilvermorny",
+    "is_correct": false
+  },
+  {
+    "id": 1474,
+    "question_id": 369,
+    "text": "B. Hogwarts",
+    "is_correct": true
+  },
+  {
+    "id": 1475,
+    "question_id": 369,
+    "text": "C. Durmstrang",
+    "is_correct": false
+  },
+  {
+    "id": 1476,
+    "question_id": 369,
+    "text": "D. Beauxbatons",
+    "is_correct": false
+  },
+  {
+    "id": 1477,
+    "question_id": 370,
+    "text": "A. Star Wars",
+    "is_correct": true
+  },
+  {
+    "id": 1478,
+    "question_id": 370,
+    "text": "B. Battlestar Galactica",
+    "is_correct": false
+  },
+  {
+    "id": 1479,
+    "question_id": 370,
+    "text": "C. Star Trek",
+    "is_correct": false
+  },
+  {
+    "id": 1480,
+    "question_id": 370,
+    "text": "D. Doctor Who",
+    "is_correct": false
+  },
+  {
+    "id": 1481,
+    "question_id": 371,
+    "text": "A. Quentin Tarantino",
+    "is_correct": true
+  },
+  {
+    "id": 1482,
+    "question_id": 371,
+    "text": "B. Francis Ford Coppola",
+    "is_correct": false
+  },
+  {
+    "id": 1483,
+    "question_id": 371,
+    "text": "C. Guy Ritchie",
+    "is_correct": false
+  },
+  {
+    "id": 1484,
+    "question_id": 371,
+    "text": "D. Martin Scorsese",
+    "is_correct": false
+  },
+  {
+    "id": 1485,
+    "question_id": 372,
+    "text": "A. Joker",
+    "is_correct": false
+  },
+  {
+    "id": 1486,
+    "question_id": 372,
+    "text": "B. 1917",
+    "is_correct": false
+  },
+  {
+    "id": 1487,
+    "question_id": 372,
+    "text": "C. Once Upon a Time in Hollywood",
+    "is_correct": false
+  },
+  {
+    "id": 1488,
+    "question_id": 372,
+    "text": "D. Parasite",
+    "is_correct": true
+  },
+  {
+    "id": 1489,
+    "question_id": 373,
+    "text": "A. James Horner",
+    "is_correct": false
+  },
+  {
+    "id": 1490,
+    "question_id": 373,
+    "text": "B. John Williams",
+    "is_correct": false
+  },
+  {
+    "id": 1491,
+    "question_id": 373,
+    "text": "C. Howard Shore",
+    "is_correct": true
+  },
+  {
+    "id": 1492,
+    "question_id": 373,
+    "text": "D. Hans Zimmer",
+    "is_correct": false
+  },
+  {
+    "id": 1493,
+    "question_id": 374,
+    "text": "A. Jared Leto",
+    "is_correct": false
+  },
+  {
+    "id": 1494,
+    "question_id": 374,
+    "text": "B. Jack Nicholson",
+    "is_correct": false
+  },
+  {
+    "id": 1495,
+    "question_id": 374,
+    "text": "C. Heath Ledger",
+    "is_correct": true
+  },
+  {
+    "id": 1496,
+    "question_id": 374,
+    "text": "D. Joaquin Phoenix",
+    "is_correct": false
+  },
+  {
+    "id": 1497,
+    "question_id": 375,
+    "text": "A. Latveria",
+    "is_correct": false
+  },
+  {
+    "id": 1498,
+    "question_id": 375,
+    "text": "B. Wakanda",
+    "is_correct": true
+  },
+  {
+    "id": 1499,
+    "question_id": 375,
+    "text": "C. Freedonia",
+    "is_correct": false
+  },
+  {
+    "id": 1500,
+    "question_id": 375,
+    "text": "D. Genovia",
+    "is_correct": false
+  },
+  {
+    "id": 1501,
+    "question_id": 376,
+    "text": "A. Aladdin",
+    "is_correct": false
+  },
+  {
+    "id": 1502,
+    "question_id": 376,
+    "text": "B. Beauty and the Beast",
+    "is_correct": false
+  },
+  {
+    "id": 1503,
+    "question_id": 376,
+    "text": "C. The Lion King",
+    "is_correct": true
+  },
+  {
+    "id": 1504,
+    "question_id": 376,
+    "text": "D. Mulan",
+    "is_correct": false
+  },
+  {
+    "id": 1505,
+    "question_id": 377,
+    "text": "A. Wes Anderson",
+    "is_correct": true
+  },
+  {
+    "id": 1506,
+    "question_id": 377,
+    "text": "B. Tim Burton",
+    "is_correct": false
+  },
+  {
+    "id": 1507,
+    "question_id": 377,
+    "text": "C. David Fincher",
+    "is_correct": false
+  },
+  {
+    "id": 1508,
+    "question_id": 377,
+    "text": "D. Spike Jonze",
+    "is_correct": false
+  },
+  {
+    "id": 1509,
+    "question_id": 378,
+    "text": "A. The Godfather",
+    "is_correct": true
+  },
+  {
+    "id": 1510,
+    "question_id": 378,
+    "text": "B. Casino",
+    "is_correct": false
+  },
+  {
+    "id": 1511,
+    "question_id": 378,
+    "text": "C. Goodfellas",
+    "is_correct": false
+  },
+  {
+    "id": 1512,
+    "question_id": 378,
+    "text": "D. Scarface",
+    "is_correct": false
+  },
+  {
+    "id": 1513,
+    "question_id": 379,
+    "text": "A. Keanu Reeves",
+    "is_correct": true
+  },
+  {
+    "id": 1514,
+    "question_id": 379,
+    "text": "B. Will Smith",
+    "is_correct": false
+  },
+  {
+    "id": 1515,
+    "question_id": 379,
+    "text": "C. Laurence Fishburne",
+    "is_correct": false
+  },
+  {
+    "id": 1516,
+    "question_id": 379,
+    "text": "D. Brad Pitt",
+    "is_correct": false
+  },
+  {
+    "id": 1517,
+    "question_id": 380,
+    "text": "A. 1990",
+    "is_correct": false
+  },
+  {
+    "id": 1518,
+    "question_id": 380,
+    "text": "B. 1988",
+    "is_correct": false
+  },
+  {
+    "id": 1519,
+    "question_id": 380,
+    "text": "C. 1994",
+    "is_correct": true
+  },
+  {
+    "id": 1520,
+    "question_id": 380,
+    "text": "D. 1999",
+    "is_correct": false
+  },
+  {
+    "id": 1521,
+    "question_id": 381,
+    "text": "A. Non-linear editing",
+    "is_correct": true
+  },
+  {
+    "id": 1522,
+    "question_id": 381,
+    "text": "B. Montage",
+    "is_correct": false
+  },
+  {
+    "id": 1523,
+    "question_id": 381,
+    "text": "C. Jump cut",
+    "is_correct": false
+  },
+  {
+    "id": 1524,
+    "question_id": 381,
+    "text": "D. Match cut",
+    "is_correct": false
+  },
+  {
+    "id": 1525,
+    "question_id": 382,
+    "text": "A. Steven Spielberg",
+    "is_correct": false
+  },
+  {
+    "id": 1526,
+    "question_id": 382,
+    "text": "B. Christopher Nolan",
+    "is_correct": false
+  },
+  {
+    "id": 1527,
+    "question_id": 382,
+    "text": "C. Ridley Scott",
+    "is_correct": false
+  },
+  {
+    "id": 1528,
+    "question_id": 382,
+    "text": "D. Stanley Kubrick",
+    "is_correct": true
+  },
+  {
+    "id": 1529,
+    "question_id": 383,
+    "text": "A. Eric Rohmer",
+    "is_correct": false
+  },
+  {
+    "id": 1530,
+    "question_id": 383,
+    "text": "B. Agnes Varda",
+    "is_correct": false
+  },
+  {
+    "id": 1531,
+    "question_id": 383,
+    "text": "C. Jean-Luc Godard",
+    "is_correct": true
+  },
+  {
+    "id": 1532,
+    "question_id": 383,
+    "text": "D. Fran\u00e7ois Truffaut",
+    "is_correct": false
+  },
+  {
+    "id": 1533,
+    "question_id": 384,
+    "text": "A. Microfilm",
+    "is_correct": true
+  },
+  {
+    "id": 1534,
+    "question_id": 384,
+    "text": "B. Secret formula",
+    "is_correct": false
+  },
+  {
+    "id": 1535,
+    "question_id": 384,
+    "text": "C. Briefcase",
+    "is_correct": false
+  },
+  {
+    "id": 1536,
+    "question_id": 384,
+    "text": "D. Keycard",
+    "is_correct": false
+  },
+  {
+    "id": 1537,
+    "question_id": 385,
+    "text": "A. Jordan Cronenweth",
+    "is_correct": true
+  },
+  {
+    "id": 1538,
+    "question_id": 385,
+    "text": "B. Wally Pfister",
+    "is_correct": false
+  },
+  {
+    "id": 1539,
+    "question_id": 385,
+    "text": "C. Roger Deakins",
+    "is_correct": false
+  },
+  {
+    "id": 1540,
+    "question_id": 385,
+    "text": "D. Emmanuel Lubezki",
+    "is_correct": false
+  },
+  {
+    "id": 1541,
+    "question_id": 386,
+    "text": "A. Long take",
+    "is_correct": true
+  },
+  {
+    "id": 1542,
+    "question_id": 386,
+    "text": "B. One-shot",
+    "is_correct": false
+  },
+  {
+    "id": 1543,
+    "question_id": 386,
+    "text": "C. Tracking shot",
+    "is_correct": false
+  },
+  {
+    "id": 1544,
+    "question_id": 386,
+    "text": "D. Steadicam",
+    "is_correct": false
+  },
+  {
+    "id": 1545,
+    "question_id": 387,
+    "text": "A. Bernard Herrmann",
+    "is_correct": true
+  },
+  {
+    "id": 1546,
+    "question_id": 387,
+    "text": "B. Alan Silvestri",
+    "is_correct": false
+  },
+  {
+    "id": 1547,
+    "question_id": 387,
+    "text": "C. Hans Zimmer",
+    "is_correct": false
+  },
+  {
+    "id": 1548,
+    "question_id": 387,
+    "text": "D. John Williams",
+    "is_correct": false
+  },
+  {
+    "id": 1549,
+    "question_id": 388,
+    "text": "A. German Expressionism",
+    "is_correct": false
+  },
+  {
+    "id": 1550,
+    "question_id": 388,
+    "text": "B. French New Wave",
+    "is_correct": false
+  },
+  {
+    "id": 1551,
+    "question_id": 388,
+    "text": "C. Italian Neorealism",
+    "is_correct": true
+  },
+  {
+    "id": 1552,
+    "question_id": 388,
+    "text": "D. Soviet Montage",
+    "is_correct": false
+  },
+  {
+    "id": 1553,
+    "question_id": 389,
+    "text": "A. Federico Fellini",
+    "is_correct": false
+  },
+  {
+    "id": 1554,
+    "question_id": 389,
+    "text": "B. Ingmar Bergman",
+    "is_correct": true
+  },
+  {
+    "id": 1555,
+    "question_id": 389,
+    "text": "C. Andrei Tarkovsky",
+    "is_correct": false
+  },
+  {
+    "id": 1556,
+    "question_id": 389,
+    "text": "D. Akira Kurosawa",
+    "is_correct": false
+  },
+  {
+    "id": 1557,
+    "question_id": 390,
+    "text": "A. Bates Motel",
+    "is_correct": false
+  },
+  {
+    "id": 1558,
+    "question_id": 390,
+    "text": "B. Continental Hotel",
+    "is_correct": false
+  },
+  {
+    "id": 1559,
+    "question_id": 390,
+    "text": "C. Ravenwood Hotel",
+    "is_correct": false
+  },
+  {
+    "id": 1560,
+    "question_id": 390,
+    "text": "D. Overlook Hotel",
+    "is_correct": true
+  },
+  {
+    "id": 1561,
+    "question_id": 391,
+    "text": "A. Lion",
+    "is_correct": true
+  },
+  {
+    "id": 1562,
+    "question_id": 391,
+    "text": "B. Tiger",
+    "is_correct": false
+  },
+  {
+    "id": 1563,
+    "question_id": 391,
+    "text": "C. Leopard",
+    "is_correct": false
+  },
+  {
+    "id": 1564,
+    "question_id": 391,
+    "text": "D. Elephant",
+    "is_correct": false
+  },
+  {
+    "id": 1565,
+    "question_id": 392,
+    "text": "A. Flying squirrel",
+    "is_correct": false
+  },
+  {
+    "id": 1566,
+    "question_id": 392,
+    "text": "B. Butterfly",
+    "is_correct": false
+  },
+  {
+    "id": 1567,
+    "question_id": 392,
+    "text": "C. Bat",
+    "is_correct": true
+  },
+  {
+    "id": 1568,
+    "question_id": 392,
+    "text": "D. Eagle",
+    "is_correct": false
+  },
+  {
+    "id": 1569,
+    "question_id": 393,
+    "text": "A. Parrot",
+    "is_correct": true
+  },
+  {
+    "id": 1570,
+    "question_id": 393,
+    "text": "B. Sparrow",
+    "is_correct": false
+  },
+  {
+    "id": 1571,
+    "question_id": 393,
+    "text": "C. Penguin",
+    "is_correct": false
+  },
+  {
+    "id": 1572,
+    "question_id": 393,
+    "text": "D. Eagle",
+    "is_correct": false
+  },
+  {
+    "id": 1573,
+    "question_id": 394,
+    "text": "A. Puppy",
+    "is_correct": false
+  },
+  {
+    "id": 1574,
+    "question_id": 394,
+    "text": "B. Calf",
+    "is_correct": false
+  },
+  {
+    "id": 1575,
+    "question_id": 394,
+    "text": "C. Kitten",
+    "is_correct": true
+  },
+  {
+    "id": 1576,
+    "question_id": 394,
+    "text": "D. Cub",
+    "is_correct": false
+  },
+  {
+    "id": 1577,
+    "question_id": 395,
+    "text": "A. Elephant",
+    "is_correct": true
+  },
+  {
+    "id": 1578,
+    "question_id": 395,
+    "text": "B. Rhino",
+    "is_correct": false
+  },
+  {
+    "id": 1579,
+    "question_id": 395,
+    "text": "C. Hippo",
+    "is_correct": false
+  },
+  {
+    "id": 1580,
+    "question_id": 395,
+    "text": "D. Giraffe",
+    "is_correct": false
+  },
+  {
+    "id": 1581,
+    "question_id": 396,
+    "text": "A. Fish",
+    "is_correct": false
+  },
+  {
+    "id": 1582,
+    "question_id": 396,
+    "text": "B. Leaves",
+    "is_correct": false
+  },
+  {
+    "id": 1583,
+    "question_id": 396,
+    "text": "C. Bamboo",
+    "is_correct": true
+  },
+  {
+    "id": 1584,
+    "question_id": 396,
+    "text": "D. Grass",
+    "is_correct": false
+  },
+  {
+    "id": 1585,
+    "question_id": 397,
+    "text": "A. Tiger",
+    "is_correct": false
+  },
+  {
+    "id": 1586,
+    "question_id": 397,
+    "text": "B. Zebra",
+    "is_correct": true
+  },
+  {
+    "id": 1587,
+    "question_id": 397,
+    "text": "C. Panda",
+    "is_correct": false
+  },
+  {
+    "id": 1588,
+    "question_id": 397,
+    "text": "D. Skunk",
+    "is_correct": false
+  },
+  {
+    "id": 1589,
+    "question_id": 398,
+    "text": "A. Octopus",
+    "is_correct": true
+  },
+  {
+    "id": 1590,
+    "question_id": 398,
+    "text": "B. Starfish",
+    "is_correct": false
+  },
+  {
+    "id": 1591,
+    "question_id": 398,
+    "text": "C. Squid",
+    "is_correct": false
+  },
+  {
+    "id": 1592,
+    "question_id": 398,
+    "text": "D. Jellyfish",
+    "is_correct": false
+  },
+  {
+    "id": 1593,
+    "question_id": 399,
+    "text": "A. Koala",
+    "is_correct": false
+  },
+  {
+    "id": 1594,
+    "question_id": 399,
+    "text": "B. Opossum",
+    "is_correct": false
+  },
+  {
+    "id": 1595,
+    "question_id": 399,
+    "text": "C. Wallaby",
+    "is_correct": false
+  },
+  {
+    "id": 1596,
+    "question_id": 399,
+    "text": "D. Kangaroo",
+    "is_correct": true
+  },
+  {
+    "id": 1597,
+    "question_id": 400,
+    "text": "A. Cheetah",
+    "is_correct": true
+  },
+  {
+    "id": 1598,
+    "question_id": 400,
+    "text": "B. Gazelle",
+    "is_correct": false
+  },
+  {
+    "id": 1599,
+    "question_id": 400,
+    "text": "C. Horse",
+    "is_correct": false
+  },
+  {
+    "id": 1600,
+    "question_id": 400,
+    "text": "D. Lion",
+    "is_correct": false
+  },
+  {
+    "id": 1601,
+    "question_id": 401,
+    "text": "A. Swan",
+    "is_correct": false
+  },
+  {
+    "id": 1602,
+    "question_id": 401,
+    "text": "B. Pelican",
+    "is_correct": false
+  },
+  {
+    "id": 1603,
+    "question_id": 401,
+    "text": "C. Eagle",
+    "is_correct": false
+  },
+  {
+    "id": 1604,
+    "question_id": 401,
+    "text": "D. Dove",
+    "is_correct": true
+  },
+  {
+    "id": 1605,
+    "question_id": 402,
+    "text": "A. Great white",
+    "is_correct": false
+  },
+  {
+    "id": 1606,
+    "question_id": 402,
+    "text": "B. Tiger shark",
+    "is_correct": false
+  },
+  {
+    "id": 1607,
+    "question_id": 402,
+    "text": "C. Hammerhead",
+    "is_correct": false
+  },
+  {
+    "id": 1608,
+    "question_id": 402,
+    "text": "D. Whale shark",
+    "is_correct": true
+  },
+  {
+    "id": 1609,
+    "question_id": 403,
+    "text": "A. Ostrich",
+    "is_correct": false
+  },
+  {
+    "id": 1610,
+    "question_id": 403,
+    "text": "B. Giraffe",
+    "is_correct": true
+  },
+  {
+    "id": 1611,
+    "question_id": 403,
+    "text": "C. Llama",
+    "is_correct": false
+  },
+  {
+    "id": 1612,
+    "question_id": 403,
+    "text": "D. Camel",
+    "is_correct": false
+  },
+  {
+    "id": 1613,
+    "question_id": 404,
+    "text": "A. Pack",
+    "is_correct": false
+  },
+  {
+    "id": 1614,
+    "question_id": 404,
+    "text": "B. Herd",
+    "is_correct": false
+  },
+  {
+    "id": 1615,
+    "question_id": 404,
+    "text": "C. Pod",
+    "is_correct": false
+  },
+  {
+    "id": 1616,
+    "question_id": 404,
+    "text": "D. Pride",
+    "is_correct": true
+  },
+  {
+    "id": 1617,
+    "question_id": 405,
+    "text": "A. Chameleon",
+    "is_correct": true
+  },
+  {
+    "id": 1618,
+    "question_id": 405,
+    "text": "B. Gecko",
+    "is_correct": false
+  },
+  {
+    "id": 1619,
+    "question_id": 405,
+    "text": "C. Snake",
+    "is_correct": false
+  },
+  {
+    "id": 1620,
+    "question_id": 405,
+    "text": "D. Iguana",
+    "is_correct": false
+  },
+  {
+    "id": 1621,
+    "question_id": 406,
+    "text": "A. Beetle",
+    "is_correct": false
+  },
+  {
+    "id": 1622,
+    "question_id": 406,
+    "text": "B. Muskrat",
+    "is_correct": false
+  },
+  {
+    "id": 1623,
+    "question_id": 406,
+    "text": "C. Otter",
+    "is_correct": false
+  },
+  {
+    "id": 1624,
+    "question_id": 406,
+    "text": "D. Beaver",
+    "is_correct": true
+  },
+  {
+    "id": 1625,
+    "question_id": 407,
+    "text": "A. Kangaroo",
+    "is_correct": false
+  },
+  {
+    "id": 1626,
+    "question_id": 407,
+    "text": "B. Platypus",
+    "is_correct": true
+  },
+  {
+    "id": 1627,
+    "question_id": 407,
+    "text": "C. Rhino",
+    "is_correct": false
+  },
+  {
+    "id": 1628,
+    "question_id": 407,
+    "text": "D. Elephant",
+    "is_correct": false
+  },
+  {
+    "id": 1629,
+    "question_id": 408,
+    "text": "A. Penguin",
+    "is_correct": true
+  },
+  {
+    "id": 1630,
+    "question_id": 408,
+    "text": "B. Falcon",
+    "is_correct": false
+  },
+  {
+    "id": 1631,
+    "question_id": 408,
+    "text": "C. Sparrow",
+    "is_correct": false
+  },
+  {
+    "id": 1632,
+    "question_id": 408,
+    "text": "D. Eagle",
+    "is_correct": false
+  },
+  {
+    "id": 1633,
+    "question_id": 409,
+    "text": "A. Monarch butterfly",
+    "is_correct": false
+  },
+  {
+    "id": 1634,
+    "question_id": 409,
+    "text": "B. Arctic tern",
+    "is_correct": true
+  },
+  {
+    "id": 1635,
+    "question_id": 409,
+    "text": "C. Wildebeest",
+    "is_correct": false
+  },
+  {
+    "id": 1636,
+    "question_id": 409,
+    "text": "D. Salmon",
+    "is_correct": false
+  },
+  {
+    "id": 1637,
+    "question_id": 410,
+    "text": "A. Elephant",
+    "is_correct": false
+  },
+  {
+    "id": 1638,
+    "question_id": 410,
+    "text": "B. Cat",
+    "is_correct": false
+  },
+  {
+    "id": 1639,
+    "question_id": 410,
+    "text": "C. Dog",
+    "is_correct": true
+  },
+  {
+    "id": 1640,
+    "question_id": 410,
+    "text": "D. Horse",
+    "is_correct": false
+  },
+  {
+    "id": 1641,
+    "question_id": 411,
+    "text": "A. Sailfish",
+    "is_correct": true
+  },
+  {
+    "id": 1642,
+    "question_id": 411,
+    "text": "B. Marlin",
+    "is_correct": false
+  },
+  {
+    "id": 1643,
+    "question_id": 411,
+    "text": "C. Tuna",
+    "is_correct": false
+  },
+  {
+    "id": 1644,
+    "question_id": 411,
+    "text": "D. Shark",
+    "is_correct": false
+  },
+  {
+    "id": 1645,
+    "question_id": 412,
+    "text": "A. Crocodile",
+    "is_correct": true
+  },
+  {
+    "id": 1646,
+    "question_id": 412,
+    "text": "B. Shark",
+    "is_correct": false
+  },
+  {
+    "id": 1647,
+    "question_id": 412,
+    "text": "C. Hippo",
+    "is_correct": false
+  },
+  {
+    "id": 1648,
+    "question_id": 412,
+    "text": "D. Tiger",
+    "is_correct": false
+  },
+  {
+    "id": 1649,
+    "question_id": 413,
+    "text": "A. Black mamba",
+    "is_correct": false
+  },
+  {
+    "id": 1650,
+    "question_id": 413,
+    "text": "B. Adder",
+    "is_correct": true
+  },
+  {
+    "id": 1651,
+    "question_id": 413,
+    "text": "C. Rattlesnake",
+    "is_correct": false
+  },
+  {
+    "id": 1652,
+    "question_id": 413,
+    "text": "D. Cobra",
+    "is_correct": false
+  },
+  {
+    "id": 1653,
+    "question_id": 414,
+    "text": "A. Whale",
+    "is_correct": false
+  },
+  {
+    "id": 1654,
+    "question_id": 414,
+    "text": "B. Bat",
+    "is_correct": true
+  },
+  {
+    "id": 1655,
+    "question_id": 414,
+    "text": "C. Dolphin",
+    "is_correct": false
+  },
+  {
+    "id": 1656,
+    "question_id": 414,
+    "text": "D. Porpoise",
+    "is_correct": false
+  },
+  {
+    "id": 1657,
+    "question_id": 415,
+    "text": "A. Entomology",
+    "is_correct": true
+  },
+  {
+    "id": 1658,
+    "question_id": 415,
+    "text": "B. Herpetology",
+    "is_correct": false
+  },
+  {
+    "id": 1659,
+    "question_id": 415,
+    "text": "C. Ornithology",
+    "is_correct": false
+  },
+  {
+    "id": 1660,
+    "question_id": 415,
+    "text": "D. Ichthyology",
+    "is_correct": false
+  },
+  {
+    "id": 1661,
+    "question_id": 416,
+    "text": "A. Kiwi",
+    "is_correct": false
+  },
+  {
+    "id": 1662,
+    "question_id": 416,
+    "text": "B. Eagle",
+    "is_correct": false
+  },
+  {
+    "id": 1663,
+    "question_id": 416,
+    "text": "C. Ostrich",
+    "is_correct": true
+  },
+  {
+    "id": 1664,
+    "question_id": 416,
+    "text": "D. Emu",
+    "is_correct": false
+  },
+  {
+    "id": 1665,
+    "question_id": 417,
+    "text": "A. Baboon",
+    "is_correct": false
+  },
+  {
+    "id": 1666,
+    "question_id": 417,
+    "text": "B. Gorilla",
+    "is_correct": false
+  },
+  {
+    "id": 1667,
+    "question_id": 417,
+    "text": "C. Chimpanzee",
+    "is_correct": true
+  },
+  {
+    "id": 1668,
+    "question_id": 417,
+    "text": "D. Orangutan",
+    "is_correct": false
+  },
+  {
+    "id": 1669,
+    "question_id": 418,
+    "text": "A. Jaguar",
+    "is_correct": false
+  },
+  {
+    "id": 1670,
+    "question_id": 418,
+    "text": "B. Tiger",
+    "is_correct": true
+  },
+  {
+    "id": 1671,
+    "question_id": 418,
+    "text": "C. Leopard",
+    "is_correct": false
+  },
+  {
+    "id": 1672,
+    "question_id": 418,
+    "text": "D. Lion",
+    "is_correct": false
+  },
+  {
+    "id": 1673,
+    "question_id": 419,
+    "text": "A. Angelfish",
+    "is_correct": false
+  },
+  {
+    "id": 1674,
+    "question_id": 419,
+    "text": "B. Electric eel",
+    "is_correct": true
+  },
+  {
+    "id": 1675,
+    "question_id": 419,
+    "text": "C. Pufferfish",
+    "is_correct": false
+  },
+  {
+    "id": 1676,
+    "question_id": 419,
+    "text": "D. Clownfish",
+    "is_correct": false
+  },
+  {
+    "id": 1677,
+    "question_id": 420,
+    "text": "A. Bat",
+    "is_correct": true
+  },
+  {
+    "id": 1678,
+    "question_id": 420,
+    "text": "B. Flying squirrel",
+    "is_correct": false
+  },
+  {
+    "id": 1679,
+    "question_id": 420,
+    "text": "C. Colugo",
+    "is_correct": false
+  },
+  {
+    "id": 1680,
+    "question_id": 420,
+    "text": "D. Sugar glider",
+    "is_correct": false
+  }
+]

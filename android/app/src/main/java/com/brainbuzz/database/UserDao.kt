@@ -31,7 +31,9 @@ interface UserDao {
     
     @Delete
     fun delete(user: User)
-    
-    @Query("DELETE FROM users")
+      @Query("DELETE FROM users")
     fun deleteAll()
+    
+    @Query("UPDATE users SET xp = xp + :xpAmount, level = :newLevel WHERE id = :userId")
+    fun awardXP(userId: Int, xpAmount: Int, newLevel: Int)
 }

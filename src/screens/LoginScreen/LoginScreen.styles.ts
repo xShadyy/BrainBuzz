@@ -1,6 +1,6 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
-const { width, height } = Dimensions.get('screen');
+const {width, height} = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
   container: {
@@ -19,7 +19,8 @@ export const styles = StyleSheet.create({
     height: 48,
     paddingHorizontal: 16,
   },
-  inputWrapper: { // New wrapper for email input with background
+  inputWrapper: {
+    // New wrapper for email input with background
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: 'rgba(255, 255, 255, 0.12)', // Light background for input
@@ -59,7 +60,7 @@ export const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 24,
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
+    shadowOffset: {width: 0, height: 4},
     shadowOpacity: 0.3,
     shadowRadius: 8,
     elevation: 10,
@@ -100,7 +101,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Lexend-SemiBold',
     fontSize: 18,
     textShadowColor: '#FFD3F4',
-    textShadowOffset: { width: 0, height: 0 },
+    textShadowOffset: {width: 0, height: 0},
     textShadowRadius: 10,
   },
   switchModeButton: {
@@ -112,7 +113,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Lexend-Medium',
     fontSize: 14,
     textShadowColor: '#A7A7FF',
-    textShadowOffset: { width: 0, height: 0 },
+    textShadowOffset: {width: 0, height: 0},
     textShadowRadius: 5,
   },
   errorText: {
@@ -122,7 +123,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 10,
     textShadowColor: '#FF0000',
-    textShadowOffset: { width: 0, height: 0 },
+    textShadowOffset: {width: 0, height: 0},
     textShadowRadius: 5,
   },
   successAnimationContainer: {
