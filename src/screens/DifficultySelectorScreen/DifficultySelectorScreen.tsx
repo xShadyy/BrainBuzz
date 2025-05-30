@@ -24,31 +24,14 @@ type DifficultySelectorScreenProps = StackScreenProps<
 export const DifficultySelectorScreen: React.FC<
   DifficultySelectorScreenProps
 > = ({navigation, route}) => {
-  const {userId, category} = route.params;
+  const {userId, category, categoryId} = route.params;
   const {user, refreshUser} = useUser();
-  const [categoryId, setCategoryId] = useState<number | null>(null);
-
   // Extract loadUserData to a useCallback for memoization
   const loadUserData = useCallback(async () => {
     if (userId) {
       await refreshUser(userId);
     }
   }, [userId, refreshUser]);
-
-  // Extract loadCategoryId to a useCallback for memoization
-  const loadCategoryId = useCallback(async () => {
-    try {
-      const categoriesData = require('../../../android/app/src/main/assets/quiz_data/categories.json');
-      const foundCategory = categoriesData.find(
-        (cat: any) => cat.name === category,
-      );
-      if (foundCategory) {
-        setCategoryId(foundCategory.id);
-      }
-    } catch (error) {
-      console.error('Failed to load category ID:', error);
-    }
-  }, [category]);
 
   // Refresh user data when screen comes into focus (e.g., returning from QuizScreen)
   useFocusEffect(
@@ -58,12 +41,10 @@ export const DifficultySelectorScreen: React.FC<
       }
     }, [userId, refreshUser]),
   );
-
   // Fetch user data when component mounts and configure status bar
   useEffect(() => {
     configureStatusBar();
     loadUserData();
-    loadCategoryId();
 
     // Initialize sound manager
     SoundManager.init();
@@ -71,7 +52,7 @@ export const DifficultySelectorScreen: React.FC<
     return () => {
       // Clean up if needed
     };
-  }, [loadUserData, loadCategoryId]); // Depend on memoized callbacks
+  }, [loadUserData]); // Depend on memoized callback
 
   const difficulties = [
     {

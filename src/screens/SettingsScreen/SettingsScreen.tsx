@@ -13,6 +13,7 @@ import {
   SafeAreaView,
   Platform,
   Dimensions,
+  ScrollView,
 } from 'react-native';
 import {styles} from './SettingsScreen.styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -87,7 +88,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
     {
       animation: require('../../assets/animations/fire_cherry_pink_lighter.json'),
       name: 'Mystical Aura',
-      color: '#A9B7C0',
+      color: '#951C4C',
       progress: 5,
     },
     {
@@ -244,9 +245,11 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
             <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Settings</Text>
-        </View>
-
-        <View style={styles.contentWrapper}>
+        </View>{' '}
+        <ScrollView
+          style={styles.contentWrapper}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.scrollContentContainer}>
           <View style={styles.staticContentContainer}>
             <View>
               <Text style={styles.sectionTitle}>Account Information</Text>
@@ -324,15 +327,15 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                     {formatDate(user?.creationDate)}
                   </Text>
                 </View>
-              </View>
-
+              </View>{' '}
               <View style={styles.card}>
                 <TouchableOpacity
                   style={styles.fieldContainer}
                   onPress={() => {
                     setIsXpTestingVisible(!isXpTestingVisible);
                     SoundManager.playInteraction();
-                  }}>
+                  }}
+                  activeOpacity={0.7}>
                   <Text style={styles.fieldLabel}>XP Testing</Text>
                   <MaterialIcons
                     name={isXpTestingVisible ? 'expand-less' : 'expand-more'}
@@ -474,11 +477,12 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                       styles.levelRowContainer,
                       isLastItem ? {marginBottom: 2} : null,
                     ]}>
+                    {' '}
                     <View style={styles.animationContainer}>
                       <LottieView
                         source={level.animation}
-                        autoPlay={userLevel >= levelNumber}
-                        loop={userLevel >= levelNumber}
+                        autoPlay={true}
+                        loop={true}
                         style={{width: 42, height: 42, alignSelf: 'center'}}
                       />
                     </View>
@@ -535,11 +539,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
               })}
             </View>
           </View>
-
-          <View style={styles.footer}>
-            <Text style={styles.footerText}>BrainBuzz • Settings v1.0</Text>
-          </View>
-        </View>
+        </ScrollView>
       </Animated.View>
     </View>
   );

@@ -15,7 +15,7 @@ import {styles, configureStatusBar} from './QuizScreen.styles';
 type QuizScreenProps = StackScreenProps<RootStackParamList, 'QuizScreen'>;
 
 export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
-  const {userId, categoryId, difficulty} = route.params;
+  const {userId, categoryId, difficulty, category} = route.params;
   const {user, refreshUser} = useUser();
   const [isLoading, setIsLoading] = useState(true);
   const [showCountdown, setShowCountdown] = useState(true);
@@ -89,41 +89,30 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
       return () => clearTimeout(fallback);
     }
   }, [showCountdown, countdownFinished]);
-
-  const handleQuizComplete = async (score: number, totalQuestions: number) => {
+  const handleQuizComplete = async (
+    score: number,
+    totalQuestions: number,
+    xpEarned: number,
+  ) => {
     SoundManager.playInteraction();
-
-    // Convert difficulty to lowercase for calculation
-    const difficultyLower = difficulty.toLowerCase();
-    // Calculate XP reward based on difficulty and performance
-    const xpReward = db.calculateXPReward(
-      score,
-      totalQuestions,
-      difficultyLower,
-    );
 
     try {
       // Award XP to user
       if (userId) {
-        const updatedUser = await db.awardXP(userId, xpReward);
+        const updatedUser = await db.awardXP(userId, xpEarned);
         if (updatedUser) {
           // Refresh user context with updated data
           await refreshUser(userId);
         }
       }
 
-      Alert.alert(
-        'Quiz Completed!',
-        `Your score: ${score}/${totalQuestions}\nXP earned: +${xpReward}`,
-        [{text: 'OK', onPress: () => navigation.goBack()}],
-      );
+      // XP display is now handled in the Quiz component's results screen
+      // No need for Android alert anymore
     } catch (error) {
       console.error('Error awarding XP:', error);
-      Alert.alert(
-        'Quiz Completed!',
-        `Your score: ${score}/${totalQuestions}\nNote: XP could not be saved`,
-        [{text: 'OK', onPress: () => navigation.goBack()}],
-      );
+      Alert.alert('Error', 'Failed to save your progress. Please try again.', [
+        {text: 'OK', onPress: () => navigation.goBack()},
+      ]);
     }
   };
 
@@ -155,6 +144,7 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
         <Quiz
           categoryId={categoryId}
           difficulty={difficulty}
+          category={category}
           onComplete={handleQuizComplete}
           onEndQuiz={handleEndQuiz}
         />

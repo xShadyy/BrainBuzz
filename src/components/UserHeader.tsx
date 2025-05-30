@@ -74,18 +74,17 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
     const clampedLevel = Math.max(1, Math.min(8, level));
     return fireAnimations[clampedLevel - 1];
   };
-
   // Get color for current level's XP bar
   const getLevelColor = (level: number) => {
     const levelColors = [
-      '#BD3039', // Level 1 - Eternal Storm (white)
-      '#A9B7C0', // Level 2 - Mystical Aura (gray)
-      '#50CB86', // Level 3 - Jade Pyre (green)
-      '#6EEB83', // Level 4 - Emerald Inferno (light green)
-      '#5DA9E9', // Level 5 - Sapphire Blaze (blue)
-      '#4ECDC4', // Level 6 - Azure Flame (cyan)
-      '#FF5C8D', // Level 7 - Sun Flame (pink)
-      '#FF6B6B', // Level 8 - Ember Spark (red)
+      '#BD3039', // Level 1 - Eternal Storm
+      '#951C4C', // Level 2 - Mystical Aura
+      '#50CB86', // Level 3 - Jade Pyre
+      '#6EEB83', // Level 4 - Emerald Inferno
+      '#5DA9E9', // Level 5 - Sapphire Blaze
+      '#4ECDC4', // Level 6 - Azure Flame
+      '#FF5C8D', // Level 7 - Sun Flame
+      '#FF6B6B', // Level 8 - Ember Spark
     ];
 
     // Clamp level between 1-8 and convert to array index (0-7)

@@ -15,7 +15,7 @@ export type RootStackParamList = {
   Welcome: undefined;
   Login: undefined;
   Dashboard: {userId: number; fromLogin?: boolean};
-  Quiz: {userId: number; category: string};
+  Quiz: {userId: number; category: string; categoryId: number};
   QuizScreen: {
     userId: number;
     categoryId: number;
