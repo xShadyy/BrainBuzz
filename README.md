@@ -22,13 +22,12 @@
 1. [Application Description](#application-description)
 2. [Database](#database)
 3. [Navigation Schema](#navigation-schema)
-4. [Technical Requirements](#technical-requirements)
-5. [Installation and Setup](#installation-and-setup)
-6. [Features](#features)
+4. [Installation and Setup](#installation-and-setup)
+5. [Features](#features)
 
 ---
 
-## 📱 Application Description
+## Application Description
 
 **BrainBuzz** is a modern mobile application for the Android system, designed for learning through interactive quizzes. The application combines education with gamification, offering users an engaging learning experience across various knowledge categories.
 
