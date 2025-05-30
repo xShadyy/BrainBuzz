@@ -45,7 +45,6 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
             try {
                 val email = userMap.getString("email") ?: ""
                 
-                // Check if email is already taken
                 val isEmailTaken = database.userDao().isEmailTaken(email)
                 if (isEmailTaken) {
                     promise.reject("EMAIL_TAKEN", "This email is already registered")
@@ -155,7 +154,6 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
     fun updateUser(userMap: ReadableMap, promise: Promise) {
         executorService.execute {
             try {
-                // Get the existing user
                 val userId = userMap.getInt("id")
                 val existingUser = database.userDao().getById(userId)
                 
@@ -164,7 +162,6 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
                     return@execute
                 }
                 
-                // Update only the fields that are provided
                 if (userMap.hasKey("name")) {
                     existingUser.name = userMap.getString("name") ?: existingUser.name
                 }
@@ -225,14 +222,14 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
                 if (user == null) {
                     promise.reject("USER_NOT_FOUND", "User not found")
                     return@execute
-                }                // Calculate new XP and level
-                val newXP = minOf(user.xp + xpAmount, 9999) // Cap XP at 9999
+                }               
+                val newXP = minOf(user.xp + xpAmount, 9999) 
                 val newLevel = calculateLevelFromXP(newXP)
 
-                // Update user with new XP and level
+     
                 database.userDao().awardXP(userId, newXP - user.xp, newLevel)
 
-                // Fetch updated user
+         
                 val updatedUser = database.userDao().getById(userId)
                 if (updatedUser != null) {
                     val userMap = WritableNativeMap()
@@ -252,12 +249,12 @@ class DatabaseModule(private val reactContext: ReactApplicationContext) : ReactC
             }
         }
     }    private fun calculateLevelFromXP(xp: Int): Int {
-        // New level progression: 0, 500, 750, 1125, 1688, 2531, 3797, 5696 XP
+
         val levelThresholds = intArrayOf(0, 500, 750, 1125, 1688, 2531, 3797, 5696)
         
         for (i in levelThresholds.size - 1 downTo 0) {
             if (xp >= levelThresholds[i]) {
-                return minOf(i + 1, 8) // Cap at level 8
+                return minOf(i + 1, 8)
             }
         }
         return 1

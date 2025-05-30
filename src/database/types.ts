@@ -2,10 +2,10 @@ export interface User {
   id?: number;
   name: string;
   email: string;
-  password?: string; // Optional in responses, required in registration
-  creationDate?: number; // Timestamp of account creation
-  level?: number; // User's current level
-  xp?: number; // User's current experience points
+  password?: string;
+  creationDate?: number;
+  level?: number;
+  xp?: number;
 }
 
 export interface DatabaseModule {
@@ -16,7 +16,6 @@ export interface DatabaseModule {
   deleteUser(userId: number): Promise<boolean>;
   deleteAllUsers(): Promise<boolean>;
 
-  // Authentication methods
   registerUser(user: {
     name: string;
     email: string;
@@ -24,6 +23,5 @@ export interface DatabaseModule {
   }): Promise<User>;
   loginUser(email: string, password: string): Promise<User>;
 
-  // XP and Level methods
   awardXP(userId: number, xpAmount: number): Promise<User | null>;
 }

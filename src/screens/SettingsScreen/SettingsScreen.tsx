@@ -13,6 +13,7 @@ import {
   SafeAreaView,
   Platform,
   Dimensions,
+  ScrollView,
 } from 'react-native';
 import {styles} from './SettingsScreen.styles';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -44,8 +45,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
   const [customXpAmount, setCustomXpAmount] = useState('');
   const hasInitialized = useRef(false);
 
-  // Remove loading states - we don't need the loading animation anymore
-  const contentOpacity = useRef(new Animated.Value(1)).current; // Start fully visible
+  const contentOpacity = useRef(new Animated.Value(1)).current;
 
   const fireLevels: FireLevel[] = [
     {
@@ -87,7 +87,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
     {
       animation: require('../../assets/animations/fire_cherry_pink_lighter.json'),
       name: 'Mystical Aura',
-      color: '#A9B7C0',
+      color: '#951C4C',
       progress: 5,
     },
     {
@@ -98,7 +98,6 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
     },
   ];
 
-  // Use useCallback to memoize the initialization function
   const initializeUser = useCallback(async () => {
     if (hasInitialized.current) {
       return;
@@ -117,7 +116,6 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
   }, [initializeUser]);
 
   useEffect(() => {
-    // Update name when user changes
     if (user && !isEditingName) {
       setNewName(user.name);
     }
@@ -148,7 +146,6 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
       const success = await db.updateUser(updatedUser);
 
       if (success) {
-        // Update local user context state immediately
         refreshUser(userId);
         setIsEditingName(false);
         SoundManager.playInteraction();
@@ -244,9 +241,11 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
             <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Settings</Text>
-        </View>
-
-        <View style={styles.contentWrapper}>
+        </View>{' '}
+        <ScrollView
+          style={styles.contentWrapper}
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={styles.scrollContentContainer}>
           <View style={styles.staticContentContainer}>
             <View>
               <Text style={styles.sectionTitle}>Account Information</Text>
@@ -324,15 +323,15 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                     {formatDate(user?.creationDate)}
                   </Text>
                 </View>
-              </View>
-
+              </View>{' '}
               <View style={styles.card}>
                 <TouchableOpacity
                   style={styles.fieldContainer}
                   onPress={() => {
                     setIsXpTestingVisible(!isXpTestingVisible);
                     SoundManager.playInteraction();
-                  }}>
+                  }}
+                  activeOpacity={0.7}>
                   <Text style={styles.fieldLabel}>XP Testing</Text>
                   <MaterialIcons
                     name={isXpTestingVisible ? 'expand-less' : 'expand-more'}
@@ -441,17 +440,15 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
               </Text>
               {fireLevels.map((level, index) => {
                 const isLastItem = index === fireLevels.length - 1;
-                // Reverse level numbering: Level 1 = highest fire (index 0), Level 8 = lowest fire (index 7)
-                const levelNumber = 8 - index; // Level 8, 7, 6, 5, 4, 3, 2, 1
+
+                const levelNumber = 8 - index;
                 const userLevel = user?.level || 1;
                 const userXP = user?.xp || 0;
 
-                // Calculate progress for each level using new thresholds
                 let progress = 0;
                 if (userLevel > levelNumber) {
-                  progress = 100; // Completed levels
+                  progress = 100;
                 } else if (userLevel === levelNumber) {
-                  // Current level - show XP progress within this level
                   const levelThresholds = [
                     0, 500, 750, 1125, 1688, 2531, 3797, 5696, 9999,
                   ];
@@ -464,7 +461,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                     Math.max(0, (levelXP / levelXPNeeded) * 100),
                   );
                 } else {
-                  progress = 0; // Future levels
+                  progress = 0;
                 }
 
                 return (
@@ -474,11 +471,12 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                       styles.levelRowContainer,
                       isLastItem ? {marginBottom: 2} : null,
                     ]}>
+                    {' '}
                     <View style={styles.animationContainer}>
                       <LottieView
                         source={level.animation}
-                        autoPlay={userLevel >= levelNumber}
-                        loop={userLevel >= levelNumber}
+                        autoPlay={true}
+                        loop={true}
                         style={{width: 42, height: 42, alignSelf: 'center'}}
                       />
                     </View>
@@ -535,11 +533,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
               })}
             </View>
           </View>
-
-          <View style={styles.footer}>
-            <Text style={styles.footerText}>BrainBuzz • Settings v1.0</Text>
-          </View>
-        </View>
+        </ScrollView>
       </Animated.View>
     </View>
   );

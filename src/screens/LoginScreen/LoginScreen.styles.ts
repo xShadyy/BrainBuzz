@@ -20,10 +20,9 @@ export const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   inputWrapper: {
-    // New wrapper for email input with background
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 255, 255, 0.12)', // Light background for input
+    backgroundColor: 'rgba(255, 255, 255, 0.12)',
     borderRadius: 8,
     borderWidth: 1,
     borderColor: 'rgba(255, 201, 242, 0.25)',

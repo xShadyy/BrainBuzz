@@ -1,9 +1,23 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState, useEffect, useCallback, useRef} from 'react';
-import {View, Text, TouchableOpacity, Animated, Alert} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  Animated,
+  Alert,
+  Image,
+} from 'react-native';
 import LottieView from 'lottie-react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import SoundManager from '../utils/SoundManager';
+import {
+  fetchQuestions,
+  decodeQuestionData,
+  ProcessedQuestion,
+} from '../utils/OpenTriviaAPI';
+import {useUser} from '../utils/UserContext';
+import {db} from '../database';
 import {styles} from './Quiz.styles';
 
 interface Question {
@@ -11,11 +25,11 @@ interface Question {
   category_id: number;
   difficulty: string;
   text: string;
+  answers: Answer[];
 }
 
 interface Answer {
   id: number;
-  question_id: number;
   text: string;
   is_correct: boolean;
 }
@@ -23,59 +37,91 @@ interface Answer {
 interface QuizProps {
   categoryId: number;
   difficulty: string;
-  onComplete?: (score: number, totalQuestions: number) => void;
+  category?: string;
+  onComplete?: (
+    score: number,
+    totalQuestions: number,
+    xpEarned: number,
+  ) => void;
   onEndQuiz?: () => void;
 }
 
 const Quiz: React.FC<QuizProps> = ({
   categoryId,
   difficulty,
+  category,
   onComplete,
   onEndQuiz,
 }) => {
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [answers, setAnswers] = useState<Answer[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswerId, setSelectedAnswerId] = useState<number | null>(null);
   const [score, setScore] = useState(0);
+  const [lives, setLives] = useState(3);
+  const [quizFailed, setQuizFailed] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [progressAnim] = useState(new Animated.Value(0));
   const scoreRef = useRef(0);
   const [showResults, setShowResults] = useState(false);
   const [finalScore, setFinalScore] = useState(0);
+  const [xpEarned, setXpEarned] = useState(0);
   const [showFeedback, setShowFeedback] = useState(false);
   const [feedbackType, setFeedbackType] = useState<
     'correct' | 'incorrect' | null
   >(null);
   const quizDataLoaded = useRef(false);
 
+  const {user} = useUser();
+
+  const getLevelColor = (level: number) => {
+    const levelColors = [
+      '#BD3039',
+      '#A9B7C0',
+      '#50CB86',
+      '#6EEB83',
+      '#5DA9E9',
+      '#4ECDC4',
+      '#FF5C8D',
+      '#FF6B6B',
+    ];
+
+    const clampedLevel = Math.max(1, Math.min(8, level));
+    return levelColors[clampedLevel - 1];
+  };
+
+  const userLevel = Math.min(user?.level || 1, 8);
   useEffect(() => {
     const loadQuizData = async () => {
       if (quizDataLoaded.current) {
         return;
       }
-      try {
-        const questionsData = require('../../android/app/src/main/assets/quiz_data/questions.json');
-        const answersData = require('../../android/app/src/main/assets/quiz_data/answers.json');
 
-        const filteredQuestions = questionsData.filter(
-          (q: Question) =>
-            q.category_id === categoryId && q.difficulty === difficulty,
+      quizDataLoaded.current = true;
+
+      try {
+        const difficultyLower = difficulty.toLowerCase();
+
+        const rawQuestions = await fetchQuestions(
+          categoryId,
+          difficultyLower,
+          10,
         );
 
-        if (filteredQuestions.length === 0) {
+        if (rawQuestions.length === 0) {
           setError('No questions found for this category and difficulty');
           return;
         }
 
-        quizDataLoaded.current = true;
-        setQuestions(filteredQuestions);
-        setAnswers(answersData);
+        const processedQuestions = decodeQuestionData(rawQuestions, categoryId);
+        setQuestions(processedQuestions);
       } catch (err) {
         console.error('Failed to load quiz data:', err);
-        setError('Failed to load quiz data. Please try again later.');
+        setError(
+          'Failed to load quiz data. Please check your internet connection and try again.',
+        );
       }
     };
+
     loadQuizData();
   }, [categoryId, difficulty]);
 
@@ -92,27 +138,37 @@ const Quiz: React.FC<QuizProps> = ({
       }).start();
     }
   }, [currentQuestionIndex, questions.length, progressAnim]);
-
   const getCurrentQuestionAnswers = useCallback(() => {
-    if (!questions.length || !answers.length) {
+    if (!questions.length) {
       return [];
     }
     const currentQuestion = questions[currentQuestionIndex];
-    return answers.filter(ans => ans.question_id === currentQuestion.id);
-  }, [questions, answers, currentQuestionIndex]);
-
+    return currentQuestion.answers || [];
+  }, [questions, currentQuestionIndex]);
   const handleAnswerSelect = useCallback(
     (answerId: number) => {
       if (selectedAnswerId !== null) {
         return;
       }
-      const selected = answers.find(ans => ans.id === answerId);
+
+      const currentQuestion = questions[currentQuestionIndex];
+      const selected = currentQuestion.answers.find(ans => ans.id === answerId);
       const correct = selected?.is_correct ?? false;
 
       if (correct) {
         SoundManager.playQuizCorrect();
       } else {
         SoundManager.playQuizIncorrect();
+
+        setLives(prev => {
+          const newLives = prev - 1;
+          if (newLives <= 0) {
+            setTimeout(() => {
+              setQuizFailed(true);
+            }, 1500);
+          }
+          return newLives;
+        });
       }
 
       setSelectedAnswerId(answerId);
@@ -131,25 +187,31 @@ const Quiz: React.FC<QuizProps> = ({
         setShowFeedback(false);
         setFeedbackType(null);
 
+        if (lives <= 1 && !correct) {
+          return;
+        }
         if (currentQuestionIndex < questions.length - 1) {
           setCurrentQuestionIndex(prev => prev + 1);
           setSelectedAnswerId(null);
         } else {
-          setFinalScore(scoreRef.current);
+          const finalScore = scoreRef.current;
+          const difficultyLower = difficulty.toLowerCase();
+          const xp = db.calculateXPReward(
+            finalScore,
+            questions.length,
+            difficultyLower,
+          );
+
+          setFinalScore(finalScore);
+          setXpEarned(xp);
           setShowResults(true);
-          onComplete?.(scoreRef.current, questions.length);
+          onComplete?.(finalScore, questions.length, xp);
         }
       }, 1500);
 
       return () => clearTimeout(timer);
     },
-    [
-      selectedAnswerId,
-      answers,
-      currentQuestionIndex,
-      questions.length,
-      onComplete,
-    ],
+    [selectedAnswerId, questions, currentQuestionIndex, lives, onComplete],
   );
 
   const handleEndQuizConfirmation = useCallback(() => {
@@ -170,6 +232,41 @@ const Quiz: React.FC<QuizProps> = ({
       {cancelable: true},
     );
   }, [onEndQuiz]);
+  const handleRetryQuiz = useCallback(() => {
+    setCurrentQuestionIndex(0);
+    setSelectedAnswerId(null);
+    setScore(0);
+    setLives(3);
+    setQuizFailed(false);
+    setShowResults(false);
+    setFinalScore(0);
+    setXpEarned(0);
+    setShowFeedback(false);
+    setFeedbackType(null);
+    scoreRef.current = 0;
+
+    progressAnim.setValue(0);
+  }, [progressAnim]);
+
+  const renderHearts = () => {
+    const hearts = [];
+    for (let i = 0; i < 3; i++) {
+      hearts.push(
+        <Image
+          key={i}
+          source={require('../assets/icons/heart.png')}
+          style={[
+            styles.heartIcon,
+            {
+              opacity: i < lives ? 1 : 0.3,
+              transform: [{scale: i < lives ? 1 : 0.8}],
+            },
+          ]}
+        />,
+      );
+    }
+    return <View style={styles.heartsContainer}>{hearts}</View>;
+  };
 
   if (error) {
     return (
@@ -178,7 +275,6 @@ const Quiz: React.FC<QuizProps> = ({
       </View>
     );
   }
-
   if (!questions.length) {
     return (
       <View style={styles.container}>
@@ -191,6 +287,28 @@ const Quiz: React.FC<QuizProps> = ({
     );
   }
 
+  if (quizFailed) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.quizFailedContainer}>
+          <Text style={styles.quizFailedText}>Quiz Failed!</Text>
+          <Text style={styles.quizFailedSubtext}>
+            You ran out of lives. Better luck next time!
+          </Text>
+          {renderHearts()}
+          <TouchableOpacity
+            style={styles.retryButton}
+            onPress={handleRetryQuiz}>
+            <Text style={styles.retryButtonText}>Retry Quiz</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.endQuizButton} onPress={onEndQuiz}>
+            <MaterialIcons name="arrow-back" size={18} color="#FFFFFF" />
+            <Text style={styles.endQuizButtonText}>Back to Menu</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
   if (showResults) {
     return (
       <View style={styles.container}>
@@ -199,6 +317,12 @@ const Quiz: React.FC<QuizProps> = ({
           <Text style={styles.scoreText}>
             Your Score: {finalScore} / {questions.length}
           </Text>
+          <Text style={styles.scoreText}>XP Earned: +{xpEarned}</Text>
+          <TouchableOpacity
+            style={styles.retryButton}
+            onPress={handleRetryQuiz}>
+            <Text style={styles.retryButtonText}>Retry Quiz</Text>
+          </TouchableOpacity>
         </View>
         <View style={styles.bottomContainer}>
           <TouchableOpacity style={styles.endQuizButton} onPress={onEndQuiz}>
@@ -211,18 +335,24 @@ const Quiz: React.FC<QuizProps> = ({
 
   const currentQuestion = questions[currentQuestionIndex];
   const questionAnswers = getCurrentQuestionAnswers();
-
   return (
     <View style={styles.container}>
       <View style={styles.content}>
+        <View style={styles.scoreContainer}>
+          <Text style={styles.categoryText}>
+            Category: {category || 'Quiz'}
+          </Text>
+        </View>
+        {renderHearts()}
         <Text style={styles.questionCount}>
           Question {currentQuestionIndex + 1} of {questions.length}
-        </Text>
+        </Text>{' '}
         <View style={styles.progressBar}>
           <Animated.View
             style={[
               styles.progressFill,
               {
+                backgroundColor: getLevelColor(userLevel),
                 width: progressAnim.interpolate({
                   inputRange: [0, 1],
                   outputRange: ['0%', '100%'],
@@ -230,11 +360,6 @@ const Quiz: React.FC<QuizProps> = ({
               },
             ]}
           />
-        </View>
-        <View style={styles.scoreContainer}>
-          <Text style={styles.scoreText}>
-            Score: {score} / {questions.length}
-          </Text>
         </View>
         <Text style={styles.questionText}>{currentQuestion.text}</Text>
         <View style={styles.answersContainer}>

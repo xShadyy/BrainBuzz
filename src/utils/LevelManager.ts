@@ -66,7 +66,7 @@ export class LevelManager {
     const fireLevel = this.fireLevels.find(
       fl => fl.level === Math.max(1, Math.min(8, level)),
     );
-    return fireLevel || this.fireLevels[this.fireLevels.length - 1]; // Default to level 1
+    return fireLevel || this.fireLevels[this.fireLevels.length - 1];
   }
 
   /**
@@ -83,12 +83,11 @@ export class LevelManager {
    * @returns Current level (1-8)
    */
   static getLevelFromXP(xp: number): number {
-    // Level progression: 0, 100, 250, 450, 700, 1000, 1350, 1750, 2200+ XP
     const levelThresholds = [0, 100, 250, 450, 700, 1000, 1350, 1750];
 
     for (let i = levelThresholds.length - 1; i >= 0; i--) {
       if (xp >= levelThresholds[i]) {
-        return Math.min(i + 1, 8); // Cap at level 8
+        return Math.min(i + 1, 8);
       }
     }
     return 1;

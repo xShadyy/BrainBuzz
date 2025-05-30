@@ -46,31 +46,26 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
   const [initialLoadDone, setInitialLoadDone] = useState(!fromLogin);
   const hasUserBeenFetched = useRef(false);
   const minLoadingTime = fromLogin ? 2000 : 0;
-
-  // Categories data
   const categoryItems: CategoryItem[] = [
-    {id: 1, title: 'Math', iconName: 'calculate', iconColor: '#1F77B4'},
-    {id: 2, title: 'Science', iconName: 'science', iconColor: '#2CA02C'},
-    {id: 3, title: 'History', iconName: 'history-edu', iconColor: '#8C564B'},
-    {id: 4, title: 'Geography', iconName: 'public', iconColor: '#17BECF'},
-    {id: 5, title: 'Languages', iconName: 'translate', iconColor: '#FF7F0E'},
-    {id: 6, title: 'Literature', iconName: 'menu-book', iconColor: '#9467BD'},
-    {id: 7, title: 'Art', iconName: 'palette', iconColor: '#D62728'},
-    {id: 8, title: 'Music', iconName: 'music-note', iconColor: '#1B9E77'},
-    {id: 9, title: 'Technology', iconName: 'memory', iconColor: '#636EFA'},
+    {id: 19, title: 'Math', iconName: 'calculate', iconColor: '#1F77B4'},
+    {id: 17, title: 'Science', iconName: 'science', iconColor: '#2CA02C'},
+    {id: 23, title: 'History', iconName: 'history-edu', iconColor: '#8C564B'},
+    {id: 22, title: 'Geography', iconName: 'public', iconColor: '#17BECF'},
+    {id: 9, title: 'Languages', iconName: 'translate', iconColor: '#FF7F0E'},
+    {id: 10, title: 'Literature', iconName: 'menu-book', iconColor: '#9467BD'},
+    {id: 25, title: 'Art', iconName: 'palette', iconColor: '#D62728'},
+    {id: 12, title: 'Music', iconName: 'music-note', iconColor: '#1B9E77'},
+    {id: 18, title: 'Technology', iconName: 'memory', iconColor: '#636EFA'},
     {
-      id: 10,
+      id: 21,
       title: 'Sports',
       iconName: 'sports-basketball',
       iconColor: '#FF5733',
     },
-    {id: 11, title: 'Health', iconName: 'favorite', iconColor: '#E63946'},
-    {id: 12, title: 'Space', iconName: 'rocket', iconColor: '#3F51B5'},
-    {id: 13, title: 'Movies', iconName: 'movie-filter', iconColor: '#FFB703'},
-    {id: 14, title: 'Animals', iconName: 'pets', iconColor: '#43AA8B'},
+    {id: 11, title: 'Movies', iconName: 'movie-filter', iconColor: '#FFB703'},
+    {id: 27, title: 'Animals', iconName: 'pets', iconColor: '#43AA8B'},
   ];
 
-  // Define loadUser function using useCallback
   const loadUser = useCallback(async () => {
     if (hasUserBeenFetched.current) {
       return;
@@ -84,20 +79,16 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     }
   }, [userId, refreshUser]);
 
-  // Load user data only once when component mounts
   useEffect(() => {
     loadUser();
   }, [loadUser]);
 
-  // Handle the loading animation timing separately from data fetching
   useEffect(() => {
     if (!initialLoadDone || !loaderVisible || !fromLogin) {
       return;
     }
 
-    // Only show loading animation if coming from login
     const timer = setTimeout(() => {
-      // Start cross-fade animation
       Animated.parallel([
         Animated.timing(loaderOpacity, {
           toValue: 0,
@@ -119,7 +110,6 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     return () => clearTimeout(timer);
   }, [initialLoadDone, fromLogin, minLoadingTime, loaderVisible]);
 
-  // Setup back button handler
   useEffect(() => {
     SoundManager.fadeOutAmbient();
 
@@ -140,27 +130,22 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
   }, []);
 
   const handleLogout = () => {
-    // Restart ambient music when logging out
     SoundManager.playAmbient();
 
-    // Navigate back to login screen
     navigation.reset({
       index: 0,
       routes: [{name: 'Login'}],
     });
   };
-
   const handleItemPress = (itemId: number) => {
-    // Play interaction sound
     SoundManager.playInteraction();
 
-    // Find the selected category
     const category = categoryItems.find(i => i.id === itemId);
     if (category) {
-      // Navigate to Quiz screen with appropriate parameters
       navigation.navigate('Quiz', {
         userId: userId,
         category: category.title,
+        categoryId: category.id,
       });
     }
   };
@@ -187,7 +172,6 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     <View style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" />
 
-      {/* Dashboard Content */}
       <Animated.View
         style={[StyleSheet.absoluteFillObject, {opacity: dashboardOpacity}]}>
         <View style={styles.backgroundContainer} />
@@ -216,14 +200,9 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
             showsVerticalScrollIndicator={false}
             columnWrapperStyle={styles.gridRow}
           />
-
-          <View style={styles.footer}>
-            <Text style={styles.footerText}>BrainBuzz • Dashboard v1.0</Text>
-          </View>
         </Animated.View>
       </Animated.View>
 
-      {/* Loading Overlay */}
       {loaderVisible && (
         <Animated.View
           style={[

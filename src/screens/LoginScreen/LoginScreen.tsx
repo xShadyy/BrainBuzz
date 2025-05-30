@@ -43,11 +43,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
       duration: 800,
       useNativeDriver: true,
     }).start();
-
-    // No status bar reset needed here since it's managed at app level
-    return () => {
-      // Cleanup if needed in the future
-    };
+    return () => {};
   }, [formOpacity]);
 
   const validateEmailFormat = (emailValue: string): boolean => {
@@ -82,7 +78,6 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
       if (user && user.id) {
         setError('');
         setSuccessUserId(user.id);
-        // Play the success sound only once here
         SoundManager.playLoginSuccess();
         setTimeout(() => setShowSuccessAnimation(true), 100);
       } else {
@@ -151,7 +146,6 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
   const handleAnimationFinish = () => {
     if (successUserId) {
       setShowSuccessAnimation(false);
-      // Navigate to Dashboard with the userId and a fromLogin flag
       navigation.replace('Dashboard', {
         userId: successUserId,
         fromLogin: true,
@@ -159,7 +153,6 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({navigation}) => {
     }
   };
 
-  // Rest of the component remains the same
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="transparent" translucent />

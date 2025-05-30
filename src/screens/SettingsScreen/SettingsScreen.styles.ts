@@ -1,7 +1,5 @@
 import {StyleSheet, StatusBar} from 'react-native';
 
-const FOOTER_HEIGHT = 40;
-
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -52,7 +50,6 @@ export const styles = StyleSheet.create({
   },
   contentWrapper: {
     flex: 1,
-    paddingBottom: FOOTER_HEIGHT,
   },
   scrollContentContainer: {
     paddingHorizontal: 20,
@@ -230,23 +227,6 @@ export const styles = StyleSheet.create({
   loadingAnimation: {
     width: 150,
     height: 150,
-  },
-  footer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: FOOTER_HEIGHT,
-    backgroundColor: '#2B2B2B',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderTopWidth: 1,
-    borderTopColor: '#FFC800',
-  },
-  footerText: {
-    fontFamily: 'Lexend-Regular',
-    fontSize: 12,
-    color: '#FFFFFF',
   },
   staticContentContainer: {
     flex: 1,

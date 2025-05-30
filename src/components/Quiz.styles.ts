@@ -10,11 +10,13 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 16,
+    paddingHorizontal: 8,
+    paddingVertical: 16,
     marginTop: 150,
+    width: '100%',
   },
   bottomContainer: {
-    padding: 20, // Adjust this to increase/decrease bottom spacing
+    padding: 20,
     alignItems: 'center',
   },
   questionCount: {
@@ -32,6 +34,8 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 30,
     lineHeight: 30,
+    width: '100%',
+    paddingHorizontal: 8,
   },
   answersContainer: {
     width: '100%',
@@ -77,7 +81,6 @@ export const styles = StyleSheet.create({
   },
   progressFill: {
     height: '100%',
-    backgroundColor: 'cyan',
     borderRadius: 3,
   },
   scoreContainer: {
@@ -91,6 +94,12 @@ export const styles = StyleSheet.create({
     fontFamily: 'Lexend-SemiBold',
     color: '#FFFFFF',
     marginRight: 5,
+  },
+  categoryText: {
+    fontSize: 18,
+    fontFamily: 'Lexend-Bold',
+    color: '#FFFFFF',
+    textAlign: 'center',
   },
   scoreValue: {
     fontSize: 16,
@@ -131,5 +140,52 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
     opacity: 0.8,
     padding: 20,
+  },
+  heartsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 15,
+    paddingHorizontal: 20,
+  },
+  heartIcon: {
+    width: 24,
+    height: 24,
+    marginHorizontal: 4,
+    tintColor: '#FF4757',
+  },
+  quizFailedContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  quizFailedText: {
+    fontSize: 24,
+    fontFamily: 'Lexend-Bold',
+    color: '#FF4757',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  quizFailedSubtext: {
+    fontSize: 16,
+    fontFamily: 'Lexend-Medium',
+    color: '#FFFFFF',
+    textAlign: 'center',
+    opacity: 0.8,
+    marginBottom: 30,
+  },
+  retryButton: {
+    backgroundColor: '#4CAF50',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    marginBottom: 10,
+  },
+  retryButtonText: {
+    fontSize: 16,
+    fontFamily: 'Lexend-Medium',
+    color: '#FFFFFF',
+    textAlign: 'center',
   },
 });

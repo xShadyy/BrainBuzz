@@ -2,17 +2,13 @@ import {StyleSheet, StatusBar, Dimensions} from 'react-native';
 
 const {height} = Dimensions.get('window');
 
-// Helper for responsive sizing
 const responsiveSize = (size: number) => {
-  return Math.round((size / 812) * height); // 812 is base height for iPhone X
+  return Math.round((size / 812) * height);
 };
 
-// Get the status bar height for Android
 const STATUS_BAR_HEIGHT = StatusBar.currentHeight || 0;
-// Estimate the header height (status bar + content)
-const HEADER_HEIGHT = STATUS_BAR_HEIGHT + responsiveSize(115); // Adjust this value based on your header
+const HEADER_HEIGHT = STATUS_BAR_HEIGHT + responsiveSize(115);
 
-// Configure status bar to match app theme
 export const configureStatusBar = () => {
   StatusBar.setBarStyle('light-content');
   StatusBar.setTranslucent(true);
@@ -36,7 +32,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     paddingHorizontal: responsiveSize(16),
-    paddingTop: responsiveSize(20), // Add some space at the top
+    paddingTop: responsiveSize(20),
   },
   contentSpacer: {
     height: responsiveSize(80),
@@ -121,7 +117,6 @@ export const styles = StyleSheet.create({
     fontFamily: 'Lexend-Bold',
     fontSize: responsiveSize(16),
   },
-  // Dynamic difficulty button styles remain the same as they use color values
   easyButton: {
     backgroundColor: '#4CAF50',
     shadowColor: 'rgba(76, 175, 80, 0.7)',

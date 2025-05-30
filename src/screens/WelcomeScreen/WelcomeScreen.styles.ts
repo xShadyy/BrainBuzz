@@ -8,7 +8,6 @@ export const styles = StyleSheet.create({
     backgroundColor: 'black',
     width: width,
     height: height,
-    // Add properties to ensure content goes to the very top of the screen
     paddingTop: 0,
     marginTop: 0,
   },
@@ -33,7 +32,7 @@ export const styles = StyleSheet.create({
     bottom: 0,
     zIndex: 2,
     width: width,
-    paddingHorizontal: 10, // Add horizontal padding
+    paddingHorizontal: 10,
   },
   titleContainer: {
     fontFamily: 'Supercharge-JRgPo',

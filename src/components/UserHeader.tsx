@@ -17,39 +17,33 @@ interface UserHeaderProps {
 }
 
 export const UserHeader: React.FC<UserHeaderProps> = ({
-  username: propUsername, // Rename to avoid conflict with context username
+  username: propUsername,
   xpCurrent: propXpCurrent,
   xpRequired: propXpRequired,
   onSettingsPress,
   onLogoutPress,
 }) => {
-  const {user} = useUser(); // Get user from context
-  const username = propUsername || user?.name || 'USER'; // Use prop username if provided, otherwise use context
+  const {user} = useUser();
+  const username = propUsername || user?.name || 'USER';
 
-  // Calculate actual XP values from user data or use provided props
-  const userXP = Math.min(user?.xp || 0, 9999); // Cap XP at 9999
-  const userLevel = Math.min(user?.level || 1, 8); // Cap level at 8
+  const userXP = Math.min(user?.xp || 0, 9999);
+  const userLevel = Math.min(user?.level || 1, 8);
 
-  // Get XP thresholds for current and next level
-  const currentLevelThreshold = db.getXPRequiredForLevel(userLevel - 1); // XP needed for current level
-  const nextLevelThreshold = db.getXPRequiredForLevel(userLevel); // XP needed for next level
+  const currentLevelThreshold = db.getXPRequiredForLevel(userLevel - 1);
+  const nextLevelThreshold = db.getXPRequiredForLevel(userLevel);
 
-  // Calculate XP progress within current level
   const xpInCurrentLevel = userXP - currentLevelThreshold;
   const xpNeededForNextLevel = nextLevelThreshold - currentLevelThreshold;
 
-  // Use prop values if provided, otherwise calculate from user data
   const xpCurrent =
     propXpCurrent !== undefined ? propXpCurrent : xpInCurrentLevel;
   const xpForCurrentLevel =
     propXpRequired !== undefined ? propXpRequired : xpNeededForNextLevel;
 
-  // Special handling for max level (Level 8) - show full XP bar
   const isMaxLevel = userLevel >= 8 && userXP >= 9999;
   const displayXpCurrent = isMaxLevel ? 9999 : xpCurrent;
   const displayXpForCurrentLevel = isMaxLevel ? 9999 : xpForCurrentLevel;
 
-  // Calculate XP percentage for the progress bar
   const xpPercentage = isMaxLevel
     ? 100
     : Math.min(
@@ -57,43 +51,37 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
         Math.max(0, (displayXpCurrent / displayXpForCurrentLevel) * 100),
       );
 
-  // Get fire animation based on user level (Level 1 = highest fire, Level 8 = lowest fire)
   const getFireAnimation = (level: number) => {
     const fireAnimations = [
-      require('../assets/animations/fire_cherry_pink_light.json'), // Level 1 (highest)
-      require('../assets/animations/fire_cherry_pink_lighter.json'), // Level 2
-      require('../assets/animations/fire_spring_green_light.json'), // Level 3
-      require('../assets/animations/fire_spring_green_lighter.json'), // Level 4
-      require('../assets/animations/fire_sky_blue_light.json'), // Level 5
-      require('../assets/animations/fire_sky_blue_lighter.json'), // Level 6
-      require('../assets/animations/fire_sunny_beige_light.json'), // Level 7
-      require('../assets/animations/fire_sunny_beige_lighter.json'), // Level 8 (lowest)
+      require('../assets/animations/fire_cherry_pink_light.json'),
+      require('../assets/animations/fire_cherry_pink_lighter.json'),
+      require('../assets/animations/fire_spring_green_light.json'),
+      require('../assets/animations/fire_spring_green_lighter.json'),
+      require('../assets/animations/fire_sky_blue_light.json'),
+      require('../assets/animations/fire_sky_blue_lighter.json'),
+      require('../assets/animations/fire_sunny_beige_light.json'),
+      require('../assets/animations/fire_sunny_beige_lighter.json'),
     ];
 
-    // Clamp level between 1-8 and convert to array index (0-7)
     const clampedLevel = Math.max(1, Math.min(8, level));
     return fireAnimations[clampedLevel - 1];
   };
-
-  // Get color for current level's XP bar
   const getLevelColor = (level: number) => {
     const levelColors = [
-      '#BD3039', // Level 1 - Eternal Storm (white)
-      '#A9B7C0', // Level 2 - Mystical Aura (gray)
-      '#50CB86', // Level 3 - Jade Pyre (green)
-      '#6EEB83', // Level 4 - Emerald Inferno (light green)
-      '#5DA9E9', // Level 5 - Sapphire Blaze (blue)
-      '#4ECDC4', // Level 6 - Azure Flame (cyan)
-      '#FF5C8D', // Level 7 - Sun Flame (pink)
-      '#FF6B6B', // Level 8 - Ember Spark (red)
+      '#BD3039',
+      '#951C4C',
+      '#50CB86',
+      '#6EEB83',
+      '#5DA9E9',
+      '#4ECDC4',
+      '#FF5C8D',
+      '#FF6B6B',
     ];
 
-    // Clamp level between 1-8 and convert to array index (0-7)
     const clampedLevel = Math.max(1, Math.min(8, level));
     return levelColors[clampedLevel - 1];
   };
 
-  // Configure status bar to match header color
   useEffect(() => {
     configureStatusBar();
   }, []);
@@ -124,7 +112,6 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
     <View style={styles.container}>
       <View style={styles.headerContent}>
         <View style={styles.userInfoContainer}>
-          {/* Top row with username and action icons */}
           <View style={styles.topRow}>
             <View style={styles.usernameContainer}>
               <Text
@@ -133,7 +120,7 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
                   {
                     opacity: 1,
                     color: getLevelColor(userLevel),
-                    textShadowColor: `${getLevelColor(userLevel)}33`, // Add 33 for 20% opacity
+                    textShadowColor: `${getLevelColor(userLevel)}33`,
                   },
                 ]}
                 numberOfLines={1}

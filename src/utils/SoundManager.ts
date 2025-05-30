@@ -1,7 +1,6 @@
 import {AppState, AppStateStatus, NativeModules} from 'react-native';
 import Sound from 'react-native-sound';
 
-// Sound files
 const ambientSource = require('../assets/sounds/ambient.mp3');
 const interactionSource = require('../assets/sounds/interaction.mp3');
 const zap1Source = require('../assets/sounds/zap1.mp3');
@@ -11,7 +10,6 @@ const countdownSource = require('../assets/sounds/countdown.mp3');
 const quizCorrectSource = require('../assets/sounds/quiz_correct.mp3');
 const quizIncorrectSource = require('../assets/sounds/quiz_incorrect.mp3');
 
-// Android AudioManager interface
 interface AudioManagerConstants {
   AUDIOFOCUS_GAIN: number;
   AUDIOFOCUS_LOSS: number;
@@ -26,12 +24,10 @@ const AudioFocusModule = NativeModules.AudioFocusModule || {
 };
 
 class SoundManager {
-  // Ambient sound
   private static ambient: Sound | null = null;
   private static ambientVolume = 0.5;
   private static ambientEnabled = true;
 
-  // Removed global and per-effect volume controls
   private static readonly DEFAULT_ZAP1_VOLUME = 0.8;
   private static readonly DEFAULT_ZAP2_VOLUME = 0.8;
   private static readonly DEFAULT_INTERACTION_VOLUME = 1.0;
@@ -40,7 +36,6 @@ class SoundManager {
   private static readonly DEFAULT_QUIZ_CORRECT_VOLUME = 1.0;
   private static readonly DEFAULT_QUIZ_INCORRECT_VOLUME = 1.0;
 
-  // Sound pools
   private static zap1Pool: Sound[] = [];
   private static zap2Pool: Sound[] = [];
   private static interactionPool: Sound[] = [];
@@ -50,7 +45,6 @@ class SoundManager {
   private static quizIncorrectPool: Sound[] = [];
   private static POOL_SIZE = 3;
 
-  // App state management
   private static appStateSubscription: {remove: () => void} | null = null;
   private static currentAppState: AppStateStatus = 'active';
   private static hasAudioFocus = false;
@@ -62,11 +56,9 @@ class SoundManager {
       return;
     }
     this._initialized = true;
-    // Initialize audio subsystem
     Sound.setCategory('Playback', true);
     console.log('[SoundManager] Initializing sounds...');
 
-    // Load sounds
     try {
       this.ambient = await this.loadSound(ambientSource);
       this.zap1Pool = await this.createSoundPool(zap1Source, this.POOL_SIZE);
@@ -96,17 +88,14 @@ class SoundManager {
       console.error('[SoundManager] Sound initialization failed:', error);
     }
 
-    // Set up app state listener
     this.appStateSubscription = AppState.addEventListener(
       'change',
       this.handleAppStateChange,
     );
 
-    // Initial audio focus
     await this.handleAudioFocus('active');
   }
 
-  // -- Ambient Music Control --
   static async playAmbient() {
     if (!this.ambientEnabled || !this.ambient) {
       return;
@@ -147,7 +136,6 @@ class SoundManager {
     }, duration);
   }
 
-  // -- Sound Effects --
   static playZap1() {
     this.playFromPool(this.zap1Pool, this.DEFAULT_ZAP1_VOLUME);
   }
@@ -213,7 +201,6 @@ class SoundManager {
     });
   }
 
-  // -- App State Management --
   private static handleAppStateChange = async (nextState: AppStateStatus) => {
     if (nextState === 'active') {
       await this.handleAudioFocus('active');
@@ -246,7 +233,6 @@ class SoundManager {
     }
   }
 
-  // -- Helper Methods --
   private static loadSound(source: any): Promise<Sound> {
     return new Promise((resolve, reject) => {
       const sound = new Sound(source, error => {
