@@ -58,7 +58,9 @@ class SoundManager {
   private static _initialized = false;
 
   static async init() {
-    if (this._initialized) {return;}
+    if (this._initialized) {
+      return;
+    }
     this._initialized = true;
     // Initialize audio subsystem
     Sound.setCategory('Playback', true);
@@ -69,11 +71,26 @@ class SoundManager {
       this.ambient = await this.loadSound(ambientSource);
       this.zap1Pool = await this.createSoundPool(zap1Source, this.POOL_SIZE);
       this.zap2Pool = await this.createSoundPool(zap2Source, this.POOL_SIZE);
-      this.interactionPool = await this.createSoundPool(interactionSource, this.POOL_SIZE);
-      this.loginSuccessPool = await this.createSoundPool(loginSuccessSource, this.POOL_SIZE);
-      this.countdownPool = await this.createSoundPool(countdownSource, this.POOL_SIZE);
-      this.quizCorrectPool = await this.createSoundPool(quizCorrectSource, this.POOL_SIZE);
-      this.quizIncorrectPool = await this.createSoundPool(quizIncorrectSource, this.POOL_SIZE);
+      this.interactionPool = await this.createSoundPool(
+        interactionSource,
+        this.POOL_SIZE,
+      );
+      this.loginSuccessPool = await this.createSoundPool(
+        loginSuccessSource,
+        this.POOL_SIZE,
+      );
+      this.countdownPool = await this.createSoundPool(
+        countdownSource,
+        this.POOL_SIZE,
+      );
+      this.quizCorrectPool = await this.createSoundPool(
+        quizCorrectSource,
+        this.POOL_SIZE,
+      );
+      this.quizIncorrectPool = await this.createSoundPool(
+        quizIncorrectSource,
+        this.POOL_SIZE,
+      );
       console.log('[SoundManager] All sounds loaded successfully');
     } catch (error) {
       console.error('[SoundManager] Sound initialization failed:', error);
@@ -157,7 +174,9 @@ class SoundManager {
       console.warn('[SoundManager] quizCorrectPool is empty or not loaded');
       return;
     }
-    const availableSound = this.quizCorrectPool.find((s: Sound) => !s.isPlaying());
+    const availableSound = this.quizCorrectPool.find(
+      (s: Sound) => !s.isPlaying(),
+    );
     if (!availableSound) {
       console.warn('[SoundManager] No available quizCorrect sound in pool');
       return;
@@ -177,7 +196,9 @@ class SoundManager {
       console.warn('[SoundManager] quizIncorrectPool is empty or not loaded');
       return;
     }
-    const availableSound = this.quizIncorrectPool.find((s: Sound) => !s.isPlaying());
+    const availableSound = this.quizIncorrectPool.find(
+      (s: Sound) => !s.isPlaying(),
+    );
     if (!availableSound) {
       console.warn('[SoundManager] No available quizIncorrect sound in pool');
       return;
@@ -272,7 +293,9 @@ class SoundManager {
 
   private static playSound(sound: Sound | null, volume: number) {
     if (!this.hasAudioFocus || !sound) {
-      console.warn('[SoundManager] playSound: No audio focus or sound not loaded');
+      console.warn(
+        '[SoundManager] playSound: No audio focus or sound not loaded',
+      );
       return;
     }
     sound.setVolume(volume);
@@ -308,7 +331,15 @@ class SoundManager {
     this.ambient?.stop();
     this.ambient?.release();
 
-    [this.zap1Pool, this.zap2Pool, this.interactionPool, this.loginSuccessPool, this.countdownPool, this.quizCorrectPool, this.quizIncorrectPool].forEach(pool => {
+    [
+      this.zap1Pool,
+      this.zap2Pool,
+      this.interactionPool,
+      this.loginSuccessPool,
+      this.countdownPool,
+      this.quizCorrectPool,
+      this.quizIncorrectPool,
+    ].forEach(pool => {
       pool.forEach((s: Sound) => {
         s.stop();
         s.release();

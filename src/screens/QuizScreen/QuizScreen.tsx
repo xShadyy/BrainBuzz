@@ -19,13 +19,17 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
   const {user, refreshUser} = useUser();
   const [isLoading, setIsLoading] = useState(true);
   const [showCountdown, setShowCountdown] = useState(true);
-  const [countdownTimeout, setCountdownTimeout] = useState<ReturnType<typeof setTimeout> | null>(null);
+  const [countdownTimeout, setCountdownTimeout] = useState<ReturnType<
+    typeof setTimeout
+  > | null>(null);
   const [countdownFinished, setCountdownFinished] = useState(false);
   const hasInitializedRef = useRef(false);
 
   // Define loadUserData with useCallback to prevent recreation on every render
   const loadUserData = useCallback(async () => {
-    if (!userId || hasInitializedRef.current) {return;}
+    if (!userId || hasInitializedRef.current) {
+      return;
+    }
 
     hasInitializedRef.current = true;
     setIsLoading(true);
@@ -92,7 +96,11 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
     // Convert difficulty to lowercase for calculation
     const difficultyLower = difficulty.toLowerCase();
     // Calculate XP reward based on difficulty and performance
-    const xpReward = db.calculateXPReward(score, totalQuestions, difficultyLower);
+    const xpReward = db.calculateXPReward(
+      score,
+      totalQuestions,
+      difficultyLower,
+    );
 
     try {
       // Award XP to user
@@ -107,18 +115,14 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
       Alert.alert(
         'Quiz Completed!',
         `Your score: ${score}/${totalQuestions}\nXP earned: +${xpReward}`,
-        [
-          {text: 'OK', onPress: () => navigation.goBack()},
-        ],
+        [{text: 'OK', onPress: () => navigation.goBack()}],
       );
     } catch (error) {
       console.error('Error awarding XP:', error);
       Alert.alert(
         'Quiz Completed!',
         `Your score: ${score}/${totalQuestions}\nNote: XP could not be saved`,
-        [
-          {text: 'OK', onPress: () => navigation.goBack()},
-        ],
+        [{text: 'OK', onPress: () => navigation.goBack()}],
       );
     }
   };

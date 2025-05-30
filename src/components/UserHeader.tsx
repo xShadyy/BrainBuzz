@@ -39,8 +39,10 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
   const xpNeededForNextLevel = nextLevelThreshold - currentLevelThreshold;
 
   // Use prop values if provided, otherwise calculate from user data
-  const xpCurrent = propXpCurrent !== undefined ? propXpCurrent : xpInCurrentLevel;
-  const xpForCurrentLevel = propXpRequired !== undefined ? propXpRequired : xpNeededForNextLevel;
+  const xpCurrent =
+    propXpCurrent !== undefined ? propXpCurrent : xpInCurrentLevel;
+  const xpForCurrentLevel =
+    propXpRequired !== undefined ? propXpRequired : xpNeededForNextLevel;
 
   // Special handling for max level (Level 8) - show full XP bar
   const isMaxLevel = userLevel >= 8 && userXP >= 9999;
@@ -48,10 +50,12 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
   const displayXpForCurrentLevel = isMaxLevel ? 9999 : xpForCurrentLevel;
 
   // Calculate XP percentage for the progress bar
-  const xpPercentage = isMaxLevel ? 100 : Math.min(
-    100,
-    Math.max(0, (displayXpCurrent / displayXpForCurrentLevel) * 100),
-  );
+  const xpPercentage = isMaxLevel
+    ? 100
+    : Math.min(
+        100,
+        Math.max(0, (displayXpCurrent / displayXpForCurrentLevel) * 100),
+      );
 
   // Get fire animation based on user level (Level 1 = highest fire, Level 8 = lowest fire)
   const getFireAnimation = (level: number) => {
@@ -135,7 +139,11 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
                 numberOfLines={1}
                 ellipsizeMode="tail">
                 {username ? username.toUpperCase() : 'USER'}
-                <Text style={{color: 'transparent', fontFamily: 'Supercharge-JRgPo'}}>
+                <Text
+                  style={{
+                    color: 'transparent',
+                    fontFamily: 'Supercharge-JRgPo',
+                  }}>
                   {' '}
                 </Text>
               </Text>
@@ -168,7 +176,15 @@ export const UserHeader: React.FC<UserHeaderProps> = ({
             </View>
             <View style={styles.xpContainer}>
               <View style={styles.xpBarBackground}>
-                <View style={[styles.xpBarFill, {width: `${xpPercentage}%`, backgroundColor: getLevelColor(userLevel)}]} />
+                <View
+                  style={[
+                    styles.xpBarFill,
+                    {
+                      width: `${xpPercentage}%`,
+                      backgroundColor: getLevelColor(userLevel),
+                    },
+                  ]}
+                />
               </View>
               <Text style={styles.xpText}>
                 {displayXpCurrent}/{displayXpForCurrentLevel} XP

@@ -4,15 +4,13 @@
  * @format
  */
 
-import React, { useEffect } from 'react';
-import { StatusBar, LogBox } from 'react-native';
-import { AppNavigator } from './src/navigation';
+import React, {useEffect} from 'react';
+import {StatusBar, LogBox} from 'react-native';
+import {AppNavigator} from './src/navigation';
 import SoundManager from './src/utils/SoundManager';
-import { UserProvider } from './src/utils/UserContext';
+import {UserProvider} from './src/utils/UserContext';
 
-LogBox.ignoreLogs([
-  'Text strings must be rendered within a <Text> component',
-]);
+LogBox.ignoreLogs(['Text strings must be rendered within a <Text> component']);
 
 function App(): React.JSX.Element {
   useEffect(() => {

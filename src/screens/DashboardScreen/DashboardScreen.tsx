@@ -39,7 +39,9 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
   const {userId, fromLogin = false} = route.params;
   const {user, isLoading: userLoading, refreshUser} = useUser();
   const loaderOpacity = useRef(new Animated.Value(fromLogin ? 1 : 0)).current;
-  const dashboardOpacity = useRef(new Animated.Value(fromLogin ? 0 : 1)).current;
+  const dashboardOpacity = useRef(
+    new Animated.Value(fromLogin ? 0 : 1),
+  ).current;
   const [loaderVisible, setLoaderVisible] = useState(fromLogin);
   const [initialLoadDone, setInitialLoadDone] = useState(!fromLogin);
   const hasUserBeenFetched = useRef(false);
@@ -70,7 +72,9 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
 
   // Define loadUser function using useCallback
   const loadUser = useCallback(async () => {
-    if (hasUserBeenFetched.current) {return;}
+    if (hasUserBeenFetched.current) {
+      return;
+    }
 
     hasUserBeenFetched.current = true;
     try {

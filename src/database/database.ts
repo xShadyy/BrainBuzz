@@ -154,7 +154,11 @@ class Database {
    * @param difficulty Quiz difficulty ('easy', 'medium', 'hard')
    * @returns XP amount to award
    */
-  calculateXPReward(score: number, totalQuestions: number, difficulty: string): number {
+  calculateXPReward(
+    score: number,
+    totalQuestions: number,
+    difficulty: string,
+  ): number {
     // Fixed XP rewards per difficulty - awarded for completing the quiz regardless of score
     const difficultyRewards = {
       easy: 50,
@@ -163,7 +167,9 @@ class Database {
     };
 
     // Return fixed XP amount based on difficulty only
-    return difficultyRewards[difficulty as keyof typeof difficultyRewards] || 50;
+    return (
+      difficultyRewards[difficulty as keyof typeof difficultyRewards] || 50
+    );
   }
 
   /**

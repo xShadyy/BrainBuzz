@@ -1,4 +1,10 @@
-import React, {createContext, useState, useContext, useRef, useCallback} from 'react';
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useRef,
+  useCallback,
+} from 'react';
 import {db} from '../database';
 import {User} from '../database/types';
 

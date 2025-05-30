@@ -1,5 +1,5 @@
-import { DefaultTheme } from '@react-navigation/native';
-import { NativeStackNavigationOptions } from '@react-navigation/native-stack';
+import {DefaultTheme} from '@react-navigation/native';
+import {NativeStackNavigationOptions} from '@react-navigation/native-stack';
 
 export const navigationTheme = {
   ...DefaultTheme,

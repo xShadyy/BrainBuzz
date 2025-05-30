@@ -1,4 +1,4 @@
-import { StyleSheet, StatusBar } from 'react-native';
+import {StyleSheet, StatusBar} from 'react-native';
 
 export const configureStatusBar = () => {
   // light-content works best on black
@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
   // Root container
   container: {
     flex: 1,
-    backgroundColor: '#1D1D1D',    // ← pure black
+    backgroundColor: '#1D1D1D', // ← pure black
   },
 
   // Header
@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
   questionText: {
     fontSize: 20,
     fontFamily: 'Lexend-Medium',
-    color: '#FFFFFF',             // ← white text
+    color: '#FFFFFF', // ← white text
     textAlign: 'center',
     marginBottom: 20,
   },

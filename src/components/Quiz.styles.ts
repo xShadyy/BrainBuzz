@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
@@ -57,13 +57,13 @@ export const styles = StyleSheet.create({
   correctAnswer: {
     backgroundColor: 'rgba(76, 175, 80, 0.3)',
     borderColor: '#4CAF50',
-    transform: [{ scale: 1.02 }],
+    transform: [{scale: 1.02}],
     elevation: 6,
   },
   wrongAnswer: {
     backgroundColor: 'rgba(244, 67, 54, 0.3)',
     borderColor: '#F44336',
-    transform: [{ scale: 1.02 }],
+    transform: [{scale: 1.02}],
     elevation: 6,
   },
   progressBar: {
@@ -105,8 +105,8 @@ export const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 16,
     borderRadius: 8,
-    },
-    endQuizButtonText: {
+  },
+  endQuizButtonText: {
     fontSize: 14,
     fontFamily: 'Lexend-Medium',
     color: '#FFFFFF',
@@ -132,4 +132,4 @@ export const styles = StyleSheet.create({
     opacity: 0.8,
     padding: 20,
   },
-  });
+});

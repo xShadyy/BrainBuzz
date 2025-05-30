@@ -100,7 +100,9 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
 
   // Use useCallback to memoize the initialization function
   const initializeUser = useCallback(async () => {
-    if (hasInitialized.current) {return;}
+    if (hasInitialized.current) {
+      return;
+    }
 
     if (user) {
       setNewName(user.name);
@@ -180,7 +182,10 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
   const handleCustomXP = async () => {
     const amount = parseInt(customXpAmount, 10);
     if (isNaN(amount) || amount === 0) {
-      Alert.alert('Error', 'Please enter a valid XP amount (positive or negative)');
+      Alert.alert(
+        'Error',
+        'Please enter a valid XP amount (positive or negative)',
+      );
       return;
     }
 
@@ -257,7 +262,11 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                       </TouchableOpacity>
                       <Text style={styles.fieldValueSupercharge}>
                         {user?.name || 'Unknown'}
-                        <Text style={{color: 'transparent', fontFamily: 'Supercharge-JRgPo'}}>
+                        <Text
+                          style={{
+                            color: 'transparent',
+                            fontFamily: 'Supercharge-JRgPo',
+                          }}>
                           {' '}
                         </Text>
                       </Text>
@@ -345,17 +354,26 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                       <Text style={styles.xpTestingTitle}>Quick XP Awards</Text>
                       <View style={styles.xpButtonRow}>
                         <TouchableOpacity
-                          style={[styles.xpButton, {backgroundColor: '#4CAF50'}]}
+                          style={[
+                            styles.xpButton,
+                            {backgroundColor: '#4CAF50'},
+                          ]}
                           onPress={() => handleAwardXP(50)}>
                           <Text style={styles.xpButtonText}>+50 XP</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
-                          style={[styles.xpButton, {backgroundColor: '#2196F3'}]}
+                          style={[
+                            styles.xpButton,
+                            {backgroundColor: '#2196F3'},
+                          ]}
                           onPress={() => handleAwardXP(100)}>
                           <Text style={styles.xpButtonText}>+100 XP</Text>
                         </TouchableOpacity>
                         <TouchableOpacity
-                          style={[styles.xpButton, {backgroundColor: '#9C27B0'}]}
+                          style={[
+                            styles.xpButton,
+                            {backgroundColor: '#9C27B0'},
+                          ]}
                           onPress={() => handleAwardXP(150)}>
                           <Text style={styles.xpButtonText}>+150 XP</Text>
                         </TouchableOpacity>
@@ -363,7 +381,9 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                     </View>
 
                     <View style={styles.xpTestingContainer}>
-                      <Text style={styles.xpTestingTitle}>Custom XP Amount</Text>
+                      <Text style={styles.xpTestingTitle}>
+                        Custom XP Amount
+                      </Text>
                       <View style={styles.customXpContainer}>
                         <TextInput
                           style={styles.customXpInput}
@@ -386,7 +406,9 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                     </View>
 
                     <View style={styles.xpTestingContainer}>
-                      <Text style={styles.xpTestingTitle}>Set Level Directly</Text>
+                      <Text style={styles.xpTestingTitle}>
+                        Set Level Directly
+                      </Text>
                       <View style={styles.levelButtonContainer}>
                         {[1, 2, 3, 4, 5, 6, 7, 8].map(level => (
                           <TouchableOpacity
@@ -399,7 +421,8 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                             <Text
                               style={[
                                 styles.levelButtonText,
-                                user?.level === level && styles.levelButtonTextActive,
+                                user?.level === level &&
+                                  styles.levelButtonTextActive,
                               ]}>
                               L{level}
                             </Text>
@@ -429,12 +452,17 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                   progress = 100; // Completed levels
                 } else if (userLevel === levelNumber) {
                   // Current level - show XP progress within this level
-                  const levelThresholds = [0, 500, 750, 1125, 1688, 2531, 3797, 5696, 9999];
+                  const levelThresholds = [
+                    0, 500, 750, 1125, 1688, 2531, 3797, 5696, 9999,
+                  ];
                   const currentLevelMin = levelThresholds[levelNumber - 1] || 0;
                   const currentLevelMax = levelThresholds[levelNumber] || 9999;
                   const levelXP = userXP - currentLevelMin;
                   const levelXPNeeded = currentLevelMax - currentLevelMin;
-                  progress = Math.min(100, Math.max(0, (levelXP / levelXPNeeded) * 100));
+                  progress = Math.min(
+                    100,
+                    Math.max(0, (levelXP / levelXPNeeded) * 100),
+                  );
                 } else {
                   progress = 0; // Future levels
                 }
@@ -476,21 +504,29 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                       ))}
                     </View>
                     <View style={styles.levelNameContainer}>
-                      <Text style={[
-                        styles.levelName,
-                        {
-                          color: userLevel >= levelNumber ? level.color : 'rgba(255,255,255,0.3)',
-                        },
-                      ]}>
+                      <Text
+                        style={[
+                          styles.levelName,
+                          {
+                            color:
+                              userLevel >= levelNumber
+                                ? level.color
+                                : 'rgba(255,255,255,0.3)',
+                          },
+                        ]}>
                         {level.name}
                       </Text>
-                      <Text style={[
-                        styles.levelName,
-                        {
-                          fontSize: 12,
-                          color: userLevel >= levelNumber ? level.color : 'rgba(255,255,255,0.3)',
-                        },
-                      ]}>
+                      <Text
+                        style={[
+                          styles.levelName,
+                          {
+                            fontSize: 12,
+                            color:
+                              userLevel >= levelNumber
+                                ? level.color
+                                : 'rgba(255,255,255,0.3)',
+                          },
+                        ]}>
                         Level {levelNumber}
                       </Text>
                     </View>

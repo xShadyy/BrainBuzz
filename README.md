@@ -15,7 +15,7 @@ Challenge yourself and discover a world of insight
 
 </div>
 
-***
+---
 
 ## Features
 
@@ -29,7 +29,7 @@ Challenge yourself and discover a world of insight
   From Math and Science to Space and Health.
 
 - **Progress Dashboard**  
-  Visualize your leveling progress with dynamic XP bar.  
+  Visualize your leveling progress with dynamic XP bar.
 
 ---
 

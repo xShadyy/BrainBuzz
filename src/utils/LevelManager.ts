@@ -1,4 +1,3 @@
-
 export interface FireLevel {
   animation: any;
   name: string;
@@ -64,7 +63,9 @@ export class LevelManager {
    * @returns FireLevel object
    */
   static getFireLevelForLevel(level: number): FireLevel {
-    const fireLevel = this.fireLevels.find(fl => fl.level === Math.max(1, Math.min(8, level)));
+    const fireLevel = this.fireLevels.find(
+      fl => fl.level === Math.max(1, Math.min(8, level)),
+    );
     return fireLevel || this.fireLevels[this.fireLevels.length - 1]; // Default to level 1
   }
 
@@ -110,7 +111,9 @@ export class LevelManager {
    * @returns Progress percentage (0-100)
    */
   static getLevelProgress(currentXP: number, currentLevel: number): number {
-    if (currentLevel >= 8) {return 100;}
+    if (currentLevel >= 8) {
+      return 100;
+    }
 
     const currentLevelThreshold = this.getXPRequiredForLevel(currentLevel - 1);
     const nextLevelThreshold = this.getXPRequiredForLevel(currentLevel);
@@ -118,6 +121,9 @@ export class LevelManager {
     const progressInLevel = currentXP - currentLevelThreshold;
     const requiredForNextLevel = nextLevelThreshold - currentLevelThreshold;
 
-    return Math.min(100, Math.max(0, (progressInLevel / requiredForNextLevel) * 100));
+    return Math.min(
+      100,
+      Math.max(0, (progressInLevel / requiredForNextLevel) * 100),
+    );
   }
 }

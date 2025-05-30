@@ -56,7 +56,7 @@ export const DifficultySelectorScreen: React.FC<
       if (userId) {
         refreshUser(userId);
       }
-    }, [userId, refreshUser])
+    }, [userId, refreshUser]),
   );
 
   // Fetch user data when component mounts and configure status bar
@@ -109,7 +109,10 @@ export const DifficultySelectorScreen: React.FC<
         category,
       });
     } else {
-      Alert.alert('Error', 'Unable to load category information. Please try again.');
+      Alert.alert(
+        'Error',
+        'Unable to load category information. Please try again.',
+      );
     }
   };
 
