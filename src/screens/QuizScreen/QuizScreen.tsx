@@ -1,4 +1,3 @@
-// QuizScreen.tsx
 import React, {useEffect, useState, useCallback, useRef} from 'react';
 import {View, StatusBar, Text, Alert} from 'react-native';
 import {StackScreenProps} from '@react-navigation/stack';
@@ -25,7 +24,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
   const [countdownFinished, setCountdownFinished] = useState(false);
   const hasInitializedRef = useRef(false);
 
-  // Define loadUserData with useCallback to prevent recreation on every render
   const loadUserData = useCallback(async () => {
     if (!userId || hasInitializedRef.current) {
       return;
@@ -42,7 +40,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
     }
   }, [userId, refreshUser]);
 
-  // Initialize sound manager only once
   useEffect(() => {
     configureStatusBar();
     const initSound = async () => {
@@ -51,12 +48,10 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
     initSound();
   }, []);
 
-  // Load user data only once
   useEffect(() => {
     loadUserData();
   }, [loadUserData]);
 
-  // Clean up timeouts
   useEffect(() => {
     return () => {
       if (countdownTimeout) {
@@ -65,7 +60,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
     };
   }, [countdownTimeout]);
 
-  // Only trigger countdown once after loading
   useEffect(() => {
     if (!isLoading && !countdownFinished) {
       setShowCountdown(true);
@@ -79,7 +73,6 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
     }
   }, [isLoading, countdownFinished]);
 
-  // Ensure countdown always ends (fallback)
   useEffect(() => {
     if (showCountdown && !countdownFinished) {
       const fallback = setTimeout(() => {
@@ -97,17 +90,12 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({navigation, route}) => {
     SoundManager.playInteraction();
 
     try {
-      // Award XP to user
       if (userId) {
         const updatedUser = await db.awardXP(userId, xpEarned);
         if (updatedUser) {
-          // Refresh user context with updated data
           await refreshUser(userId);
         }
       }
-
-      // XP display is now handled in the Quiz component's results screen
-      // No need for Android alert anymore
     } catch (error) {
       console.error('Error awarding XP:', error);
       Alert.alert('Error', 'Failed to save your progress. Please try again.', [

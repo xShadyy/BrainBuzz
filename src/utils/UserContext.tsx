@@ -33,12 +33,11 @@ interface UserProviderProps {
 export const UserProvider: React.FC<UserProviderProps> = ({children}) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const isRefreshingRef = useRef<boolean>(false); // Track if refreshUser is already in progress
+  const isRefreshingRef = useRef<boolean>(false);
 
   const updateUser = (updatedUser: User) => {
     setUser(updatedUser);
 
-    // Also update in the database if we have an ID
     if (updatedUser.id) {
       db.updateUser(updatedUser).catch(error => {
         console.error('Error updating user:', error);
@@ -47,7 +46,6 @@ export const UserProvider: React.FC<UserProviderProps> = ({children}) => {
   };
 
   const refreshUser = useCallback(async (userId: number) => {
-    // Prevent multiple concurrent refreshUser calls
     if (isRefreshingRef.current) {
       return;
     }

@@ -45,7 +45,7 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
   const [loaderVisible, setLoaderVisible] = useState(fromLogin);
   const [initialLoadDone, setInitialLoadDone] = useState(!fromLogin);
   const hasUserBeenFetched = useRef(false);
-  const minLoadingTime = fromLogin ? 2000 : 0; // Categories data with Open Trivia DB IDs
+  const minLoadingTime = fromLogin ? 2000 : 0;
   const categoryItems: CategoryItem[] = [
     {id: 19, title: 'Math', iconName: 'calculate', iconColor: '#1F77B4'},
     {id: 17, title: 'Science', iconName: 'science', iconColor: '#2CA02C'},
@@ -66,7 +66,6 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     {id: 27, title: 'Animals', iconName: 'pets', iconColor: '#43AA8B'},
   ];
 
-  // Define loadUser function using useCallback
   const loadUser = useCallback(async () => {
     if (hasUserBeenFetched.current) {
       return;
@@ -80,20 +79,16 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     }
   }, [userId, refreshUser]);
 
-  // Load user data only once when component mounts
   useEffect(() => {
     loadUser();
   }, [loadUser]);
 
-  // Handle the loading animation timing separately from data fetching
   useEffect(() => {
     if (!initialLoadDone || !loaderVisible || !fromLogin) {
       return;
     }
 
-    // Only show loading animation if coming from login
     const timer = setTimeout(() => {
-      // Start cross-fade animation
       Animated.parallel([
         Animated.timing(loaderOpacity, {
           toValue: 0,
@@ -115,7 +110,6 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     return () => clearTimeout(timer);
   }, [initialLoadDone, fromLogin, minLoadingTime, loaderVisible]);
 
-  // Setup back button handler
   useEffect(() => {
     SoundManager.fadeOutAmbient();
 
@@ -136,27 +130,22 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
   }, []);
 
   const handleLogout = () => {
-    // Restart ambient music when logging out
     SoundManager.playAmbient();
 
-    // Navigate back to login screen
     navigation.reset({
       index: 0,
       routes: [{name: 'Login'}],
     });
   };
   const handleItemPress = (itemId: number) => {
-    // Play interaction sound
     SoundManager.playInteraction();
 
-    // Find the selected category
     const category = categoryItems.find(i => i.id === itemId);
     if (category) {
-      // Navigate to Quiz screen with appropriate parameters
       navigation.navigate('Quiz', {
         userId: userId,
         category: category.title,
-        categoryId: category.id, // Pass the Open Trivia DB category ID
+        categoryId: category.id,
       });
     }
   };
@@ -183,7 +172,6 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
     <View style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" />
 
-      {/* Dashboard Content */}
       <Animated.View
         style={[StyleSheet.absoluteFillObject, {opacity: dashboardOpacity}]}>
         <View style={styles.backgroundContainer} />
@@ -215,7 +203,6 @@ export const DashboardScreen: React.FC<DashboardScreenProps> = ({
         </Animated.View>
       </Animated.View>
 
-      {/* Loading Overlay */}
       {loaderVisible && (
         <Animated.View
           style={[

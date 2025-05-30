@@ -45,8 +45,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
   const [customXpAmount, setCustomXpAmount] = useState('');
   const hasInitialized = useRef(false);
 
-  // Remove loading states - we don't need the loading animation anymore
-  const contentOpacity = useRef(new Animated.Value(1)).current; // Start fully visible
+  const contentOpacity = useRef(new Animated.Value(1)).current;
 
   const fireLevels: FireLevel[] = [
     {
@@ -99,7 +98,6 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
     },
   ];
 
-  // Use useCallback to memoize the initialization function
   const initializeUser = useCallback(async () => {
     if (hasInitialized.current) {
       return;
@@ -118,7 +116,6 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
   }, [initializeUser]);
 
   useEffect(() => {
-    // Update name when user changes
     if (user && !isEditingName) {
       setNewName(user.name);
     }
@@ -149,7 +146,6 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
       const success = await db.updateUser(updatedUser);
 
       if (success) {
-        // Update local user context state immediately
         refreshUser(userId);
         setIsEditingName(false);
         SoundManager.playInteraction();
@@ -444,17 +440,15 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
               </Text>
               {fireLevels.map((level, index) => {
                 const isLastItem = index === fireLevels.length - 1;
-                // Reverse level numbering: Level 1 = highest fire (index 0), Level 8 = lowest fire (index 7)
-                const levelNumber = 8 - index; // Level 8, 7, 6, 5, 4, 3, 2, 1
+
+                const levelNumber = 8 - index;
                 const userLevel = user?.level || 1;
                 const userXP = user?.xp || 0;
 
-                // Calculate progress for each level using new thresholds
                 let progress = 0;
                 if (userLevel > levelNumber) {
-                  progress = 100; // Completed levels
+                  progress = 100;
                 } else if (userLevel === levelNumber) {
-                  // Current level - show XP progress within this level
                   const levelThresholds = [
                     0, 500, 750, 1125, 1688, 2531, 3797, 5696, 9999,
                   ];
@@ -467,7 +461,7 @@ export const SettingsScreen: React.FC<SettingsScreenProps> = ({
                     Math.max(0, (levelXP / levelXPNeeded) * 100),
                   );
                 } else {
-                  progress = 0; // Future levels
+                  progress = 0;
                 }
 
                 return (

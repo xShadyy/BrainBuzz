@@ -26,14 +26,12 @@ export const DifficultySelectorScreen: React.FC<
 > = ({navigation, route}) => {
   const {userId, category, categoryId} = route.params;
   const {user, refreshUser} = useUser();
-  // Extract loadUserData to a useCallback for memoization
   const loadUserData = useCallback(async () => {
     if (userId) {
       await refreshUser(userId);
     }
   }, [userId, refreshUser]);
 
-  // Refresh user data when screen comes into focus (e.g., returning from QuizScreen)
   useFocusEffect(
     useCallback(() => {
       if (userId) {
@@ -41,18 +39,13 @@ export const DifficultySelectorScreen: React.FC<
       }
     }, [userId, refreshUser]),
   );
-  // Fetch user data when component mounts and configure status bar
   useEffect(() => {
     configureStatusBar();
     loadUserData();
-
-    // Initialize sound manager
     SoundManager.init();
 
-    return () => {
-      // Clean up if needed
-    };
-  }, [loadUserData]); // Depend on memoized callback
+    return () => {};
+  }, [loadUserData]);
 
   const difficulties = [
     {
@@ -81,7 +74,6 @@ export const DifficultySelectorScreen: React.FC<
   const handleDifficultySelect = (difficulty: string) => {
     SoundManager.playInteraction();
 
-    // Navigate to QuizScreen instead of showing Quiz component directly
     if (categoryId) {
       navigation.navigate('QuizScreen', {
         userId,

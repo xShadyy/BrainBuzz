@@ -1,27 +1,23 @@
 import {StyleSheet, StatusBar} from 'react-native';
 
 export const configureStatusBar = () => {
-  // light-content works best on black
   StatusBar.setBarStyle('light-content');
   StatusBar.setTranslucent(true);
   StatusBar.setBackgroundColor('transparent');
 };
 
 export const styles = StyleSheet.create({
-  // Root container
   container: {
     flex: 1,
-    backgroundColor: '#1D1D1D', // ← pure black
+    backgroundColor: '#1D1D1D',
   },
 
-  // Header
   headerContainer: {
     width: '100%',
     paddingHorizontal: 16,
     paddingBottom: 10,
   },
 
-  // Main content area
   contentContainer: {
     flex: 1,
     marginTop: 10,
@@ -31,32 +27,27 @@ export const styles = StyleSheet.create({
     position: 'relative',
   },
 
-  // Quiz wrapper
   quizContainer: {
     flex: 1,
     width: '100%',
     maxWidth: 600,
     alignSelf: 'center',
-    // ensure a stable height so children don’t push things around:
     minHeight: 400,
     justifyContent: 'space-between',
   },
 
-  // Question text
   questionText: {
     fontSize: 20,
     fontFamily: 'Lexend-Medium',
-    color: '#FFFFFF', // ← white text
+    color: '#FFFFFF',
     textAlign: 'center',
     marginBottom: 20,
   },
 
-  // Answer list
   answerList: {
     width: '100%',
   },
 
-  // Each answer button
   answerButton: {
     paddingVertical: 16,
     paddingHorizontal: 12,
@@ -72,7 +63,6 @@ export const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
 
-  // Feedback (e.g. “Correct!”) pinned at bottom center
   feedbackContainer: {
     position: 'absolute',
     bottom: 30,
@@ -86,7 +76,6 @@ export const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
 
-  // Loading and error states
   loadingContainer: {
     flex: 1,
     justifyContent: 'center',

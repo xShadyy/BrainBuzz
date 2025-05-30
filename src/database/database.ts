@@ -148,7 +148,7 @@ class Database {
   }
 
   /**
-   * Calculate XP reward based on quiz performance
+   * Calculate XP reward based on completed difficulty
    * @param score Number of correct answers
    * @param totalQuestions Total number of questions
    * @param difficulty Quiz difficulty ('easy', 'medium', 'hard')
@@ -159,14 +159,12 @@ class Database {
     totalQuestions: number,
     difficulty: string,
   ): number {
-    // Fixed XP rewards per difficulty - awarded for completing the quiz regardless of score
     const difficultyRewards = {
       easy: 50,
       medium: 100,
       hard: 150,
     };
 
-    // Return fixed XP amount based on difficulty only
     return (
       difficultyRewards[difficulty as keyof typeof difficultyRewards] || 50
     );
@@ -178,12 +176,11 @@ class Database {
    * @returns Current level (1-8)
    */
   getLevelFromXP(xp: number): number {
-    // New level progression: 0, 500, 750, 1125, 1688, 2531, 3797, 5696 XP
     const levelThresholds = [0, 500, 750, 1125, 1688, 2531, 3797, 5696];
 
     for (let i = levelThresholds.length - 1; i >= 0; i--) {
       if (xp >= levelThresholds[i]) {
-        return Math.min(i + 1, 8); // Cap at level 8
+        return Math.min(i + 1, 8);
       }
     }
     return 1;
@@ -191,8 +188,8 @@ class Database {
 
   /**
    * Get XP required for a specific level
-   * @param level Level number (0 for current level start, 1-8 for level thresholds)
-   * @returns XP required for that level
+   * @param level Target level
+   * @returns XP threshold for the level
    */
   getXPRequiredForLevel(level: number): number {
     const levelThresholds = [0, 500, 750, 1125, 1688, 2531, 3797, 5696, 9999];

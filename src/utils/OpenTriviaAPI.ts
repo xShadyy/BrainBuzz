@@ -1,5 +1,3 @@
-// OpenTriviaAPI.ts - Utility for Open Trivia Database API integration
-
 export interface OpenTriviaQuestion {
   category: string;
   type: string;
@@ -80,7 +78,6 @@ export const decodeQuestionData = (
   categoryId: number,
 ): ProcessedQuestion[] => {
   return data.map((item, index) => {
-    // Combine all answers and shuffle them
     const allAnswers = [...item.incorrect_answers, item.correct_answer];
     const shuffledAnswers = allAnswers.sort(() => Math.random() - 0.5);
 

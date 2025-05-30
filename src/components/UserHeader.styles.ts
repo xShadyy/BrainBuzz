@@ -1,6 +1,5 @@
 import {StyleSheet, StatusBar, Platform} from 'react-native';
 
-// Get the status bar height for proper padding
 const STATUS_BAR_HEIGHT =
   Platform.OS === 'android' ? StatusBar.currentHeight || 0 : 0;
 
@@ -12,10 +11,10 @@ export const styles = StyleSheet.create({
     left: 0,
     right: 0,
     zIndex: 10,
-    paddingTop: STATUS_BAR_HEIGHT, // Add padding for status bar
+    paddingTop: STATUS_BAR_HEIGHT,
     paddingBottom: 10,
-    elevation: 4, // Android elevation for shadow
-    shadowColor: '#000', // iOS shadow properties
+    elevation: 4,
+    shadowColor: '#000',
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.2,
     shadowRadius: 3,
@@ -55,7 +54,7 @@ export const styles = StyleSheet.create({
   levelContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: 12, // Increased top margin to move things down
+    marginTop: 12,
   },
   levelEffect: {
     alignItems: 'center',
@@ -67,8 +66,8 @@ export const styles = StyleSheet.create({
   xpContainer: {
     flex: 1,
     justifyContent: 'center',
-    marginTop: 10, // Added margin to move XP bar lower
-    paddingBottom: 5, // Extra padding at the bottom
+    marginTop: 10,
+    paddingBottom: 5,
   },
   xpBarBackground: {
     backgroundColor: 'rgba(12, 12, 12, 0.61)',
@@ -90,11 +89,10 @@ export const styles = StyleSheet.create({
   actionsContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    minWidth: 64, // Ensure minimum width for icons
+    minWidth: 64,
   },
 });
 
-// Export a function to set status bar color
 export const configureStatusBar = () => {
   StatusBar.setBackgroundColor('rgb(43, 43, 43)');
   StatusBar.setBarStyle('light-content');

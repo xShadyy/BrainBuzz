@@ -57,8 +57,8 @@ const Quiz: React.FC<QuizProps> = ({
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswerId, setSelectedAnswerId] = useState<number | null>(null);
   const [score, setScore] = useState(0);
-  const [lives, setLives] = useState(3); // Add lives state
-  const [quizFailed, setQuizFailed] = useState(false); // Add quiz failed state
+  const [lives, setLives] = useState(3);
+  const [quizFailed, setQuizFailed] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [progressAnim] = useState(new Animated.Value(0));
   const scoreRef = useRef(0);
@@ -71,28 +71,25 @@ const Quiz: React.FC<QuizProps> = ({
   >(null);
   const quizDataLoaded = useRef(false);
 
-  // Get user data for level-based colors
   const {user} = useUser();
 
-  // Get color for current level's progress bar (same as UserHeader)
   const getLevelColor = (level: number) => {
     const levelColors = [
-      '#BD3039', // Level 1 - Eternal Storm
-      '#A9B7C0', // Level 2 - Mystical Aura
-      '#50CB86', // Level 3 - Jade Pyre
-      '#6EEB83', // Level 4 - Emerald Inferno
-      '#5DA9E9', // Level 5 - Sapphire Blaze
-      '#4ECDC4', // Level 6 - Azure Flame
-      '#FF5C8D', // Level 7 - Sun Flame
-      '#FF6B6B', // Level 8 - Ember Spark
+      '#BD3039',
+      '#A9B7C0',
+      '#50CB86',
+      '#6EEB83',
+      '#5DA9E9',
+      '#4ECDC4',
+      '#FF5C8D',
+      '#FF6B6B',
     ];
 
-    // Clamp level between 1-8 and convert to array index (0-7)
     const clampedLevel = Math.max(1, Math.min(8, level));
     return levelColors[clampedLevel - 1];
   };
 
-  const userLevel = Math.min(user?.level || 1, 8); // Cap level at 8
+  const userLevel = Math.min(user?.level || 1, 8);
   useEffect(() => {
     const loadQuizData = async () => {
       if (quizDataLoaded.current) {
@@ -102,10 +99,8 @@ const Quiz: React.FC<QuizProps> = ({
       quizDataLoaded.current = true;
 
       try {
-        // Convert difficulty to lowercase for API call
         const difficultyLower = difficulty.toLowerCase();
 
-        // Fetch questions from Open Trivia DB
         const rawQuestions = await fetchQuestions(
           categoryId,
           difficultyLower,
@@ -117,7 +112,6 @@ const Quiz: React.FC<QuizProps> = ({
           return;
         }
 
-        // Process and decode the questions
         const processedQuestions = decodeQuestionData(rawQuestions, categoryId);
         setQuestions(processedQuestions);
       } catch (err) {
@@ -165,11 +159,10 @@ const Quiz: React.FC<QuizProps> = ({
         SoundManager.playQuizCorrect();
       } else {
         SoundManager.playQuizIncorrect();
-        // Reduce lives on wrong answer
+
         setLives(prev => {
           const newLives = prev - 1;
           if (newLives <= 0) {
-            // Quiz failed when no lives left
             setTimeout(() => {
               setQuizFailed(true);
             }, 1500);
@@ -194,16 +187,13 @@ const Quiz: React.FC<QuizProps> = ({
         setShowFeedback(false);
         setFeedbackType(null);
 
-        // Check if quiz failed (no lives left)
         if (lives <= 1 && !correct) {
-          // Quiz failed, don't proceed
           return;
         }
         if (currentQuestionIndex < questions.length - 1) {
           setCurrentQuestionIndex(prev => prev + 1);
           setSelectedAnswerId(null);
         } else {
-          // Quiz completed - calculate XP
           const finalScore = scoreRef.current;
           const difficultyLower = difficulty.toLowerCase();
           const xp = db.calculateXPReward(
@@ -243,7 +233,6 @@ const Quiz: React.FC<QuizProps> = ({
     );
   }, [onEndQuiz]);
   const handleRetryQuiz = useCallback(() => {
-    // Reset all quiz states
     setCurrentQuestionIndex(0);
     setSelectedAnswerId(null);
     setScore(0);
@@ -256,7 +245,6 @@ const Quiz: React.FC<QuizProps> = ({
     setFeedbackType(null);
     scoreRef.current = 0;
 
-    // Reset progress animation
     progressAnim.setValue(0);
   }, [progressAnim]);
 

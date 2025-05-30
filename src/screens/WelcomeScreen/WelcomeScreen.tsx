@@ -25,8 +25,6 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({navigation}) => {
   const timers = useRef<ReturnType<typeof setTimeout>[]>([]);
 
   useEffect(() => {
-    // No need to set status bar here anymore since it's handled at app level
-
     const initializeApp = async () => {
       try {
         await SoundManager.init();
@@ -78,7 +76,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({navigation}) => {
               }),
             ]).start();
           }, 2900),
-        ); // 1200 + 1500 + 200 = 2900ms
+        );
       } catch (error) {
         console.error('Initialization error:', error);
       }
@@ -87,7 +85,6 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({navigation}) => {
     initializeApp();
 
     return () => {
-      // Only clear timers, no status bar reset needed
       timers.current.forEach(clearTimeout);
     };
   }, [

@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
     width: '100%',
   },
   bottomContainer: {
-    padding: 20, // Adjust this to increase/decrease bottom spacing
+    padding: 20,
     alignItems: 'center',
   },
   questionCount: {
