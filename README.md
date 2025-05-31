@@ -1,5 +1,3 @@
-# BrainBuzz - Project Documentation
-
 ![brainbuzz](brainbuzz.png)
 
 <div align="center"> 
